@@ -1,0 +1,497 @@
+﻿using AVL_Baum;
+using Busnisse_Layer;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Parfüm2025
+{
+    public partial class frmpafümAnsicht : Form
+    {
+        DataTable _dtParfüms;
+        DataTable _dtHerrenParfüms;
+        DataTable _dtDamenPafüms;
+
+        BindingSource _bindingSourceParfüm;
+        BindingSource _bindingSourceHerrenParfüm;
+        BindingSource _bindingSourceDamenParfüm;
+        public frmpafümAnsicht()
+        {
+            InitializeComponent();
+            // Setze den DrawMode des TabControls
+            tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
+
+            _bindingSourceParfüm = new BindingSource();
+            _bindingSourceHerrenParfüm = new BindingSource();
+            _bindingSourceDamenParfüm = new BindingSource();
+        }
+
+        //Lade Daten für Unisexdüfte
+        private void _LadeParfümDaten()
+        {
+            _dtParfüms = clsParfüm.GetAllParfüms();
+            _bindingSourceParfüm.DataSource = _dtParfüms;
+            dgvParfüm.DataSource = _bindingSourceParfüm;
+        }
+
+        //Lade Daten für Herrendüfte
+        private void _LadeHerrenParfümDaten()
+        {
+            _dtHerrenParfüms = clsParfüm.GetAllHerrenParfüms();
+            _bindingSourceHerrenParfüm.DataSource = _dtHerrenParfüms;
+            dgvHerrefDüfte.DataSource = _bindingSourceHerrenParfüm;
+        }
+
+        //Lade Daten für Damendüfte
+        private void _LadeDamenParfümDaten()
+        {
+            _dtDamenPafüms = clsParfüm.GetAllDamenParfüms();
+            _bindingSourceDamenParfüm.DataSource = _dtDamenPafüms;
+            dgvDamenParfüm.DataSource = _bindingSourceDamenParfüm;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        { 
+            _LadeParfümDaten();
+            _LadeHerrenParfümDaten();
+            _LadeDamenParfümDaten();
+        }
+
+        private void _FilterAnwendenFürParfüms(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(filterwert))
+            {
+                _bindingSourceParfüm.Filter = $" {spalteName} Like '{filterwert}%'";
+            }
+            else
+                _bindingSourceParfüm.Filter = string.Empty;
+        }
+        private void txtFilterBeiName_TextChanged(object sender, EventArgs e)
+        {
+
+            string nummer, marke, name, jahreszeiten, duftrichtung;
+            nummer = txtParfümFilterbeiNummer.Text;
+            marke = txtFilterBeiMarke.Text;
+            //name = txtFilterBeiName.Text;
+            jahreszeiten = txtJareszeiten.Text;
+            duftrichtung = txtDuftrichtung.Text;
+
+            if (!string.IsNullOrEmpty(nummer) || !string.IsNullOrEmpty(marke)
+                || !string.IsNullOrEmpty(duftrichtung) || !string.IsNullOrEmpty(jahreszeiten))
+            {
+                txtParfümFilterbeiNummer.Clear();
+                txtFilterBeiMarke.Clear();
+                txtDuftrichtung.Clear();
+                txtJareszeiten.Clear();
+            }
+            _FilterAnwendenFürParfüms("Name", txtFilterBeiName.Text.Trim());
+        }
+
+        private void txtFilterBeiMarke_TextChanged(object sender, EventArgs e)
+        {
+
+            string nummer, marke, name, jahreszeiten, duftrichtung;
+            nummer = txtParfümFilterbeiNummer.Text;
+            //marke = txtFilterBeiMarke.Text;
+            name = txtFilterBeiName.Text;
+            jahreszeiten = txtJareszeiten.Text;
+            duftrichtung = txtDuftrichtung.Text;
+
+            if (!string.IsNullOrEmpty(nummer) || !string.IsNullOrEmpty(name)
+                || !string.IsNullOrEmpty(duftrichtung) || !string.IsNullOrEmpty(jahreszeiten))
+            {
+                txtParfümFilterbeiNummer.Clear();
+                txtFilterBeiName.Clear();
+                txtDuftrichtung.Clear();
+                txtJareszeiten.Clear();
+            }
+            _FilterAnwendenFürParfüms("Marke", txtFilterBeiMarke.Text.Trim());
+        }
+
+
+        private void mehrDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string currentName = dgvParfüm.CurrentRow.Cells[2].Value.ToString();
+            // URL, die im Browser geöffnet werden soll
+            string url = "https://www.parfumo.de/s_perfumes_x.php?in=1&filter=" + currentName;
+
+            // Starten Sie den Standard-Webbrowser mit der angegebenen URL
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+   
+        private void _FilterBeiNummerFürParfüm(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(txtParfümFilterbeiNummer.Text.Trim()))
+            {
+                _bindingSourceParfüm.Filter = $"{spalteName} = {Convert.ToInt32(filterwert)}";
+            }
+            else
+                _bindingSourceParfüm.Filter = string.Empty;
+        }
+        private void txtParfümFilterbeiNummer_TextChanged(object sender, EventArgs e)
+        {
+
+            string nummer, marke, name, jahreszeiten, duftrichtung;
+            //nummer = txtParfümFilterbeiNummer.Text;
+            marke = txtFilterBeiMarke.Text;
+            name = txtFilterBeiName.Text;
+            jahreszeiten = txtJareszeiten.Text;
+            duftrichtung = txtDuftrichtung.Text;
+
+            if (!string.IsNullOrEmpty(marke) || !string.IsNullOrEmpty(name)
+                || !string.IsNullOrEmpty(duftrichtung) || !string.IsNullOrEmpty(jahreszeiten))
+            {
+                txtFilterBeiMarke.Clear();
+                txtFilterBeiName.Clear();
+                txtDuftrichtung.Clear();
+                txtJareszeiten.Clear();
+            }
+            _FilterBeiNummerFürParfüm("parfümNummer", txtParfümFilterbeiNummer.Text.Trim());
+        }
+        private void txtParfümFilterbeiNummer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        /// <summary>
+        /// hier habe ich extra filter für Duftrichtung und Jahreszeiten verwendet
+        /// </summary>
+        private void _FilterAnwendenFürDuftrichtungUndJahreszeiten(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(filterwert))
+            {
+                _bindingSourceParfüm.Filter = $"{spalteName} Like '%{filterwert}%'";
+            }
+            else
+                _bindingSourceParfüm.Filter = string.Empty;
+        }
+        private void txtDuftrichtung_TextChanged_1(object sender, EventArgs e)
+        {
+
+            string nummer, marke, name, jahreszeiten;
+            nummer = txtParfümFilterbeiNummer.Text;
+            marke = txtFilterBeiMarke.Text;
+            name = txtFilterBeiName.Text;
+            jahreszeiten = txtJareszeiten.Text;
+
+            if (!string.IsNullOrEmpty(nummer) || !string.IsNullOrEmpty(marke) 
+                || !string.IsNullOrEmpty(name) || !string.IsNullOrEmpty(jahreszeiten))
+            {
+                txtParfümFilterbeiNummer.Clear();
+                txtFilterBeiMarke.Clear();
+                txtFilterBeiName.Clear();
+                txtJareszeiten.Clear();
+            }
+            _FilterAnwendenFürDuftrichtungUndJahreszeiten("Duftrichtung", txtDuftrichtung.Text.Trim());
+        }
+
+        private void txtJareszeiten_TextChanged(object sender, EventArgs e)
+        {
+
+            string nummer, marke, name, duftRichtung;
+            nummer = txtParfümFilterbeiNummer.Text;
+            marke = txtFilterBeiMarke.Text;
+            name = txtFilterBeiName.Text;
+            duftRichtung = txtDuftrichtung.Text;
+
+
+            if (!string.IsNullOrEmpty(nummer) || !string.IsNullOrEmpty(marke) 
+                || !string.IsNullOrEmpty(name) || !string.IsNullOrEmpty(duftRichtung))
+            {
+                txtParfümFilterbeiNummer.Clear();
+                txtFilterBeiMarke.Clear();
+                txtFilterBeiName.Clear();
+                txtDuftrichtung.Clear();
+            }
+            _FilterAnwendenFürDuftrichtungUndJahreszeiten("Jahreszeiten",txtJareszeiten.Text.Trim());
+        }
+
+
+        //Ab Hier für Herrendüfte
+        private void _FilterAnwendenFürHerrenParfüms(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(filterwert))
+            {
+                _bindingSourceHerrenParfüm.Filter = $" {spalteName} Like '{filterwert}%'";
+            }
+            else
+                _bindingSourceHerrenParfüm.Filter = string.Empty;
+        }
+        private void txtHerrenParfümFilterbeiName_TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtHerrenParfümFilterbeiMarke.Text) || !string.IsNullOrEmpty(txtHerrenParfümFilterbeiNummer.Text))
+            {
+                txtHerrenParfümFilterbeiMarke.Clear();
+                txtHerrenParfümFilterbeiNummer.Clear();
+            }
+
+            _FilterAnwendenFürHerrenParfüms("Name", txtHerrenParfümFilterbeiName.Text.Trim());
+        }
+        private void txtHerrenParfümFilterbeiMarke_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtHerrenParfümFilterbeiName.Text) || !string.IsNullOrEmpty(txtHerrenParfümFilterbeiNummer.Text))
+            {
+                txtHerrenParfümFilterbeiName.Clear();
+                txtHerrenParfümFilterbeiNummer.Clear();
+            }
+            _FilterAnwendenFürHerrenParfüms("Marke", txtHerrenParfümFilterbeiMarke.Text.Trim());
+
+        }
+
+        private void _FilterBeiNummerFürHerrenParfüm(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(txtHerrenParfümFilterbeiNummer.Text.Trim()))
+            {
+                _bindingSourceHerrenParfüm.Filter = $"{spalteName} = {Convert.ToInt32(filterwert)}";
+            }
+            else
+                _bindingSourceHerrenParfüm.Filter = string.Empty;
+        }
+        private void txtHerrenParfümFilterbeiNummer_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtHerrenParfümFilterbeiName.Text) || !string.IsNullOrEmpty(txtHerrenParfümFilterbeiMarke.Text))
+            {
+                txtHerrenParfümFilterbeiName.Clear();
+                txtHerrenParfümFilterbeiMarke.Clear();
+            }
+            _FilterBeiNummerFürHerrenParfüm("parfümNummer", txtHerrenParfümFilterbeiNummer.Text.Trim());
+
+        }
+
+        private void txtHerrenParfümFilterbeiNummer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar));
+        }
+
+
+        //Ab hier für Damendüfte
+        private void _FilterAnwendenFürDamenParfüms(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(filterwert))
+            {
+                _bindingSourceDamenParfüm.Filter = $" {spalteName} Like '{filterwert}%'";
+            }
+            else
+                _bindingSourceDamenParfüm.Filter = string.Empty;
+        }
+
+        private void _FilterBeiNummerFürDamenParfüm(string spalteName, string filterwert)
+        {
+            if (!string.IsNullOrEmpty(txtDamenPafrümFilterBeiNummer.Text.Trim()))
+            {
+                _bindingSourceDamenParfüm.Filter = $"{spalteName} = {Convert.ToInt32(filterwert)}";
+            }
+            else
+                _bindingSourceDamenParfüm.Filter = string.Empty;
+        }
+        private void txtDamenPafrümFilterBeiNummer_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtDamenParfümFilterbeiName.Text) || !string.IsNullOrEmpty(txtDamenParfümFilterBeiMarke.Text))
+            {
+                txtDamenParfümFilterbeiName.Clear();
+                txtDamenParfümFilterBeiMarke.Clear();
+            }
+            _FilterBeiNummerFürDamenParfüm("parfümNummer", txtDamenPafrümFilterBeiNummer.Text.Trim());
+        }
+
+        private void txtDamenParfümFilterBeiMarke_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtDamenParfümFilterbeiName.Text) || !string.IsNullOrEmpty(txtDamenPafrümFilterBeiNummer.Text))
+            {
+                txtDamenParfümFilterbeiName.Clear();
+                txtDamenPafrümFilterBeiNummer.Clear();
+            }
+
+            _FilterAnwendenFürDamenParfüms("Marke", txtDamenParfümFilterBeiMarke.Text.Trim());
+        }
+
+        private void txtDamenParfümFilterbeiName_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtDamenParfümFilterBeiMarke.Text) || !string.IsNullOrEmpty(txtDamenPafrümFilterBeiNummer.Text))
+            {
+                txtDamenParfümFilterBeiMarke.Clear();
+                txtDamenPafrümFilterBeiNummer.Clear();
+            }
+
+            _FilterAnwendenFürDamenParfüms("Name", txtDamenParfümFilterbeiName.Text.Trim());
+        }
+
+        private void txtDamenPafrümFilterBeiNummer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar));
+        }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            // Bestimme die Farbe, die für das ausgewählte und das nicht ausgewählte Tab verwendet wird
+            Color selectedColor = Color.DarkGray;  // Farbe für den ausgewählten Tab
+            Color unselectedColor = Color.LightGray; // Farbe für nicht ausgewählte Tabs
+
+            // Prüfe, ob der Tab ausgewählt ist
+            bool isSelected = e.Index == tabControl1.SelectedIndex;
+
+            // Setze die Hintergrundfarbe entsprechend der Auswahl
+            e.Graphics.FillRectangle(new SolidBrush(isSelected ? selectedColor : unselectedColor), e.Bounds);
+
+            // Zeichne den Tab-Text in Schwarz oder einer anderen Farbe deiner Wahl
+            string tabText = tabControl1.TabPages[e.Index].Text;
+            TextRenderer.DrawText(e.Graphics, tabText, tabControl1.Font, e.Bounds, Color.Black, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+        }
+
+        private void txtParfümSuchen_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    e.Handled = true;
+            //    btnSuchen.PerformClick();
+           
+            //}
+        }
+
+        private void txtParfümSuchen_TextChanged(object sender, EventArgs e)
+        {
+            _AvlBaumImplementierung();
+
+        }
+        private void _AvlBaumImplementierung()
+        {
+            AVLTree tree = new AVLTree();
+
+            foreach (DataRow row in _dtParfüms.Rows)
+            {
+                tree.Insert(row["Name"].ToString());
+            }
+
+            string perfix = txtParfümSuchen.Text.Trim();
+            var completions = tree.AutoComplete(perfix);
+
+            //wir aktualisieren die listbox, um vorschläge anzuzeigen.
+            UpdateAutoCompleteListeBox(completions);
+
+        }
+
+        private void UpdateAutoCompleteListeBox(IEnumerable<string> completions)
+        {
+            lbVorschläge.Items.Clear();
+
+            //wir füllen dann die listebox mit vorschlägen
+            foreach (var suggestion in completions)
+            {
+                lbVorschläge.Items.Add(suggestion.ToString());
+            }
+
+            if (!string.IsNullOrEmpty(txtParfümSuchen.Text.Trim()))
+            {
+                //die liste wird angezeigt, wenn da Vorschläge gibt.
+                lbVorschläge.Visible = lbVorschläge.Items.Count > 0;
+            }
+            else
+            {
+                lbVorschläge.Items.Clear();
+                lbVorschläge.Visible = false;
+            }
+        }
+
+        private void lbVorschläge_Click(object sender, EventArgs e)
+        {
+            txtParfümSuchen.Focus();
+            //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
+            if (lbVorschläge.SelectedItems != null)
+            {
+                txtParfümSuchen.Text = lbVorschläge.SelectedItem.ToString();
+                lbVorschläge.Visible = false;
+            }
+        }
+
+        private void btnSuchen_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtParfümSuchen.Text))
+            {
+                string gesuchteDaten = txtParfümSuchen.Text.Trim();
+                // URL, die im Browser geöffnet werden soll
+                string url = "https://www.parfumo.de/s_perfumes_x.php?in=1&filter=" + gesuchteDaten;
+
+                // Starten Sie den Standard-Webbrowser mit der angegebenen URL
+                Process.Start(new ProcessStartInfo(url));
+            }
+            else
+            {
+                MessageBox.Show("Bitte geben Sie einen Suchbegriff ein.");
+            }
+        }
+
+        private void txtParfümSuchen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                // Verhindern, dass die Enter-Taste in das Textfeld eingegeben wird (kein Signalton)
+                e.Handled = true;
+
+                // Klick den Such-Button auslösen
+                btnSuchen.PerformClick();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (frmAddUpdateNewPerfum frm = new frmAddUpdateNewPerfum(-1))
+            {
+                frm.ShowDialog();
+            }
+            _LadeParfümDaten();
+        }
+
+        private void duftEntfernenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int parfümNummer = (int)dgvParfüm.CurrentRow.Cells[0].Value;
+     
+            bool result = (MessageBox.Show("Sind Sie sicher, Sie möchten " +
+              "diesen Vorgang durchführen","Hinweis",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning,
+              MessageBoxDefaultButton.Button2) == DialogResult.OK);
+
+            if(result && clsParfüm.Delete(parfümNummer))
+            {
+                MessageBox.Show("Duft wurde erfolgreich entfernt","Entfernung",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                _LadeParfümDaten();
+            }
+            else
+                MessageBox.Show("Der Vorgang ist abgebrochen.", "Entfernung",
+                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void parfümHinzufügentoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (frmAddUpdateNewPerfum frm = new frmAddUpdateNewPerfum(-1))
+            {
+                frm.ShowDialog();
+            }
+            _LadeParfümDaten();
+        }
+
+        private void pafümAktualisierentoolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            int parfümNummer = (int)dgvParfüm.CurrentRow.Cells[0].Value;
+
+            using(frmAddUpdateNewPerfum frm = new frmAddUpdateNewPerfum(parfümNummer))
+            {
+                frm.ShowDialog();
+            }
+            _LadeParfümDaten();
+        }
+    }
+}
