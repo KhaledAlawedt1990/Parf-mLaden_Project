@@ -143,6 +143,16 @@ namespace Parfüm2025.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap update_7411697 {
+            get {
+                object obj = ResourceManager.GetObject("update_7411697", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Vorderseite {
             get {
                 object obj = ResourceManager.GetObject("Vorderseite", resourceCulture);

@@ -126,5 +126,8 @@
   <ItemGroup>
     <None Include="Icons\delete_5953478 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\update_7411697.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

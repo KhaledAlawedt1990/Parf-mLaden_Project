@@ -493,5 +493,10 @@ namespace Parfüm2025
             }
             _LadeParfümDaten();
         }
+
+        private void btnDatenAktualisieren_Click(object sender, EventArgs e)
+        {
+            _LadeParfümDaten();
+        }
     }
 }
