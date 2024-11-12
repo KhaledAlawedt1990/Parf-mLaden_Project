@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -55,6 +53,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvParfüm = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mehrDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.parfümHinzufügentoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pafümAktualisierentoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.duftEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2HerrnDüfte = new System.Windows.Forms.TabPage();
             this.txtHerrenParfümFilterbeiNummer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,6 +65,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtHerrenParfümFilterbeiMarke = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dgvHerrefDüfte = new System.Windows.Forms.DataGridView();
             this.tabPage3DamenDüfte = new System.Windows.Forms.TabPage();
             this.txtDamenPafrümFilterBeiNummer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,22 +74,17 @@
             this.txtDamenParfümFilterBeiMarke = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDamenParfüm = new System.Windows.Forms.DataGridView();
-            this.duftEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pafümAktualisierentoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mehrDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parfümHinzufügentoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.dgvHerrefDüfte = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tpAlleParfüms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParfüm)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2HerrnDüfte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHerrefDüfte)).BeginInit();
             this.tabPage3DamenDüfte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDamenParfüm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHerrefDüfte)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -107,6 +106,7 @@
             // tpAlleParfüms
             // 
             this.tpAlleParfüms.BackColor = System.Drawing.Color.White;
+            this.tpAlleParfüms.Controls.Add(this.button1);
             this.tpAlleParfüms.Controls.Add(this.btnNeuParfümHinzufügen);
             this.tpAlleParfüms.Controls.Add(this.btnSuchen);
             this.tpAlleParfüms.Controls.Add(this.lbVorschläge);
@@ -319,7 +319,7 @@
             this.dgvParfüm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -359,6 +359,47 @@
             this.duftEntfernenToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(383, 162);
+            // 
+            // mehrDetailsToolStripMenuItem
+            // 
+            this.mehrDetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.details_32;
+            this.mehrDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mehrDetailsToolStripMenuItem.Name = "mehrDetailsToolStripMenuItem";
+            this.mehrDetailsToolStripMenuItem.Size = new System.Drawing.Size(382, 38);
+            this.mehrDetailsToolStripMenuItem.Text = "Mehr Details über den Duft";
+            this.mehrDetailsToolStripMenuItem.Click += new System.EventHandler(this.mehrDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(379, 6);
+            // 
+            // parfümHinzufügentoolStripMenuItem1
+            // 
+            this.parfümHinzufügentoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.plus_10021331;
+            this.parfümHinzufügentoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.parfümHinzufügentoolStripMenuItem1.Name = "parfümHinzufügentoolStripMenuItem1";
+            this.parfümHinzufügentoolStripMenuItem1.Size = new System.Drawing.Size(382, 38);
+            this.parfümHinzufügentoolStripMenuItem1.Text = "Neuer Parfüm hinzufügen";
+            this.parfümHinzufügentoolStripMenuItem1.Click += new System.EventHandler(this.parfümHinzufügentoolStripMenuItem1_Click);
+            // 
+            // pafümAktualisierentoolStripMenuItem2
+            // 
+            this.pafümAktualisierentoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
+            this.pafümAktualisierentoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.pafümAktualisierentoolStripMenuItem2.Name = "pafümAktualisierentoolStripMenuItem2";
+            this.pafümAktualisierentoolStripMenuItem2.Size = new System.Drawing.Size(382, 38);
+            this.pafümAktualisierentoolStripMenuItem2.Text = "Parfüm aktualisieren";
+            this.pafümAktualisierentoolStripMenuItem2.Click += new System.EventHandler(this.pafümAktualisierentoolStripMenuItem2_Click);
+            // 
+            // duftEntfernenToolStripMenuItem
+            // 
+            this.duftEntfernenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
+            this.duftEntfernenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.duftEntfernenToolStripMenuItem.Name = "duftEntfernenToolStripMenuItem";
+            this.duftEntfernenToolStripMenuItem.Size = new System.Drawing.Size(382, 38);
+            this.duftEntfernenToolStripMenuItem.Text = "Parfüm entfernen";
+            this.duftEntfernenToolStripMenuItem.Click += new System.EventHandler(this.duftEntfernenToolStripMenuItem_Click);
             // 
             // tabPage2HerrnDüfte
             // 
@@ -441,6 +482,28 @@
             this.label6.Size = new System.Drawing.Size(92, 29);
             this.label6.TabIndex = 11;
             this.label6.Text = "Marke:";
+            // 
+            // dgvHerrefDüfte
+            // 
+            this.dgvHerrefDüfte.AllowUserToAddRows = false;
+            this.dgvHerrefDüfte.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvHerrefDüfte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvHerrefDüfte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHerrefDüfte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHerrefDüfte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHerrefDüfte.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvHerrefDüfte.Location = new System.Drawing.Point(4, 91);
+            this.dgvHerrefDüfte.MultiSelect = false;
+            this.dgvHerrefDüfte.Name = "dgvHerrefDüfte";
+            this.dgvHerrefDüfte.ReadOnly = true;
+            this.dgvHerrefDüfte.RowHeadersWidth = 60;
+            this.dgvHerrefDüfte.RowTemplate.Height = 30;
+            this.dgvHerrefDüfte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHerrefDüfte.Size = new System.Drawing.Size(1538, 562);
+            this.dgvHerrefDüfte.TabIndex = 10;
             // 
             // tabPage3DamenDüfte
             // 
@@ -528,22 +591,14 @@
             // 
             this.dgvDamenParfüm.AllowUserToAddRows = false;
             this.dgvDamenParfüm.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvDamenParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDamenParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDamenParfüm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDamenParfüm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDamenParfüm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDamenParfüm.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDamenParfüm.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDamenParfüm.Location = new System.Drawing.Point(3, 73);
             this.dgvDamenParfüm.Name = "dgvDamenParfüm";
             this.dgvDamenParfüm.ReadOnly = true;
@@ -552,24 +607,6 @@
             this.dgvDamenParfüm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDamenParfüm.Size = new System.Drawing.Size(1538, 580);
             this.dgvDamenParfüm.TabIndex = 17;
-            // 
-            // duftEntfernenToolStripMenuItem
-            // 
-            this.duftEntfernenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
-            this.duftEntfernenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.duftEntfernenToolStripMenuItem.Name = "duftEntfernenToolStripMenuItem";
-            this.duftEntfernenToolStripMenuItem.Size = new System.Drawing.Size(382, 38);
-            this.duftEntfernenToolStripMenuItem.Text = "Parfüm entfernen";
-            this.duftEntfernenToolStripMenuItem.Click += new System.EventHandler(this.duftEntfernenToolStripMenuItem_Click);
-            // 
-            // pafümAktualisierentoolStripMenuItem2
-            // 
-            this.pafümAktualisierentoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
-            this.pafümAktualisierentoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.pafümAktualisierentoolStripMenuItem2.Name = "pafümAktualisierentoolStripMenuItem2";
-            this.pafümAktualisierentoolStripMenuItem2.Size = new System.Drawing.Size(382, 38);
-            this.pafümAktualisierentoolStripMenuItem2.Text = "Parfüm aktualisieren";
-            this.pafümAktualisierentoolStripMenuItem2.Click += new System.EventHandler(this.pafümAktualisierentoolStripMenuItem2_Click);
             // 
             // pictureBox1
             // 
@@ -583,58 +620,16 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // mehrDetailsToolStripMenuItem
+            // button1
             // 
-            this.mehrDetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.details_32;
-            this.mehrDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mehrDetailsToolStripMenuItem.Name = "mehrDetailsToolStripMenuItem";
-            this.mehrDetailsToolStripMenuItem.Size = new System.Drawing.Size(382, 38);
-            this.mehrDetailsToolStripMenuItem.Text = "Mehr Details über den Duft";
-            this.mehrDetailsToolStripMenuItem.Click += new System.EventHandler(this.mehrDetailsToolStripMenuItem_Click);
-            // 
-            // parfümHinzufügentoolStripMenuItem1
-            // 
-            this.parfümHinzufügentoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.plus_10021331;
-            this.parfümHinzufügentoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.parfümHinzufügentoolStripMenuItem1.Name = "parfümHinzufügentoolStripMenuItem1";
-            this.parfümHinzufügentoolStripMenuItem1.Size = new System.Drawing.Size(382, 38);
-            this.parfümHinzufügentoolStripMenuItem1.Text = "Neuer Parfüm hinzufügen";
-            this.parfümHinzufügentoolStripMenuItem1.Click += new System.EventHandler(this.parfümHinzufügentoolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(379, 6);
-            // 
-            // dgvHerrefDüfte
-            // 
-            this.dgvHerrefDüfte.AllowUserToAddRows = false;
-            this.dgvHerrefDüfte.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvHerrefDüfte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvHerrefDüfte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvHerrefDüfte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHerrefDüfte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvHerrefDüfte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHerrefDüfte.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvHerrefDüfte.Location = new System.Drawing.Point(4, 91);
-            this.dgvHerrefDüfte.MultiSelect = false;
-            this.dgvHerrefDüfte.Name = "dgvHerrefDüfte";
-            this.dgvHerrefDüfte.ReadOnly = true;
-            this.dgvHerrefDüfte.RowHeadersWidth = 60;
-            this.dgvHerrefDüfte.RowTemplate.Height = 30;
-            this.dgvHerrefDüfte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHerrefDüfte.Size = new System.Drawing.Size(1538, 562);
-            this.dgvHerrefDüfte.TabIndex = 10;
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(1031, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 43);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Addnew";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmpafümAnsicht
             // 
@@ -654,11 +649,11 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2HerrnDüfte.ResumeLayout(false);
             this.tabPage2HerrnDüfte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHerrefDüfte)).EndInit();
             this.tabPage3DamenDüfte.ResumeLayout(false);
             this.tabPage3DamenDüfte.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDamenParfüm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHerrefDüfte)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,6 +700,7 @@
         private System.Windows.Forms.ToolStripMenuItem pafümAktualisierentoolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridView dgvHerrefDüfte;
+        private System.Windows.Forms.Button button1;
     }
 }
 
