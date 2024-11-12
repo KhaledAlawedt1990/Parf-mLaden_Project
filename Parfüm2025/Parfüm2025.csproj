@@ -90,9 +90,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AVL-Baum\AVL-Baum.csproj">
-      <Project>{f8d567e5-dd3e-4ae6-904e-fc29ac780c2a}</Project>
-      <Name>AVL-Baum</Name>
+    <ProjectReference Include="AutoComplete\AutoComplete\AutoComplete\AutoComplete.csproj">
+      <Project>{1bb2d05b-13b1-4fe5-ae1c-9eb718dc4c28}</Project>
+      <Name>AutoComplete</Name>
     </ProjectReference>
     <ProjectReference Include="Busnisse_Layer\Busnisse_Layer.csproj">
       <Project>{ef81815d-4a86-4a1c-a36f-8b98e229d62d}</Project>

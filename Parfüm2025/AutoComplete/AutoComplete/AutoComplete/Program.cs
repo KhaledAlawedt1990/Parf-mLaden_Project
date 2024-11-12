@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class AVLNode
+public class AVLNode
 {
     public string Value { get; set; }
     public AVLNode Left { get; set; }
@@ -15,7 +15,7 @@ class AVLNode
     }
 }
 
-class AVLTree
+public class AVLTree
 {
     private AVLNode root;
 

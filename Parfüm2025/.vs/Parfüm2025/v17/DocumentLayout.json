@@ -1,29 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\",
+  "WorkspaceRootPath": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf\u00FCm2025\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|c:\\users\\khale\\desktop\\parf\u00FCm2025\\busnisse_layer\\clsparf\u00FCm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|solutionrelative:busnisse_layer\\clsparf\u00FCm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|c:\\users\\khale\\desktop\\parf\u00FCm2025\\data_layer\\clsparf\u00FCmdatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|solutionrelative:data_layer\\clsparf\u00FCmdatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf\u00FCm2025\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf\u00FCm2025\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}|AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\autocomplete\\autocomplete\\autocomplete\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}|AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj|solutionrelative:autocomplete\\autocomplete\\autocomplete\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\busnisse_layer\\clsparf\u00FCm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|solutionrelative:busnisse_layer\\clsparf\u00FCm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\data_layer\\clsparf\u00FCmdatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|solutionrelative:data_layer\\clsparf\u00FCmdatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 151,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,37 +62,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsParf\u00FCm.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\Busnisse_Layer\\clsParf\u00FCm.cs",
-              "RelativeDocumentMoniker": "Busnisse_Layer\\clsParf\u00FCm.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\Busnisse_Layer\\clsParf\u00FCm.cs",
-              "RelativeToolTip": "Busnisse_Layer\\clsParf\u00FCm.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAE4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T08:10:02.178Z",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwAgAAACRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-12T11:03:20.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "clsParf\u00FCmDatenzugriff.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
-              "RelativeDocumentMoniker": "Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
-              "RelativeToolTip": "Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
-              "ViewState": "AQIAAMsAAAAAAAAAAAAAANgAAABXAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\AutoComplete\\AutoComplete\\AutoComplete\\Program.cs",
+              "RelativeDocumentMoniker": "AutoComplete\\AutoComplete\\AutoComplete\\Program.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\AutoComplete\\AutoComplete\\AutoComplete\\Program.cs",
+              "RelativeToolTip": "AutoComplete\\AutoComplete\\AutoComplete\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T07:33:36.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T19:46:37.694Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "clsParf\u00FCm.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsParf\u00FCm.cs",
+              "RelativeDocumentMoniker": "Busnisse_Layer\\clsParf\u00FCm.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsParf\u00FCm.cs",
+              "RelativeToolTip": "Busnisse_Layer\\clsParf\u00FCm.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T08:10:02.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsParf\u00FCmDatenzugriff.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
+              "RelativeDocumentMoniker": "Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
+              "RelativeToolTip": "Data_Layer\\clsParf\u00FCmDatenzugriff.cs",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAAANgAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:33:36.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmParf\u00FCmAnsicht.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs",
               "RelativeDocumentMoniker": "frmParf\u00FCmAnsicht.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs [Entwurf]",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs [Entwurf]",
               "RelativeToolTip": "frmParf\u00FCmAnsicht.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T07:32:12.416Z",
@@ -92,41 +123,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmParf\u00FCmAnsicht.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs",
               "RelativeDocumentMoniker": "frmParf\u00FCmAnsicht.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmParf\u00FCmAnsicht.cs",
               "RelativeToolTip": "frmParf\u00FCmAnsicht.cs",
-              "ViewState": "AQIAAMUBAAAAAAAAAAAAANcBAAA8AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T07:32:17.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "frmAddUpdateNewPerfum.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
               "RelativeDocumentMoniker": "frmAddUpdateNewPerfum.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs [Entwurf]",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs [Entwurf]",
               "RelativeToolTip": "frmAddUpdateNewPerfum.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T22:52:05.59Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2024-11-08T22:52:05.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmAddUpdateNewPerfum.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
               "RelativeDocumentMoniker": "frmAddUpdateNewPerfum.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
               "RelativeToolTip": "frmAddUpdateNewPerfum.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAHAAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHAAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T22:55:20.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T22:55:20.413Z"
             }
           ]
         },

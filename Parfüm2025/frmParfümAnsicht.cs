@@ -1,4 +1,4 @@
-﻿using AVL_Baum;
+﻿
 using Busnisse_Layer;
 using System;
 using System.Collections.Generic;
@@ -367,7 +367,7 @@ namespace Parfüm2025
         }
         private void _AvlBaumImplementierung()
         {
-            AVLTree tree = new AVLTree();
+             AVLTree tree = new AVLTree();
 
             foreach (DataRow row in _dtParfüms.Rows)
             {

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Busnisse_Layer", "Busnisse_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Layer", "Data_Layer\Data_Layer.csproj", "{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVL-Baum", "..\AVL-Baum\AVL-Baum.csproj", "{F8D567E5-DD3E-4AE6-904E-FC29AC780C2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoComplete", "AutoComplete\AutoComplete\AutoComplete\AutoComplete.csproj", "{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8D567E5-DD3E-4AE6-904E-FC29AC780C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8D567E5-DD3E-4AE6-904E-FC29AC780C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8D567E5-DD3E-4AE6-904E-FC29AC780C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8D567E5-DD3E-4AE6-904E-FC29AC780C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB2D05B-13B1-4FE5-AE1C-9EB718DC4C28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
