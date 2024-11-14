@@ -63,6 +63,16 @@ namespace Parfüm2025.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap businessman_1478880 {
+            get {
+                object obj = ResourceManager.GetObject("businessman_1478880", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_5953478__1_ {
             get {
                 object obj = ResourceManager.GetObject("delete_5953478 (1)", resourceCulture);
@@ -86,6 +96,26 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap details_32 {
             get {
                 object obj = ResourceManager.GetObject("details 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_15112322 {
+            get {
+                object obj = ResourceManager.GetObject("file_15112322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_employee_13271134 {
+            get {
+                object obj = ResourceManager.GetObject("new-employee_13271134", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap refresh_5791276 {
             get {
                 object obj = ResourceManager.GetObject("refresh_5791276", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tester_4157277 {
+            get {
+                object obj = ResourceManager.GetObject("tester_4157277", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

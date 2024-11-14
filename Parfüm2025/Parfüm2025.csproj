@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrAddUpdatePerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrAddUpdatePerson.Designer.cs">
+      <DependentUpon>ctrAddUpdatePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUpdateNeueMitarbeiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateNeueMitarbeiter.Designer.cs">
+      <DependentUpon>frmAddUpdateNeueMitarbeiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMitarbeiterListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMitarbeiterListe.Designer.cs">
+      <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmParfümAnsicht.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrAddUpdatePerson.resx">
+      <DependentUpon>ctrAddUpdatePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateNeueMitarbeiter.resx">
+      <DependentUpon>frmAddUpdateNeueMitarbeiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMitarbeiterListe.resx">
+      <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmParfümAnsicht.resx">
       <DependentUpon>frmParfümAnsicht.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +125,10 @@
       <Project>{ef81815d-4a86-4a1c-a36f-8b98e229d62d}</Project>
       <Name>Busnisse_Layer</Name>
     </ProjectReference>
+    <ProjectReference Include="clsHilfsMethoden\HilfsMethoden.csproj">
+      <Project>{0461c194-ce2d-40a6-a75e-fdf9a29e6383}</Project>
+      <Name>HilfsMethoden</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pexels-karolina-grabowska-4735908.jpg" />
@@ -128,6 +159,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\update_7411697.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\businessman_1478880.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\new-employee_13271134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\file_15112322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\tester_4157277.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

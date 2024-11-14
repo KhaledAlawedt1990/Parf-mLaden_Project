@@ -23,6 +23,12 @@ namespace Parfüm2025
         BindingSource _bindingSourceParfüm;
         BindingSource _bindingSourceHerrenParfüm;
         BindingSource _bindingSourceDamenParfüm;
+
+        // wir haben die lock-Blöcke verwendet um die tabellen sowie die Aktualisierung 
+        // der Datenquellen zu Synchronisieren..
+        private readonly object _dataloadLock = new object();
+        private readonly object _filterLock = new object();
+        private readonly object _autoComplateLock = new object();
         public frmpafümAnsicht()
         {
             InitializeComponent();
@@ -37,9 +43,12 @@ namespace Parfüm2025
         //Lade Daten für Unisexdüfte
         private void _LadeParfümDaten()
         {
-            _dtParfüms = clsParfüm.GetAllParfüms();
-            _bindingSourceParfüm.DataSource = _dtParfüms;
-            dgvParfüm.DataSource = _bindingSourceParfüm;
+            lock (_dataloadLock)
+            {
+                _dtParfüms = clsParfüm.GetAllParfüms();
+                _bindingSourceParfüm.DataSource = _dtParfüms;
+                dgvParfüm.DataSource = _bindingSourceParfüm;
+            }
         }
 
         //Lade Daten für Herrendüfte
@@ -66,12 +75,15 @@ namespace Parfüm2025
 
         private void _FilterAnwendenFürParfüms(string spalteName, string filterwert)
         {
-            if (!string.IsNullOrEmpty(filterwert))
+            lock (_filterLock)
             {
-                _bindingSourceParfüm.Filter = $" {spalteName} Like '{filterwert}%'";
+                if (!string.IsNullOrEmpty(filterwert))
+                {
+                    _bindingSourceParfüm.Filter = $" {spalteName} Like '{filterwert}%'";
+                }
+                else
+                    _bindingSourceParfüm.Filter = string.Empty;
             }
-            else
-                _bindingSourceParfüm.Filter = string.Empty;
         }
         private void txtFilterBeiName_TextChanged(object sender, EventArgs e)
         {
@@ -384,23 +396,26 @@ namespace Parfüm2025
 
         private void UpdateAutoCompleteListeBox(IEnumerable<string> completions)
         {
-            lbVorschläge.Items.Clear();
-
-            //wir füllen dann die listebox mit vorschlägen
-            foreach (var suggestion in completions)
-            {
-                lbVorschläge.Items.Add(suggestion.ToString());
-            }
-
-            if (!string.IsNullOrEmpty(txtParfümSuchen.Text.Trim()))
-            {
-                //die liste wird angezeigt, wenn da Vorschläge gibt.
-                lbVorschläge.Visible = lbVorschläge.Items.Count > 0;
-            }
-            else
+            lock (_autoComplateLock)
             {
                 lbVorschläge.Items.Clear();
-                lbVorschläge.Visible = false;
+
+                //wir füllen dann die listebox mit vorschlägen
+                foreach (var suggestion in completions)
+                {
+                    lbVorschläge.Items.Add(suggestion.ToString());
+                }
+
+                if (!string.IsNullOrEmpty(txtParfümSuchen.Text.Trim()))
+                {
+                    //die liste wird angezeigt, wenn da Vorschläge gibt.
+                    lbVorschläge.Visible = lbVorschläge.Items.Count > 0;
+                }
+                else
+                {
+                    lbVorschläge.Items.Clear();
+                    lbVorschläge.Visible = false;
+                }
             }
         }
 
