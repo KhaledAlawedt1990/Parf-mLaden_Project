@@ -19,3 +19,10 @@ C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\AutoComplete\AutoComplet
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.csproj.CoreCompileInputs.cache
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.exe
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.pdb
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\bin\Debug\AutoComplete.exe.config
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\bin\Debug\AutoComplete.exe
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\bin\Debug\AutoComplete.pdb
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.csproj.AssemblyReference.cache
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.csproj.CoreCompileInputs.cache
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.exe
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project - Kopie\Parfüm2025\AutoComplete\AutoComplete\AutoComplete\obj\Debug\AutoComplete.pdb

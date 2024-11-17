@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsKunde.cs" />
     <Compile Include="clsMitarbeiter.cs" />
     <Compile Include="clsParfüm.cs" />
     <Compile Include="clsPerson.cs" />
+    <Compile Include="clsUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

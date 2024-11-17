@@ -142,5 +142,34 @@ namespace Parfüm2025
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
             }
         }
+
+        private void btnAktualisieren_Click(object sender, EventArgs e)
+        {
+            _SetzeMitarbeiterdaten();
+        }
+
+        private void HinzufügeBenutzerrechtetoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int mitarbeiterID = (int)dgvMitarbeiter.CurrentRow.Cells[0].Value;
+
+            frmAddUpdateNeueUser frm = new frmAddUpdateNeueUser(mitarbeiterID, frmAddUpdateNeueUser.enMode.addnew);
+            frm.ShowDialog();
+        }
+
+        private void AktualisiereBenutzerrechtetoolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            int mitarbeiterID = (int)dgvMitarbeiter.CurrentRow.Cells[0].Value;
+
+            frmAddUpdateNeueUser frm = new frmAddUpdateNeueUser(mitarbeiterID, frmAddUpdateNeueUser.enMode.update);
+            frm.ShowDialog();
+        }
+
+        private void cmsMitarbeiter_Opening(object sender, CancelEventArgs e)
+        {
+            int mitarbeiterID = (int)dgvMitarbeiter.CurrentRow.Cells[0].Value;
+
+            HinzufügeBenutzerrechtetoolStripMenuItem1.Enabled = (!clsUser.ExistUserForThisMitarbeiter(mitarbeiterID)); //falls der mitarbeiter user im system definiert.
+            AktualisiereBenutzerrechtetoolStripMenuItem2.Enabled = (clsUser.ExistUserForThisMitarbeiter(mitarbeiterID));
+        }
     }
 }

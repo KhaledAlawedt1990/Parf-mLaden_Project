@@ -73,6 +73,26 @@ namespace Parfüm2025.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CloseBlack {
+            get {
+                object obj = ResourceManager.GetObject("CloseBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CloseBlack1 {
+            get {
+                object obj = ResourceManager.GetObject("CloseBlack1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_5953478__1_ {
             get {
                 object obj = ResourceManager.GetObject("delete_5953478 (1)", resourceCulture);
@@ -116,6 +136,16 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap new_employee_13271134 {
             get {
                 object obj = ResourceManager.GetObject("new-employee_13271134", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_anis_salmani_208342252_11711830 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-anis-salmani-208342252-11711830", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

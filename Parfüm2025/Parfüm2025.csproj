@@ -46,17 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsGlobaleKlasse.cs" />
     <Compile Include="ctrAddUpdatePerson.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ctrAddUpdatePerson.Designer.cs">
       <DependentUpon>ctrAddUpdatePerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUpdateNeueKunde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateNeueKunde.Designer.cs">
+      <DependentUpon>frmAddUpdateNeueKunde.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUpdateNeueMitarbeiter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddUpdateNeueMitarbeiter.Designer.cs">
       <DependentUpon>frmAddUpdateNeueMitarbeiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUpdateNeueUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateNeueUser.Designer.cs">
+      <DependentUpon>frmAddUpdateNeueUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKundeListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKundeListe.Designer.cs">
+      <DependentUpon>frmKundeListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogginScreen.Designer.cs">
+      <DependentUpon>frmLogginScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMitarbeiterListe.cs">
       <SubType>Form</SubType>
@@ -81,8 +106,20 @@
     <EmbeddedResource Include="ctrAddUpdatePerson.resx">
       <DependentUpon>ctrAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateNeueKunde.resx">
+      <DependentUpon>frmAddUpdateNeueKunde.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddUpdateNeueMitarbeiter.resx">
       <DependentUpon>frmAddUpdateNeueMitarbeiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateNeueUser.resx">
+      <DependentUpon>frmAddUpdateNeueUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKundeListe.resx">
+      <DependentUpon>frmKundeListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogginScreen.resx">
+      <DependentUpon>frmLogginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMitarbeiterListe.resx">
       <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
@@ -171,6 +208,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\tester_4157277.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-anis-salmani-208342252-11711830.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBlack1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

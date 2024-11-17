@@ -130,17 +130,26 @@
   <data name="businessman_1478880" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\businessman_1478880.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CloseBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pexels-lovetosmile-8516275" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-lovetosmile-8516275.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh_5791276" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\refresh_5791276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pexels-valeriya-1961795" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Bilder\pexels-valeriya-1961795.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pexels-anis-salmani-208342252-11711830" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-anis-salmani-208342252-11711830.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="details" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\details.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh_5791276" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\refresh_5791276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_5953478 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\delete_5953478 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="details 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\details 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,16 +157,16 @@
   <data name="Vorderseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Bilder\Vorderseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tester_4157277" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\tester_4157277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="update_7411697" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\update_7411697.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_5953478 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\delete_5953478 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus_10021331" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\plus_10021331.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tester_4157277" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\tester_4157277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CloseBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

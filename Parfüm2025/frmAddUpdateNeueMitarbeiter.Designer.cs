@@ -189,10 +189,10 @@
             // 
             // btnSpeicherin
             // 
-            this.btnSpeicherin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpeicherin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpeicherin.Location = new System.Drawing.Point(47, 724);
             this.btnSpeicherin.Name = "btnSpeicherin";
-            this.btnSpeicherin.Size = new System.Drawing.Size(139, 48);
+            this.btnSpeicherin.Size = new System.Drawing.Size(278, 39);
             this.btnSpeicherin.TabIndex = 13;
             this.btnSpeicherin.Text = "Speichern";
             this.btnSpeicherin.UseVisualStyleBackColor = true;
@@ -200,10 +200,10 @@
             // 
             // btnAbbrechen
             // 
-            this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbbrechen.Location = new System.Drawing.Point(209, 724);
+            this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbbrechen.Location = new System.Drawing.Point(376, 724);
             this.btnAbbrechen.Name = "btnAbbrechen";
-            this.btnAbbrechen.Size = new System.Drawing.Size(139, 48);
+            this.btnAbbrechen.Size = new System.Drawing.Size(278, 39);
             this.btnAbbrechen.TabIndex = 14;
             this.btnAbbrechen.Text = "Abbrechen";
             this.btnAbbrechen.UseVisualStyleBackColor = true;

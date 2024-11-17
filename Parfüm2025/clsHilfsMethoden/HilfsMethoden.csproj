@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="clsDatumFormat.cs" />
     <Compile Include="clsOrdnerFürBilderErstellen.cs" />
+    <Compile Include="clsPermissionService.cs" />
     <Compile Include="clsRegistryHelfer.cs" />
     <Compile Include="clsValidierung.cs" />
     <Compile Include="clsVerschüsselungHelfer.cs" />
