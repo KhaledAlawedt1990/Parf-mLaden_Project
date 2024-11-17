@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbAnmeldeDaten = new System.Windows.Forms.GroupBox();
+            this.btnSchliessen = new System.Windows.Forms.Button();
             this.btnEinloggen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPasswort = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSchliessen = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbAnmeldeDaten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,18 +52,32 @@
             this.gbAnmeldeDaten.Controls.Add(this.txtPasswort);
             this.gbAnmeldeDaten.Controls.Add(this.txtUsername);
             this.gbAnmeldeDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAnmeldeDaten.Location = new System.Drawing.Point(408, 26);
+            this.gbAnmeldeDaten.Location = new System.Drawing.Point(544, 32);
+            this.gbAnmeldeDaten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbAnmeldeDaten.Name = "gbAnmeldeDaten";
-            this.gbAnmeldeDaten.Size = new System.Drawing.Size(240, 398);
+            this.gbAnmeldeDaten.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAnmeldeDaten.Size = new System.Drawing.Size(320, 600);
             this.gbAnmeldeDaten.TabIndex = 3;
             this.gbAnmeldeDaten.TabStop = false;
             this.gbAnmeldeDaten.Text = "Anmeldedaten";
             // 
+            // btnSchliessen
+            // 
+            this.btnSchliessen.Location = new System.Drawing.Point(26, 541);
+            this.btnSchliessen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSchliessen.Name = "btnSchliessen";
+            this.btnSchliessen.Size = new System.Drawing.Size(264, 39);
+            this.btnSchliessen.TabIndex = 5;
+            this.btnSchliessen.Text = "Schließen";
+            this.btnSchliessen.UseVisualStyleBackColor = true;
+            this.btnSchliessen.Click += new System.EventHandler(this.btnSchliessen_Click);
+            // 
             // btnEinloggen
             // 
-            this.btnEinloggen.Location = new System.Drawing.Point(20, 287);
+            this.btnEinloggen.Location = new System.Drawing.Point(26, 483);
+            this.btnEinloggen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEinloggen.Name = "btnEinloggen";
-            this.btnEinloggen.Size = new System.Drawing.Size(198, 32);
+            this.btnEinloggen.Size = new System.Drawing.Size(264, 39);
             this.btnEinloggen.TabIndex = 4;
             this.btnEinloggen.Text = "Einloggen";
             this.btnEinloggen.UseVisualStyleBackColor = true;
@@ -72,33 +86,41 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 145);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 251);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.Size = new System.Drawing.Size(118, 29);
             this.label2.TabIndex = 3;
-            this.label2.Text = "passwort";
+            this.label2.Text = "Passwort:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 71);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(136, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "User name:";
             // 
             // txtPasswort
             // 
-            this.txtPasswort.Location = new System.Drawing.Point(20, 168);
+            this.txtPasswort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswort.Location = new System.Drawing.Point(26, 284);
+            this.txtPasswort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPasswort.Name = "txtPasswort";
-            this.txtPasswort.Size = new System.Drawing.Size(198, 26);
+            this.txtPasswort.Size = new System.Drawing.Size(263, 34);
             this.txtPasswort.TabIndex = 1;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(20, 94);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(27, 189);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(198, 26);
+            this.txtUsername.Size = new System.Drawing.Size(263, 34);
             this.txtUsername.TabIndex = 0;
             // 
             // pictureBox1
@@ -106,21 +128,12 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.pexels_anis_salmani_208342252_11711830;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(371, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(495, 645);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnSchliessen
-            // 
-            this.btnSchliessen.Location = new System.Drawing.Point(20, 334);
-            this.btnSchliessen.Name = "btnSchliessen";
-            this.btnSchliessen.Size = new System.Drawing.Size(198, 32);
-            this.btnSchliessen.TabIndex = 5;
-            this.btnSchliessen.Text = "Schließen";
-            this.btnSchliessen.UseVisualStyleBackColor = true;
-            this.btnSchliessen.Click += new System.EventHandler(this.btnSchliessen_Click);
             // 
             // errorProvider1
             // 
@@ -128,12 +141,13 @@
             // 
             // frmLogginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 450);
+            this.ClientSize = new System.Drawing.Size(934, 645);
             this.ControlBox = false;
             this.Controls.Add(this.gbAnmeldeDaten);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogginScreen";

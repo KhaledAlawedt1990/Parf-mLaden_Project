@@ -83,6 +83,12 @@
     <Compile Include="frmLogginScreen.Designer.cs">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainScreen.Designer.cs">
+      <DependentUpon>frmMainScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMitarbeiterListe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogginScreen.resx">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainScreen.resx">
+      <DependentUpon>frmMainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMitarbeiterListe.resx">
       <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>

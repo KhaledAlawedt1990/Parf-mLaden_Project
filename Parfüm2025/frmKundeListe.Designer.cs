@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAktualisieren = new System.Windows.Forms.Button();
             this.lblRecord = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,8 +46,12 @@
             this.deaktiviereKundeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aktiviereKundeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendeEmailZumKundenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKunde)).BeginInit();
             this.cmsKunde.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAktualisieren
@@ -56,9 +60,10 @@
             this.btnAktualisieren.BackColor = System.Drawing.Color.Khaki;
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAktualisieren.Location = new System.Drawing.Point(924, 271);
+            this.btnAktualisieren.Location = new System.Drawing.Point(1030, 333);
+            this.btnAktualisieren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAktualisieren.Name = "btnAktualisieren";
-            this.btnAktualisieren.Size = new System.Drawing.Size(321, 43);
+            this.btnAktualisieren.Size = new System.Drawing.Size(428, 53);
             this.btnAktualisieren.TabIndex = 16;
             this.btnAktualisieren.Text = "akutalisiere Kundedaten";
             this.btnAktualisieren.UseVisualStyleBackColor = false;
@@ -69,9 +74,10 @@
             this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(100, 689);
+            this.lblRecord.Location = new System.Drawing.Point(133, 848);
+            this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(39, 20);
+            this.lblRecord.Size = new System.Drawing.Size(48, 25);
             this.lblRecord.TabIndex = 15;
             this.lblRecord.Text = "###";
             // 
@@ -80,9 +86,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 689);
+            this.label2.Location = new System.Drawing.Point(29, 848);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Record:";
             // 
@@ -90,9 +97,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 292);
+            this.label1.Location = new System.Drawing.Point(33, 359);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Filter bei:";
             // 
@@ -103,18 +111,20 @@
             this.cbFilterbei.Items.AddRange(new object[] {
             "Vollname",
             "KundeID"});
-            this.cbFilterbei.Location = new System.Drawing.Point(115, 286);
+            this.cbFilterbei.Location = new System.Drawing.Point(153, 352);
+            this.cbFilterbei.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbFilterbei.Name = "cbFilterbei";
-            this.cbFilterbei.Size = new System.Drawing.Size(175, 28);
+            this.cbFilterbei.Size = new System.Drawing.Size(232, 33);
             this.cbFilterbei.TabIndex = 12;
             this.cbFilterbei.SelectedIndexChanged += new System.EventHandler(this.cbFilterbei_SelectedIndexChanged);
             // 
             // txtFilterwert
             // 
             this.txtFilterwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterwert.Location = new System.Drawing.Point(296, 286);
+            this.txtFilterwert.Location = new System.Drawing.Point(395, 352);
+            this.txtFilterwert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFilterwert.Name = "txtFilterwert";
-            this.txtFilterwert.Size = new System.Drawing.Size(451, 29);
+            this.txtFilterwert.Size = new System.Drawing.Size(600, 34);
             this.txtFilterwert.TabIndex = 11;
             this.txtFilterwert.TextChanged += new System.EventHandler(this.txtFilterwert_TextChanged);
             this.txtFilterwert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterwert_KeyPress);
@@ -125,9 +135,10 @@
             this.btnHinzufügen.BackColor = System.Drawing.Color.Khaki;
             this.btnHinzufügen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHinzufügen.Location = new System.Drawing.Point(1251, 271);
+            this.btnHinzufügen.Location = new System.Drawing.Point(1466, 333);
+            this.btnHinzufügen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHinzufügen.Name = "btnHinzufügen";
-            this.btnHinzufügen.Size = new System.Drawing.Size(321, 43);
+            this.btnHinzufügen.Size = new System.Drawing.Size(428, 53);
             this.btnHinzufügen.TabIndex = 10;
             this.btnHinzufügen.Text = "hinzufüge einen neuen Kunden";
             this.btnHinzufügen.UseVisualStyleBackColor = false;
@@ -141,36 +152,40 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKunde.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKunde.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKunde.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvKunde.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKunde.ContextMenuStrip = this.cmsKunde;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKunde.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvKunde.Location = new System.Drawing.Point(26, 320);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKunde.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvKunde.Location = new System.Drawing.Point(38, 393);
+            this.dgvKunde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvKunde.MultiSelect = false;
             this.dgvKunde.Name = "dgvKunde";
             this.dgvKunde.ReadOnly = true;
+            this.dgvKunde.RowHeadersWidth = 51;
             this.dgvKunde.RowTemplate.Height = 40;
             this.dgvKunde.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKunde.Size = new System.Drawing.Size(1546, 352);
+            this.dgvKunde.Size = new System.Drawing.Size(1856, 433);
             this.dgvKunde.TabIndex = 9;
+            this.dgvKunde.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKunde_CellContentClick);
             // 
             // cmsKunde
             // 
             this.cmsKunde.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsKunde.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsKunde.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.seheKundeDetailsToolStripMenuItem,
             this.aktualisiereKundedatenToolStripMenuItem,
@@ -179,53 +194,91 @@
             this.aktiviereKundeToolStripMenuItem,
             this.sendeEmailZumKundenToolStripMenuItem});
             this.cmsKunde.Name = "cmsKunde";
-            this.cmsKunde.Size = new System.Drawing.Size(257, 182);
+            this.cmsKunde.Size = new System.Drawing.Size(305, 196);
             // 
             // seheKundeDetailsToolStripMenuItem
             // 
             this.seheKundeDetailsToolStripMenuItem.Name = "seheKundeDetailsToolStripMenuItem";
-            this.seheKundeDetailsToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.seheKundeDetailsToolStripMenuItem.Size = new System.Drawing.Size(304, 32);
             this.seheKundeDetailsToolStripMenuItem.Text = "Sehe Kunde Details";
             this.seheKundeDetailsToolStripMenuItem.Click += new System.EventHandler(this.seheKundeDetailsToolStripMenuItem_Click);
             // 
             // aktualisiereKundedatenToolStripMenuItem
             // 
             this.aktualisiereKundedatenToolStripMenuItem.Name = "aktualisiereKundedatenToolStripMenuItem";
-            this.aktualisiereKundedatenToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.aktualisiereKundedatenToolStripMenuItem.Size = new System.Drawing.Size(304, 32);
             this.aktualisiereKundedatenToolStripMenuItem.Text = "Aktualisiere Kundedaten";
             this.aktualisiereKundedatenToolStripMenuItem.Click += new System.EventHandler(this.aktualisiereKundedatenToolStripMenuItem_Click);
             // 
             // entferneKundedatenToolStripMenuItem
             // 
             this.entferneKundedatenToolStripMenuItem.Name = "entferneKundedatenToolStripMenuItem";
-            this.entferneKundedatenToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.entferneKundedatenToolStripMenuItem.Size = new System.Drawing.Size(304, 32);
             this.entferneKundedatenToolStripMenuItem.Text = "Entferne Kundedaten";
             this.entferneKundedatenToolStripMenuItem.Click += new System.EventHandler(this.entferneKundedatenToolStripMenuItem_Click);
             // 
             // deaktiviereKundeToolStripMenuItem
             // 
             this.deaktiviereKundeToolStripMenuItem.Name = "deaktiviereKundeToolStripMenuItem";
-            this.deaktiviereKundeToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.deaktiviereKundeToolStripMenuItem.Size = new System.Drawing.Size(304, 32);
             this.deaktiviereKundeToolStripMenuItem.Text = "Deaktiviere Kunde";
+            this.deaktiviereKundeToolStripMenuItem.Click += new System.EventHandler(this.deaktiviereKundeToolStripMenuItem_Click_1);
             // 
             // aktiviereKundeToolStripMenuItem
             // 
             this.aktiviereKundeToolStripMenuItem.Name = "aktiviereKundeToolStripMenuItem";
-            this.aktiviereKundeToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.aktiviereKundeToolStripMenuItem.Size = new System.Drawing.Size(304, 32);
             this.aktiviereKundeToolStripMenuItem.Text = "Aktiviere Kunde";
+            this.aktiviereKundeToolStripMenuItem.Click += new System.EventHandler(this.aktiviereKundeToolStripMenuItem_Click_1);
             // 
             // sendeEmailZumKundenToolStripMenuItem
             // 
             this.sendeEmailZumKundenToolStripMenuItem.Name = "sendeEmailZumKundenToolStripMenuItem";
-            this.sendeEmailZumKundenToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.sendeEmailZumKundenToolStripMenuItem.Size = new System.Drawing.Size(304, 32);
             this.sendeEmailZumKundenToolStripMenuItem.Text = "Sende Email zum Kunden";
             this.sendeEmailZumKundenToolStripMenuItem.Click += new System.EventHandler(this.sendeEmailZumKundenToolStripMenuItem_Click_1);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Gold;
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(38, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1856, 314);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(489, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(931, 135);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Alowidat Parfüm";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(750, 184);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(412, 32);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Deine Düfte - Deine Geschichte";
+            // 
             // frmKundeListe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 718);
+            this.ClientSize = new System.Drawing.Size(1924, 884);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAktualisieren);
             this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.label2);
@@ -234,11 +287,15 @@
             this.Controls.Add(this.txtFilterwert);
             this.Controls.Add(this.btnHinzufügen);
             this.Controls.Add(this.dgvKunde);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmKundeListe";
             this.Text = "frmKundeListe";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmKundeListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKunde)).EndInit();
             this.cmsKunde.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +318,8 @@
         private System.Windows.Forms.ToolStripMenuItem deaktiviereKundeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aktiviereKundeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendeEmailZumKundenToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

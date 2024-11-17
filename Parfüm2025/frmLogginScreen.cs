@@ -80,15 +80,27 @@ namespace Parfüm2025
 
             try
             {
-               // frmMainScreen frm = new frmMainScreen();
+                // Benutzername und Passwort zurücksetzen
+                txtUsername.Clear();
+                txtPasswort.Clear();
 
-                //this.Hide();
-               // frm.ShowDialog();
+                // Hauptfenster erstellen
+                frmMainScreen frm = new frmMainScreen(this);
+
+                // Login-Fenster verstecken
+                this.Hide();
+
+                // Hauptfenster als modales Fenster öffnen
+                frm.ShowDialog();
+
+                // Login-Fenster wieder anzeigen (nach Schließen des Hauptfensters)
+                this.Show();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Fehler beim Laden des Hauptfensters: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Show(); // Das aktuelle Fenster wieder anzeigen
+                // Fehler anzeigen und Login-Fenster sichtbar machen
+                MessageBox.Show($"Fehler beim Öffnen des Hauptfensters: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Show();
             }
         }
             

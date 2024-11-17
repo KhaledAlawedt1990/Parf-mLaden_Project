@@ -116,30 +116,6 @@ namespace Parfüm2025
                 MessageBox.Show("Fehler ist aufgetreten!", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void deaktiviereKundeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int kundeID = (int)dgvKunde.CurrentRow.Cells[0].Value;
-
-            if (!clsKunde.deaktiviereKunde(kundeID))
-            {
-                MessageBox.Show("Der Kunde ist bereits Inaktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            _setzeKundedaten();
-        }
-
-        private void aktiviereKundeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int kundeID = (int)dgvKunde.CurrentRow.Cells[0].Value;
-
-            if (!clsKunde.aktiviereKunde(kundeID))
-            {
-                MessageBox.Show("Der Kunde ist bereits aktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            _setzeKundedaten();
-        }
-
        
         private void btnHinzufügen_Click(object sender, EventArgs e)
         {
@@ -161,6 +137,35 @@ namespace Parfüm2025
 
             // Öffne die URL im Standard-Webbrowser
             System.Diagnostics.Process.Start(gmailUrl);
+        }
+
+        private void deaktiviereKundeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            int kundeID = (int)dgvKunde.CurrentRow.Cells[0].Value;
+
+            if (!clsKunde.deaktiviereKunde(kundeID))
+            {
+                MessageBox.Show("Der Kunde ist bereits Inaktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            _setzeKundedaten();
+        }
+
+        private void aktiviereKundeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            int kundeID = (int)dgvKunde.CurrentRow.Cells[0].Value;
+
+            if (!clsKunde.aktiviereKunde(kundeID))
+            {
+                MessageBox.Show("Der Kunde ist bereits aktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            _setzeKundedaten();
+        }
+
+        private void dgvKunde_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
