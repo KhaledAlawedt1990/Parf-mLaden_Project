@@ -107,6 +107,12 @@
     <Compile Include="frmAddUpdateNewPerfum.Designer.cs">
       <DependentUpon>frmAddUpdateNewPerfum.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserListe.Designer.cs">
+      <DependentUpon>frmUserListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ctrAddUpdatePerson.resx">
@@ -139,20 +145,23 @@
     <EmbeddedResource Include="frmAddUpdateNewPerfum.resx">
       <DependentUpon>frmAddUpdateNewPerfum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUserListe.resx">
+      <DependentUpon>frmUserListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -226,6 +235,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CloseBlack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\users 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\People 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\perfume_1241933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\store_5622610.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\maths_14052894.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\add-user_492527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\recycle_17163818.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\unemployed_9772949.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\email_15254895.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

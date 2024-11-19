@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clsHilfsMethoden;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,23 +32,78 @@ namespace Parfüm2025
 
         private void parfümverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmpafümAnsicht frm = new frmpafümAnsicht();
-            frm.ShowDialog();
+            if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.ParfuemVerwaltung))
+            {
+                frmpafümAnsicht frm = new frmpafümAnsicht();
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
+                "Zugriff verweigert",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Benutzer ausloggen (aktiven Benutzer zurücksetzen)
-            clsGlobaleKlasse.currentUser = null;
-
-            // Login-Fenster wieder anzeigen
-            if (_einLoggin != null)
-            {
-                _einLoggin.Show();
-            }
-
-            // Hauptfenster schließen
             this.Close();
+        }
+
+        private void frmMainScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //// Benutzer ausloggen (aktiven Benutzer zurücksetzen)
+            //clsGlobaleKlasse.currentUser = null;
+
+            //// Login-Fenster wieder anzeigen
+            //if (_einLoggin != null)
+            //{
+            //    _einLoggin.Show();
+            //}
+        }
+
+        private void frmMainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Benutzer ausloggen (aktiven Benutzer zurücksetzen)
+            if(clsGlobaleKlasse.currentUser != null)
+                  clsGlobaleKlasse.currentUser = null;
+            
+            // Anwendung vollständig beenden
+            //Application.Exit();
+     
+            this.Close();
+        }
+
+        private void mitarbeiterverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.MitarbeiterVerwaltung))
+            {
+                frmMitarbeiterListe frm = new frmMitarbeiterListe();
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
+               "Zugriff verweigert",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Warning);
+        }
+
+        private void kundeverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.KundenVerwaltung))
+            {
+                frmKundeListe frm = new frmKundeListe();
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
+               "Zugriff verweigert",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Warning);
+        }
+
+        private void userverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

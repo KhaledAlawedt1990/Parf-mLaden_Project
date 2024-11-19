@@ -18,7 +18,7 @@ namespace Parfüm2025
         private int _mitarbeiterID = -1;
         private bool _flage = true;
         private clsUser _user;
-        public enum enMode { addnew = 0, update = 1 }
+        public enum enMode { addnew = 0, update = 1, seheDetails = 2 }
         private enMode _mode = enMode.addnew;
         public frmAddUpdateNeueUser(int mitarbeiterID, enMode mode)
         {
@@ -78,12 +78,11 @@ namespace Parfüm2025
         private void _fülleUserdaten()
         {
             
-                _user.mitarbeiterID = Convert.ToInt32(txtMitarbeiterID.Text);
-                _user.userRolle = txtUserrolle.Text;
-                _user.userPasswort = txtUserPasswort.Text;
-                _user.permissionNum = _BerechnePermission();
-                _user.istAktive = chbIstAktive.Checked;
-            
+            _user.mitarbeiterID = Convert.ToInt32(txtMitarbeiterID.Text);
+            _user.userRolle = txtUserrolle.Text;
+            _user.userPasswort = txtUserPasswort.Text;
+            _user.permissionNum = _BerechnePermission();
+            _user.istAktive = chbIstAktive.Checked;         
         }
 
         private void _speichereUserdaten()
@@ -163,6 +162,11 @@ namespace Parfüm2025
 
         private void frmAddUpdateNeueUser_Load(object sender, EventArgs e)
         {
+            if(_mode == enMode.seheDetails)
+            {
+                _ladeUserdaten();
+                btnSpeichern.Enabled = false;
+            }
             if (_mode == enMode.update)
             {
                 _ladeUserdaten();

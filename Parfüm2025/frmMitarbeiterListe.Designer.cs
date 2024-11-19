@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMitarbeiter = new System.Windows.Forms.DataGridView();
             this.cmsMitarbeiter = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.HinzufügeBenutzerrechtetoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +51,8 @@
             this.cbFilterBei = new System.Windows.Forms.ComboBox();
             this.btnAktualisieren = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMitarbeiter)).BeginInit();
             this.cmsMitarbeiter.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,39 +66,40 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMitarbeiter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMitarbeiter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMitarbeiter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMitarbeiter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMitarbeiter.ContextMenuStrip = this.cmsMitarbeiter;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMitarbeiter.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMitarbeiter.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMitarbeiter.Location = new System.Drawing.Point(12, 326);
             this.dgvMitarbeiter.MultiSelect = false;
             this.dgvMitarbeiter.Name = "dgvMitarbeiter";
             this.dgvMitarbeiter.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMitarbeiter.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvMitarbeiter.RowTemplate.Height = 50;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMitarbeiter.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMitarbeiter.RowHeadersWidth = 60;
+            this.dgvMitarbeiter.RowTemplate.Height = 40;
             this.dgvMitarbeiter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMitarbeiter.Size = new System.Drawing.Size(1487, 453);
+            this.dgvMitarbeiter.Size = new System.Drawing.Size(1529, 453);
             this.dgvMitarbeiter.TabIndex = 1;
             // 
             // cmsMitarbeiter
@@ -120,6 +121,8 @@
             // HinzufügeBenutzerrechtetoolStripMenuItem1
             // 
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HinzufügeBenutzerrechtetoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.add_user_492527;
+            this.HinzufügeBenutzerrechtetoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Name = "HinzufügeBenutzerrechtetoolStripMenuItem1";
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Size = new System.Drawing.Size(294, 38);
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Text = "Hinzufüge Benutzerrechte";
@@ -128,6 +131,8 @@
             // AktualisiereBenutzerrechtetoolStripMenuItem2
             // 
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AktualisiereBenutzerrechtetoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.recycle_17163818;
+            this.AktualisiereBenutzerrechtetoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Name = "AktualisiereBenutzerrechtetoolStripMenuItem2";
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Size = new System.Drawing.Size(294, 38);
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Text = "Aktualisiere Benutzerrechte";
@@ -176,6 +181,8 @@
             // deaktiviereMitarbeiterToolStripMenuItem
             // 
             this.deaktiviereMitarbeiterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deaktiviereMitarbeiterToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.unemployed_9772949;
+            this.deaktiviereMitarbeiterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deaktiviereMitarbeiterToolStripMenuItem.Name = "deaktiviereMitarbeiterToolStripMenuItem";
             this.deaktiviereMitarbeiterToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
             this.deaktiviereMitarbeiterToolStripMenuItem.Text = "Deaktiviere Mitarbeiter";
@@ -239,7 +246,7 @@
             this.btnAddnewMitarbeiter.BackColor = System.Drawing.Color.Gold;
             this.btnAddnewMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnewMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1166, 276);
+            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1208, 276);
             this.btnAddnewMitarbeiter.Name = "btnAddnewMitarbeiter";
             this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(333, 49);
             this.btnAddnewMitarbeiter.TabIndex = 7;
@@ -266,7 +273,7 @@
             this.btnAktualisieren.BackColor = System.Drawing.Color.Gold;
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAktualisieren.Location = new System.Drawing.Point(827, 276);
+            this.btnAktualisieren.Location = new System.Drawing.Point(869, 276);
             this.btnAktualisieren.Name = "btnAktualisieren";
             this.btnAktualisieren.Size = new System.Drawing.Size(333, 49);
             this.btnAktualisieren.TabIndex = 10;
@@ -283,39 +290,39 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(16, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1483, 270);
+            this.groupBox1.Size = new System.Drawing.Size(1525, 270);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(341, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(741, 108);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Alowidat Parfüm";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(567, 150);
+            this.label4.Location = new System.Drawing.Point(588, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(323, 28);
+            this.label4.Size = new System.Drawing.Size(303, 28);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Deine Düfte - Deine Geschichte";
+            this.label4.Text = "Dein Duft - Deine Geschichte";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(362, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(828, 109);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Alowidat Parfüm";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmMitarbeiterListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1530, 823);
+            this.ClientSize = new System.Drawing.Size(1572, 823);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAktualisieren);
             this.Controls.Add(this.cbFilterBei);

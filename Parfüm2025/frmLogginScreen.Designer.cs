@@ -52,45 +52,42 @@
             this.gbAnmeldeDaten.Controls.Add(this.txtPasswort);
             this.gbAnmeldeDaten.Controls.Add(this.txtUsername);
             this.gbAnmeldeDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAnmeldeDaten.Location = new System.Drawing.Point(544, 32);
-            this.gbAnmeldeDaten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAnmeldeDaten.Location = new System.Drawing.Point(448, 24);
             this.gbAnmeldeDaten.Name = "gbAnmeldeDaten";
-            this.gbAnmeldeDaten.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbAnmeldeDaten.Size = new System.Drawing.Size(320, 600);
+            this.gbAnmeldeDaten.Size = new System.Drawing.Size(240, 488);
             this.gbAnmeldeDaten.TabIndex = 3;
             this.gbAnmeldeDaten.TabStop = false;
             this.gbAnmeldeDaten.Text = "Anmeldedaten";
             // 
             // btnSchliessen
             // 
-            this.btnSchliessen.Location = new System.Drawing.Point(26, 541);
-            this.btnSchliessen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSchliessen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSchliessen.Location = new System.Drawing.Point(20, 440);
             this.btnSchliessen.Name = "btnSchliessen";
-            this.btnSchliessen.Size = new System.Drawing.Size(264, 39);
+            this.btnSchliessen.Size = new System.Drawing.Size(198, 32);
             this.btnSchliessen.TabIndex = 5;
             this.btnSchliessen.Text = "Schließen";
-            this.btnSchliessen.UseVisualStyleBackColor = true;
+            this.btnSchliessen.UseVisualStyleBackColor = false;
             this.btnSchliessen.Click += new System.EventHandler(this.btnSchliessen_Click);
             // 
             // btnEinloggen
             // 
-            this.btnEinloggen.Location = new System.Drawing.Point(26, 483);
-            this.btnEinloggen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEinloggen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEinloggen.Location = new System.Drawing.Point(20, 392);
             this.btnEinloggen.Name = "btnEinloggen";
-            this.btnEinloggen.Size = new System.Drawing.Size(264, 39);
+            this.btnEinloggen.Size = new System.Drawing.Size(198, 32);
             this.btnEinloggen.TabIndex = 4;
             this.btnEinloggen.Text = "Einloggen";
-            this.btnEinloggen.UseVisualStyleBackColor = true;
+            this.btnEinloggen.UseVisualStyleBackColor = false;
             this.btnEinloggen.Click += new System.EventHandler(this.btnEinloggen_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 251);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(16, 204);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 29);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Passwort:";
             // 
@@ -98,29 +95,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 160);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(16, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 29);
+            this.label1.Size = new System.Drawing.Size(107, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "User name:";
             // 
             // txtPasswort
             // 
             this.txtPasswort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswort.Location = new System.Drawing.Point(26, 284);
-            this.txtPasswort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPasswort.Location = new System.Drawing.Point(20, 231);
             this.txtPasswort.Name = "txtPasswort";
-            this.txtPasswort.Size = new System.Drawing.Size(263, 34);
+            this.txtPasswort.Size = new System.Drawing.Size(198, 28);
             this.txtPasswort.TabIndex = 1;
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(27, 189);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(20, 154);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(263, 34);
+            this.txtUsername.Size = new System.Drawing.Size(198, 28);
             this.txtUsername.TabIndex = 0;
             // 
             // pictureBox1
@@ -128,9 +122,8 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.pexels_anis_salmani_208342252_11711830;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(495, 645);
+            this.pictureBox1.Size = new System.Drawing.Size(442, 524);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -141,13 +134,12 @@
             // 
             // frmLogginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AcceptButton = this.btnEinloggen;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 645);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(700, 524);
             this.Controls.Add(this.gbAnmeldeDaten);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogginScreen";

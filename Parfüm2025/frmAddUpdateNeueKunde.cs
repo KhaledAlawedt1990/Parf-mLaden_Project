@@ -21,10 +21,11 @@ namespace Parfüm2025
         enMode _mode = enMode.addnew;
         private bool _seheDetails = false;
         private readonly object _lockObject = new object();
-        public frmAddUpdateNeueKunde(int personID)
+        public frmAddUpdateNeueKunde(int personID, bool seheDetails)
         {
             InitializeComponent();
             this._personID = personID;
+            this._seheDetails = seheDetails;
         }
 
         private void _ResetDatenAufStandardWerte()
@@ -144,13 +145,13 @@ namespace Parfüm2025
             _ResetDatenAufStandardWerte();
 
             //wenn wir die Mitarbeiterdaten nur zum anzeigen aufrufen.
-            //if (_seheDetails)
-            //{
-            //    ctrAddUpdatePerson1._GetPersonDetails(_personID);
-            //    _ladeKundedaten();
-            //    btnSpeichern.Enabled = false;
-            //    return;
-            //}
+            if (_seheDetails)
+            {
+                ctrAddUpdatePerson1._GetPersonDetails(_personID);
+                _ladeKundedaten();
+                btnSpeichern.Enabled = false;
+                return;
+            }
 
             ctrAddUpdatePerson1.HandlePersondaten(_personID); // Wir bearbeiten die persondaten.
 

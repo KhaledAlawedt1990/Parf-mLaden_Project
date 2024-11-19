@@ -82,13 +82,15 @@ namespace Parfüm2025
 
         private void seheKundeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            int personID = (int)dgvKunde.CurrentRow.Cells[1].Value;
+            frmAddUpdateNeueKunde frm = new frmAddUpdateNeueKunde(personID, true);
+            frm.ShowDialog();
         }
 
         private void aktualisiereKundedatenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int personID = (int)dgvKunde.CurrentRow.Cells[1].Value;
-            frmAddUpdateNeueKunde frm = new frmAddUpdateNeueKunde(personID);
+            frmAddUpdateNeueKunde frm = new frmAddUpdateNeueKunde(personID, false);
             frm.ShowDialog();
 
             _setzeKundedaten();
@@ -119,7 +121,7 @@ namespace Parfüm2025
        
         private void btnHinzufügen_Click(object sender, EventArgs e)
         {
-            frmAddUpdateNeueKunde frm = new frmAddUpdateNeueKunde(-1);
+            frmAddUpdateNeueKunde frm = new frmAddUpdateNeueKunde(-1, false);
             frm.ShowDialog();
 
             _setzeKundedaten();

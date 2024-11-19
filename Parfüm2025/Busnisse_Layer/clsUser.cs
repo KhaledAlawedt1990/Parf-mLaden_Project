@@ -127,7 +127,7 @@ namespace Busnisse_Layer
             return clsUserDatenzugriff.deaktiviereUser(userID);
         }
 
-        public static bool aktiviereUer(int userID)
+        public static bool aktiviereUser(int userID)
         {
             return clsUserDatenzugriff.aktiviereUser(userID);
         }
