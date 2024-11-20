@@ -45,6 +45,7 @@
             // 
             // gbAnmeldeDaten
             // 
+            this.gbAnmeldeDaten.BackColor = System.Drawing.Color.LightGray;
             this.gbAnmeldeDaten.Controls.Add(this.btnSchliessen);
             this.gbAnmeldeDaten.Controls.Add(this.btnEinloggen);
             this.gbAnmeldeDaten.Controls.Add(this.label2);
@@ -52,16 +53,16 @@
             this.gbAnmeldeDaten.Controls.Add(this.txtPasswort);
             this.gbAnmeldeDaten.Controls.Add(this.txtUsername);
             this.gbAnmeldeDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAnmeldeDaten.Location = new System.Drawing.Point(448, 24);
+            this.gbAnmeldeDaten.Location = new System.Drawing.Point(448, 12);
             this.gbAnmeldeDaten.Name = "gbAnmeldeDaten";
-            this.gbAnmeldeDaten.Size = new System.Drawing.Size(240, 488);
+            this.gbAnmeldeDaten.Size = new System.Drawing.Size(240, 500);
             this.gbAnmeldeDaten.TabIndex = 3;
             this.gbAnmeldeDaten.TabStop = false;
             this.gbAnmeldeDaten.Text = "Anmeldedaten";
             // 
             // btnSchliessen
             // 
-            this.btnSchliessen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSchliessen.BackColor = System.Drawing.Color.White;
             this.btnSchliessen.Location = new System.Drawing.Point(20, 440);
             this.btnSchliessen.Name = "btnSchliessen";
             this.btnSchliessen.Size = new System.Drawing.Size(198, 32);
@@ -72,7 +73,7 @@
             // 
             // btnEinloggen
             // 
-            this.btnEinloggen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEinloggen.BackColor = System.Drawing.Color.White;
             this.btnEinloggen.Location = new System.Drawing.Point(20, 392);
             this.btnEinloggen.Name = "btnEinloggen";
             this.btnEinloggen.Size = new System.Drawing.Size(198, 32);

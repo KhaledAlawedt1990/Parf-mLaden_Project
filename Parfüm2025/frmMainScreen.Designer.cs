@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.parfümverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitarbeiterverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +36,9 @@
             this.lageverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rechnungverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,86 @@
             this.menuStrip1.Size = new System.Drawing.Size(1643, 100);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // parfümverwaltungToolStripMenuItem
+            // 
+            this.parfümverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.parfümverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parfümverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.perfume_1241933;
+            this.parfümverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.parfümverwaltungToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
+            this.parfümverwaltungToolStripMenuItem.Name = "parfümverwaltungToolStripMenuItem";
+            this.parfümverwaltungToolStripMenuItem.Size = new System.Drawing.Size(150, 96);
+            this.parfümverwaltungToolStripMenuItem.Text = "Parfüm";
+            this.parfümverwaltungToolStripMenuItem.Click += new System.EventHandler(this.parfümverwaltungToolStripMenuItem_Click);
+            // 
+            // mitarbeiterverwaltungToolStripMenuItem
+            // 
+            this.mitarbeiterverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.mitarbeiterverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mitarbeiterverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.users_643;
+            this.mitarbeiterverwaltungToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mitarbeiterverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mitarbeiterverwaltungToolStripMenuItem.Name = "mitarbeiterverwaltungToolStripMenuItem";
+            this.mitarbeiterverwaltungToolStripMenuItem.Size = new System.Drawing.Size(185, 96);
+            this.mitarbeiterverwaltungToolStripMenuItem.Text = "Mitarbeiter";
+            this.mitarbeiterverwaltungToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mitarbeiterverwaltungToolStripMenuItem.Click += new System.EventHandler(this.mitarbeiterverwaltungToolStripMenuItem_Click);
+            // 
+            // userverwaltungToolStripMenuItem
+            // 
+            this.userverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.userverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.Users_2_643;
+            this.userverwaltungToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.userverwaltungToolStripMenuItem.Name = "userverwaltungToolStripMenuItem";
+            this.userverwaltungToolStripMenuItem.Size = new System.Drawing.Size(126, 96);
+            this.userverwaltungToolStripMenuItem.Text = "User";
+            this.userverwaltungToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.userverwaltungToolStripMenuItem.Click += new System.EventHandler(this.userverwaltungToolStripMenuItem_Click);
+            // 
+            // kundeverwaltungToolStripMenuItem
+            // 
+            this.kundeverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.kundeverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kundeverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.People_642;
+            this.kundeverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.kundeverwaltungToolStripMenuItem.Name = "kundeverwaltungToolStripMenuItem";
+            this.kundeverwaltungToolStripMenuItem.Size = new System.Drawing.Size(143, 96);
+            this.kundeverwaltungToolStripMenuItem.Text = "Kunde";
+            this.kundeverwaltungToolStripMenuItem.Click += new System.EventHandler(this.kundeverwaltungToolStripMenuItem_Click);
+            // 
+            // lageverwaltungToolStripMenuItem
+            // 
+            this.lageverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.lageverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lageverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.store_56226101;
+            this.lageverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.lageverwaltungToolStripMenuItem.Name = "lageverwaltungToolStripMenuItem";
+            this.lageverwaltungToolStripMenuItem.Size = new System.Drawing.Size(135, 96);
+            this.lageverwaltungToolStripMenuItem.Text = "Lager";
+            // 
+            // rechnungverwaltungToolStripMenuItem
+            // 
+            this.rechnungverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.rechnungverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rechnungverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.maths_140528941;
+            this.rechnungverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.rechnungverwaltungToolStripMenuItem.Name = "rechnungverwaltungToolStripMenuItem";
+            this.rechnungverwaltungToolStripMenuItem.Size = new System.Drawing.Size(173, 96);
+            this.rechnungverwaltungToolStripMenuItem.Text = "Rechnung";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.sign_out_32__22;
+            this.logoutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(147, 96);
+            this.logoutToolStripMenuItem.Text = "Ausloggen";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -110,86 +190,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Alowidat Parfüm";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // parfümverwaltungToolStripMenuItem
-            // 
-            this.parfümverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.parfümverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parfümverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.perfume_1241933;
-            this.parfümverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.parfümverwaltungToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
-            this.parfümverwaltungToolStripMenuItem.Name = "parfümverwaltungToolStripMenuItem";
-            this.parfümverwaltungToolStripMenuItem.Size = new System.Drawing.Size(247, 96);
-            this.parfümverwaltungToolStripMenuItem.Text = "Parfümverwaltung";
-            this.parfümverwaltungToolStripMenuItem.Click += new System.EventHandler(this.parfümverwaltungToolStripMenuItem_Click);
-            // 
-            // mitarbeiterverwaltungToolStripMenuItem
-            // 
-            this.mitarbeiterverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.mitarbeiterverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mitarbeiterverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.users_643;
-            this.mitarbeiterverwaltungToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mitarbeiterverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mitarbeiterverwaltungToolStripMenuItem.Name = "mitarbeiterverwaltungToolStripMenuItem";
-            this.mitarbeiterverwaltungToolStripMenuItem.Size = new System.Drawing.Size(283, 96);
-            this.mitarbeiterverwaltungToolStripMenuItem.Text = "Mitarbeiterverwaltung";
-            this.mitarbeiterverwaltungToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mitarbeiterverwaltungToolStripMenuItem.Click += new System.EventHandler(this.mitarbeiterverwaltungToolStripMenuItem_Click);
-            // 
-            // userverwaltungToolStripMenuItem
-            // 
-            this.userverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.userverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.Users_2_643;
-            this.userverwaltungToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.userverwaltungToolStripMenuItem.Name = "userverwaltungToolStripMenuItem";
-            this.userverwaltungToolStripMenuItem.Size = new System.Drawing.Size(224, 96);
-            this.userverwaltungToolStripMenuItem.Text = "Userverwaltung";
-            this.userverwaltungToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.userverwaltungToolStripMenuItem.Click += new System.EventHandler(this.userverwaltungToolStripMenuItem_Click);
-            // 
-            // kundeverwaltungToolStripMenuItem
-            // 
-            this.kundeverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.kundeverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kundeverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.People_642;
-            this.kundeverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.kundeverwaltungToolStripMenuItem.Name = "kundeverwaltungToolStripMenuItem";
-            this.kundeverwaltungToolStripMenuItem.Size = new System.Drawing.Size(240, 96);
-            this.kundeverwaltungToolStripMenuItem.Text = "Kundeverwaltung";
-            this.kundeverwaltungToolStripMenuItem.Click += new System.EventHandler(this.kundeverwaltungToolStripMenuItem_Click);
-            // 
-            // lageverwaltungToolStripMenuItem
-            // 
-            this.lageverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.lageverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lageverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.store_56226101;
-            this.lageverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.lageverwaltungToolStripMenuItem.Name = "lageverwaltungToolStripMenuItem";
-            this.lageverwaltungToolStripMenuItem.Size = new System.Drawing.Size(225, 96);
-            this.lageverwaltungToolStripMenuItem.Text = "Lageverwaltung";
-            // 
-            // rechnungverwaltungToolStripMenuItem
-            // 
-            this.rechnungverwaltungToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.rechnungverwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rechnungverwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.maths_140528941;
-            this.rechnungverwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.rechnungverwaltungToolStripMenuItem.Name = "rechnungverwaltungToolStripMenuItem";
-            this.rechnungverwaltungToolStripMenuItem.Size = new System.Drawing.Size(270, 96);
-            this.rechnungverwaltungToolStripMenuItem.Text = "Rechnungverwaltung";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.sign_out_32__22;
-            this.logoutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(147, 96);
-            this.logoutToolStripMenuItem.Text = "Ausloggen";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // frmMainScreen
             // 
