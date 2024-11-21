@@ -103,7 +103,16 @@ namespace Parfüm2025
 
         private void userverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.KundenVerwaltung))
+            {
+                frmUserListe frm = new frmUserListe();
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
+               "Zugriff verweigert",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Warning);
         }
     }
 }

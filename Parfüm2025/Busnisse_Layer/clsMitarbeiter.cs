@@ -133,9 +133,14 @@ namespace Busnisse_Layer
 
         public override bool Delete()
         {
-            bool Done = clsMitarbeiterDatenzugriff.DeleteMitarbeiter(this.MitarbeiterID);
+            bool UserEntfernt = clsUser.DeleteUserByMitarbeiterID(this.MitarbeiterID);
 
-            if (!Done)
+            if (!UserEntfernt)
+                return false; ;
+
+            bool MitarbeiterEntfernt = clsMitarbeiterDatenzugriff.DeleteMitarbeiter(this.MitarbeiterID);
+
+            if (!MitarbeiterEntfernt)
                 return false;
 
             //wir löschen dann die generische Person vom System.
@@ -144,9 +149,9 @@ namespace Busnisse_Layer
 
         public static bool DeleteMitarbeiter(int MitarbeiterID, int personID)
         {
-            bool Done = clsMitarbeiterDatenzugriff.DeleteMitarbeiter(MitarbeiterID);
+            bool MitarbeiterEntfernt = clsMitarbeiterDatenzugriff.DeleteMitarbeiter(MitarbeiterID);
 
-            if (Done)
+            if (MitarbeiterEntfernt)
             {
                 //wir löschen dann die generische Person vom System.
                 return clsPerson.Delete(personID);

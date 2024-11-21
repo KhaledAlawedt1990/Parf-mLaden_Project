@@ -71,9 +71,9 @@ namespace Parfüm2025
 
         private void deaktiviereBenutzerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int mitarbeiterID = (int)dgvUser.CurrentRow.Cells[1].Value;
+            int userID = (int)dgvUser.CurrentRow.Cells[0].Value;
 
-            if (!clsUser.deaktiviereUser(mitarbeiterID))
+            if (!clsUser.deaktiviereUser(userID))
             {
                 MessageBox.Show("Der Benutzer ist bereits Inaktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -83,11 +83,11 @@ namespace Parfüm2025
 
         private void aktiviereBenutzerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int mitarbeiterID = (int)dgvUser.CurrentRow.Cells[1].Value;
+            int userID = (int)dgvUser.CurrentRow.Cells[0].Value;
 
-            if (!clsUser.aktiviereUser(mitarbeiterID))
+            if (!clsUser.aktiviereUser(userID))
             {
-                MessageBox.Show("Der Benutzer ist bereits Inaktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Der Benutzer ist bereits Aktive!!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             _setzeUserdaten();

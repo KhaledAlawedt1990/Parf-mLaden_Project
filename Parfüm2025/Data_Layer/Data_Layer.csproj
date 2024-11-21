@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsKundeDatenzugriff.cs" />
+    <Compile Include="clsLageDatenzugriff.cs" />
     <Compile Include="clsMitarbeiterDatenzugriff.cs" />
     <Compile Include="clsParfümDatenzugriff.cs" />
     <Compile Include="clsPersonDatenzugriff.cs" />

@@ -13,6 +13,7 @@ namespace clsHilfsMethoden
         public const int KundenVerwaltung = 4;       // Bit 2
         public const int MitarbeiterVerwaltung = 8; // Bit 3
         public const int LagerVerwaltung = 16;      // Bit 4
+        public const int UserVerwaltung = 32;  //Bit 5
         public const int Admin = -1;                // Alle Berechtigungen
 
         // Prüft, ob der Benutzer Admin ist

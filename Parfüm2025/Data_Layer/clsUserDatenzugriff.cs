@@ -483,6 +483,31 @@ namespace Data_Layer
             return RowAffected > 0;
         }
 
+        public static bool DeleteUserByMitarbeiterID(int mitarbeiterID)
+        {
+            int RowAffected = 0;
+
+            string abfrage = @"Delete From Benutzer Where mitarbeiterID = @mitarbeiterID";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(abfrage, connection))
+                    {
+                        command.Parameters.AddWithValue("@mitarbeiterID", mitarbeiterID);
+
+                        //Öffene die verbindung und ausführe den Befehl
+                        connection.Open();
+                        RowAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw;
+            }
+            return RowAffected > 0;
+        }
         public static bool deaktiviereUser(int userID)
         {
             int rowAffected = 0;

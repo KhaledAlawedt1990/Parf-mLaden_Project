@@ -49,6 +49,9 @@ namespace Parfüm2025
 
                 if (chbLageverwaltung.Checked)
                     permissions = clsPermissionService.BerechtigungHinzufuegen(permissions, clsPermissionService.LagerVerwaltung);
+
+                if (chbUserverwaltung.Checked)
+                    permissions = clsPermissionService.BerechtigungHinzufuegen(permissions, clsPermissionService.UserVerwaltung);
             }
 
             return permissions;
@@ -74,6 +77,9 @@ namespace Parfüm2025
 
             if (clsPermissionService.HatBerechtigung(permission, clsPermissionService.LagerVerwaltung))
                 chbLageverwaltung.Checked = true;
+
+            if (clsPermissionService.HatBerechtigung(permissions, clsPermissionService.UserVerwaltung))
+                chbUserverwaltung.Checked = true;
         }
         private void _fülleUserdaten()
         {
@@ -132,18 +138,6 @@ namespace Parfüm2025
             _speichereUserdaten();
         }
 
-        private void chbIstAktive_CheckedChanged(object sender, EventArgs e)
-        {
-            if (_flage)
-            {
-                chbIstAktive.Text = "Inaktive";
-            }
-            else
-                chbIstAktive.Text = "Aktive";
-
-            _flage = !_flage;
-        }
-
         private void chbAdminBerechtigung_CheckedChanged(object sender, EventArgs e)
         {
             // Wenn Admin ausgewählt wird, deaktivieren wir die anderen Checkboxen
@@ -153,6 +147,7 @@ namespace Parfüm2025
             chbKundeverwaltung.Enabled = !istAdmin;
             chbMitarbeiterverwaltung.Enabled = !istAdmin;
             chbLageverwaltung.Enabled = !istAdmin;
+            chbUserverwaltung.Enabled = !istAdmin;
 
             if (istAdmin)
             {
@@ -207,6 +202,18 @@ namespace Parfüm2025
             isValid &= _ValidiereEinFeld(txtUserPasswort, "userPasswort");
 
             return isValid; // Gibt zurück, ob alle Felder gültig sind
+        }
+
+        private void chbIstAktive_CheckedChanged(object sender, EventArgs e)
+        {
+            if (_flage)
+            {
+                chbIstAktive.Text = "Inaktive";
+            }
+            else
+                chbIstAktive.Text = "Aktive";
+
+            _flage = !_flage;
         }
     }
 }

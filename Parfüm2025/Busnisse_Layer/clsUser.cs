@@ -117,6 +117,11 @@ namespace Busnisse_Layer
             return clsUserDatenzugriff.DeleteUser(this.userID);
         }
 
+        public static bool DeleteUserByMitarbeiterID(int mitarbeiterID)
+        {
+            return clsUserDatenzugriff.DeleteUserByMitarbeiterID(mitarbeiterID);
+        }
+
         public static DataTable GetAllUser()
         {
             return clsUserDatenzugriff.GetAllUser();

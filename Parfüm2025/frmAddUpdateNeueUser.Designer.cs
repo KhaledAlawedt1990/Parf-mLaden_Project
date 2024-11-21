@@ -43,6 +43,7 @@
             this.btnAbbrechen = new System.Windows.Forms.Button();
             this.btnSpeichern = new System.Windows.Forms.Button();
             this.gbPermission = new System.Windows.Forms.GroupBox();
+            this.chbUserverwaltung = new System.Windows.Forms.CheckBox();
             this.chbAdminBerechtigung = new System.Windows.Forms.CheckBox();
             this.chbLageverwaltung = new System.Windows.Forms.CheckBox();
             this.chbMitarbeiterverwaltung = new System.Windows.Forms.CheckBox();
@@ -188,6 +189,7 @@
             // 
             // gbPermission
             // 
+            this.gbPermission.Controls.Add(this.chbUserverwaltung);
             this.gbPermission.Controls.Add(this.chbAdminBerechtigung);
             this.gbPermission.Controls.Add(this.chbLageverwaltung);
             this.gbPermission.Controls.Add(this.chbMitarbeiterverwaltung);
@@ -200,6 +202,16 @@
             this.gbPermission.TabIndex = 5;
             this.gbPermission.TabStop = false;
             this.gbPermission.Text = "Permission";
+            // 
+            // chbUserverwaltung
+            // 
+            this.chbUserverwaltung.AutoSize = true;
+            this.chbUserverwaltung.Location = new System.Drawing.Point(43, 167);
+            this.chbUserverwaltung.Name = "chbUserverwaltung";
+            this.chbUserverwaltung.Size = new System.Drawing.Size(260, 24);
+            this.chbUserverwaltung.TabIndex = 5;
+            this.chbUserverwaltung.Text = "Berechtigung für Userverwaltung";
+            this.chbUserverwaltung.UseVisualStyleBackColor = true;
             // 
             // chbAdminBerechtigung
             // 
@@ -215,7 +227,7 @@
             // chbLageverwaltung
             // 
             this.chbLageverwaltung.AutoSize = true;
-            this.chbLageverwaltung.Location = new System.Drawing.Point(43, 179);
+            this.chbLageverwaltung.Location = new System.Drawing.Point(43, 137);
             this.chbLageverwaltung.Name = "chbLageverwaltung";
             this.chbLageverwaltung.Size = new System.Drawing.Size(262, 24);
             this.chbLageverwaltung.TabIndex = 3;
@@ -225,7 +237,7 @@
             // chbMitarbeiterverwaltung
             // 
             this.chbMitarbeiterverwaltung.AutoSize = true;
-            this.chbMitarbeiterverwaltung.Location = new System.Drawing.Point(43, 133);
+            this.chbMitarbeiterverwaltung.Location = new System.Drawing.Point(43, 107);
             this.chbMitarbeiterverwaltung.Name = "chbMitarbeiterverwaltung";
             this.chbMitarbeiterverwaltung.Size = new System.Drawing.Size(301, 24);
             this.chbMitarbeiterverwaltung.TabIndex = 2;
@@ -235,7 +247,7 @@
             // chbKundeverwaltung
             // 
             this.chbKundeverwaltung.AutoSize = true;
-            this.chbKundeverwaltung.Location = new System.Drawing.Point(43, 87);
+            this.chbKundeverwaltung.Location = new System.Drawing.Point(43, 77);
             this.chbKundeverwaltung.Name = "chbKundeverwaltung";
             this.chbKundeverwaltung.Size = new System.Drawing.Size(272, 24);
             this.chbKundeverwaltung.TabIndex = 1;
@@ -301,5 +313,6 @@
         private System.Windows.Forms.CheckBox chbKundeverwaltung;
         private System.Windows.Forms.CheckBox chbParfümverwaltung;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox chbUserverwaltung;
     }
 }
