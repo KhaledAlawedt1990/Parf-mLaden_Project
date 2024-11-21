@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtGrammText = new System.Windows.Forms.TextBox();
             this.dtpErstellungsDatum = new System.Windows.Forms.DateTimePicker();
             this.txtLagerbestand = new System.Windows.Forms.TextBox();
             this.txtParfümCode = new System.Windows.Forms.TextBox();
@@ -43,8 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSpeichern = new System.Windows.Forms.Button();
             this.btnAbbrechen = new System.Windows.Forms.Button();
-            this.txtGrammText = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,6 +72,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parfüm Mengedaten";
+            // 
+            // txtGrammText
+            // 
+            this.txtGrammText.Location = new System.Drawing.Point(339, 233);
+            this.txtGrammText.Name = "txtGrammText";
+            this.txtGrammText.Size = new System.Drawing.Size(70, 26);
+            this.txtGrammText.TabIndex = 12;
+            this.txtGrammText.Text = "Gramm";
             // 
             // dtpErstellungsDatum
             // 
@@ -112,6 +123,7 @@
             this.txtParfümNummer.Name = "txtParfümNummer";
             this.txtParfümNummer.Size = new System.Drawing.Size(246, 26);
             this.txtParfümNummer.TabIndex = 6;
+            this.txtParfümNummer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParfümNummer_KeyPress);
             // 
             // label6
             // 
@@ -189,13 +201,9 @@
             this.btnAbbrechen.UseVisualStyleBackColor = true;
             this.btnAbbrechen.Click += new System.EventHandler(this.btnAbbrechen_Click);
             // 
-            // txtGrammText
+            // errorProvider1
             // 
-            this.txtGrammText.Location = new System.Drawing.Point(339, 233);
-            this.txtGrammText.Name = "txtGrammText";
-            this.txtGrammText.Size = new System.Drawing.Size(70, 26);
-            this.txtGrammText.TabIndex = 12;
-            this.txtGrammText.Text = "Gramm";
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddUpdateNeueParfümMenge
             // 
@@ -212,6 +220,7 @@
             this.Load += new System.EventHandler(this.frmAddUpdateNeueParfümMenge_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +243,6 @@
         private System.Windows.Forms.Button btnAbbrechen;
         private System.Windows.Forms.DateTimePicker dtpErstellungsDatum;
         private System.Windows.Forms.TextBox txtGrammText;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
