@@ -143,7 +143,7 @@ namespace Data_Layer
                             Vorname = (string)reader["Vorname"];
                             Nachname = (string)reader["Nachname"];
                             GeburtsTag = (DateTime)reader["GeburtsTag"];
-                            Geschlecht = (char)reader["Geschlecht"];
+                            Geschlecht = reader["Geschlecht"].ToString()[0];
                             steuerID = (string)reader["SteuerID"];
                             Straße = (string)reader["Strasse"];
                             Stadt = (string)reader["Stadt"];
@@ -194,7 +194,7 @@ namespace Data_Layer
                             Vorname = (string)reader["Vorname"];
                             Nachname = (string)reader["Nachname"];
                             GeburtsTag = (DateTime)reader["GeburtsTag"];
-                            Geschlecht = (char)reader["Geschlecht"];
+                            Geschlecht = reader["Geschlecht"].ToString()[0];
                             steuerID = (string)reader["SteuerID"];
                             Email = reader["Email"] != DBNull.Value ? (string)reader["Email"] : string.Empty;
                             Straße = (string)reader["Strasse"];

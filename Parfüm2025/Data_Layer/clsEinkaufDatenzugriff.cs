@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace Data_Layer
 {
-    public class clsLageDatenzugriff
+    public class clsEinkaufDatenzugriff
     {
 
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
 
-        public static bool GetLagerDatenByParfümID(int parfümNummer, ref string parfümName, ref string batchNummer,
+        public static bool GetEinkaufDatenByParfümID(int parfümNummer, ref string parfümName, ref string batchNummer,
                     ref string parfümCode, ref float lagerbestand, ref DateTime erstellungsDatum)
         {
 
             bool isfound = false;
-            string abfrage = @"SELECT * From  Lager Where parfümNummer= @parfümNummer";
+            string abfrage = @"SELECT * From  Einkauf Where parfümNummer= @parfümNummer";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -55,13 +55,13 @@ namespace Data_Layer
             return isfound;
         }
 
-        public static bool GetLagerDatenByParfümName(ref int parfümNummer, string parfümName, ref string batchNummer,
+        public static bool GetEinkaufDatenByParfümName(ref int parfümNummer, string parfümName, ref string batchNummer,
                     ref string parfümCode, ref float lagerbestand, ref DateTime erstellungsDatum)
         {
 
             bool isfound = false;
 
-            string abfrage = @"SELECT * From Lager Where parfümName = @parfümName";
+            string abfrage = @"SELECT * From Einkauf Where parfümName = @parfümName";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -99,11 +99,11 @@ namespace Data_Layer
 
 
 
-        public static DataTable GetAllLagerDaten()
+        public static DataTable GetAllEinkaufDaten()
         {
             DataTable dt = new DataTable();
 
-            string abfrage = @"Select * From  Lager
+            string abfrage = @"Select * From  Einkauf
                                                   Order by erstellungsDatum Desc";
             try
             {
@@ -127,47 +127,12 @@ namespace Data_Layer
             }
             return dt;
         }
-
-
-        //public static DataTable GetAllKunde_View()
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    string abfrage = @"select Kunde.kundeID, Kunde.personID,
-        //                                (Person.Vorname + ' ' + Person.Nachname) as Vollname , 
-        //                                Person.Geburtstag, Person.Geschlecht, Kunde.firmaName, Person.Email, Kunde.regestriertAm, Kunde.istAktive
-        //                               from Person INNER JOIN Kunde ON
-        //                               Person.PersonID = Kunde.personID ";
-        //    try
-        //    {
-        //        using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //        {
-        //            using (SqlCommand command = new SqlCommand(abfrage, connection))
-        //            {
-
-        //                connection.Open();
-        //                using (SqlDataReader reader = command.ExecuteReader())
-        //                {
-        //                    if (reader.HasRows)
-        //                        dt.Load(reader);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw;
-        //    }
-        //    return dt;
-        //}
-
-
-        public static bool AddNewParfümMitMenge(int parfümNummer,string parfümName, string batchNummer,
+        public static bool AddNewEinkaufDaten(int parfümNummer,string parfümName, string batchNummer,
                     string parfümCode,float lagerbestand, DateTime erstellungsDatum)
         {
             int rowAffected = 0;
 
-            string abfrage = @"Insert into Lager(parfümNummer,parfümName,batchNummer,parfümCode,lagerbestand,erstellungsDatum)
+            string abfrage = @"Insert into Einkauf (parfümNummer,parfümName,batchNummer,parfümCode,lagerbestand,erstellungsDatum)
                                         Values  (@parfümNummer, @parfümName, @batchNummer, @parfümCode, @lagerbestand, @erstellungsDatum)";
        
             try
@@ -198,16 +163,16 @@ namespace Data_Layer
             return (rowAffected > 0);
         }
 
-        public static bool UpdateMengeByParfümNummer(int parfümNummer, string batchNummer,
+        public static bool UpdateEinkaufDaten(int parfümNummer, string batchNummer,
                     string parfümCode, float lagerbestand, DateTime erstellungsDatum)
         {
             int RowAffected = 0;
-            string abfrage = @"Update Lager  Set
+            string abfrage = @"Update Einkauf  Set
                                                   batchNummer = @batchNummer,
                                                   parfümCode  = @parfümCode,
                                                   lagerbestand = @lagerbestand,
-                                                  erstellungsDatum = GetDate()
-                                            Where parfümNummer = parfümNummer";
+                                                  erstellungsDatum = @erstellungsDatum
+                                            Where parfümNummer = @parfümNummer";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -220,6 +185,7 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@batchNummer", batchNummer);
                         command.Parameters.AddWithValue("@parfümCode", parfümCode);
                         command.Parameters.AddWithValue("@lagerbestand", lagerbestand);
+                        command.Parameters.AddWithValue("@erstellungsDatum", erstellungsDatum);
 
                         connection.Open();
                         RowAffected = command.ExecuteNonQuery();
@@ -233,11 +199,41 @@ namespace Data_Layer
             return RowAffected > 0;
         }
 
-        public static bool UpdateMengeByParfümName(string parfümName, string batchNummer,
+
+        public static bool UpdateLagerbestand(int parfümNummer, float neueLagerbestand)
+        {
+            int RowAffected = 0;
+            string abfrage = @"Update Einkauf  Set
+                                                  lagerbestand = @neueLagerbestand,
+                                                  erstellungsDatum = GetDate()
+                                            Where parfümNummer = @parfümNummer";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(abfrage, connection))
+                    {
+
+                        // Parameter hinzufügen
+                        command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
+                        command.Parameters.AddWithValue("@neueLagerbestand", neueLagerbestand);
+          
+                        connection.Open();
+                        RowAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw;
+            }
+            return RowAffected > 0;
+        }
+        public static bool UpdateEinkaufDaten(string parfümName, string batchNummer,
                  string parfümCode, float lagerbestand, DateTime erstellungsDatum)
         {
             int RowAffected = 0;
-            string abfrage = @"Update Lager  Set
+            string abfrage = @"Update Einkauf  Set
                                                   batchNummer = @batchNummer,
                                                   parfümCode  = @parfümCode,
                                                   lagerbestand = @lagerbestand,
@@ -267,11 +263,11 @@ namespace Data_Layer
             }
             return RowAffected > 0;
         }
-        public static bool DeleteParfüm(int parfümNummer)
+        public static bool DeleteEinkaufDaten(int parfümNummer)
         {
             int RowAffected = 0;
 
-            string abfrage = @"Delete From Lager Where ParfümNummer = @parfümNummer";
+            string abfrage = @"Delete From Einkauf Where ParfümNummer = @parfümNummer";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -297,7 +293,7 @@ namespace Data_Layer
         {
             bool istVerfügbar = false;
 
-            string abfrage = @"Select 1 From Lager where parfümNummer = @parfümNummer";
+            string abfrage = @"Select 1 From Einkauf where parfümNummer = @parfümNummer";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))

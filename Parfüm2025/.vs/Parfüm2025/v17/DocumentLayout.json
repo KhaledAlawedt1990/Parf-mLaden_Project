@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\hamssa\\desktop\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneueparf\u00FCmmenge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueparf\u00FCmmenge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\data_layer\\clskundedatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|solutionrelative:data_layer\\clskundedatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmaddupdateneueparf\u00FCmmenge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueparf\u00FCmmenge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmlagerliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlagerliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmlagerliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlagerliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\busnisse_layer\\clslager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|solutionrelative:busnisse_layer\\clslager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\busnisse_layer\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|solutionrelative:busnisse_layer\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0461C194-CE2D-40A6-A75E-FDF9A29E6383}|clsHilfsMethoden\\HilfsMethoden.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\clshilfsmethoden\\clskomminikationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0461C194-CE2D-40A6-A75E-FDF9A29E6383}|clsHilfsMethoden\\HilfsMethoden.csproj|solutionrelative:clshilfsmethoden\\clskomminikationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 151,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "clsUser.cs",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsUser.cs",
-              "RelativeDocumentMoniker": "Busnisse_Layer\\clsUser.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsUser.cs",
-              "RelativeToolTip": "Busnisse_Layer\\clsUser.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAswHkAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T11:10:18.466Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -75,86 +42,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmAddUpdateNeueUser.cs",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
-              "RelativeDocumentMoniker": "frmAddUpdateNeueUser.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
-              "RelativeToolTip": "frmAddUpdateNeueUser.cs",
-              "ViewState": "AgIAALsAAAAAAAAAAAAAAM0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "clsKomminikationsService.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\clsHilfsMethoden\\clsKomminikationsService.cs",
+              "RelativeDocumentMoniker": "clsHilfsMethoden\\clsKomminikationsService.cs",
+              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\clsHilfsMethoden\\clsKomminikationsService.cs",
+              "RelativeToolTip": "clsHilfsMethoden\\clsKomminikationsService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwIEAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:32:08.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmLagerListe.cs",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLagerListe.cs",
-              "RelativeDocumentMoniker": "frmLagerListe.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLagerListe.cs",
-              "RelativeToolTip": "frmLagerListe.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAmwB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T20:05:54.973Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "RelativeDocumentMoniker": "frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "RelativeToolTip": "frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAawMMAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:34:35.887Z",
+              "WhenOpened": "2024-11-24T10:18:32.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAddUpdateNeueParf\u00FCmMenge.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "RelativeDocumentMoniker": "frmAddUpdateNeueParf\u00FCmMenge.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueParf\u00FCmMenge.cs [Entwurf]",
-              "RelativeToolTip": "frmAddUpdateNeueParf\u00FCmMenge.cs [Entwurf]",
+              "DocumentIndex": 0,
+              "Title": "clsKundeDatenzugriff.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsKundeDatenzugriff.cs",
+              "RelativeDocumentMoniker": "Data_Layer\\clsKundeDatenzugriff.cs",
+              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsKundeDatenzugriff.cs",
+              "RelativeToolTip": "Data_Layer\\clsKundeDatenzugriff.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAwIsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:21:12.061Z"
+              "WhenOpened": "2024-11-23T13:56:57.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmLagerListe.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLagerListe.cs",
-              "RelativeDocumentMoniker": "frmLagerListe.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLagerListe.cs [Entwurf]",
-              "RelativeToolTip": "frmLagerListe.cs [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:00:01.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsLager.cs",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsLager.cs",
-              "RelativeDocumentMoniker": "Busnisse_Layer\\clsLager.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsLager.cs",
-              "RelativeToolTip": "Busnisse_Layer\\clsLager.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAAwIsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T16:39:29.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAwBgAAAAMAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T15:06:29.963Z"
+              "WhenOpened": "2024-11-17T15:06:29.963Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -95,6 +95,49 @@ namespace Data_Layer
             return isfound;
         }
 
+        public static bool GetKundebyPersonName(string vollName, ref int kundeID, ref int personID, ref string firmaName,
+                          ref DateTime regestriertAm, ref bool istAktive)
+        {
+
+            bool isfound = false;
+
+            string abfrage = @"Select * from Kunde Inner join Person On
+                                                              Kunde.personID = Person.personID
+	                                               where Trim(person.Vorname) + ' ' + Trim(Person.Nachname) = @vollName";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(abfrage, connection))
+                    {
+                        command.Parameters.AddWithValue("@vollName", vollName);
+
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                isfound = true;
+
+                                kundeID = (int)reader["kundeID"];
+                                personID = (int)reader["personID"];
+                                firmaName = (string)reader["firmaName"];
+                                regestriertAm = (DateTime)reader["regestriertAm"];
+                                istAktive = (bool)reader["istAktive"];
+
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                isfound = false;
+                throw;
+            }
+
+            return isfound;
+        }
 
 
         public static DataTable GetAllKunde()
@@ -125,7 +168,35 @@ namespace Data_Layer
             }
             return dt;
         }
+        public static DataTable GetAllKundenName()
+        {
+            DataTable dt = new DataTable();
 
+            string abfrage = @"select (person.Vorname + ' ' + Person.Nachname) As Vollname
+                                                 From Person Inner Join Kunde On 
+	                                                Person.personID = Kunde.personID;";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(abfrage, connection))
+                    {
+
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw;
+            }
+            return dt;
+        }
 
         public static DataTable GetAllKunde_View()
         {
@@ -187,36 +258,7 @@ namespace Data_Layer
         //    return dt;
         //}
 
-        public static DataTable GetKundeByPersonName(string vollname)
-        {
-            DataTable dt = new DataTable();
-
-            string abfrage = @"Select * from Person Inner Join Kunde On
-                                                      Person.PersonID = Kunde.personID 
-		                                                     where Trim(Person.Vorname) + ' ' + Trim(Person.Nachname) = @PersonName";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    using (SqlCommand command = new SqlCommand(abfrage, connection))
-                    {
-                        command.Parameters.AddWithValue("@Vollname", vollname);
-
-                        connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                                dt.Load(reader);
-                        }
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                throw;
-            }
-            return dt;
-        }
+       
         public static bool DoesKundeExistForThisPerson(int PersonID)
         {
             bool isFound = false;

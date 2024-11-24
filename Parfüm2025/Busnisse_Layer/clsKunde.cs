@@ -116,9 +116,26 @@ namespace Busnisse_Layer
             else
                 return null;
         }
-        public static DataTable FindKundeByPersonName(string personName)
+        public static clsKunde FindKundeByPersonName(string vollName)
         {
-            return clsKundeDatenzugriff.GetKundeByPersonName(personName);
+            int kundeID = -1; int personID = -1;string firmaName = string.Empty;
+            DateTime regestriertAm = DateTime.Now; bool istAktive = false;
+
+            bool isfound = clsKundeDatenzugriff.GetKundebyPersonName(vollName, ref kundeID, ref personID, ref firmaName, ref regestriertAm, ref istAktive);
+
+            if (!isfound) return null; // falls ist nicht gefunden.
+
+            //wir suchen nach der generischen Person für diesen Mitarbeiter
+            clsPerson person = clsPerson.Find(personID);
+
+            if (person != null)
+            {
+                return new clsKunde(person.PersonID, person.Vorname, person.Nachname, person.GeburtsTag, person.Geschlecht,
+                    person.SteuerID, person.Email, person.Straße, person.Stadt, person.Land, person.Telefon,
+                    kundeID, firmaName, regestriertAm, istAktive);
+            }
+            else
+                return null;
         }
 
         public override bool Delete()
@@ -148,6 +165,11 @@ namespace Busnisse_Layer
         public static DataTable GetAllKunde()
         {
             return clsKundeDatenzugriff.GetAllKunde();
+        }
+
+        public static DataTable GetAllKundeName()
+        {
+            return clsKundeDatenzugriff.GetAllKundenName();
         }
         public static DataTable GetKundeView()
         {

@@ -17,7 +17,7 @@ namespace Parfüm2025
         public enMode _mode = enMode.addnew;
 
         private readonly object _lackObject = new object();
-        clsLager _parfüm;
+        clsEinkauf _einkaufsDaten;
         private int _parfümNummer;
         public frmAddUpdateNeueParfümMenge(int parfümNummer, enMode mode)
         {
@@ -30,10 +30,10 @@ namespace Parfüm2025
         private void _DatumEinrichten()
         {
             dtpErstellungsDatum.Format = DateTimePickerFormat.Custom;
-            dtpErstellungsDatum.CustomFormat = "dd.MM.yyyy       HH:mm";
+            dtpErstellungsDatum.CustomFormat = "dd.MM.yyyy          HH:mm";
         }
 
-        private void _setzeDatenAufStandardWerte()
+        private void _setzeEinkaufsDatenAufStandardWerte()
         {
             _DatumEinrichten();
 
@@ -45,25 +45,25 @@ namespace Parfüm2025
             dtpErstellungsDatum.Value = DateTime.Now;
         }
 
-        private void _ladeParfümMengeDaten()
+        private void _ladeEinkaufsDaten()
         {
             lock(_lackObject)
             {
-                _parfüm = clsLager.FindLagerDatenByParfümNummer(_parfümNummer);
+                _einkaufsDaten = clsEinkauf.FindEinkaufDatenByParfümNummer(_parfümNummer);
 
-                if(_parfüm != null)
+                if(_einkaufsDaten != null)
                 {
-                    txtParfümNummer.Text = _parfüm.parfümNummer.ToString();
-                    txtParfümName.Text = _parfüm.parfümName;
-                    txtBatchNummer.Text = _parfüm.batchNummer;
-                    txtParfümCode.Text = _parfüm.parfümCode;
+                    txtParfümNummer.Text = _einkaufsDaten.parfümNummer.ToString();
+                    txtParfümName.Text = _einkaufsDaten.parfümName;
+                    txtBatchNummer.Text = _einkaufsDaten.batchNummer;
+                    txtParfümCode.Text = _einkaufsDaten.parfümCode;
     
-                    txtLagerbestand.Text = _parfüm.lagerbestand.ToString();
-                    dtpErstellungsDatum.Value = _parfüm.erstellungsDatum;
+                    txtLagerbestand.Text = _einkaufsDaten.lagerbestand.ToString();
+                    dtpErstellungsDatum.Value = _einkaufsDaten.erstellungsDatum;
                 }
                 else
                 {
-                    MessageBox.Show("Der gesuchte Parfüm wurde nicht gefunden.", "Fehlermeldung",
+                    MessageBox.Show("Der gesuchte EinkaufsDaten wurde nicht gefunden.", "Fehlermeldung",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -76,15 +76,15 @@ namespace Parfüm2025
 
         private void frmAddUpdateNeueParfümMenge_Load(object sender, EventArgs e)
         {
-            _setzeDatenAufStandardWerte();
+            _setzeEinkaufsDatenAufStandardWerte();
 
             if(_mode == enMode.addnew)
             {
-                _parfüm = new clsLager();
+                _einkaufsDaten = new clsEinkauf();
             }
             else
             {
-                _ladeParfümMengeDaten();
+                _ladeEinkaufsDaten();
             }
         }
 
@@ -109,65 +109,66 @@ namespace Parfüm2025
             return true;
         }
 
-        private bool _ValiedereParfümMengeFelder()
+        private bool _ValiedereEinkaufsdatenMenge()
         {
             bool isValid = true;
 
-            isValid = _ValidiereEinFeld(txtParfümName, "parfümName");
-            isValid &= _ValidiereEinFeld(txtBatchNummer, "batchNummer");
-            isValid &= _ValidiereEinFeld(txtParfümCode, "parfümCode");
-            isValid &= _ValidiereEinFeld(txtLagerbestand, "lagerbestand");
+            isValid = _ValidiereEinFeld(txtParfümName, "ParfümName");
+            isValid &= _ValidiereEinFeld(txtBatchNummer, "BatchNummer");
+            isValid &= _ValidiereEinFeld(txtParfümCode, "ParfümCode");
+            isValid &= _ValidiereEinFeld(txtNeueMenge, "EinkaufsMenge");
             return isValid; // Gibt zurück, ob alle Felder gültig sind
         }
 
-        private float _istLagerbestandNummerGültig(string lagerbestand)
+        private float _HatNeueMengeGültigeNummer(string neueMenge)
         {
-            float lagerbestandNummer;
+            float MengeNummer;
 
-            if (float.TryParse(lagerbestand, out lagerbestandNummer))
+            if (float.TryParse(neueMenge, out MengeNummer))
             {
-                return lagerbestandNummer;
+                return MengeNummer;
             }
             else
                 return -1;
         }
 
-        private void _fülleParfümMengeDaten()
+        private void _fülleEinkaufsdaten()
         {
-            _parfüm.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
-            _parfüm.parfümName = txtParfümName.Text;
-            _parfüm.batchNummer = txtBatchNummer.Text;
-            _parfüm.parfümCode = txtParfümCode.Text;
-            _parfüm.lagerbestand = Convert.ToSingle(txtLagerbestand.Text);
-            _parfüm.erstellungsDatum = dtpErstellungsDatum.Value;
+            _einkaufsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
+            _einkaufsDaten.parfümName = txtParfümName.Text;
+            _einkaufsDaten.batchNummer = txtBatchNummer.Text;
+            _einkaufsDaten.parfümCode = txtParfümCode.Text;
+            _einkaufsDaten.lagerbestand = _einkaufsDaten.lagerbestand + Convert.ToSingle(txtNeueMenge.Text.Trim()); // Hier addieren wir die neue Menge!!!!!
+            _einkaufsDaten.erstellungsDatum = dtpErstellungsDatum.Value;
         }
-        private void _speicherParfümMengeDaten()
+        private void _speicherEinkaufsdaten()
         {
            
-            if (!_ValiedereParfümMengeFelder())
+            if (!_ValiedereEinkaufsdatenMenge())
                 return;
 
-            if (_istLagerbestandNummerGültig(txtLagerbestand.Text.Trim()) == -1)
+            if (_HatNeueMengeGültigeNummer(txtNeueMenge.Text.Trim()) == -1)
             {
-                errorProvider1.SetError(txtLagerbestand, "Der Feld nimmt nur Nummer auf");
+                errorProvider1.SetError(txtNeueMenge, "Der Feld nimmt nur Nummer auf");
                 return;
             }
 
-            _fülleParfümMengeDaten();
+            _fülleEinkaufsdaten();
 
             try
             {
-                if (_parfüm.Save())
+                if (_einkaufsDaten.Save())
                 {
-                    MessageBox.Show($"Parfüm Menge erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
+                    MessageBox.Show($"Einkauf Daten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     _mode = enMode.update; // wir aktualisieren den Object.
 
                     this.Close();
+                    
                 }
                 else
-                    MessageBox.Show("Fehler beim Speichern ParfümMenge ist aufgetreten", "Fehlermeldung",
+                    MessageBox.Show("Fehler beim Speichern der Einkaufsdaten ist aufgetreten", "Fehlermeldung",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
@@ -188,7 +189,7 @@ namespace Parfüm2025
 
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
-            _speicherParfümMengeDaten();
+            _speicherEinkaufsdaten();
         }
 
         private void txtParfümNummer_KeyPress(object sender, KeyPressEventArgs e)

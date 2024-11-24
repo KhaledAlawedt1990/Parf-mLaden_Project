@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsDruckerService.cs" />
     <Compile Include="clsGlobaleKlasse.cs" />
     <Compile Include="ctrAddUpdatePerson.cs">
       <SubType>UserControl</SubType>
@@ -77,17 +78,23 @@
     <Compile Include="frmAddUpdateNeueUser.Designer.cs">
       <DependentUpon>frmAddUpdateNeueUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUpdateVerkaufDaten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateVerkaufDaten.Designer.cs">
+      <DependentUpon>frmAddUpdateVerkaufDaten.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKundeListe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmKundeListe.Designer.cs">
       <DependentUpon>frmKundeListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLagerListe.cs">
+    <Compile Include="frmEinkaufsDatenListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLagerListe.Designer.cs">
-      <DependentUpon>frmLagerListe.cs</DependentUpon>
+    <Compile Include="frmEinkaufsDatenListe.Designer.cs">
+      <DependentUpon>frmEinkaufsDatenListe.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogginScreen.cs">
       <SubType>Form</SubType>
@@ -125,6 +132,12 @@
     <Compile Include="frmUserListe.Designer.cs">
       <DependentUpon>frmUserListe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerkaufsDatenListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerkaufsDatenListe.Designer.cs">
+      <DependentUpon>frmVerkaufsDatenListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ctrAddUpdatePerson.resx">
@@ -142,11 +155,14 @@
     <EmbeddedResource Include="frmAddUpdateNeueUser.resx">
       <DependentUpon>frmAddUpdateNeueUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateVerkaufDaten.resx">
+      <DependentUpon>frmAddUpdateVerkaufDaten.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmKundeListe.resx">
       <DependentUpon>frmKundeListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLagerListe.resx">
-      <DependentUpon>frmLagerListe.cs</DependentUpon>
+    <EmbeddedResource Include="frmEinkaufsDatenListe.resx">
+      <DependentUpon>frmEinkaufsDatenListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogginScreen.resx">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>
@@ -165,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserListe.resx">
       <DependentUpon>frmUserListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerkaufsDatenListe.resx">
+      <DependentUpon>frmVerkaufsDatenListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,12 +223,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pexels-karolina-grabowska-4735908.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-lovetosmile-8516275.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Icons\details.png" />
   </ItemGroup>
   <ItemGroup>
@@ -244,15 +257,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\tester_4157277.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-anis-salmani-208342252-11711830.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CloseBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CloseBlack1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\users 64.png" />

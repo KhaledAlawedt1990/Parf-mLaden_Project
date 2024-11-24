@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Busnisse_Layer
 {
-    public class clsLager
+    public class clsEinkauf
     {
         public enum enMode { addnew = 0, update = 1 }
         private enMode _mode = enMode.addnew;
 
         public enum enUpdate { UpdateDurchParfümNummer = 0, UpdateDurchParfümName}
-        private enUpdate _update = enUpdate.UpdateDurchParfümNummer;
+
         public int parfümNummer { get; set; }
         public string parfümName { get; set; }
         public string batchNummer { get; set; }
@@ -23,7 +23,7 @@ namespace Busnisse_Layer
         public float lagerbestand { get; set; }
         public DateTime erstellungsDatum { get; set; }
 
-        private clsLager(int parfümNummer, string parfümName, string batchNummer, string parfümCode,
+        private clsEinkauf(int parfümNummer, string parfümName, string batchNummer, string parfümCode,
             float lagerbestand, DateTime erstellungsDatum)
         {
             this.parfümNummer = parfümNummer;
@@ -36,7 +36,7 @@ namespace Busnisse_Layer
             _mode = enMode.update;
         }
 
-        public clsLager()
+        public clsEinkauf()
         {
             this.parfümNummer = -1;
             this.parfümName = string.Empty;
@@ -48,58 +48,62 @@ namespace Busnisse_Layer
             _mode = enMode.addnew;
         }
 
-        public static clsLager FindLagerDatenByParfümNummer(int parfümNummer)
+        public static clsEinkauf FindEinkaufDatenByParfümNummer(int parfümNummer)
         {
             string parfümName = string.Empty; string batchNummer = string.Empty;
             string parfümCode = string.Empty; float lagerbestand = 0; DateTime erstellungsDatum = DateTime.Now;
 
-            if (clsLageDatenzugriff.GetLagerDatenByParfümID(parfümNummer, ref parfümName, ref batchNummer,
+            if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümID(parfümNummer, ref parfümName, ref batchNummer,
                                                          ref parfümCode, ref lagerbestand, ref erstellungsDatum))
             {
-                return new clsLager(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, erstellungsDatum);
+                return new clsEinkauf(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, erstellungsDatum);
             }
             else
                 return null;
         }
 
-        public static clsLager FindLagerDatenByParfümName(string parfümName)
+        public static clsEinkauf FindEinkaufDatenByParfümName(string parfümName)
         {
             int parfümNummer = -1; string batchNummer = string.Empty;
             string parfümCode = string.Empty; float lagerbestand = 0; DateTime erstellungsDatum = DateTime.Now;
 
-            if (clsLageDatenzugriff.GetLagerDatenByParfümName(ref parfümNummer, parfümName, ref batchNummer,
+            if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümName(ref parfümNummer, parfümName, ref batchNummer,
                                                          ref parfümCode, ref lagerbestand, ref erstellungsDatum))
             {
-                return new clsLager(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, erstellungsDatum);
+                return new clsEinkauf(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, erstellungsDatum);
             }
             else
                 return null;
         }
 
-        private bool _AddNewParfümMitMenge()
+        private bool _AddNewEinkaufDaten()
         {
-            return clsLageDatenzugriff.AddNewParfümMitMenge(this.parfümNummer, this.parfümName, this.batchNummer,
+            return clsEinkaufDatenzugriff.AddNewEinkaufDaten(this.parfümNummer, this.parfümName, this.batchNummer,
                                                                          this.parfümCode, this.lagerbestand, this.erstellungsDatum);
         }
 
-        public bool _UpdateByParfümName()
-        {
-            return clsLageDatenzugriff.UpdateMengeByParfümName(this.parfümName, this.batchNummer, this.parfümCode,
-                                                                   this.lagerbestand, erstellungsDatum);
-        }
+        //public bool _UpdateByParfümName()
+        //{
+        //    return clsEinkaufDatenzugriff.UpdateMengeByParfümName(this.parfümName, this.batchNummer, this.parfümCode,
+        //                                                           this.lagerbestand, erstellungsDatum);
+        //}
 
         public bool _UpdateByParfümNummer()
         {
-            return clsLageDatenzugriff.UpdateMengeByParfümNummer(this.parfümNummer, this.batchNummer, this.parfümCode,
+            return clsEinkaufDatenzugriff.UpdateEinkaufDaten(this.parfümNummer, this.batchNummer, this.parfümCode,
                                                                    this.lagerbestand, erstellungsDatum);
         }
 
+        public static bool UpdateLagerbestand(int parfümNummer, float neueLagerbestand)
+        {
+            return clsEinkaufDatenzugriff.UpdateLagerbestand(parfümNummer, neueLagerbestand);
+        }
         public bool Save()
         {
             switch(_mode)
             {
                 case enMode.addnew:
-                    if (_AddNewParfümMitMenge())
+                    if (_AddNewEinkaufDaten())
                     {
                         _mode = enMode.update;
                         return true;
@@ -110,15 +114,7 @@ namespace Busnisse_Layer
 
                 case enMode.update:
                     {
-                        switch(_update)
-                        {
-                            case enUpdate.UpdateDurchParfümNummer:
-                                return _UpdateByParfümNummer();
-
-                            case enUpdate.UpdateDurchParfümName:
-                                return _UpdateByParfümName();
-                        }
-                        break;
+                        return _UpdateByParfümNummer();
                     }
             }
             return false;
@@ -126,17 +122,17 @@ namespace Busnisse_Layer
 
         public static bool istParfümNummerVerfügbar(int parfümNummer)
         {
-            return clsLageDatenzugriff.IstParfümNummerVerfügbar(parfümNummer);
+            return clsEinkaufDatenzugriff.IstParfümNummerVerfügbar(parfümNummer);
         }
 
         public bool Delete()
         {
-            return clsLageDatenzugriff.DeleteParfüm(this.parfümNummer);
+            return clsEinkaufDatenzugriff.DeleteEinkaufDaten(this.parfümNummer);
         }
 
-        public static DataTable GetAllLagerDaten()
+        public static DataTable GetAllEinkaufDaten()
         {
-            return clsLageDatenzugriff.GetAllLagerDaten();
+            return clsEinkaufDatenzugriff.GetAllEinkaufDaten();
         }
     }
 }

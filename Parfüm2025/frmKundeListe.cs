@@ -64,7 +64,7 @@ namespace Parfüm2025
 
         private void cbFilterbei_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(cbFilterbei.Text.Trim()))
+            if (cbFilterbei.SelectedIndex != -1)
             {
                 txtFilterwert.Clear();
                 txtFilterwert.Focus();

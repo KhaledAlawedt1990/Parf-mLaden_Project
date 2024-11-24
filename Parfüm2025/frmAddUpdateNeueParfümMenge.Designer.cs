@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNeueMenge = new System.Windows.Forms.TextBox();
             this.txtGrammText = new System.Windows.Forms.TextBox();
             this.dtpErstellungsDatum = new System.Windows.Forms.DateTimePicker();
             this.txtLagerbestand = new System.Windows.Forms.TextBox();
@@ -52,6 +55,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtNeueMenge);
             this.groupBox1.Controls.Add(this.txtGrammText);
             this.groupBox1.Controls.Add(this.dtpErstellungsDatum);
             this.groupBox1.Controls.Add(this.txtLagerbestand);
@@ -68,14 +74,39 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 315);
+            this.groupBox1.Size = new System.Drawing.Size(432, 374);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Parfüm Mengedaten";
+            this.groupBox1.Text = "Einkauf-daten";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(339, 238);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(70, 26);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.Text = "Gramm";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Maroon;
+            this.label7.Location = new System.Drawing.Point(15, 238);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "EinkaufsMenge:*";
+            // 
+            // txtNeueMenge
+            // 
+            this.txtNeueMenge.Location = new System.Drawing.Point(163, 238);
+            this.txtNeueMenge.Name = "txtNeueMenge";
+            this.txtNeueMenge.Size = new System.Drawing.Size(170, 26);
+            this.txtNeueMenge.TabIndex = 13;
             // 
             // txtGrammText
             // 
-            this.txtGrammText.Location = new System.Drawing.Point(339, 233);
+            this.txtGrammText.Location = new System.Drawing.Point(339, 271);
             this.txtGrammText.Name = "txtGrammText";
             this.txtGrammText.Size = new System.Drawing.Size(70, 26);
             this.txtGrammText.TabIndex = 12;
@@ -84,21 +115,22 @@
             // dtpErstellungsDatum
             // 
             this.dtpErstellungsDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpErstellungsDatum.Location = new System.Drawing.Point(163, 273);
+            this.dtpErstellungsDatum.Location = new System.Drawing.Point(163, 323);
             this.dtpErstellungsDatum.Name = "dtpErstellungsDatum";
             this.dtpErstellungsDatum.Size = new System.Drawing.Size(246, 26);
             this.dtpErstellungsDatum.TabIndex = 11;
             // 
             // txtLagerbestand
             // 
-            this.txtLagerbestand.Location = new System.Drawing.Point(163, 232);
+            this.txtLagerbestand.Location = new System.Drawing.Point(163, 270);
             this.txtLagerbestand.Name = "txtLagerbestand";
+            this.txtLagerbestand.ReadOnly = true;
             this.txtLagerbestand.Size = new System.Drawing.Size(170, 26);
             this.txtLagerbestand.TabIndex = 10;
             // 
             // txtParfümCode
             // 
-            this.txtParfümCode.Location = new System.Drawing.Point(163, 190);
+            this.txtParfümCode.Location = new System.Drawing.Point(163, 191);
             this.txtParfümCode.Name = "txtParfümCode";
             this.txtParfümCode.Size = new System.Drawing.Size(246, 26);
             this.txtParfümCode.TabIndex = 9;
@@ -128,7 +160,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 275);
+            this.label6.Location = new System.Drawing.Point(5, 325);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 20);
             this.label6.TabIndex = 5;
@@ -137,11 +169,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 236);
+            this.label5.Location = new System.Drawing.Point(27, 274);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 20);
+            this.label5.Size = new System.Drawing.Size(112, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Lagerbestand:*";
+            this.label5.Text = "Lagerbestand:";
             // 
             // label4
             // 
@@ -182,7 +214,7 @@
             // btnSpeichern
             // 
             this.btnSpeichern.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpeichern.Location = new System.Drawing.Point(156, 333);
+            this.btnSpeichern.Location = new System.Drawing.Point(159, 405);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(134, 31);
             this.btnSpeichern.TabIndex = 1;
@@ -193,7 +225,7 @@
             // btnAbbrechen
             // 
             this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbbrechen.Location = new System.Drawing.Point(310, 333);
+            this.btnAbbrechen.Location = new System.Drawing.Point(310, 405);
             this.btnAbbrechen.Name = "btnAbbrechen";
             this.btnAbbrechen.Size = new System.Drawing.Size(134, 31);
             this.btnAbbrechen.TabIndex = 2;
@@ -209,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 376);
+            this.ClientSize = new System.Drawing.Size(465, 448);
             this.Controls.Add(this.btnAbbrechen);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.groupBox1);
@@ -244,5 +276,8 @@
         private System.Windows.Forms.DateTimePicker dtpErstellungsDatum;
         private System.Windows.Forms.TextBox txtGrammText;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNeueMenge;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

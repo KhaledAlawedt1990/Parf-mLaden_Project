@@ -43,11 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsKundeDatenzugriff.cs" />
-    <Compile Include="clsLageDatenzugriff.cs" />
+    <Compile Include="clsEinkaufDatenzugriff.cs" />
     <Compile Include="clsMitarbeiterDatenzugriff.cs" />
     <Compile Include="clsParfümDatenzugriff.cs" />
     <Compile Include="clsPersonDatenzugriff.cs" />
     <Compile Include="clsUserDatenzugriff.cs" />
+    <Compile Include="clsVerkaufDatenzugriff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

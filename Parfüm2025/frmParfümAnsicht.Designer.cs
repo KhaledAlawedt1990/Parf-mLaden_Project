@@ -36,24 +36,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpAlleParfüms = new System.Windows.Forms.TabPage();
+            this.txtServerDienst = new System.Windows.Forms.TextBox();
+            this.btnFreigabe = new System.Windows.Forms.Button();
+            this.lbVorschläge = new System.Windows.Forms.ListBox();
+            this.txtFilterWert = new System.Windows.Forms.TextBox();
+            this.cbFilterBei = new System.Windows.Forms.ComboBox();
+            this.btnDatenAktualisieren = new System.Windows.Forms.Button();
             this.btnNeuParfümHinzufügen = new System.Windows.Forms.Button();
             this.btnSuchen = new System.Windows.Forms.Button();
-            this.lbVorschläge = new System.Windows.Forms.ListBox();
             this.txtParfümSuchen = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtJareszeiten = new System.Windows.Forms.TextBox();
-            this.txtDuftrichtung = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtParfümFilterbeiNummer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtFilterBeiName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFilterBeiMarke = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvParfüm = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mehrDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.parfümHinzufügentoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pafümAktualisierentoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.duftEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2HerrnDüfte = new System.Windows.Forms.TabPage();
             this.txtHerrenParfümFilterbeiNummer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,11 +71,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDamenParfüm = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDatenAktualisieren = new System.Windows.Forms.Button();
-            this.mehrDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parfümHinzufügentoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pafümAktualisierentoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.duftEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tpAlleParfüms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParfüm)).BeginInit();
@@ -100,29 +95,24 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1165, 571);
+            this.tabControl1.Size = new System.Drawing.Size(1406, 571);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
             // tpAlleParfüms
             // 
             this.tpAlleParfüms.BackColor = System.Drawing.Color.White;
+            this.tpAlleParfüms.Controls.Add(this.txtServerDienst);
+            this.tpAlleParfüms.Controls.Add(this.btnFreigabe);
+            this.tpAlleParfüms.Controls.Add(this.lbVorschläge);
+            this.tpAlleParfüms.Controls.Add(this.txtFilterWert);
+            this.tpAlleParfüms.Controls.Add(this.cbFilterBei);
             this.tpAlleParfüms.Controls.Add(this.btnDatenAktualisieren);
             this.tpAlleParfüms.Controls.Add(this.btnNeuParfümHinzufügen);
             this.tpAlleParfüms.Controls.Add(this.btnSuchen);
-            this.tpAlleParfüms.Controls.Add(this.lbVorschläge);
             this.tpAlleParfüms.Controls.Add(this.txtParfümSuchen);
             this.tpAlleParfüms.Controls.Add(this.label12);
-            this.tpAlleParfüms.Controls.Add(this.txtJareszeiten);
-            this.tpAlleParfüms.Controls.Add(this.txtDuftrichtung);
-            this.tpAlleParfüms.Controls.Add(this.label11);
-            this.tpAlleParfüms.Controls.Add(this.label10);
-            this.tpAlleParfüms.Controls.Add(this.txtParfümFilterbeiNummer);
             this.tpAlleParfüms.Controls.Add(this.label3);
-            this.tpAlleParfüms.Controls.Add(this.txtFilterBeiName);
-            this.tpAlleParfüms.Controls.Add(this.label2);
-            this.tpAlleParfüms.Controls.Add(this.txtFilterBeiMarke);
-            this.tpAlleParfüms.Controls.Add(this.label1);
             this.tpAlleParfüms.Controls.Add(this.dgvParfüm);
             this.tpAlleParfüms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpAlleParfüms.ForeColor = System.Drawing.Color.Black;
@@ -130,20 +120,103 @@
             this.tpAlleParfüms.Margin = new System.Windows.Forms.Padding(2);
             this.tpAlleParfüms.Name = "tpAlleParfüms";
             this.tpAlleParfüms.Padding = new System.Windows.Forms.Padding(2);
-            this.tpAlleParfüms.Size = new System.Drawing.Size(1157, 532);
+            this.tpAlleParfüms.Size = new System.Drawing.Size(1398, 532);
             this.tpAlleParfüms.TabIndex = 0;
             this.tpAlleParfüms.Text = "Unisexdüfte";
             // 
+            // txtServerDienst
+            // 
+            this.txtServerDienst.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtServerDienst.BackColor = System.Drawing.Color.White;
+            this.txtServerDienst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtServerDienst.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServerDienst.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtServerDienst.Location = new System.Drawing.Point(900, 5);
+            this.txtServerDienst.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerDienst.Name = "txtServerDienst";
+            this.txtServerDienst.Size = new System.Drawing.Size(359, 29);
+            this.txtServerDienst.TabIndex = 26;
+            // 
+            // btnFreigabe
+            // 
+            this.btnFreigabe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFreigabe.BackColor = System.Drawing.Color.Gold;
+            this.btnFreigabe.Location = new System.Drawing.Point(1263, 2);
+            this.btnFreigabe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFreigabe.Name = "btnFreigabe";
+            this.btnFreigabe.Size = new System.Drawing.Size(127, 35);
+            this.btnFreigabe.TabIndex = 25;
+            this.btnFreigabe.Text = "Freigabe";
+            this.btnFreigabe.UseVisualStyleBackColor = false;
+            this.btnFreigabe.Click += new System.EventHandler(this.btnFreigabe_Click);
+            // 
+            // lbVorschläge
+            // 
+            this.lbVorschläge.FormattingEnabled = true;
+            this.lbVorschläge.ItemHeight = 20;
+            this.lbVorschläge.Location = new System.Drawing.Point(360, 47);
+            this.lbVorschläge.Name = "lbVorschläge";
+            this.lbVorschläge.Size = new System.Drawing.Size(232, 164);
+            this.lbVorschläge.TabIndex = 24;
+            this.lbVorschläge.Visible = false;
+            this.lbVorschläge.Click += new System.EventHandler(this.lbVorschläge_Click_1);
+            // 
+            // txtFilterWert
+            // 
+            this.txtFilterWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilterWert.Location = new System.Drawing.Point(334, 107);
+            this.txtFilterWert.Name = "txtFilterWert";
+            this.txtFilterWert.Size = new System.Drawing.Size(413, 29);
+            this.txtFilterWert.TabIndex = 23;
+            this.txtFilterWert.TextChanged += new System.EventHandler(this.txtFilterWert_TextChanged);
+            this.txtFilterWert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterWert_KeyPress);
+            // 
+            // cbFilterBei
+            // 
+            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterBei.FormattingEnabled = true;
+            this.cbFilterBei.Items.AddRange(new object[] {
+            "ParfümNummer",
+            "Marke",
+            "Name",
+            "Kategorie",
+            "Duftrichtung",
+            "Jahreszeiten"});
+            this.cbFilterBei.Location = new System.Drawing.Point(108, 105);
+            this.cbFilterBei.Name = "cbFilterBei";
+            this.cbFilterBei.Size = new System.Drawing.Size(218, 32);
+            this.cbFilterBei.TabIndex = 22;
+            this.cbFilterBei.SelectedIndexChanged += new System.EventHandler(this.cbFilterBei_SelectedIndexChanged);
+            // 
+            // btnDatenAktualisieren
+            // 
+            this.btnDatenAktualisieren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDatenAktualisieren.BackColor = System.Drawing.Color.Gold;
+            this.btnDatenAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatenAktualisieren.Image = global::Parfüm2025.Properties.Resources.update_7411697;
+            this.btnDatenAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDatenAktualisieren.Location = new System.Drawing.Point(900, 94);
+            this.btnDatenAktualisieren.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDatenAktualisieren.Name = "btnDatenAktualisieren";
+            this.btnDatenAktualisieren.Size = new System.Drawing.Size(242, 41);
+            this.btnDatenAktualisieren.TabIndex = 21;
+            this.btnDatenAktualisieren.Text = "Aktualisiere Parfümdaten";
+            this.btnDatenAktualisieren.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDatenAktualisieren.UseVisualStyleBackColor = false;
+            this.btnDatenAktualisieren.Click += new System.EventHandler(this.btnDatenAktualisieren_Click);
+            // 
             // btnNeuParfümHinzufügen
             // 
+            this.btnNeuParfümHinzufügen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNeuParfümHinzufügen.BackColor = System.Drawing.Color.Gold;
             this.btnNeuParfümHinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNeuParfümHinzufügen.Location = new System.Drawing.Point(685, 9);
+            this.btnNeuParfümHinzufügen.Location = new System.Drawing.Point(1161, 95);
             this.btnNeuParfümHinzufügen.Margin = new System.Windows.Forms.Padding(2);
             this.btnNeuParfümHinzufügen.Name = "btnNeuParfümHinzufügen";
-            this.btnNeuParfümHinzufügen.Size = new System.Drawing.Size(84, 35);
+            this.btnNeuParfümHinzufügen.Size = new System.Drawing.Size(229, 41);
             this.btnNeuParfümHinzufügen.TabIndex = 20;
-            this.btnNeuParfümHinzufügen.Text = "Addnew";
+            this.btnNeuParfümHinzufügen.Text = "Addnew Parfümdaten";
             this.btnNeuParfümHinzufügen.UseVisualStyleBackColor = false;
             this.btnNeuParfümHinzufügen.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -153,34 +226,22 @@
             this.btnSuchen.Location = new System.Drawing.Point(596, 10);
             this.btnSuchen.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuchen.Name = "btnSuchen";
-            this.btnSuchen.Size = new System.Drawing.Size(84, 35);
+            this.btnSuchen.Size = new System.Drawing.Size(127, 35);
             this.btnSuchen.TabIndex = 18;
             this.btnSuchen.Text = "Suche";
             this.btnSuchen.UseVisualStyleBackColor = false;
             this.btnSuchen.Click += new System.EventHandler(this.btnSuchen_Click);
             // 
-            // lbVorschläge
-            // 
-            this.lbVorschläge.FormattingEnabled = true;
-            this.lbVorschläge.ItemHeight = 20;
-            this.lbVorschläge.Location = new System.Drawing.Point(360, 46);
-            this.lbVorschläge.Margin = new System.Windows.Forms.Padding(2);
-            this.lbVorschläge.Name = "lbVorschläge";
-            this.lbVorschläge.Size = new System.Drawing.Size(233, 204);
-            this.lbVorschläge.TabIndex = 17;
-            this.lbVorschläge.Visible = false;
-            this.lbVorschläge.Click += new System.EventHandler(this.lbVorschläge_Click);
-            // 
             // txtParfümSuchen
             // 
             this.txtParfümSuchen.BackColor = System.Drawing.Color.White;
             this.txtParfümSuchen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtParfümSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParfümSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParfümSuchen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtParfümSuchen.Location = new System.Drawing.Point(360, 12);
+            this.txtParfümSuchen.Location = new System.Drawing.Point(360, 14);
             this.txtParfümSuchen.Margin = new System.Windows.Forms.Padding(2);
             this.txtParfümSuchen.Name = "txtParfümSuchen";
-            this.txtParfümSuchen.Size = new System.Drawing.Size(232, 32);
+            this.txtParfümSuchen.Size = new System.Drawing.Size(232, 29);
             this.txtParfümSuchen.TabIndex = 16;
             this.txtParfümSuchen.TextChanged += new System.EventHandler(this.txtParfümSuchen_TextChanged);
             this.txtParfümSuchen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtParfümSuchen_KeyDown);
@@ -198,131 +259,17 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Nach einem bestimmten Parüfm suchen";
             // 
-            // txtJareszeiten
-            // 
-            this.txtJareszeiten.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtJareszeiten.BackColor = System.Drawing.Color.White;
-            this.txtJareszeiten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtJareszeiten.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJareszeiten.Location = new System.Drawing.Point(980, 65);
-            this.txtJareszeiten.Margin = new System.Windows.Forms.Padding(2);
-            this.txtJareszeiten.Name = "txtJareszeiten";
-            this.txtJareszeiten.Size = new System.Drawing.Size(172, 32);
-            this.txtJareszeiten.TabIndex = 14;
-            this.txtJareszeiten.TextChanged += new System.EventHandler(this.txtJareszeiten_TextChanged);
-            // 
-            // txtDuftrichtung
-            // 
-            this.txtDuftrichtung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDuftrichtung.BackColor = System.Drawing.Color.White;
-            this.txtDuftrichtung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDuftrichtung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuftrichtung.Location = new System.Drawing.Point(980, 102);
-            this.txtDuftrichtung.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDuftrichtung.Name = "txtDuftrichtung";
-            this.txtDuftrichtung.Size = new System.Drawing.Size(172, 32);
-            this.txtDuftrichtung.TabIndex = 13;
-            this.txtDuftrichtung.TextChanged += new System.EventHandler(this.txtDuftrichtung_TextChanged_1);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(856, 108);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 24);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Duftrichtung:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(850, 71);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 24);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Jahreszeiten:";
-            // 
-            // txtParfümFilterbeiNummer
-            // 
-            this.txtParfümFilterbeiNummer.BackColor = System.Drawing.Color.White;
-            this.txtParfümFilterbeiNummer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtParfümFilterbeiNummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParfümFilterbeiNummer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtParfümFilterbeiNummer.Location = new System.Drawing.Point(109, 106);
-            this.txtParfümFilterbeiNummer.Margin = new System.Windows.Forms.Padding(2);
-            this.txtParfümFilterbeiNummer.Name = "txtParfümFilterbeiNummer";
-            this.txtParfümFilterbeiNummer.Size = new System.Drawing.Size(154, 32);
-            this.txtParfümFilterbeiNummer.TabIndex = 9;
-            this.txtParfümFilterbeiNummer.TextChanged += new System.EventHandler(this.txtParfümFilterbeiNummer_TextChanged);
-            this.txtParfümFilterbeiNummer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParfümFilterbeiNummer_KeyPress);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(16, 111);
+            this.label3.Location = new System.Drawing.Point(16, 108);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 24);
+            this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Nummer:";
-            // 
-            // txtFilterBeiName
-            // 
-            this.txtFilterBeiName.BackColor = System.Drawing.Color.White;
-            this.txtFilterBeiName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFilterBeiName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterBeiName.Location = new System.Drawing.Point(640, 103);
-            this.txtFilterBeiName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFilterBeiName.Name = "txtFilterBeiName";
-            this.txtFilterBeiName.Size = new System.Drawing.Size(201, 32);
-            this.txtFilterBeiName.TabIndex = 7;
-            this.txtFilterBeiName.TextChanged += new System.EventHandler(this.txtFilterBeiName_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(573, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Name:";
-            // 
-            // txtFilterBeiMarke
-            // 
-            this.txtFilterBeiMarke.BackColor = System.Drawing.Color.White;
-            this.txtFilterBeiMarke.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFilterBeiMarke.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterBeiMarke.Location = new System.Drawing.Point(341, 106);
-            this.txtFilterBeiMarke.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFilterBeiMarke.Name = "txtFilterBeiMarke";
-            this.txtFilterBeiMarke.Size = new System.Drawing.Size(204, 32);
-            this.txtFilterBeiMarke.TabIndex = 5;
-            this.txtFilterBeiMarke.TextChanged += new System.EventHandler(this.txtFilterBeiMarke_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(268, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Marke:";
+            this.label3.Text = "Filter bei:";
             // 
             // dgvParfüm
             // 
@@ -362,7 +309,7 @@
             this.dgvParfüm.RowTemplate.Height = 30;
             this.dgvParfüm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParfüm.ShowCellErrors = false;
-            this.dgvParfüm.Size = new System.Drawing.Size(1135, 389);
+            this.dgvParfüm.Size = new System.Drawing.Size(1376, 389);
             this.dgvParfüm.TabIndex = 3;
             // 
             // contextMenuStrip1
@@ -376,12 +323,48 @@
             this.pafümAktualisierentoolStripMenuItem2,
             this.duftEntfernenToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(354, 184);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(354, 162);
+            // 
+            // mehrDetailsToolStripMenuItem
+            // 
+            this.mehrDetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.details_32;
+            this.mehrDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mehrDetailsToolStripMenuItem.Name = "mehrDetailsToolStripMenuItem";
+            this.mehrDetailsToolStripMenuItem.Size = new System.Drawing.Size(353, 38);
+            this.mehrDetailsToolStripMenuItem.Text = "Sehe Duft details";
+            this.mehrDetailsToolStripMenuItem.Click += new System.EventHandler(this.mehrDetailsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(350, 6);
+            // 
+            // parfümHinzufügentoolStripMenuItem1
+            // 
+            this.parfümHinzufügentoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.plus_10021331;
+            this.parfümHinzufügentoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.parfümHinzufügentoolStripMenuItem1.Name = "parfümHinzufügentoolStripMenuItem1";
+            this.parfümHinzufügentoolStripMenuItem1.Size = new System.Drawing.Size(353, 38);
+            this.parfümHinzufügentoolStripMenuItem1.Text = "Hinzufüge neuen Duft";
+            this.parfümHinzufügentoolStripMenuItem1.Click += new System.EventHandler(this.parfümHinzufügentoolStripMenuItem1_Click);
+            // 
+            // pafümAktualisierentoolStripMenuItem2
+            // 
+            this.pafümAktualisierentoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
+            this.pafümAktualisierentoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.pafümAktualisierentoolStripMenuItem2.Name = "pafümAktualisierentoolStripMenuItem2";
+            this.pafümAktualisierentoolStripMenuItem2.Size = new System.Drawing.Size(353, 38);
+            this.pafümAktualisierentoolStripMenuItem2.Text = "Aktualisiere bestehenden Duft";
+            this.pafümAktualisierentoolStripMenuItem2.Click += new System.EventHandler(this.pafümAktualisierentoolStripMenuItem2_Click);
+            // 
+            // duftEntfernenToolStripMenuItem
+            // 
+            this.duftEntfernenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
+            this.duftEntfernenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.duftEntfernenToolStripMenuItem.Name = "duftEntfernenToolStripMenuItem";
+            this.duftEntfernenToolStripMenuItem.Size = new System.Drawing.Size(353, 38);
+            this.duftEntfernenToolStripMenuItem.Text = "Entferne Duft";
+            this.duftEntfernenToolStripMenuItem.Click += new System.EventHandler(this.duftEntfernenToolStripMenuItem_Click);
             // 
             // tabPage2HerrnDüfte
             // 
@@ -398,7 +381,7 @@
             this.tabPage2HerrnDüfte.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2HerrnDüfte.Name = "tabPage2HerrnDüfte";
             this.tabPage2HerrnDüfte.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2HerrnDüfte.Size = new System.Drawing.Size(1157, 532);
+            this.tabPage2HerrnDüfte.Size = new System.Drawing.Size(1398, 532);
             this.tabPage2HerrnDüfte.TabIndex = 1;
             this.tabPage2HerrnDüfte.Text = "Herrndüfte";
             // 
@@ -509,7 +492,7 @@
             this.tabPage3DamenDüfte.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3DamenDüfte.Name = "tabPage3DamenDüfte";
             this.tabPage3DamenDüfte.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3DamenDüfte.Size = new System.Drawing.Size(1157, 532);
+            this.tabPage3DamenDüfte.Size = new System.Drawing.Size(1398, 532);
             this.tabPage3DamenDüfte.TabIndex = 2;
             this.tabPage3DamenDüfte.Text = "Damendüfte";
             this.tabPage3DamenDüfte.UseVisualStyleBackColor = true;
@@ -614,68 +597,16 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1164, 295);
+            this.pictureBox1.Size = new System.Drawing.Size(1405, 295);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnDatenAktualisieren
-            // 
-            this.btnDatenAktualisieren.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnDatenAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatenAktualisieren.Image = global::Parfüm2025.Properties.Resources.update_7411697;
-            this.btnDatenAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDatenAktualisieren.Location = new System.Drawing.Point(20, 54);
-            this.btnDatenAktualisieren.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDatenAktualisieren.Name = "btnDatenAktualisieren";
-            this.btnDatenAktualisieren.Size = new System.Drawing.Size(295, 41);
-            this.btnDatenAktualisieren.TabIndex = 21;
-            this.btnDatenAktualisieren.Text = "aktualisiere Parfümdaten";
-            this.btnDatenAktualisieren.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDatenAktualisieren.UseVisualStyleBackColor = false;
-            this.btnDatenAktualisieren.Click += new System.EventHandler(this.btnDatenAktualisieren_Click);
-            // 
-            // mehrDetailsToolStripMenuItem
-            // 
-            this.mehrDetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.details_32;
-            this.mehrDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mehrDetailsToolStripMenuItem.Name = "mehrDetailsToolStripMenuItem";
-            this.mehrDetailsToolStripMenuItem.Size = new System.Drawing.Size(353, 38);
-            this.mehrDetailsToolStripMenuItem.Text = "Sehe Duft details";
-            this.mehrDetailsToolStripMenuItem.Click += new System.EventHandler(this.mehrDetailsToolStripMenuItem_Click);
-            // 
-            // parfümHinzufügentoolStripMenuItem1
-            // 
-            this.parfümHinzufügentoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.plus_10021331;
-            this.parfümHinzufügentoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.parfümHinzufügentoolStripMenuItem1.Name = "parfümHinzufügentoolStripMenuItem1";
-            this.parfümHinzufügentoolStripMenuItem1.Size = new System.Drawing.Size(353, 38);
-            this.parfümHinzufügentoolStripMenuItem1.Text = "Hinzufüge neuen Duft";
-            this.parfümHinzufügentoolStripMenuItem1.Click += new System.EventHandler(this.parfümHinzufügentoolStripMenuItem1_Click);
-            // 
-            // pafümAktualisierentoolStripMenuItem2
-            // 
-            this.pafümAktualisierentoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
-            this.pafümAktualisierentoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.pafümAktualisierentoolStripMenuItem2.Name = "pafümAktualisierentoolStripMenuItem2";
-            this.pafümAktualisierentoolStripMenuItem2.Size = new System.Drawing.Size(353, 38);
-            this.pafümAktualisierentoolStripMenuItem2.Text = "Aktualisiere bestehenden Duft";
-            this.pafümAktualisierentoolStripMenuItem2.Click += new System.EventHandler(this.pafümAktualisierentoolStripMenuItem2_Click);
-            // 
-            // duftEntfernenToolStripMenuItem
-            // 
-            this.duftEntfernenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
-            this.duftEntfernenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.duftEntfernenToolStripMenuItem.Name = "duftEntfernenToolStripMenuItem";
-            this.duftEntfernenToolStripMenuItem.Size = new System.Drawing.Size(353, 38);
-            this.duftEntfernenToolStripMenuItem.Text = "Entferne Duft";
-            this.duftEntfernenToolStripMenuItem.Click += new System.EventHandler(this.duftEntfernenToolStripMenuItem_Click);
             // 
             // frmpafümAnsicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 862);
+            this.ClientSize = new System.Drawing.Size(1405, 862);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -705,11 +636,6 @@
         private System.Windows.Forms.TabPage tabPage2HerrnDüfte;
         private System.Windows.Forms.TabPage tabPage3DamenDüfte;
         private System.Windows.Forms.DataGridView dgvParfüm;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtFilterBeiMarke;
-        private System.Windows.Forms.TextBox txtFilterBeiName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtParfümFilterbeiNummer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mehrDetailsToolStripMenuItem;
@@ -726,13 +652,8 @@
         private System.Windows.Forms.TextBox txtDamenParfümFilterBeiMarke;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgvDamenParfüm;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtDuftrichtung;
-        private System.Windows.Forms.TextBox txtJareszeiten;
         private System.Windows.Forms.TextBox txtParfümSuchen;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListBox lbVorschläge;
         private System.Windows.Forms.Button btnSuchen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnNeuParfümHinzufügen;
@@ -742,6 +663,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridView dgvHerrefDüfte;
         private System.Windows.Forms.Button btnDatenAktualisieren;
+        private System.Windows.Forms.TextBox txtFilterWert;
+        private System.Windows.Forms.ComboBox cbFilterBei;
+        private System.Windows.Forms.ListBox lbVorschläge;
+        private System.Windows.Forms.Button btnFreigabe;
+        private System.Windows.Forms.TextBox txtServerDienst;
     }
 }
 

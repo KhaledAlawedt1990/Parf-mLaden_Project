@@ -83,26 +83,6 @@ namespace Parfüm2025.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CloseBlack {
-            get {
-                object obj = ResourceManager.GetObject("CloseBlack", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CloseBlack1 {
-            get {
-                object obj = ResourceManager.GetObject("CloseBlack1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Delete_32 {
             get {
                 object obj = ResourceManager.GetObject("Delete 32", resourceCulture);
@@ -256,46 +236,6 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap PersonDetails_321 {
             get {
                 object obj = ResourceManager.GetObject("PersonDetails 321", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_anis_salmani_208342252_11711830 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-anis-salmani-208342252-11711830", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_karolina_grabowska_4735908 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-karolina-grabowska-4735908", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_lovetosmile_8516275 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-lovetosmile-8516275", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_valeriya_1961795 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-valeriya-1961795", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
