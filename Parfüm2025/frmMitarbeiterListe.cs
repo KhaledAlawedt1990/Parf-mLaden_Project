@@ -170,7 +170,7 @@ namespace Parfüm2025
         {
             int mitarbeiterID = (int)dgvMitarbeiter.CurrentRow.Cells[0].Value;
 
-            HinzufügeBenutzerrechtetoolStripMenuItem1.Enabled = (!clsUser.ExistUserForThisMitarbeiter(mitarbeiterID)); //falls der mitarbeiter user im system definiert.
+            HinzufügeBenutzerrechtetoolStripMenuItem1.Enabled = (!clsUser.ExistUserForThisMitarbeiter(mitarbeiterID)); //falls der _persondaten user im system definiert.
             AktualisiereBenutzerrechtetoolStripMenuItem2.Enabled = (clsUser.ExistUserForThisMitarbeiter(mitarbeiterID));
         }
     }

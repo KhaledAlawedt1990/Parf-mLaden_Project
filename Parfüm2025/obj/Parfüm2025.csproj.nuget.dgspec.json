@@ -4,22 +4,6 @@
     "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj",
-        "projectName": "AutoComplete",
-        "projectPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj",
-        "UsingMicrosoftNETSdk": false,
-        "frameworks": {
-          "net472": {
-            "projectReferences": {}
-          }
-        }
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
     "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj": {
       "restore": {
         "projectUniqueName": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj",
@@ -165,9 +149,6 @@
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj": {
-                "projectPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\AutoComplete\\AutoComplete\\AutoComplete\\AutoComplete.csproj"
-              },
               "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj": {
                 "projectPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj"
               },

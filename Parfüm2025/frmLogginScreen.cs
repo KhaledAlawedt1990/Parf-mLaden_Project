@@ -85,7 +85,7 @@ namespace Parfüm2025
                 txtPasswort.Clear();
 
                 // Hauptfenster erstellen
-                frmMainScreen frm = new frmMainScreen(this);
+                frmHaupBildschrimAnsicht frm = new frmHaupBildschrimAnsicht();
 
                 // Login-Fenster verstecken
                 this.Hide();

@@ -1,4 +1,5 @@
 ﻿using Busnisse_Layer;
+using clsHilfsMethoden;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -140,7 +141,7 @@ namespace Parfüm2025
             else
                 status = "aktualisiert";
 
-            AVLTree tree = new AVLTree();
+            AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
             if(_parfüm.Save())
             {
                 tree.Insert(_parfüm.Name); // Hier addieren wir jeden neuen Parfüm in AVL Tree.

@@ -138,7 +138,8 @@ namespace Data_Layer
                                         Person.Geburtstag, Person.Geschlecht, Mitarbeiter.versicherungsName, Mitarbeiter.versicherungsNummer,
                                        Mitarbeiter.EingestelltAm, Mitarbeiter.istAktive
                                        from Person INNER JOIN Mitarbeiter ON
-                                       Person.PersonID = Mitarbeiter.personID ";
+                                       Person.PersonID = Mitarbeiter.personID 
+                                Order by MitarbeiterID Desc";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))

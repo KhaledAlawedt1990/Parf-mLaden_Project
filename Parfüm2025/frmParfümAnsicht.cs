@@ -247,7 +247,7 @@ namespace Parfüm2025
         }
         private void _AvlBaumImplementierung()
         {
-             AVLTree tree = new AVLTree();
+            AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
 
             foreach (DataRow row in _dtParfüms.Rows)
             {

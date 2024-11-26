@@ -94,18 +94,16 @@ C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Parfüm2025.pd
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\System.ValueTuple.dll
-C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\AutoComplete.exe
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Busnisse_Layer.dll
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\clsHilfsMethoden.dll
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Data_Layer.dll
-C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\AutoComplete.pdb
-C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\AutoComplete.exe.config
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Busnisse_Layer.pdb
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\clsHilfsMethoden.pdb
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\bin\Debug\Data_Layer.pdb
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.csproj.AssemblyReference.cache
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.csproj.SuggestedBindingRedirects.cache
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.exe.config
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmHaupBildschrimAnsicht.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.ctrAddUpdatePerson.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmAddUpdateNeueKunde.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmAddUpdateNeueMitarbeiter.resources
@@ -115,7 +113,6 @@ C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.fr
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmKundeListe.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmEinkaufsDatenListe.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmLogginScreen.resources
-C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmMainScreen.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmMitarbeiterListe.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmpafümAnsicht.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmAddUpdateNewPerfum.resources

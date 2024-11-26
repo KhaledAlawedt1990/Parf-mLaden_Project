@@ -41,7 +41,7 @@ namespace Parfüm2025
         private enum enMode { addnew = 0, update = 1 }
         enMode _mode = enMode.addnew;
 
-        public clsPerson mitarbeiter;
+        private clsPerson _persondaten;
 
         private readonly object _lockObject = new object();
         private void _GeburtsdatumEinrichten()
@@ -60,22 +60,22 @@ namespace Parfüm2025
             else
             { 
                 _mode = enMode.addnew;
-                mitarbeiter = new clsPerson();
+                _persondaten = new clsPerson();
             }
 
         }
         private void _füllePersonDaten()
         {
-            mitarbeiter.Vorname = txtVorname.Text;
-            mitarbeiter.Nachname = txtNachname.Text;
-            mitarbeiter.GeburtsTag = dtpGeburtstag.Value;
-            mitarbeiter.Geschlecht = Convert.ToChar(cbGeschlecht.SelectedItem.ToString());
-            mitarbeiter.SteuerID = txtSteuerID.Text;
-            mitarbeiter.Email = txtEmail.Text;
-            mitarbeiter.Straße = txtStrasse.Text;
-            mitarbeiter.Stadt = txtStadt.Text;
-            mitarbeiter.Land = cbLand.SelectedItem.ToString();
-            mitarbeiter.Telefon = txtTelefon.Text;
+            _persondaten.Vorname = txtVorname.Text;
+            _persondaten.Nachname = txtNachname.Text;
+            _persondaten.GeburtsTag = dtpGeburtstag.Value;
+            _persondaten.Geschlecht = Convert.ToChar(cbGeschlecht.SelectedItem.ToString());
+            _persondaten.SteuerID = txtSteuerID.Text;
+            _persondaten.Email = txtEmail.Text;
+            _persondaten.Straße = txtStrasse.Text;
+            _persondaten.Stadt = txtStadt.Text;
+            _persondaten.Land = cbLand.SelectedItem.ToString();
+            _persondaten.Telefon = txtTelefon.Text;
         }
 
         private void ctrAddUpdatePerson_Load(object sender, EventArgs e)
@@ -89,32 +89,35 @@ namespace Parfüm2025
         }
         private void _ladePersonDaten(int personID)
         {
-            try
+            lock (_lockObject)
             {
-                mitarbeiter = clsPerson.Find(personID);
+                try
+                {
+                    _persondaten = clsPerson.Find(personID);
 
-                if (mitarbeiter != null)
-                {
-                    txtVorname.Text = mitarbeiter.Vorname;
-                    txtNachname.Text = mitarbeiter.Nachname;
-                    dtpGeburtstag.Value = mitarbeiter.GeburtsTag;
-                    cbGeschlecht.SelectedItem = mitarbeiter.Geschlecht.ToString();
-                    txtSteuerID.Text = mitarbeiter.SteuerID;
-                    txtEmail.Text = mitarbeiter.Email;
-                    txtStrasse.Text = mitarbeiter.Straße;
-                    txtStadt.Text = mitarbeiter.Stadt;
-                    cbLand.SelectedItem = mitarbeiter.Land;
-                    txtTelefon.Text = mitarbeiter.Telefon;
+                    if (_persondaten != null)
+                    {
+                        txtVorname.Text = _persondaten.Vorname;
+                        txtNachname.Text = _persondaten.Nachname;
+                        dtpGeburtstag.Value = _persondaten.GeburtsTag;
+                        cbGeschlecht.SelectedItem = _persondaten.Geschlecht.ToString();
+                        txtSteuerID.Text = _persondaten.SteuerID;
+                        txtEmail.Text = _persondaten.Email;
+                        txtStrasse.Text = _persondaten.Straße;
+                        txtStadt.Text = _persondaten.Stadt;
+                        cbLand.SelectedItem = _persondaten.Land;
+                        txtTelefon.Text = _persondaten.Telefon;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Diese Person existiert leider nicht in System!", "Fehlermeldung",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Diese Person existiert leider nicht in System!", "Fehlermeldung",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new Exception($"Fehler beim Laden der Personendaten für ID {personID}: {ex.Message}");
                 }
-            }
-            catch (Exception ex)
-            { 
-              throw new Exception ($"Fehler beim Laden der Personendaten für ID {personID}: {ex.Message}");
             }
         }
 
@@ -147,7 +150,7 @@ namespace Parfüm2025
                               "Vereinigtes Königreich", "Weißrussland", "Zypern"
                                        };
 
-            AVLTree tree = new AVLTree();
+            AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
 
             foreach (string land in europäischeLänder)
             {
@@ -178,7 +181,7 @@ namespace Parfüm2025
         {
             bool isValid = true;
 
-            isValid = _ValidiereEinFeld(txtVorname, "Vorname");
+            isValid &= _ValidiereEinFeld(txtVorname, "Vorname");
             isValid &= _ValidiereEinFeld(txtNachname, "Nachname");
             isValid &= _ValidiereEinFeld(txtSteuerID, "SteuerID");
             isValid &= _ValidiereEinFeld(txtEmail, "Email");
@@ -216,12 +219,12 @@ namespace Parfüm2025
                     return false;
 
                 _füllePersonDaten();
-                if (!mitarbeiter.Save())
+                if (!_persondaten.Save())
                     return false;
 
                 if (OnSelectedPerson != null)
                 {
-                    SelectedPerson(mitarbeiter.PersonID);
+                    SelectedPerson(_persondaten.PersonID);
                 }
                 return true;
             }

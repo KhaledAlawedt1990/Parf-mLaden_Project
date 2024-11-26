@@ -206,7 +206,8 @@ namespace Data_Layer
                                         (Person.Vorname + ' ' + Person.Nachname) as Vollname , 
                                         Person.Geburtstag, Person.Geschlecht, Kunde.firmaName, Person.Email, Kunde.regestriertAm, Kunde.istAktive
                                        from Person INNER JOIN Kunde ON
-                                       Person.PersonID = Kunde.personID ";
+                                       Person.PersonID = Kunde.personID
+                           Order by KundeID Desc";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))

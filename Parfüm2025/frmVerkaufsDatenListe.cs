@@ -137,7 +137,7 @@ namespace Parfüm2025
         private void btnHinzufügeVerkaufsDaten_Click(object sender, EventArgs e)
         {
             frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(-1, frmAddUpdateVerkaufDaten.enMode.addnew);
-            frm.lagerbestandAktualisiert += _AktualisiereLagerbestand;
+            frm.lagerbestandAktualisiert += _ÜberprüfeLagerbestand;
 
             frm.ShowDialog();
 
@@ -153,7 +153,7 @@ namespace Parfüm2025
             int verkaufID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
             frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(verkaufID, frmAddUpdateVerkaufDaten.enMode.update);
 
-            frm.lagerbestandAktualisiert += _AktualisiereLagerbestand; // Der Neue Lagerbestand zurückkiegen.
+            frm.lagerbestandAktualisiert += _ÜberprüfeLagerbestand; // Der Neue Lagerbestand zurückkiegen.
             frm.ShowDialog();
 
             if (_neueLagerBestad < 50 && _neueLagerBestad != -1)
@@ -175,7 +175,7 @@ namespace Parfüm2025
             _neueLagerBestad = -1;  // neuelagerbestand zurücksetzen
             _parfümNummer = -1;    // parfümNummer zurücksetzen 
         }
-        private void _AktualisiereLagerbestand(object sender, float lagerbestand, int parfümNummer)
+        private void _ÜberprüfeLagerbestand(object sender, float lagerbestand, int parfümNummer)
         {
             _neueLagerBestad = lagerbestand;
             _parfümNummer = parfümNummer;

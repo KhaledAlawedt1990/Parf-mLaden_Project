@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using clsHilfsMethoden;
+using System.Data.SqlClient;
 
 namespace Parfüm2025
 {
@@ -56,26 +58,46 @@ namespace Parfüm2025
         {
             lock (_lackObject)
             {
-                _verkaufsDaten = clsVerkauf.Find(_verkaufsID);
-
-                if (_verkaufsDaten != null)
+                try
                 {
+                    _verkaufsDaten = clsVerkauf.Find(_verkaufsID);
+
+                    if (_verkaufsDaten == null)
+                    {
+                        MessageBox.Show("Die Verkaufsdaten konnten nicht gefunden werden.", "Fehler",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+
                     txtVerkaufsID.Text = _verkaufsDaten.verkaufsID.ToString();
                     txtParfümNummer.Text = _verkaufsDaten.parfümNummer.ToString();
                     txtKundeName.Text = _verkaufsDaten.kundeInfos.Vollname;
                     txtVerkaufsMenge.Text = _verkaufsDaten.verkaufsMenge.ToString();
+                    // Lagerbestand abrufen
                     txtLagerbestand.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_verkaufsDaten.parfümNummer).lagerbestand.ToString();
-
+                    // Preise formatieren
                     txtNormalPreis.Text = _verkaufsDaten.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     txtGesamtPreis.Text = _verkaufsDaten.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     dtpErstellungsDatum.Value = _verkaufsDaten.erstellungsDatum;
+
                 }
-                else
+                catch (NullReferenceException ex)
                 {
-                    MessageBox.Show("Der gesuchte VerkaufsDaten wurde nicht gefunden.", "Fehlermeldung",
+                    MessageBox.Show($"Ein unerwarteter Fehler ist aufgetreten: {ex.Message}", "Fehler",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show($"Ein Formatierungsfehler ist aufgetreten: {ex.Message}", "Fehler",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ein allgemeiner Fehler ist aufgetreten: {ex.Message}", "Fehler",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
             }
         }
 
@@ -294,7 +316,7 @@ namespace Parfüm2025
             if (kundenName == null)
                 return;
 
-            AVLTree tree = new AVLTree();
+            AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
 
             foreach (DataRow row in kundenName.Rows)
             {

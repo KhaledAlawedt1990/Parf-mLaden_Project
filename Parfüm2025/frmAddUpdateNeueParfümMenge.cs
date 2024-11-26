@@ -49,22 +49,42 @@ namespace Parfüm2025
         {
             lock(_lackObject)
             {
-                _einkaufsDaten = clsEinkauf.FindEinkaufDatenByParfümNummer(_parfümNummer);
-
-                if(_einkaufsDaten != null)
+                try
                 {
+                    _einkaufsDaten = clsEinkauf.FindEinkaufDatenByParfümNummer(_parfümNummer);
+                     
+                    if(_einkaufsDaten == null)
+                    {
+                        MessageBox.Show("Der gesuchte EinkaufsDaten wurde nicht gefunden.", "Fehlermeldung",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                   
                     txtParfümNummer.Text = _einkaufsDaten.parfümNummer.ToString();
                     txtParfümName.Text = _einkaufsDaten.parfümName;
                     txtBatchNummer.Text = _einkaufsDaten.batchNummer;
                     txtParfümCode.Text = _einkaufsDaten.parfümCode;
-    
+
                     txtLagerbestand.Text = _einkaufsDaten.lagerbestand.ToString();
                     dtpErstellungsDatum.Value = _einkaufsDaten.erstellungsDatum;
+                    
+                  
                 }
-                else
+                catch (NullReferenceException ex)
                 {
-                    MessageBox.Show("Der gesuchte EinkaufsDaten wurde nicht gefunden.", "Fehlermeldung",
+                    MessageBox.Show($"Ein unerwarteter Fehler ist aufgetreten: {ex.Message}", "Fehler",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show($"Ein Formatierungsfehler ist aufgetreten: {ex.Message}", "Fehler",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ein allgemeiner Fehler ist aufgetreten: {ex.Message}", "Fehler",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
 
             }

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoComplete.cs" />
     <Compile Include="clsDatumFormat.cs" />
     <Compile Include="clsKomminikationsService.cs" />
     <Compile Include="clsOrdnerFürBilderErstellen.cs" />

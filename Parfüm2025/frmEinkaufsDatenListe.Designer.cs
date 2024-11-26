@@ -35,14 +35,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLager = new System.Windows.Forms.DataGridView();
             this.cmsLager = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.seheVerkaufsDetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktualisiereParfümMengeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entferneParfümToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHinzufügeNeueMenge = new System.Windows.Forms.Button();
             this.btnAktualisereParfümMenge = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbFilterbei = new System.Windows.Forms.ComboBox();
             this.txtFilerwert = new System.Windows.Forms.TextBox();
-            this.seheVerkaufsDetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktualisiereParfümMengeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entferneParfümToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLager)).BeginInit();
             this.cmsLager.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             this.dgvLager.AllowUserToAddRows = false;
             this.dgvLager.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             this.dgvLager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -101,6 +101,35 @@
             this.entferneParfümToolStripMenuItem});
             this.cmsLager.Name = "cmsLager";
             this.cmsLager.Size = new System.Drawing.Size(276, 118);
+            // 
+            // seheVerkaufsDetailstoolStripMenuItem1
+            // 
+            this.seheVerkaufsDetailstoolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seheVerkaufsDetailstoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.details_322;
+            this.seheVerkaufsDetailstoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.seheVerkaufsDetailstoolStripMenuItem1.Name = "seheVerkaufsDetailstoolStripMenuItem1";
+            this.seheVerkaufsDetailstoolStripMenuItem1.Size = new System.Drawing.Size(275, 38);
+            this.seheVerkaufsDetailstoolStripMenuItem1.Text = "Sehe Verkauf Details";
+            // 
+            // aktualisiereParfümMengeToolStripMenuItem
+            // 
+            this.aktualisiereParfümMengeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aktualisiereParfümMengeToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.update_7411697;
+            this.aktualisiereParfümMengeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aktualisiereParfümMengeToolStripMenuItem.Name = "aktualisiereParfümMengeToolStripMenuItem";
+            this.aktualisiereParfümMengeToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
+            this.aktualisiereParfümMengeToolStripMenuItem.Text = "Aktualisiere Einkaufsdaten";
+            this.aktualisiereParfümMengeToolStripMenuItem.Click += new System.EventHandler(this.aktualisiereParfümMengeToolStripMenuItem_Click);
+            // 
+            // entferneParfümToolStripMenuItem
+            // 
+            this.entferneParfümToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entferneParfümToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
+            this.entferneParfümToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.entferneParfümToolStripMenuItem.Name = "entferneParfümToolStripMenuItem";
+            this.entferneParfümToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
+            this.entferneParfümToolStripMenuItem.Text = "Entferne Einkaufsdaten";
+            this.entferneParfümToolStripMenuItem.Click += new System.EventHandler(this.entferneParfümToolStripMenuItem_Click);
             // 
             // btnHinzufügeNeueMenge
             // 
@@ -168,35 +197,6 @@
             this.txtFilerwert.TabIndex = 6;
             this.txtFilerwert.TextChanged += new System.EventHandler(this.txtFilerwert_TextChanged);
             this.txtFilerwert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilerwert_KeyPress);
-            // 
-            // seheVerkaufsDetailstoolStripMenuItem1
-            // 
-            this.seheVerkaufsDetailstoolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seheVerkaufsDetailstoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.details_322;
-            this.seheVerkaufsDetailstoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.seheVerkaufsDetailstoolStripMenuItem1.Name = "seheVerkaufsDetailstoolStripMenuItem1";
-            this.seheVerkaufsDetailstoolStripMenuItem1.Size = new System.Drawing.Size(275, 38);
-            this.seheVerkaufsDetailstoolStripMenuItem1.Text = "Sehe Verkauf Details";
-            // 
-            // aktualisiereParfümMengeToolStripMenuItem
-            // 
-            this.aktualisiereParfümMengeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aktualisiereParfümMengeToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.update_7411697;
-            this.aktualisiereParfümMengeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.aktualisiereParfümMengeToolStripMenuItem.Name = "aktualisiereParfümMengeToolStripMenuItem";
-            this.aktualisiereParfümMengeToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
-            this.aktualisiereParfümMengeToolStripMenuItem.Text = "Aktualisiere Einkaufsdaten";
-            this.aktualisiereParfümMengeToolStripMenuItem.Click += new System.EventHandler(this.aktualisiereParfümMengeToolStripMenuItem_Click);
-            // 
-            // entferneParfümToolStripMenuItem
-            // 
-            this.entferneParfümToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entferneParfümToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
-            this.entferneParfümToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.entferneParfümToolStripMenuItem.Name = "entferneParfümToolStripMenuItem";
-            this.entferneParfümToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
-            this.entferneParfümToolStripMenuItem.Text = "Entferne Einkaufsdaten";
-            this.entferneParfümToolStripMenuItem.Click += new System.EventHandler(this.entferneParfümToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
