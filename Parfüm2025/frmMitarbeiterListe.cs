@@ -80,6 +80,8 @@ namespace Parfüm2025
         private void frmMitarbeiterListe_Load(object sender, EventArgs e)
         {
             cbFilterBei.SelectedIndex = 0;
+            // Verhindert, dass der Benutzer den Text ändert
+            cbFilterBei.DropDownStyle = ComboBoxStyle.DropDownList;
             _SetzeMitarbeiterdaten();
         }
 

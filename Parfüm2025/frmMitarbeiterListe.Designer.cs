@@ -68,7 +68,7 @@
             this.dgvMitarbeiter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -246,24 +246,24 @@
             this.btnAddnewMitarbeiter.BackColor = System.Drawing.Color.Gold;
             this.btnAddnewMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnewMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1208, 276);
+            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1261, 276);
             this.btnAddnewMitarbeiter.Name = "btnAddnewMitarbeiter";
-            this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(333, 49);
+            this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(283, 49);
             this.btnAddnewMitarbeiter.TabIndex = 7;
-            this.btnAddnewMitarbeiter.Text = "hinzufüge einen neun Mitarbeiter";
+            this.btnAddnewMitarbeiter.Text = "Hinzufüge einen neun Mitarbeiter";
             this.btnAddnewMitarbeiter.UseVisualStyleBackColor = false;
             this.btnAddnewMitarbeiter.Click += new System.EventHandler(this.btnAddnewMitarbeiter_Click);
             // 
             // cbFilterBei
             // 
-            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterBei.FormattingEnabled = true;
             this.cbFilterBei.Items.AddRange(new object[] {
             "Vollname",
             "MitarbeiterID"});
-            this.cbFilterBei.Location = new System.Drawing.Point(103, 293);
+            this.cbFilterBei.Location = new System.Drawing.Point(103, 291);
             this.cbFilterBei.Name = "cbFilterBei";
-            this.cbFilterBei.Size = new System.Drawing.Size(189, 28);
+            this.cbFilterBei.Size = new System.Drawing.Size(189, 32);
             this.cbFilterBei.TabIndex = 8;
             this.cbFilterBei.SelectedIndexChanged += new System.EventHandler(this.cbFilterBei_SelectedIndexChanged);
             // 
@@ -273,11 +273,11 @@
             this.btnAktualisieren.BackColor = System.Drawing.Color.Gold;
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAktualisieren.Location = new System.Drawing.Point(869, 276);
+            this.btnAktualisieren.Location = new System.Drawing.Point(972, 276);
             this.btnAktualisieren.Name = "btnAktualisieren";
-            this.btnAktualisieren.Size = new System.Drawing.Size(333, 49);
+            this.btnAktualisieren.Size = new System.Drawing.Size(283, 49);
             this.btnAktualisieren.TabIndex = 10;
-            this.btnAktualisieren.Text = "aktualisiere Mitarbeiterdaten";
+            this.btnAktualisieren.Text = "Aktualisiere Mitarbeiterdaten";
             this.btnAktualisieren.UseVisualStyleBackColor = false;
             this.btnAktualisieren.Click += new System.EventHandler(this.btnAktualisieren_Click);
             // 
@@ -299,7 +299,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(588, 150);
+            this.label4.Location = new System.Drawing.Point(634, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(303, 28);
             this.label4.TabIndex = 1;
@@ -310,10 +310,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(362, 26);
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(570, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(828, 109);
+            this.label3.Size = new System.Drawing.Size(417, 55);
             this.label3.TabIndex = 0;
             this.label3.Text = "Alowidat Parfüm";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;

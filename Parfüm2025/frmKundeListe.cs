@@ -29,6 +29,8 @@ namespace Parfüm2025
         private void frmKundeListe_Load(object sender, EventArgs e)
         {
             cbFilterbei.SelectedIndex = 0;
+            cbFilterbei.DropDownStyle = ComboBoxStyle.DropDownList;
+
             _setzeKundedaten();
         }
         private void btnAktualisieren_Click(object sender, EventArgs e)

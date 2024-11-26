@@ -233,6 +233,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddUpdateNeueMitarbeiter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUpdate-NeueMitarbeiter";
             this.Load += new System.EventHandler(this.frmAddUpdateNeueMitarbeiter_Load);
             this.gbMitarbeiterdaten.ResumeLayout(false);

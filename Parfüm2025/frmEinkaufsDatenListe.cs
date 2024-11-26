@@ -16,6 +16,7 @@ namespace Parfüm2025
     {
         DataTable _dtEinkaufsdaten;
         BindingSource _bindingSource;
+        private readonly object _lockObject = new object();
         public frmEinkaufsDatenListe()
         {
             InitializeComponent();
@@ -39,6 +40,8 @@ namespace Parfüm2025
         private void frmLagerListe_Load(object sender, EventArgs e)
         {
             cbFilterbei.SelectedIndex = 0;
+            cbFilterbei.DropDownStyle = ComboBoxStyle.DropDownList; // verhindert die ComboBox Einträge zu ändern.
+             
             _setzeEinkaufsDaten();
         }
 
@@ -62,7 +65,7 @@ namespace Parfüm2025
 
             clsEinkauf einkaufdaten = clsEinkauf.FindEinkaufDatenByParfümNummer(parfümNummer);
 
-            bool result = (MessageBox.Show("Sind Sie sicher, Sie möchten diesen Vorgand durchführen?", "Hinweis",
+            bool result = (MessageBox.Show("Sind Sie sicher, Sie möchten diesen Vorgang durchführen?", "Hinweis",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes);
 
             if (!result)
@@ -70,12 +73,12 @@ namespace Parfüm2025
 
             if(result && einkaufdaten != null && einkaufdaten.Delete())
             {
-                MessageBox.Show("Parfümdaten erfolgreich entfernt", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Einkaufsdaten erfolgreich entfernt", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 _setzeEinkaufsDaten();
             }
             else
-                MessageBox.Show("Fehler beim Entfernen der Parfümdaten ist aufgetreten.", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Fehler beim Entfernen der Einkaufsdaten ist aufgetreten.", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void cbFilterbei_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,20 +95,22 @@ namespace Parfüm2025
             string filterspalte = cbFilterbei.SelectedItem.ToString();
             string filterwert = txtFilerwert.Text.Trim();
 
-            if (!string.IsNullOrEmpty(filterwert))
+            lock (_lockObject)
             {
-                if (filterspalte == "ParfümName")
+                if (!string.IsNullOrEmpty(filterwert))
                 {
-                    _bindingSource.Filter = $"{filterspalte} Like '{filterwert}%'";
+                    if (filterspalte == "ParfümName")
+                    {
+                        _bindingSource.Filter = $"{filterspalte} Like '{filterwert}%'";
+                    }
+                    else if (filterspalte == "ParfümNummer")
+                        _bindingSource.Filter = $"{filterspalte} = {filterwert}";
                 }
-                else if (filterspalte == "ParfümNummer")
-                    _bindingSource.Filter = $"{filterspalte} = {filterwert}";
+                else
+                {
+                    _bindingSource.Filter = string.Empty;
+                }
             }
-            else
-            {
-                _bindingSource.Filter = string.Empty;
-            }
-
         }
         private void txtFilerwert_TextChanged(object sender, EventArgs e)
         {

@@ -93,9 +93,29 @@ namespace Parfüm2025.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_321 {
+            get {
+                object obj = ResourceManager.GetObject("Delete 321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_5953478__1_ {
             get {
                 object obj = ResourceManager.GetObject("delete_5953478 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_5953478__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("delete_5953478 (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,26 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap details_321 {
             get {
                 object obj = ResourceManager.GetObject("details 321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap details_322 {
+            get {
+                object obj = ResourceManager.GetObject("details 322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap details_323 {
+            get {
+                object obj = ResourceManager.GetObject("details 323", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +326,16 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap refresh_5791276 {
             get {
                 object obj = ResourceManager.GetObject("refresh_5791276", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_57912761 {
+            get {
+                object obj = ResourceManager.GetObject("refresh_57912761", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -248,6 +248,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddUpdateNeueParfümMenge";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUpdateNeueParfümMenge";
             this.Load += new System.EventHandler(this.frmAddUpdateNeueParfümMenge_Load);
             this.groupBox1.ResumeLayout(false);

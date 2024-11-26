@@ -32,6 +32,7 @@
             this.btnAbbrechen = new System.Windows.Forms.Button();
             this.btnSpeichern = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbVorschläge = new System.Windows.Forms.ListBox();
             this.txtGesamtPreis = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNormalPreis = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbVorschläge = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +106,18 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Verkauf-daten";
+            // 
+            // lbVorschläge
+            // 
+            this.lbVorschläge.FormattingEnabled = true;
+            this.lbVorschläge.ItemHeight = 20;
+            this.lbVorschläge.Location = new System.Drawing.Point(163, 146);
+            this.lbVorschläge.Name = "lbVorschläge";
+            this.lbVorschläge.Size = new System.Drawing.Size(246, 164);
+            this.lbVorschläge.TabIndex = 22;
+            this.lbVorschläge.Visible = false;
+            this.lbVorschläge.Click += new System.EventHandler(this.lbVorschläge_Click);
+            this.lbVorschläge.SelectedIndexChanged += new System.EventHandler(this.lbVorschläge_SelectedIndexChanged);
             // 
             // txtGesamtPreis
             // 
@@ -267,18 +279,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // lbVorschläge
-            // 
-            this.lbVorschläge.FormattingEnabled = true;
-            this.lbVorschläge.ItemHeight = 20;
-            this.lbVorschläge.Location = new System.Drawing.Point(163, 146);
-            this.lbVorschläge.Name = "lbVorschläge";
-            this.lbVorschläge.Size = new System.Drawing.Size(246, 164);
-            this.lbVorschläge.TabIndex = 22;
-            this.lbVorschläge.Visible = false;
-            this.lbVorschläge.Click += new System.EventHandler(this.lbVorschläge_Click);
-            this.lbVorschläge.SelectedIndexChanged += new System.EventHandler(this.lbVorschläge_SelectedIndexChanged);
-            // 
             // frmAddUpdateVerkaufDaten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +287,8 @@
             this.Controls.Add(this.btnAbbrechen);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAddUpdateVerkaufDaten";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUpdate-VerkaufDaten";

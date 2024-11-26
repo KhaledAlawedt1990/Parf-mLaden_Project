@@ -9,18 +9,22 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Parfüm2025
 {
     public partial class frmAddUpdateVerkaufDaten : Form
     {
-        public enum enMode { addnew = 0, update = 1 }
+        public enum enMode { addnew = 0, update = 1, SeheDetails = 2}
         public enMode _mode = enMode.addnew;
 
         private readonly object _lackObject = new object();
         private readonly object _autoComplateLock = new object();
         clsVerkauf  _verkaufsDaten;
         private int _verkaufsID;
+
+        public delegate void  Databack(object senden, float lagerbestand, int parfümNummer);
+        public event Databack lagerbestandAktualisiert;
         public frmAddUpdateVerkaufDaten(int verkaufsID, enMode mode)
         {
             InitializeComponent();
@@ -42,7 +46,7 @@ namespace Parfüm2025
             txtParfümNummer.Clear();
             txtKundeName.Clear();
             txtVerkaufsMenge.Clear();
-            txtLagerbestand.Clear();
+            txtLagerbestand.Text = "0";
             txtNormalPreis.Clear();
             txtGesamtPreis.Clear();
             dtpErstellungsDatum.Value = DateTime.Now;
@@ -62,8 +66,8 @@ namespace Parfüm2025
                     txtVerkaufsMenge.Text = _verkaufsDaten.verkaufsMenge.ToString();
                     txtLagerbestand.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_verkaufsDaten.parfümNummer).lagerbestand.ToString();
 
-                    txtNormalPreis.Text = _verkaufsDaten.normalPreis.ToString();
-                    txtGesamtPreis.Text = _verkaufsDaten.ToString();
+                    txtNormalPreis.Text = _verkaufsDaten.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
+                    txtGesamtPreis.Text = _verkaufsDaten.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     dtpErstellungsDatum.Value = _verkaufsDaten.erstellungsDatum;
                 }
                 else
@@ -108,34 +112,59 @@ namespace Parfüm2025
             return isValid; // Gibt zurück, ob alle Felder gültig sind
         }
 
-        private float _HatNeueMengeGültigeNummer(string neueMenge)
-        {
-            float MengeNummer;
 
-            if (float.TryParse(neueMenge, out MengeNummer))
-            {
-                return MengeNummer;
-            }
-            else
-                return -1;
-        }
-        private void _fülleVerkaufsdaten()
+        private bool _fülleVerkaufsdaten()
         {
              
             _verkaufsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
             _verkaufsDaten.kundeID = clsKunde.FindKundeByPersonName(txtKundeName.Text.Trim()).kundeID;
             _verkaufsDaten.verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
-            float neueLagerbestand = Convert.ToSingle(txtLagerbestand.Text.Trim()) - Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
+           
+            float lagerbestand = Convert.ToSingle(txtLagerbestand.Text.Trim());
+            float verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
+
+            if(lagerbestand < verkaufsMenge)
+            {
+                MessageBox.Show("Die Verkaufsmenge überschreitet den Lagerbestand. Bitte passen Sie die Menge an.",
+                  "Warnung",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Warning);
+                return false;
+            }
+            float neueLagerbestand = lagerbestand - verkaufsMenge;
             _verkaufsDaten.lagerbestand = neueLagerbestand; ; // hier subtraieren die verkaufsMenge .
 
-            _verkaufsDaten.normalPreis = Convert.ToSingle(txtNormalPreis.Text.Trim()); 
-
-            _verkaufsDaten.gesamtPreis = Convert.ToSingle(_verkaufsDaten.normalPreis * 1.19); // Mit Seteuer dazu.
-
+            
+            _verkaufsDaten.normalPreis = _ExtractNumber(txtNormalPreis.Text.Trim()) ; 
+            _verkaufsDaten.gesamtPreis = _ExtractNumber(txtGesamtPreis.Text.Trim()); // Mit Seteuer dazu.
             _verkaufsDaten.erstellungsDatum = dtpErstellungsDatum.Value;
+
+            return true;
         }
 
+        private float _ExtractNumber(string text)
+        {
+            // Entfernt alle Tausendertrennzeichen (Punkte in deutscher Kultur)
+            string cleanedInput = text.Replace(".", "");
+
+            // Filtert nur Ziffern und das Dezimaltrennzeichen (Komma für de-DE)
+            string numericPart = new string(cleanedInput.Where(c => char.IsDigit(c) || c == ',').ToArray());
+
+            // Ersetzt das Komma durch einen Punkt (falls notwendig)
+            numericPart = numericPart.Replace(',', '.');
+
+            // Versucht, die gefilterte Zeichenkette in eine Zahl umzuwandeln
+            if (float.TryParse(numericPart, NumberStyles.Float, CultureInfo.InvariantCulture, out float number))
+            {
+                return number;
+            }
+            else
+            {
+                MessageBox.Show($"Die Eingabe '{text}' enthält keine gültige Zahl.");
+                return 0f;
+            }
+        }
         private bool _ExistiertParfümNummer()
         {
             int parfümNummer = Convert.ToInt32(txtParfümNummer.Text.Trim());
@@ -150,25 +179,27 @@ namespace Parfüm2025
         }
         private void _speicherEinkaufsdaten()
         {
-            if (!_ExistiertParfümNummer())
-                return;
-
             if (!_ValiedereVerkaufsdatenMenge())
                 return;
 
-            if (_HatNeueMengeGültigeNummer(txtVerkaufsMenge.Text.Trim()) == -1)
+            if (!_ExistiertParfümNummer())
+                return;
+
+
+            if (_ExtractNumber(txtVerkaufsMenge.Text.Trim()) == 0f)
             {
                 errorProvider1.SetError(txtVerkaufsMenge, "Der Feld nimmt nur Nummer auf");
                 return;
             }
 
-            if (_HatNeueMengeGültigeNummer(txtNormalPreis.Text.Trim()) == -1)
+            if (_ExtractNumber(txtNormalPreis.Text.Trim()) == 0f)
             {
                 errorProvider1.SetError(txtNormalPreis, "Der Feld nimmt nur Nummer auf");
                 return;
             }
 
-            _fülleVerkaufsdaten();
+            if(!_fülleVerkaufsdaten())
+                return;
 
             if (_verkaufsDaten.Save() && clsEinkauf.UpdateLagerbestand(_verkaufsDaten.parfümNummer, _verkaufsDaten.lagerbestand))
             {
@@ -177,6 +208,9 @@ namespace Parfüm2025
 
                 _mode = enMode.update; // wir aktualisieren den Object.
                 txtVerkaufsID.Text = _verkaufsDaten.verkaufsID.ToString();
+
+                this.lagerbestandAktualisiert?.Invoke(this, _verkaufsDaten.lagerbestand, _verkaufsDaten.parfümNummer);
+
                 this.Close();
 
             }
@@ -189,13 +223,21 @@ namespace Parfüm2025
         {
             
             _setzeVerkaufsDatenAufStandardWerte();
+
             if (_mode == enMode.addnew)
             {
                 _verkaufsDaten = new clsVerkauf();
             }
+            else if(_mode == enMode.update)
+            {
+                _ladeVerkaufsDaten();
+                lbVorschläge.Visible = false;
+            }
             else
             {
                 _ladeVerkaufsDaten();
+                btnSpeichern.Enabled = false;
+                lbVorschläge.Visible = !(_mode == enMode.SeheDetails);
             }
         }
 
@@ -225,19 +267,23 @@ namespace Parfüm2025
                     txtLagerbestand.Text = einkaufsdaten.lagerbestand.ToString();
                 }
                 else
-                    txtLagerbestand.Clear();
+                    txtLagerbestand.Text = "0";
             }
             else
                 txtLagerbestand.Clear();
         }
 
         private void txtNormalPreis_TextChanged(object sender, EventArgs e)
-        {
+       {
+            string formattedPrice = txtNormalPreis.Text.Trim();
+            float normalPreise;
             if (!string.IsNullOrEmpty(txtNormalPreis.Text.Trim()))
             {
-                float normalPreis = Convert.ToSingle(txtNormalPreis.Text.Trim());
-                float gesamtPreis = Convert.ToSingle(normalPreis * 1.19);
-                txtGesamtPreis.Text = gesamtPreis.ToString();
+                if (float.TryParse(formattedPrice, NumberStyles.Currency, CultureInfo.GetCultureInfo("de-DE"), out normalPreise))
+                {
+                    float gesamtPreis = Convert.ToSingle(normalPreise * 1.19);
+                    txtGesamtPreis.Text = gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
+                }
             }
             else
                 txtGesamtPreis.Clear();
@@ -294,17 +340,40 @@ namespace Parfüm2025
 
         private void lbVorschläge_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //// Überprüfen, ob etwas ausgewählt wurde
+            //if (lbVorschläge.SelectedItem != null)
+            //{
+            //    string selectedItem = lbVorschläge.SelectedItem.ToString();
+            //    MessageBox.Show($"Ausgewählt: {selectedItem}");
+            //}
+            //else
+            //{
+            //    // Keine Aktion notwendig, weil nichts ausgewählt wurde
+            //    MessageBox.Show("Kein Eintrag ausgewählt!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    return;
+            //}
         }
 
         private void lbVorschläge_Click(object sender, EventArgs e)
         {
-           txtKundeName.Focus();
-            //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
-            if (lbVorschläge.SelectedItems != null)
+            if (lbVorschläge.Items.Count == 0)
             {
-                txtKundeName.Text = lbVorschläge.SelectedItem.ToString();
+                MessageBox.Show("Die Liste ist leer.", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            txtKundeName.Focus();
+            //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
+            if (lbVorschläge.SelectedItem != null)
+            {
+                string selectedItem = lbVorschläge.SelectedItem.ToString();
+                txtKundeName.Text = selectedItem;
+                MessageBox.Show($"Ausgewählt: {selectedItem}");
                 lbVorschläge.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Kein gültiger Eintrag ausgewählt.", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

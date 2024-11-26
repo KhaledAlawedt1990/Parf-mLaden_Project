@@ -140,8 +140,10 @@ namespace Parfüm2025
             else
                 status = "aktualisiert";
 
+            AVLTree tree = new AVLTree();
             if(_parfüm.Save())
-            { 
+            {
+                tree.Insert(_parfüm.Name); // Hier addieren wir jeden neuen Parfüm in AVL Tree.
 
                 MessageBox.Show($"Parfümdaten erfolgreich {status}", "Erfolg",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

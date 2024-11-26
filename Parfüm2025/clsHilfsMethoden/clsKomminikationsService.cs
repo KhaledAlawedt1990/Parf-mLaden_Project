@@ -108,28 +108,34 @@ namespace clsHilfsMethoden
                     server.Stop(); // Sicherstellen, dass vorherige Instanz gestoppt wurde
                 }
 
-                server = new TcpListener(IPAddress.Any, 5000);
-                server.Start();
-                running = true;
+                server = new TcpListener(IPAddress.Any, 5000);  // server: Erstellt einen neuen Server, der auf Port 5000 lauscht und Verbindungen von allen IP-Adressen (IPAddress.Any) akzeptiert.
+                server.Start(); // server.Start(): Startet den Server, damit er auf Verbindungen wartet.
+                running = true; //running = true: Die Schleife bleibt aktiv, solange running auf true gesetzt ist.
 
-                while(running)
+                while (running)
+                /*
+                 * server != null: Stellt sicher, dass der Server initialisiert wurde.
+                   server.Server.IsBound: Prüft, ob der Server erfolgreich an den Port gebunden ist.
+                     server.Pending(): Überprüft, ob eingehende Verbindungen in der Warteschlange sind.
+                 */
                 {
                     if (server != null && server.Server.IsBound && server.Pending())
                     {
-                        using (TcpClient client = await server.AcceptTcpClientAsync())
+                        using (TcpClient client = await server.AcceptTcpClientAsync()) //AcceptTcpClientAsync(): Wartet asynchron auf eine eingehende Verbindung und akzeptiert diese.
+                                                                                       //   Die Verbindung wird als TcpClient-Objekt bereitgestellt.
                         {
-                            NetworkStream stream = client.GetStream();
-                            byte[] buffer = new byte[1024];
-                            int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
-
-                            if (bytesRead > 0)
+                            NetworkStream stream = client.GetStream(); //GetStream(): Ruft den Netzwerk-Datenstrom ab, der für das Lesen und Schreiben von Daten verwendet wird.
+                            byte[] buffer = new byte[1024];  //buffer: Ein Puffer, in den empfangene Daten gespeichert werden.
+                            int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length); //ReadAsync(): Liest Daten asynchron vom Netzwerk-Stream in den Puffer.
+                           // bytesRead: Die Anzahl der tatsächlich gelesenen Bytes.
+                            if (bytesRead > 0) 
                             {
                                 result = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
                                 // Antwort an den Client senden
                                 string response = "Nachricht empfangen, Vielen Dank für Ihren Einkauf!.";
-                                byte[] responseBytes = Encoding.UTF8.GetBytes(response);
-                                await stream.WriteAsync(responseBytes, 0, responseBytes.Length);
+                                byte[] responseBytes = Encoding.UTF8.GetBytes(response);  
+                                await stream.WriteAsync(responseBytes, 0, responseBytes.Length);  // //WriteAsync(): Sendet die Nachricht asynchron über den Netzwerk-Stream. 
 
                                 return result;
                             }

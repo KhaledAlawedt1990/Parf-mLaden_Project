@@ -117,6 +117,7 @@ namespace Parfüm2025
                 if (_mode == enMode.update) { status = "Kundedaten wurden erfolgreich aktualisiert."; }
                 else status = "Kundedaten wurden erfolgreich hinzugefügt.";
 
+
                 if (personGespeichert && _kunde.Save())
                 {
                     _mode = enMode.update;

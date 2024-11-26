@@ -103,7 +103,7 @@ namespace Busnisse_Layer
             return false;
         }
 
-        private bool Delete()
+        public bool Delete()
         {
             return clsVerkaufDatenzugriff.DeleteVerkaufDaten(this.verkaufsID);
         }

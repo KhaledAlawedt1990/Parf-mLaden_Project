@@ -62,7 +62,7 @@ namespace Data_Layer
         {
             DataTable dt = new DataTable();
 
-            string abfrage = @"Select * From  Verkauf
+            string abfrage = @"Select * From  Verkauf_View
                                                   Order by erstellungsDatum Desc";
             try
             {
@@ -148,6 +148,7 @@ namespace Data_Layer
 
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
+                        command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
                         command.Parameters.AddWithValue("@kundeID", kundeID);
                         command.Parameters.AddWithValue("@verkaufsMenge", verkaufsMenge);
                         command.Parameters.AddWithValue("@lagerbestand", lagerbestand);
@@ -189,6 +190,7 @@ namespace Data_Layer
                     {
 
                         // Parameter hinzufügen
+                        command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
                         command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
                         command.Parameters.AddWithValue("@kundeID", kundeID);
                         command.Parameters.AddWithValue("@verkaufsMenge", verkaufsMenge);
@@ -210,18 +212,18 @@ namespace Data_Layer
         }
 
      
-        public static bool DeleteVerkaufDaten(int verkaufID)
+        public static bool DeleteVerkaufDaten(int verkaufsID)
         {
             int RowAffected = 0;
 
-            string abfrage = @"Delete From Verkauf Where verkaufID = @verkaufID";
+            string abfrage = @"Delete From Verkauf Where verkaufsID = @verkaufsID";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     using (SqlCommand command = new SqlCommand(abfrage, connection))
                     {
-                        command.Parameters.AddWithValue("@verkaufID", verkaufID);
+                        command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
 
                         //Öffene die verbindung und ausführe den Befehl
                         connection.Open();

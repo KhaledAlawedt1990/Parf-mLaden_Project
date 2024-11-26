@@ -286,6 +286,17 @@ namespace Parfüm2025
                 }
             }
         }
+
+        private void lbVorschläge_Click_1(object sender, EventArgs e)
+        {
+            txtParfümSuchen.Focus();
+            //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
+            if (lbVorschläge.SelectedItems != null)
+            {
+                txtParfümSuchen.Text = lbVorschläge.SelectedItem.ToString();
+                lbVorschläge.Visible = false;
+            }
+        }
         private void btnSuchen_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtParfümSuchen.Text))
@@ -402,21 +413,10 @@ namespace Parfüm2025
 
         private void cbFilterBei_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbFilterBei.SelectedIndex != -1)
+            if (cbFilterBei.SelectedIndex != -1)
             {
                 txtFilterWert.Clear();
                 txtFilterWert.Focus();
-            }
-        }
-
-        private void lbVorschläge_Click_1(object sender, EventArgs e)
-        {
-            txtParfümSuchen.Focus();
-            //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
-            if (lbVorschläge.SelectedItems != null)
-            {
-                txtParfümSuchen.Text = lbVorschläge.SelectedItem.ToString();
-                lbVorschläge.Visible = false;
             }
         }
 
