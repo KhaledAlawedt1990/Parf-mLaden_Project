@@ -168,6 +168,41 @@ namespace Data_Layer
             }
             return dt;
         }
+
+        public static DataTable GetKundeByName(string vollName)
+        {
+            DataTable dt = new DataTable();
+
+            string abfrage = @"select Kunde.kundeID, Kunde.personID,
+                                        (Person.Vorname + ' ' + Person.Nachname) as KundenName , 
+                                        Person.Geburtstag, Person.Geschlecht, Kunde.firmaName, 
+                                        Person.Email, Kunde.regestriertAm, Kunde.istAktive
+                                       from Person INNER JOIN Kunde ON
+                                       Person.PersonID = Kunde.personID
+	                                   where Trim(person.Vorname) + ' ' + Trim(Person.Nachname) = @vollName";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(abfrage, connection))
+                    {
+                        command.Parameters.AddWithValue("@vollName", vollName);
+
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw;
+            }
+            return dt;
+        }
         public static DataTable GetAllKundenName()
         {
             DataTable dt = new DataTable();
@@ -203,7 +238,7 @@ namespace Data_Layer
             DataTable dt = new DataTable();
 
             string abfrage = @"select Kunde.kundeID, Kunde.personID,
-                                        (Person.Vorname + ' ' + Person.Nachname) as Vollname , 
+                                        (Person.Vorname + ' ' + Person.Nachname) as KundenName , 
                                         Person.Geburtstag, Person.Geschlecht, Kunde.firmaName, Person.Email, Kunde.regestriertAm, Kunde.istAktive
                                        from Person INNER JOIN Kunde ON
                                        Person.PersonID = Kunde.personID

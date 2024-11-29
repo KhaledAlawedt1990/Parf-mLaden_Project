@@ -30,7 +30,7 @@ namespace Parfüm2025
         }
         private void _setzeVerkaufsDaten()
         {
-            _dtverkaufsDaten = clsVerkauf.GetAllVerkaufDaten();
+            _dtverkaufsDaten = clsVerkauf.GetVerkaufsRecordProSeite(100, 1);
             _bindingSource.DataSource = _dtverkaufsDaten;
             dgvVerkaufsDaten.DataSource = _bindingSource;
             //dgvVerkaufsDaten.Columns["LagerbestandInGramm"].DefaultCellStyle.BackColor = Color.Gold;
@@ -73,6 +73,7 @@ namespace Parfüm2025
             cbFilterbei.SelectedIndex = 0;
             cbFilterbei.DropDownStyle = ComboBoxStyle.DropDownList; //verhindert die Combobox Einträge zu ändern.
 
+
             _setzeVerkaufsDaten();
         }
 
@@ -85,11 +86,11 @@ namespace Parfüm2025
             {
                 if (!string.IsNullOrEmpty(filterwert))
                 {
-                    if (filterspalte == "ParfümNummer")
+                    if (filterspalte == "ParfümNummer" || filterspalte == "BelegID")
                     {
                         _bindingSource.Filter = $"{filterspalte} = {filterwert}";
                     }
-                    else if (filterspalte == "Vollname")
+                    else if (filterspalte == "KundenName")
                         _bindingSource.Filter = $"{filterspalte} Like '{filterwert}%'";
                     
                 }
@@ -123,14 +124,14 @@ namespace Parfüm2025
 
         private void txtFilerwert_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (cbFilterbei.SelectedItem.ToString() == "ParfümNummer")
+            if (cbFilterbei.SelectedItem.ToString() == "ParfümNummer" || cbFilterbei.SelectedItem.ToString() == "BelegID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void seheVerkaufToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int verkaufID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
-            frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(verkaufID, frmAddUpdateVerkaufDaten.enMode.SeheDetails);
+            int belegID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
+            frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(belegID, frmAddUpdateVerkaufDaten.enMode.SeheDetails);
             frm.ShowDialog();             
         }
 
@@ -150,8 +151,8 @@ namespace Parfüm2025
         }
         private void aktualisiereVerkaufdatentoolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            int verkaufID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
-            frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(verkaufID, frmAddUpdateVerkaufDaten.enMode.update);
+            int belegID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
+            frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(belegID, frmAddUpdateVerkaufDaten.enMode.update);
 
             frm.lagerbestandAktualisiert += _ÜberprüfeLagerbestand; // Der Neue Lagerbestand zurückkiegen.
             frm.ShowDialog();
@@ -184,9 +185,9 @@ namespace Parfüm2025
 
         private void entferneVerkaufsdatenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int verkaufID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
+            int belegID = (int)dgvVerkaufsDaten.CurrentRow.Cells[0].Value;
 
-            clsVerkauf verkaufdaten = clsVerkauf.Find(verkaufID);
+            clsVerkauf verkaufdaten = clsVerkauf.Find(belegID);
 
             bool result = (MessageBox.Show("Sind Sie sicher, Sie möchten diesen Vorgang durchführen?", "Hinweis",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes);

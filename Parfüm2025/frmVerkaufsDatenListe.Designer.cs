@@ -71,8 +71,9 @@
             this.cbFilterbei.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterbei.FormattingEnabled = true;
             this.cbFilterbei.Items.AddRange(new object[] {
-            "Vollname",
-            "ParfümNummer"});
+            "KundenName",
+            "ParfümNummer",
+            "BelegID"});
             this.cbFilterbei.Location = new System.Drawing.Point(92, 293);
             this.cbFilterbei.Name = "cbFilterbei";
             this.cbFilterbei.Size = new System.Drawing.Size(163, 28);
@@ -130,10 +131,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVerkaufsDaten.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVerkaufsDaten.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
@@ -147,7 +148,8 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVerkaufsDaten.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvVerkaufsDaten.Location = new System.Drawing.Point(12, 328);
+            this.dgvVerkaufsDaten.EnableHeadersVisualStyles = false;
+            this.dgvVerkaufsDaten.Location = new System.Drawing.Point(16, 327);
             this.dgvVerkaufsDaten.Name = "dgvVerkaufsDaten";
             this.dgvVerkaufsDaten.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -230,7 +232,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Khaki;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.store_869636;
             this.pictureBox1.Location = new System.Drawing.Point(12, 10);
             this.pictureBox1.Name = "pictureBox1";

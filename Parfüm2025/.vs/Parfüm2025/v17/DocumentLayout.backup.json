@@ -1,9 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
+  "WorkspaceRootPath": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,8 +42,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 163,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddUpdateNeueUser.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
+              "RelativeDocumentMoniker": "frmAddUpdateNeueUser.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
+              "RelativeToolTip": "frmAddUpdateNeueUser.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAIAywIQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:26:05.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAddUpdateNeueUser.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
+              "RelativeDocumentMoniker": "frmAddUpdateNeueUser.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs [Entwurf]",
+              "RelativeToolTip": "frmAddUpdateNeueUser.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:25:59.375Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAddUpdateNewPerfum.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
+              "RelativeDocumentMoniker": "frmAddUpdateNewPerfum.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
+              "RelativeToolTip": "frmAddUpdateNewPerfum.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwDcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:23:13.556Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -34,15 +100,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "frmUserListe.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs",
+              "RelativeDocumentMoniker": "frmUserListe.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs",
+              "RelativeToolTip": "frmUserListe.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwCwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T14:38:29.331Z",
+              "WhenOpened": "2024-11-29T14:14:27.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmUserListe.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs",
+              "RelativeDocumentMoniker": "frmUserListe.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs [Entwurf]",
+              "RelativeToolTip": "frmUserListe.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:12:44.228Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmLogginScreen.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeDocumentMoniker": "frmLogginScreen.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeToolTip": "frmLogginScreen.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAADwvzsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:11:36.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmLogginScreen.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeDocumentMoniker": "frmLogginScreen.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs [Entwurf]",
+              "RelativeToolTip": "frmLogginScreen.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:11:35.083Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T09:59:46.372Z",
               "EditorCaption": ""
             }
           ]

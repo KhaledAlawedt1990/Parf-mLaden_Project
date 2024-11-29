@@ -1,4 +1,5 @@
-﻿using clsHilfsMethoden;
+﻿using Busnisse_Layer;
+using clsHilfsMethoden;
 using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.ApplicationModel.VoiceCommands;
 
 namespace Parfüm2025
 {
@@ -17,12 +19,46 @@ namespace Parfüm2025
     {
         private float _neuerLagerbestand = -1;
         private int _parfümNummer = -1;
+        private frmOverly _overlay;
         public frmHaupBildschrimAnsicht()
         {
             InitializeComponent();
+
+            // KeyPreview aktivieren, um Tasteneingaben abzufangen
+            this.KeyPreview = true;
+
+            // Ereignis für KeyDown hinzufügen
+            this.KeyDown += frmHaupt_KeyDown;
+
+        }
+
+        // KeyDown-Ereignis für die Hauptform
+        private void frmHaupt_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Wenn die F12-Taste gedrückt wird
+            if (e.KeyCode == Keys.F12)
+            {
+                if (_overlay == null || _overlay.IsDisposed)
+                {
+                    // Overlay-Form erstellen
+                    _overlay = new frmOverly();
+                    _overlay.Owner = this; // Setze die Hauptform als Owner
+                    _overlay.Show();
+                }
+            }
+            else if (e.KeyCode == Keys.F11)
+            {
+                // Schließe die Overlay-Form, falls sie aktiv ist
+                if (_overlay != null && !_overlay.IsDisposed)
+                {
+                    _overlay.Close();
+                }
+            }
         }
         private void clsHaupBildschrimAnsicht_FormClosed(object sender, FormClosedEventArgs e)
         {
+            _overlay = null; // Setze die Overlay-Instanz zurück
+
             // Benutzer ausloggen (aktiven Benutzer zurücksetzen)
             if (clsGlobaleKlasse.currentUser != null)
                 clsGlobaleKlasse.currentUser = null;
@@ -176,6 +212,46 @@ namespace Parfüm2025
 
             _neuerLagerbestand = -1;  // neuelagerbestand zurücksetzen
             _parfümNummer = -1;    // parfümNummer zurücksetzen 
+        }
+
+        private void sucheEinenKundenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKundeSucheFilter frm = new frmKundeSucheFilter();
+            frm.ShowDialog();
+        }
+
+        private void _BackupDatabase()
+        {
+
+            if(DateTime.Now.DayOfWeek == DayOfWeek.Friday)
+            {
+                // Überprüfen, ob Backup schon durchgeführt wurde
+                string letzterBackupTag = Properties.Settings.Default.LetztesBackupDatum;
+                string heutigesDatum = DateTime.Now.ToString("yyyy-MM-dd");
+
+                if (letzterBackupTag != heutigesDatum)
+                {
+                    //Backup erstellen
+                    bool backupErfolgreich = clsBackup.IsBackupSuccessfulByMacAdresse();
+
+                    if (backupErfolgreich)
+                    {
+                        new ToastContentBuilder()
+                     .AddText("Backup erfolgreich")
+                       .AddText("Das Backup der Datenbank wurde erfolgreich erstellt.")
+                       .SetToastDuration(ToastDuration.Long).Show(); // Toast länger anzeigen
+
+                        // Datum speichern
+                        Properties.Settings.Default.LetztesBackupDatum = heutigesDatum;
+                        Properties.Settings.Default.Save();
+
+                    }
+                }
+            }
+        }
+        private void frmHaupBildschrimAnsicht_Load(object sender, EventArgs e)
+        {
+            _BackupDatabase();
         }
     }
 }

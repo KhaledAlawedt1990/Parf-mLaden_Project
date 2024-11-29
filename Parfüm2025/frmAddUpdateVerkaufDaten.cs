@@ -23,14 +23,14 @@ namespace Parfüm2025
         private readonly object _lackObject = new object();
         private readonly object _autoComplateLock = new object();
         clsVerkauf  _verkaufsDaten;
-        private int _verkaufsID;
+        private int _belegID;
 
         public delegate void  Databack(object senden, float lagerbestand, int parfümNummer);
         public event Databack lagerbestandAktualisiert;
-        public frmAddUpdateVerkaufDaten(int verkaufsID, enMode mode)
+        public frmAddUpdateVerkaufDaten(int belegID, enMode mode)
         {
             InitializeComponent();
-            this._verkaufsID= verkaufsID;
+            this._belegID= belegID;
             this._mode = mode;
         }
 
@@ -44,7 +44,7 @@ namespace Parfüm2025
         {
             _DatumEinrichten();
 
-            txtVerkaufsID.Text = "-1";
+            txtBelegID.Text = "-1";
             txtParfümNummer.Clear();
             txtKundeName.Clear();
             txtVerkaufsMenge.Clear();
@@ -60,7 +60,7 @@ namespace Parfüm2025
             {
                 try
                 {
-                    _verkaufsDaten = clsVerkauf.Find(_verkaufsID);
+                    _verkaufsDaten = clsVerkauf.Find(_belegID);
 
                     if (_verkaufsDaten == null)
                     {
@@ -70,7 +70,7 @@ namespace Parfüm2025
                     }
 
 
-                    txtVerkaufsID.Text = _verkaufsDaten.verkaufsID.ToString();
+                    txtBelegID.Text = _verkaufsDaten.belegID.ToString();
                     txtParfümNummer.Text = _verkaufsDaten.parfümNummer.ToString();
                     txtKundeName.Text = _verkaufsDaten.kundeInfos.Vollname;
                     txtVerkaufsMenge.Text = _verkaufsDaten.verkaufsMenge.ToString();
@@ -229,7 +229,7 @@ namespace Parfüm2025
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 _mode = enMode.update; // wir aktualisieren den Object.
-                txtVerkaufsID.Text = _verkaufsDaten.verkaufsID.ToString();
+                txtBelegID.Text = _verkaufsDaten.belegID.ToString();
 
                 this.lagerbestandAktualisiert?.Invoke(this, _verkaufsDaten.lagerbestand, _verkaufsDaten.parfümNummer);
 
@@ -383,8 +383,6 @@ namespace Parfüm2025
                 MessageBox.Show("Die Liste ist leer.", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            txtKundeName.Focus();
             //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
             if (lbVorschläge.SelectedItem != null)
             {

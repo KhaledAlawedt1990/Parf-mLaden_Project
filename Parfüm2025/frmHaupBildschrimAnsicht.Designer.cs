@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.parfümVerwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parfümAnsichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,6 +36,7 @@
             this.kundeVerwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kundeAnsichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hinzufügeNeuenKundenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sucheEinenKundenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitarbeiterVerwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitarbeiterAnsichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hinzufügeNeuenMitarbeiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +50,7 @@
             this.ausloggenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ausloggenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +105,8 @@
             // 
             this.kundeVerwaltungToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kundeAnsichtToolStripMenuItem,
-            this.hinzufügeNeuenKundenToolStripMenuItem});
+            this.hinzufügeNeuenKundenToolStripMenuItem,
+            this.sucheEinenKundenToolStripMenuItem});
             this.kundeVerwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kundeVerwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.People_644;
             this.kundeVerwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -115,7 +119,7 @@
             this.kundeAnsichtToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.computer_120061443;
             this.kundeAnsichtToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.kundeAnsichtToolStripMenuItem.Name = "kundeAnsichtToolStripMenuItem";
-            this.kundeAnsichtToolStripMenuItem.Size = new System.Drawing.Size(280, 38);
+            this.kundeAnsichtToolStripMenuItem.Size = new System.Drawing.Size(280, 44);
             this.kundeAnsichtToolStripMenuItem.Text = "Kunde Ansicht";
             this.kundeAnsichtToolStripMenuItem.Click += new System.EventHandler(this.kundeAnsichtToolStripMenuItem_Click);
             // 
@@ -124,9 +128,18 @@
             this.hinzufügeNeuenKundenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.add_user_4925271;
             this.hinzufügeNeuenKundenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.hinzufügeNeuenKundenToolStripMenuItem.Name = "hinzufügeNeuenKundenToolStripMenuItem";
-            this.hinzufügeNeuenKundenToolStripMenuItem.Size = new System.Drawing.Size(280, 38);
+            this.hinzufügeNeuenKundenToolStripMenuItem.Size = new System.Drawing.Size(280, 44);
             this.hinzufügeNeuenKundenToolStripMenuItem.Text = "Hinzufüge neuen Kunden";
             this.hinzufügeNeuenKundenToolStripMenuItem.Click += new System.EventHandler(this.hinzufügeNeuenKundenToolStripMenuItem_Click);
+            // 
+            // sucheEinenKundenToolStripMenuItem
+            // 
+            this.sucheEinenKundenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.file_15112322;
+            this.sucheEinenKundenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sucheEinenKundenToolStripMenuItem.Name = "sucheEinenKundenToolStripMenuItem";
+            this.sucheEinenKundenToolStripMenuItem.Size = new System.Drawing.Size(280, 44);
+            this.sucheEinenKundenToolStripMenuItem.Text = "Suche einen Kunden";
+            this.sucheEinenKundenToolStripMenuItem.Click += new System.EventHandler(this.sucheEinenKundenToolStripMenuItem_Click);
             // 
             // mitarbeiterVerwaltungToolStripMenuItem
             // 
@@ -260,6 +273,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Alowidat Parfüm";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // frmHaupBildschrimAnsicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +291,7 @@
             this.Text = "HaupBildschrim-Ansicht";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.clsHaupBildschrimAnsicht_FormClosed);
+            this.Load += new System.EventHandler(this.frmHaupBildschrimAnsicht_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -302,5 +321,7 @@
         private System.Windows.Forms.ToolStripMenuItem hinzufügeNeuenEinkaufToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hinzufügeNeuenVerkaufToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem sucheEinenKundenToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

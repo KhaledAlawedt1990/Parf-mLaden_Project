@@ -82,6 +82,7 @@ namespace Parfüm2025
             cbFilterBei.SelectedIndex = 0;
             // Verhindert, dass der Benutzer den Text ändert
             cbFilterBei.DropDownStyle = ComboBoxStyle.DropDownList;
+
             _SetzeMitarbeiterdaten();
         }
 

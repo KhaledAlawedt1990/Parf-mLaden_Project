@@ -169,7 +169,12 @@ namespace Busnisse_Layer
 
         public static DataTable GetAllKundeName()
         {
-            return clsKundeDatenzugriff.GetAllKundenName();
+            return clsKundeDatenzugriff.GetAllKundenName();  // Die Name zum Hinfügen in AutoComplate .
+        }
+
+        public static DataTable GetKundeByName(string vollname)
+        {
+            return clsKundeDatenzugriff.GetKundeByName(vollname);
         }
         public static DataTable GetKundeView()
         {

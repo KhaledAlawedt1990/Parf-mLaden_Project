@@ -58,7 +58,7 @@
             // btnAktualisieren
             // 
             this.btnAktualisieren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAktualisieren.BackColor = System.Drawing.Color.Khaki;
+            this.btnAktualisieren.BackColor = System.Drawing.Color.Gold;
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAktualisieren.Location = new System.Drawing.Point(855, 272);
@@ -106,7 +106,7 @@
             this.cbFilterbei.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterbei.FormattingEnabled = true;
             this.cbFilterbei.Items.AddRange(new object[] {
-            "Vollname",
+            "KundenName",
             "KundeID"});
             this.cbFilterbei.Location = new System.Drawing.Point(115, 286);
             this.cbFilterbei.Name = "cbFilterbei";
@@ -127,7 +127,7 @@
             // btnHinzufügen
             // 
             this.btnHinzufügen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHinzufügen.BackColor = System.Drawing.Color.Khaki;
+            this.btnHinzufügen.BackColor = System.Drawing.Color.Gold;
             this.btnHinzufügen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHinzufügen.Location = new System.Drawing.Point(1141, 271);
@@ -171,7 +171,7 @@
             this.dgvKunde.Name = "dgvKunde";
             this.dgvKunde.ReadOnly = true;
             this.dgvKunde.RowHeadersWidth = 51;
-            this.dgvKunde.RowTemplate.Height = 40;
+            this.dgvKunde.RowTemplate.Height = 30;
             this.dgvKunde.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKunde.Size = new System.Drawing.Size(1392, 352);
             this.dgvKunde.TabIndex = 9;

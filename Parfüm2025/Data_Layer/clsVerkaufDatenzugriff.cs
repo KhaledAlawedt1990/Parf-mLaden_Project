@@ -14,12 +14,12 @@ namespace Data_Layer
     {
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
 
-        public static bool GetVerkaufDatenByID(int verkaufsID, ref int parfümNummer, ref int kundeID, ref float verkaufsMenge,
+        public static bool GetVerkaufDatenByID(int belegID, ref int parfümNummer, ref int kundeID, ref float verkaufsMenge,
              ref float lagerbestand, ref float normalPreis, ref float gesamtPreis, ref DateTime erstellungsDatum)
         {
 
             bool isfound = false;
-            string abfrage = @"SELECT * From  Verkauf Where verkaufsID= @verkaufsID";
+            string abfrage = @"SELECT * From  Verkauf Where belegID= @belegID";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -27,7 +27,7 @@ namespace Data_Layer
                     using (SqlCommand command = new SqlCommand(abfrage, connection))
                     {
 
-                        command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
+                        command.Parameters.AddWithValue("@belegID", belegID);
 
                         connection.Open();
                         using (SqlDataReader reader = command.ExecuteReader())
@@ -57,6 +57,34 @@ namespace Data_Layer
             return isfound;
         }
 
+        public static DataTable GetRecordAnzahlProSeite(int ZeileProseite, int SeiteNummer)
+        {
+            DataTable dt = new DataTable();
+           using(SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    using(SqlCommand command = new SqlCommand("Sp_GetVerkaufRecordsProSeite", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ZeileProSeite", ZeileProseite);
+                        command.Parameters.AddWithValue("@SeiteNummer", SeiteNummer);
+
+                        connection.Open();
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+                    }
+                }
+                catch(SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            return dt;
+        }
 
         public static DataTable GetAllVerkaufsDaten()
         {
@@ -89,7 +117,7 @@ namespace Data_Layer
         public static int AddNewVerakaufDaten(int parfümNummer, int kundeID, float verkaufsMenge,
              float lagerbestand, float normalerPreis, float gesamtPreis, DateTime erstellungsDatum)
         {
-            int verkaufsID = -1;
+            int belegID = -1;
 
             string abfrage = @"Insert into Verkauf (parfümNummer,kundeID,verkaufsMenge,lagerbestand, normalPreis, gesamtPreis, erstellungsDatum)
                                         Values  (@parfümNummer, @kundeID, @verkaufsMenge, @lagerbestand, @normalPreis, @gesamtPreis, @erstellungsDatum)
@@ -115,7 +143,7 @@ namespace Data_Layer
 
                         object result = command.ExecuteScalar();
                         if (result != null && int.TryParse(result.ToString(), out int InsertedID))
-                            verkaufsID = InsertedID;
+                            belegID = InsertedID;
                     }
                 }
             }
@@ -123,10 +151,10 @@ namespace Data_Layer
             {
                 throw;
             }
-            return verkaufsID;
+            return belegID;
         }
 
-        public static bool UpdateVerkaufDaten(int verkaufsID, int parfümNummer, int kundeID, float verkaufsMenge,
+        public static bool UpdateVerkaufDaten(int belegID, int parfümNummer, int kundeID, float verkaufsMenge,
              float lagerbestand, float normalerPreis, float gesamtPreis, DateTime erstellungsDatum)
         {
             int RowAffected = 0;
@@ -138,7 +166,7 @@ namespace Data_Layer
                                                   normalPreis  = @normalPreis,
                                                   gesamtPreis = @gesamtPreis,
                                                   erstellungsDatum = erstellungsDatum
-                                          Where verkaufsID = @verkaufsID";
+                                          Where belegID = @belegID";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -147,7 +175,7 @@ namespace Data_Layer
                     {
 
                         // Parameter hinzufügen
-                        command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
+                        command.Parameters.AddWithValue("@belegID", belegID);
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
                         command.Parameters.AddWithValue("@kundeID", kundeID);
                         command.Parameters.AddWithValue("@verkaufsMenge", verkaufsMenge);
@@ -168,12 +196,12 @@ namespace Data_Layer
             return RowAffected > 0;
         }
 
-        public static bool UpdateVerkaufDatenByKundeID(int verkaufsID, int parfümNummer, int kundeID, float verkaufsMenge,
+        public static bool UpdateVerkaufDatenByKundeID(int belegID, int parfümNummer, int kundeID, float verkaufsMenge,
          float lagerbestand, float normalerPreis, float gesamtPreis, DateTime erstellungsDatum)
         {
             int RowAffected = 0;
             string abfrage = @"Update Verkauf  Set
-                                                  verkaufsID = @verkaufsID,
+                                                  belegID = @belegID,
                                                   parfümNummer = @parfümNummer,
                                             
                                                   verkaufsMenge = @verkaufsMenge,
@@ -191,7 +219,7 @@ namespace Data_Layer
 
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
-                        command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
+                        command.Parameters.AddWithValue("@belegID", belegID);
                         command.Parameters.AddWithValue("@kundeID", kundeID);
                         command.Parameters.AddWithValue("@verkaufsMenge", verkaufsMenge);
                         command.Parameters.AddWithValue("@lagerbestand", lagerbestand);
@@ -212,18 +240,18 @@ namespace Data_Layer
         }
 
      
-        public static bool DeleteVerkaufDaten(int verkaufsID)
+        public static bool DeleteVerkaufDaten(int belegID)
         {
             int RowAffected = 0;
 
-            string abfrage = @"Delete From Verkauf Where verkaufsID = @verkaufsID";
+            string abfrage = @"Delete From Verkauf Where belegID = @belegID";
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     using (SqlCommand command = new SqlCommand(abfrage, connection))
                     {
-                        command.Parameters.AddWithValue("@verkaufsID", verkaufsID);
+                        command.Parameters.AddWithValue("@belegID", belegID);
 
                         //Öffene die verbindung und ausführe den Befehl
                         connection.Open();

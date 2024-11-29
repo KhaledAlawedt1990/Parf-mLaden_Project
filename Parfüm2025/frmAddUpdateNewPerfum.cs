@@ -46,11 +46,15 @@ namespace Parfüm2025
             if(string.IsNullOrEmpty(name.Text))
             {
                 errorProvider1.SetError(name,feldname + " darf nicht leer sein!");
+                name.BackColor = Color.LightPink;
+                name.BorderStyle = BorderStyle.FixedSingle;
                 return false;
             }
             else
             {
                 errorProvider1.SetError(name, null);
+                name.BackColor = Color.White;
+                name.BorderStyle = BorderStyle.FixedSingle;
                 return true;
             }
         }
@@ -87,7 +91,7 @@ namespace Parfüm2025
             }
         }
 
-        private bool _IstAlteParfümNumerGleichWieNeue()
+        private bool _IstAlteParfümNummerGleichWieNeue()
         {
             int alteParfümNummer = 0;
             int AktuelleParfümNummer = 0;
@@ -107,6 +111,7 @@ namespace Parfüm2025
                  _parfüm.neuParfümNummer = Convert.ToInt32(txtparfümNummer.Text);
              else
                 _parfüm.parfümNummer = Convert.ToInt32(txtparfümNummer.Text);
+
             _parfüm.Marke = txtMarke.Text;
             _parfüm.Name = txtName.Text;
             _parfüm.Kategorie = txtKategorie.Text;
@@ -117,7 +122,7 @@ namespace Parfüm2025
         private bool _IstParfümNummerVergeben()
         {
             int parfümNummer = Convert.ToInt32(txtparfümNummer.Text);
-            if(clsParfüm.IstParfümNummerVergeben(parfümNummer) && !_IstAlteParfümNumerGleichWieNeue())
+            if(clsParfüm.IstParfümNummerVergeben(parfümNummer) && !_IstAlteParfümNummerGleichWieNeue())
             {
                 MessageBox.Show("Diese Nummer ist vergeben\nVersuchen Sie bitte " +
                     "mit anderer Nummer erneut","Hinweis",MessageBoxButtons.OK, MessageBoxIcon.Warning);

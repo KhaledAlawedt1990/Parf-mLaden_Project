@@ -18,7 +18,7 @@ namespace Busnisse_Layer
 
         public enum enUpdate { UpdateDurchParfümNummer = 0, UpdateDurchParfümName }
 
-        public int verkaufsID { get; set; }
+        public int belegID { get; set; }
         public int parfümNummer { get; set; }
         public int kundeID { get; set; }
         public clsKunde kundeInfos
@@ -31,10 +31,10 @@ namespace Busnisse_Layer
         public float gesamtPreis { get; set; }
         public DateTime erstellungsDatum { get; set; }
 
-        private clsVerkauf(int verkaufsID, int parfümNummer, int kundeID, float verkaufsMenge,
+        private clsVerkauf(int belegID, int parfümNummer, int kundeID, float verkaufsMenge,
             float lagerbestand, float normalPreis, float gesamtPreis, DateTime erstellungsDatum)
         {
-            this.verkaufsID = verkaufsID;
+            this.belegID = belegID;
             this.parfümNummer = parfümNummer;
             this.kundeID = kundeID;
             this.verkaufsMenge = verkaufsMenge;
@@ -48,7 +48,7 @@ namespace Busnisse_Layer
 
         public clsVerkauf()
         {
-            this.verkaufsID = -1;
+            this.belegID = -1;
             this.parfümNummer = -1;
             this.kundeID = -1;
             this.verkaufsMenge = 0;
@@ -58,29 +58,29 @@ namespace Busnisse_Layer
             this.erstellungsDatum = DateTime.Now;
         }
 
-        public static clsVerkauf Find(int verkaufsID)
+        public static clsVerkauf Find(int belegID)
         {
             int parfümNummer = -1, kundeID = -1; float verkaufsMenge = 0, lagerbestand = 0;
             float normalPreis = 0, gesamtPreis = 0; DateTime erstellungsDatum = DateTime.Now;
 
-            if (clsVerkaufDatenzugriff.GetVerkaufDatenByID(verkaufsID, ref parfümNummer, ref kundeID, ref verkaufsMenge,
+            if (clsVerkaufDatenzugriff.GetVerkaufDatenByID(belegID, ref parfümNummer, ref kundeID, ref verkaufsMenge,
                                                   ref lagerbestand, ref normalPreis, ref gesamtPreis, ref erstellungsDatum))
-                return new clsVerkauf(verkaufsID, parfümNummer, kundeID, verkaufsMenge, lagerbestand, normalPreis, gesamtPreis, erstellungsDatum);
+                return new clsVerkauf(belegID, parfümNummer, kundeID, verkaufsMenge, lagerbestand, normalPreis, gesamtPreis, erstellungsDatum);
             else
                 return null;
         }
 
         private bool _AddnewVerkaufDaten()
         {
-            this.verkaufsID = clsVerkaufDatenzugriff.AddNewVerakaufDaten(this.parfümNummer, this.kundeID, this.verkaufsMenge,
+            this.belegID = clsVerkaufDatenzugriff.AddNewVerakaufDaten(this.parfümNummer, this.kundeID, this.verkaufsMenge,
                                        this.lagerbestand, this.normalPreis, this.gesamtPreis, this.erstellungsDatum);
 
-            return (this.verkaufsID != -1);
+            return (this.belegID != -1);
         }
 
         private bool _UpdateVerkaufDaten()
         {
-            return clsVerkaufDatenzugriff.UpdateVerkaufDaten(this.verkaufsID, this.parfümNummer, this.kundeID, this.verkaufsMenge,
+            return clsVerkaufDatenzugriff.UpdateVerkaufDaten(this.belegID, this.parfümNummer, this.kundeID, this.verkaufsMenge,
                                                         this.lagerbestand, this.normalPreis, this.gesamtPreis, this.erstellungsDatum);
         }
 
@@ -105,12 +105,17 @@ namespace Busnisse_Layer
 
         public bool Delete()
         {
-            return clsVerkaufDatenzugriff.DeleteVerkaufDaten(this.verkaufsID);
+            return clsVerkaufDatenzugriff.DeleteVerkaufDaten(this.belegID);
         }
 
         public static DataTable GetAllVerkaufDaten()
         {
             return clsVerkaufDatenzugriff.GetAllVerkaufsDaten();  
+        }
+
+        public static DataTable GetVerkaufsRecordProSeite(int zeileProSeite, int seiteNummer)
+        {
+            return clsVerkaufDatenzugriff.GetRecordAnzahlProSeite(zeileProSeite, seiteNummer);
         }
     }
 }

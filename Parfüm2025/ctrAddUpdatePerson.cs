@@ -125,7 +125,9 @@ namespace Parfüm2025
         {
             _GeburtsdatumEinrichten();
             _FülleLandComboBoxMitLändern();
+
             txtVorname.Clear();
+            txtVorname.Select();
             txtNachname.Clear();
             dtpGeburtstag.Value = DateTime.Now;
             cbGeschlecht.SelectedIndex = 0;
@@ -231,5 +233,9 @@ namespace Parfüm2025
 
         }
 
+        private void gbPersondaten_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

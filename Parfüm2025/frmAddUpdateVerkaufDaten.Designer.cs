@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNormalPreis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtVerkaufsID = new System.Windows.Forms.TextBox();
+            this.txtBelegID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtNormalPreis);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtVerkaufsID);
+            this.groupBox1.Controls.Add(this.txtBelegID);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label7);
@@ -153,23 +153,23 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "NormalPreis:*";
             // 
-            // txtVerkaufsID
+            // txtBelegID
             // 
-            this.txtVerkaufsID.Location = new System.Drawing.Point(165, 37);
-            this.txtVerkaufsID.Name = "txtVerkaufsID";
-            this.txtVerkaufsID.ReadOnly = true;
-            this.txtVerkaufsID.Size = new System.Drawing.Size(246, 26);
-            this.txtVerkaufsID.TabIndex = 17;
-            this.txtVerkaufsID.Text = "-1";
+            this.txtBelegID.Location = new System.Drawing.Point(165, 37);
+            this.txtBelegID.Name = "txtBelegID";
+            this.txtBelegID.ReadOnly = true;
+            this.txtBelegID.Size = new System.Drawing.Size(246, 26);
+            this.txtBelegID.TabIndex = 17;
+            this.txtBelegID.Text = "-1";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 39);
+            this.label8.Location = new System.Drawing.Point(62, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 20);
+            this.label8.Size = new System.Drawing.Size(71, 20);
             this.label8.TabIndex = 16;
-            this.label8.Text = "VerkaufsID:";
+            this.label8.Text = "BelegID:";
             // 
             // textBox1
             // 
@@ -317,7 +317,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtVerkaufsID;
+        private System.Windows.Forms.TextBox txtBelegID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtGesamtPreis;
         private System.Windows.Forms.Label label4;

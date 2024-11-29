@@ -16,6 +16,9 @@ namespace Data_Layer
         public static bool GetUserByUsernameAndPasswort(ref int userID, ref int mitarbeiterID, string userRolle, string userPasswort,
                               ref int permissionNum, ref bool istAktive)
         {
+
+            string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
+
             bool isfound = false;
             string abfrage = @"SELECT * From  Benutzer Where userRolle = @userRolle And userPasswort = @userPasswort";
             try
@@ -26,7 +29,7 @@ namespace Data_Layer
                     {
 
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort", userPasswort);
+                        command.Parameters.AddWithValue("@userPasswort", verschlüsseltesPasswort);
 
                         connection.Open();
                         using (SqlDataReader reader = command.ExecuteReader())
@@ -76,7 +79,10 @@ namespace Data_Layer
 
                                 mitarbeiterID = (int)reader["mitarbeiterID"];
                                 userRolle = (string)reader["userRolle"];
-                                userPasswort = (string)reader["userPasswort"];
+
+                                string entschlüsseltsPasswort = clsVerschlüsselungHelfer.Encrypt((string)reader["userPasswort"]);
+                                userPasswort = entschlüsseltsPasswort;
+
                                 permissionNum = (int)reader["permissionNum"];
                                 istAktive = (bool)reader["istAktive"];
                             }
@@ -117,7 +123,10 @@ namespace Data_Layer
 
                                 userID = (int)reader["userID"];
                                 userRolle = (string)reader["userRolle"];
-                                userPasswort = (string)reader["userPasswort"];
+
+                                string entschlüsseltsPasswort = clsVerschlüsselungHelfer.Decrypt((string)reader["userPasswort"]);
+                                userPasswort = entschlüsseltsPasswort;
+
                                 permissionNum = (int)reader["permissionNum"];
                                 istAktive = (bool)reader["istAktive"];
 
@@ -165,99 +174,6 @@ namespace Data_Layer
             }
             return dt;
         }
-
-
-        //public static DataTable GetAllUser_View()
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    string abfrage = @"select Mitarbeiter.mitarbeiterID, Mitarbeiter.personID,
-        //                                (Person.Vorname + ' ' + Person.Nachname) as Vollname , 
-        //                                Person.Geburtstag, Person.Geschlecht, Mitarbeiter.versicherungsName, Mitarbeiter.versicherungsNummer,
-        //                               Mitarbeiter.EingestelltAm, Mitarbeiter.istAktive
-        //                               from Person INNER JOIN Mitarbeiter ON
-        //                               Person.PersonID = Mitarbeiter.personID ";
-        //    try
-        //    {
-        //        using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //        {
-        //            using (SqlCommand command = new SqlCommand(abfrage, connection))
-        //            {
-
-        //                connection.Open();
-        //                using (SqlDataReader reader = command.ExecuteReader())
-        //                {
-        //                    if (reader.HasRows)
-        //                        dt.Load(reader);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw;
-        //    }
-        //    return dt;
-        //}
-
-        //public static DataTable GetMitarbeiter_View()
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    string abfrage = @"Select * from Mitarbeiter_View";
-        //    try
-        //    {
-        //        using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //        {
-        //            using (SqlCommand command = new SqlCommand(abfrage, connection))
-        //            {
-
-        //                connection.Open();
-        //                using (SqlDataReader reader = command.ExecuteReader())
-        //                {
-        //                    if (reader.HasRows)
-        //                        dt.Load(reader);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw;
-        //    }
-        //    return dt;
-        //}
-
-        //public static DataTable GetMitarbeiterByPersonName(string vollname)
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    string abfrage = @"Select * from Person Inner Join Mitarbeiter On
-        //                                              Person.PersonID = Mitarbeiter.personID 
-		      //                                               where Trim(Person.Vorname) + ' ' + Trim(Person.Nachname) = @PersonName";
-        //    try
-        //    {
-        //        using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //        {
-        //            using (SqlCommand command = new SqlCommand(abfrage, connection))
-        //            {
-        //                command.Parameters.AddWithValue("@Vollname", vollname);
-
-        //                connection.Open();
-        //                using (SqlDataReader reader = command.ExecuteReader())
-        //                {
-        //                    if (reader.HasRows)
-        //                        dt.Load(reader);
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw;
-        //    }
-        //    return dt;
-        //}
         public static bool DoesUserExistForThisMitarbeiterID(int mitarbeiterID)
         {
             bool isFound = false;
@@ -328,7 +244,10 @@ namespace Data_Layer
                         // Über Parameter hinzufügen
                         command.Parameters.AddWithValue("@mitarbeiteriD",mitarbeiterID);
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort",userPasswort);
+
+                        string verschlüsseltsPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
+                        command.Parameters.AddWithValue("@userPasswort",verschlüsseltsPasswort);
+
                         command.Parameters.AddWithValue("@permissionNum",permissionNum);
                         command.Parameters.AddWithValue("@istAktive", istAktive);
 
@@ -353,6 +272,7 @@ namespace Data_Layer
         public static bool UpdateUserByMitarbeiterID(int mitarbeiterID, string userRolle, string userPasswort,
                               int permissionNum, bool istAktive)
         {
+            string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
             int RowAffected = 0;
             string abfrage = @"Update Benutzer Set 
                                                        userRolle = @userRolle,
@@ -370,7 +290,7 @@ namespace Data_Layer
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@mitarbeiterID", mitarbeiterID);
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort", userPasswort);
+                        command.Parameters.AddWithValue("@userPasswort", verschlüsseltesPasswort);
                         command.Parameters.AddWithValue("@permissionNum", permissionNum);
                         command.Parameters.AddWithValue("@istAktive", istAktive);
 
@@ -422,6 +342,8 @@ namespace Data_Layer
         public static bool UpdateUser(int userID, string userRolle, string userPasswort,
                              int permissionNum, bool istAktive)
         {
+            string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
+
             int RowAffected = 0;
             string abfrage = @"Update Benutzer Set 
                                                        userRolle = @userRolle,
@@ -439,7 +361,7 @@ namespace Data_Layer
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@userID", userID);
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort", userPasswort);
+                        command.Parameters.AddWithValue("@userPasswort", verschlüsseltesPasswort);
                         command.Parameters.AddWithValue("@permissionNum", permissionNum);
                         command.Parameters.AddWithValue("@istAktive", istAktive);
 
@@ -558,32 +480,6 @@ namespace Data_Layer
                 throw;
             }
             return rowAffected > 0;
-        }
-
-        //public static bool BenutzerExistForThisMitarbeiter(int mitarbeiterID)
-        //{
-        //    bool hatVertrag = false;
-        //    string abfrage = @"";
-        //    try
-        //    {
-        //        using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //        {
-        //            using (SqlCommand command = new SqlCommand(abfrage, connection))
-        //            {
-        //                command.Parameters.AddWithValue("@MitarbeiterID", mitarbeiterID);
-
-        //                connection.Open();
-        //                object result = command.ExecuteScalar();
-        //                if (result != null)
-        //                    hatVertrag = Convert.ToBoolean(result);
-        //            }
-        //        }
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw;
-        //    }
-        //    return hatVertrag;
-        //}
+        } 
     }
 }

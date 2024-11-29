@@ -87,6 +87,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMitarbeiter.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMitarbeiter.EnableHeadersVisualStyles = false;
             this.dgvMitarbeiter.Location = new System.Drawing.Point(12, 326);
             this.dgvMitarbeiter.MultiSelect = false;
             this.dgvMitarbeiter.Name = "dgvMitarbeiter";
@@ -302,7 +303,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(634, 136);
+            this.label4.Location = new System.Drawing.Point(620, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(303, 28);
             this.label4.TabIndex = 1;

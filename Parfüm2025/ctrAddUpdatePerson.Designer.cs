@@ -134,6 +134,7 @@
             this.gbPersondaten.TabIndex = 18;
             this.gbPersondaten.TabStop = false;
             this.gbPersondaten.Text = "Persondaten";
+            this.gbPersondaten.Enter += new System.EventHandler(this.gbPersondaten_Enter);
             // 
             // cbLand
             // 

@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="clsDruckerService.cs" />
     <Compile Include="clsGlobaleKlasse.cs" />
+    <Compile Include="frmDruckvorschau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDruckvorschau.Designer.cs">
+      <DependentUpon>frmDruckvorschau.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHaupBildschrimAnsicht.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,18 @@
     <Compile Include="frmEinkaufsDatenListe.Designer.cs">
       <DependentUpon>frmEinkaufsDatenListe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKundenSucheAnsicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKundenSucheAnsicht.Designer.cs">
+      <DependentUpon>frmKundenSucheAnsicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKundeSucheFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKundeSucheFilter.Designer.cs">
+      <DependentUpon>frmKundeSucheFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,12 @@
     </Compile>
     <Compile Include="frmMitarbeiterListe.Designer.cs">
       <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOverly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOverly.Designer.cs">
+      <DependentUpon>frmOverly.cs</DependentUpon>
     </Compile>
     <Compile Include="frmParfümAnsicht.cs">
       <SubType>Form</SubType>
@@ -142,6 +166,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDruckvorschau.resx">
+      <DependentUpon>frmDruckvorschau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHaupBildschrimAnsicht.resx">
       <DependentUpon>frmHaupBildschrimAnsicht.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,11 +196,20 @@
     <EmbeddedResource Include="frmEinkaufsDatenListe.resx">
       <DependentUpon>frmEinkaufsDatenListe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKundenSucheAnsicht.resx">
+      <DependentUpon>frmKundenSucheAnsicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKundeSucheFilter.resx">
+      <DependentUpon>frmKundeSucheFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogginScreen.resx">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMitarbeiterListe.resx">
       <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOverly.resx">
+      <DependentUpon>frmOverly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmParfümAnsicht.resx">
       <DependentUpon>frmParfümAnsicht.cs</DependentUpon>
@@ -211,10 +247,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AutoComplete\AutoComplete\AutoComplete\AutoComplete.csproj">
-      <Project>{1bb2d05b-13b1-4fe5-ae1c-9eb718dc4c28}</Project>
-      <Name>AutoComplete</Name>
-    </ProjectReference>
     <ProjectReference Include="Busnisse_Layer\Busnisse_Layer.csproj">
       <Project>{ef81815d-4a86-4a1c-a36f-8b98e229d62d}</Project>
       <Name>Busnisse_Layer</Name>

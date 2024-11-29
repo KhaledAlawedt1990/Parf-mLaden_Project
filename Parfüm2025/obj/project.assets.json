@@ -2041,11 +2041,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
+      "projectUniqueName": "C:\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
       "projectName": "Parfüm2025",
-      "projectPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
+      "projectPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
       "packagesPath": "C:\\Users\\Hamssa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\obj\\",
+      "outputPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -2067,11 +2067,11 @@
       "frameworks": {
         "net48": {
           "projectReferences": {
-            "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj": {
-              "projectPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj"
+            "C:\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj": {
+              "projectPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\Busnisse_Layer\\Busnisse_Layer.csproj"
             },
-            "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj": {
-              "projectPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj"
+            "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj": {
+              "projectPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj"
             }
           }
         }

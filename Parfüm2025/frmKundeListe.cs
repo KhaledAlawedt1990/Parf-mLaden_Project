@@ -25,6 +25,8 @@ namespace Parfüm2025
             _dtKunde = clsKunde.GetKundeView();
             _bindingSource.DataSource = _dtKunde;
             dgvKunde.DataSource = _bindingSource;
+
+            lblRecord.Text = _bindingSource.Count.ToString();
         }
         private void frmKundeListe_Load(object sender, EventArgs e)
         {
@@ -44,7 +46,7 @@ namespace Parfüm2025
 
             if (!string.IsNullOrEmpty(filterwert))
             {
-                if (filterspalte == "Vollname")
+                if (filterspalte == "KundenName")
                 {
                     _bindingSource.Filter = $"{filterspalte} Like '{filterwert}%'";
                 }
@@ -55,8 +57,8 @@ namespace Parfüm2025
             {
                 _bindingSource.Filter = string.Empty;
             }
-            lblRecord.Text = _bindingSource.Count.ToString();
 
+            lblRecord.Text = _bindingSource.Count.ToString();
         }
 
         private void txtFilterwert_TextChanged(object sender, EventArgs e)

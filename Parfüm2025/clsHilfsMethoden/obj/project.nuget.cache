@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jwdC888fkoQ=",
+  "dgSpecHash": "fsqi+Z+KcnM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj",
+  "projectFilePath": "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hamssa\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
     "C:\\Users\\Hamssa\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.3\\microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512",
