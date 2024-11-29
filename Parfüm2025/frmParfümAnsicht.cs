@@ -31,8 +31,6 @@ namespace Parfüm2025
         private readonly object _dataloadLock = new object();
         private readonly object _filterLock = new object();
         private readonly object _autoComplateLock = new object();
-
-        private bool _Freigabe = true;
         public frmpafümAnsicht()
         {
             InitializeComponent();

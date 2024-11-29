@@ -109,7 +109,54 @@ namespace Parfüm2025
             if (!_ValiedereEinloggenFelder())
                 return;
 
+            if (!_CheckProduktSchluessel())
+                return;
+
             _Einlogging();
+        }
+
+        private bool _CheckProduktSchluessel()
+        {
+            string lizenzKey = Properties.Settings.Default.LizenzKey;
+
+            DataTable dtSchleusselDaten = clsProduktKey.GetDatumAndAblaufdatumBySchluessel(lizenzKey);
+
+            if (dtSchleusselDaten.Rows.Count > 0)
+            {
+                DateTime ablaufdatum = Convert.ToDateTime(dtSchleusselDaten.Rows[0]["ablaufdatum"]);
+
+                if(ablaufdatum < DateTime.Now)
+                {
+                    // Ablaufdatum in der Vergangenheit
+                    MessageBox.Show("Der Produktschlüssel ist abgelaufen. Bitte erneuern Sie Ihre Lizenz, um fortzufahren.",
+                                    "Lizenz abgelaufen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        
+                    frmLizenzEigabeBildschirm frm = new frmLizenzEigabeBildschirm();
+                    this.Hide();
+                    frm.ShowDialog();
+                    
+                    if(!frm.GetValidKey())
+                    {
+                        // Falls der Lizenzschlüssel ungültig ist, das Programm beenden oder weitere Schritte unternehmen
+                        MessageBox.Show("Bitte geben Sie einen gültigen Lizenzschlüssel ein, um fortzufahren.",
+                                        "Ungültiger Schlüssel", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Application.Exit(); // Optional: Programm beenden, falls kein gültiger Schlüssel eingegeben wurde
+                    }
+                    else
+                       this.Show();
+
+                    return false;
+                }
+            }
+            else
+            {
+                // Keine gültigen Daten für den Produktschlüssel gefunden
+                MessageBox.Show("Kein Produktschlüssel gefunden. Bitte geben Sie einen gültigen Schlüssel ein.",
+                                "Lizenz erforderlich", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

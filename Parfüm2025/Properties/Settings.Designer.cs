@@ -34,5 +34,17 @@ namespace Parfüm2025.Properties {
                 this["LetztesBackupDatum"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LizenzKey {
+            get {
+                return ((string)(this["LizenzKey"]));
+            }
+            set {
+                this["LizenzKey"] = value;
+            }
+        }
     }
 }

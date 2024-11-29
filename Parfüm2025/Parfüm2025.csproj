@@ -122,6 +122,12 @@
     <Compile Include="frmKundeSucheFilter.Designer.cs">
       <DependentUpon>frmKundeSucheFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLizenzEigabeBildschirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLizenzEigabeBildschirm.Designer.cs">
+      <DependentUpon>frmLizenzEigabeBildschirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKundeSucheFilter.resx">
       <DependentUpon>frmKundeSucheFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLizenzEigabeBildschirm.resx">
+      <DependentUpon>frmLizenzEigabeBildschirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogginScreen.resx">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>

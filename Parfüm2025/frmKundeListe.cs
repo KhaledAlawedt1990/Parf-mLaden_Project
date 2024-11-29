@@ -134,8 +134,6 @@ namespace Parfüm2025
         private void sendeEmailZumKundenToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             string empfaengerEmail = dgvKunde.CurrentRow.Cells[6].Value.ToString();
-            string betreff = "Test Betreff";
-            string nachricht = "Dies ist eine automatische Nachricht von meinem Programm.";
 
             // URL mit den Parametern für Gmail
             string gmailUrl = $"https://mail.google.com/mail/u/0/?view=cm&fs=1&to={empfaengerEmail}";

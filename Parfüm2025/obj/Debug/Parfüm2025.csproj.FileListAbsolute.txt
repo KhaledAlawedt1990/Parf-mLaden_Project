@@ -164,3 +164,4 @@ C:\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmDruckvorschau.resour
 C:\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmKundenSucheAnsicht.resources
 C:\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmKundeSucheFilter.resources
 C:\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmOverly.resources
+C:\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmLizenzEigabeBildschirm.resources

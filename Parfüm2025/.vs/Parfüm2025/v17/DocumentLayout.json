@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlizenzeigabebildschirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlizenzeigabebildschirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneueuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlizenzeigabebildschirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlizenzeigabebildschirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\data_layer\\clsproductschl\u00FCsseldatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|solutionrelative:data_layer\\clsproductschl\u00FCsseldatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\busnisse_layer\\clsproduktkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|solutionrelative:busnisse_layer\\clsproduktkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\data_layer\\clsbackupdatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D289DB9-4F9F-4C11-90EC-3631EF57EF7D}|Data_Layer\\Data_Layer.csproj|solutionrelative:data_layer\\clsbackupdatenzugriff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmuserliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,46 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 163,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAddUpdateNeueUser.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
-              "RelativeDocumentMoniker": "frmAddUpdateNeueUser.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
-              "RelativeToolTip": "frmAddUpdateNeueUser.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAIAywIQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:26:05.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmAddUpdateNeueUser.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs",
-              "RelativeDocumentMoniker": "frmAddUpdateNeueUser.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueUser.cs [Entwurf]",
-              "RelativeToolTip": "frmAddUpdateNeueUser.cs [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:25:59.375Z",
-              "EditorCaption": " [Entwurf]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAddUpdateNewPerfum.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
-              "RelativeDocumentMoniker": "frmAddUpdateNewPerfum.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNewPerfum.cs",
-              "RelativeToolTip": "frmAddUpdateNewPerfum.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAcwDcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:23:13.556Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -101,19 +63,96 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmUserListe.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs",
-              "RelativeDocumentMoniker": "frmUserListe.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs",
-              "RelativeToolTip": "frmUserListe.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAUwCwAAAAMAAAAAAAAAA==",
+              "Title": "clsProductSchl\u00FCsselDatenzugriff.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsProductSchl\u00FCsselDatenzugriff.cs",
+              "RelativeDocumentMoniker": "Data_Layer\\clsProductSchl\u00FCsselDatenzugriff.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsProductSchl\u00FCsselDatenzugriff.cs",
+              "RelativeToolTip": "Data_Layer\\clsProductSchl\u00FCsselDatenzugriff.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwDEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:14:27.145Z",
+              "WhenOpened": "2024-11-29T15:10:39.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmLizenzEigabeBildschirm.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLizenzEigabeBildschirm.cs",
+              "RelativeDocumentMoniker": "frmLizenzEigabeBildschirm.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLizenzEigabeBildschirm.cs",
+              "RelativeToolTip": "frmLizenzEigabeBildschirm.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA9wC4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T16:07:45.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmLizenzEigabeBildschirm.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLizenzEigabeBildschirm.cs",
+              "RelativeDocumentMoniker": "frmLizenzEigabeBildschirm.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLizenzEigabeBildschirm.cs [Entwurf]",
+              "RelativeToolTip": "frmLizenzEigabeBildschirm.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T15:59:02.085Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "clsProduktKey.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsProduktKey.cs",
+              "RelativeDocumentMoniker": "Busnisse_Layer\\clsProduktKey.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsProduktKey.cs",
+              "RelativeToolTip": "Busnisse_Layer\\clsProduktKey.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T15:53:31.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T09:59:46.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogginScreen.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeDocumentMoniker": "frmLogginScreen.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeToolTip": "frmLogginScreen.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAYwJUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:11:36.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsBackupDatenzugriff.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsBackupDatenzugriff.cs",
+              "RelativeDocumentMoniker": "Data_Layer\\clsBackupDatenzugriff.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Data_Layer\\clsBackupDatenzugriff.cs",
+              "RelativeToolTip": "Data_Layer\\clsBackupDatenzugriff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T15:11:02.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmUserListe.cs [Entwurf]",
               "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmUserListe.cs",
               "RelativeDocumentMoniker": "frmUserListe.cs",
@@ -122,44 +161,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T14:12:44.228Z",
               "EditorCaption": " [Entwurf]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmLogginScreen.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
-              "RelativeDocumentMoniker": "frmLogginScreen.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
-              "RelativeToolTip": "frmLogginScreen.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAADwvzsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:11:36.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmLogginScreen.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
-              "RelativeDocumentMoniker": "frmLogginScreen.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs [Entwurf]",
-              "RelativeToolTip": "frmLogginScreen.cs [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:11:35.083Z",
-              "EditorCaption": " [Entwurf]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T09:59:46.372Z",
-              "EditorCaption": ""
             }
           ]
         },
