@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,10 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoComplete.cs" />
+    <Compile Include="clsBackupDatenbank.cs" />
     <Compile Include="clsDatumFormat.cs" />
     <Compile Include="clsKomminikationsService.cs" />
     <Compile Include="clsOrdnerFürBilderErstellen.cs" />
     <Compile Include="clsPermissionService.cs" />
+    <Compile Include="clsProduktSchluessel.cs" />
     <Compile Include="clsRegistryHelfer.cs" />
     <Compile Include="clsValidierung.cs" />
     <Compile Include="clsVerschüsselungHelfer.cs" />

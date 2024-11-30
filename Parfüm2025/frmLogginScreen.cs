@@ -1,4 +1,5 @@
 ﻿using Busnisse_Layer;
+using clsHilfsMethoden;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -119,11 +120,15 @@ namespace Parfüm2025
         {
             string lizenzKey = Properties.Settings.Default.LizenzKey;
 
-            DataTable dtSchleusselDaten = clsProduktKey.GetDatumAndAblaufdatumBySchluessel(lizenzKey);
+            DataTable dtSchleusselDaten = clsProduktSchluessel.GetDatumAndAblaufdatumBySchluessel(lizenzKey);
 
             if (dtSchleusselDaten.Rows.Count > 0)
             {
-                DateTime ablaufdatum = Convert.ToDateTime(dtSchleusselDaten.Rows[0]["ablaufdatum"]);
+                DateTime ablaufdatum = DateTime.MinValue;
+                if (dtSchleusselDaten.Rows[0]["ablaufdatum"] != DBNull.Value)
+                {
+                    ablaufdatum = Convert.ToDateTime(dtSchleusselDaten.Rows[0]["ablaufdatum"]);
+                }
 
                 if(ablaufdatum < DateTime.Now)
                 {
@@ -135,8 +140,8 @@ namespace Parfüm2025
                     frmLizenzEigabeBildschirm frm = new frmLizenzEigabeBildschirm();
                     this.Hide();
                     frm.ShowDialog();
-                    
-                    if(!frm.GetValidKey())
+
+                    if (!frm.GetValidKey())
                     {
                         // Falls der Lizenzschlüssel ungültig ist, das Programm beenden oder weitere Schritte unternehmen
                         MessageBox.Show("Bitte geben Sie einen gültigen Lizenzschlüssel ein, um fortzufahren.",
@@ -144,9 +149,9 @@ namespace Parfüm2025
                         Application.Exit(); // Optional: Programm beenden, falls kein gültiger Schlüssel eingegeben wurde
                     }
                     else
-                       this.Show();
-
-                    return false;
+                    {
+                        this.Show();
+                    }
                 }
             }
             else

@@ -1,4 +1,6 @@
 ﻿using Busnisse_Layer;
+using clsHilfsMethoden;
+using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +30,7 @@ namespace Parfüm2025
         {
             string schluessel = txtKeyFeld.Text.Trim();
 
-            if(string.IsNullOrEmpty(schluessel) || !clsProduktKey.AddnewProduktKay(schluessel))
+            if(string.IsNullOrEmpty(schluessel) || !clsProduktSchluessel.AktiviereProduktSchluesselDatum(schluessel))
             {
                 MessageBox.Show("Der Lizenzschlüssel konnte nicht verifiziert werden. " +
                    "Bitte überprüfen Sie den eingegebenen Schlüssel oder wenden Sie sich an den Support, " +
@@ -43,6 +45,12 @@ namespace Parfüm2025
                 Properties.Settings.Default.Save();
 
                 _IsLezenzKeyValid = true;
+
+                new ToastContentBuilder()
+                    .AddText("Produktschuessel gültig")
+                      .AddText("Der Produktschluessel wurde  erfolgreich aktiviert.")
+                      .SetToastDuration(ToastDuration.Short).Show(); // Toast länger anzeigen
+
                 this.Close();
             }
         }

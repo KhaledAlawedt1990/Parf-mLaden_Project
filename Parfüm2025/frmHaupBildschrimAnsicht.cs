@@ -232,7 +232,7 @@ namespace Parfüm2025
                 if (letzterBackupTag != heutigesDatum)
                 {
                     //Backup erstellen
-                    bool backupErfolgreich = clsBackup.IsBackupSuccessfulByMacAdresse();
+                    bool backupErfolgreich = clsBackupDatenbank.IsBackupSuccessfulByMacAdresse();
 
                     if (backupErfolgreich)
                     {

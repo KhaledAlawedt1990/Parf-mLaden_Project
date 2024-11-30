@@ -18,7 +18,7 @@ namespace Parfüm2025
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmpafümAnsicht());
             //Application.Run(new frmMitarbeiterListe());
-             Application.Run(new frmLogginScreen());
+            Application.Run(new frmLogginScreen());
             // Application.Run(new frmKundeListe());
             //Application.Run(new frmMainScreen());
             //Application.Run(new frmUserListe());

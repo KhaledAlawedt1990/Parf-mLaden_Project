@@ -287,13 +287,17 @@ namespace Parfüm2025
 
         private void lbVorschläge_Click_1(object sender, EventArgs e)
         {
-            txtParfümSuchen.Focus();
+           
             //wir setzen den ausgewählten Vorschlag in das "txtFilterBeiName" Textfeld und verbergen wir  die listboxw
-            if (lbVorschläge.SelectedItems != null)
+            if (lbVorschläge.SelectedItem != null)
             {
                 txtParfümSuchen.Text = lbVorschläge.SelectedItem.ToString();
                 lbVorschläge.Visible = false;
             }
+            else
+                MessageBox.Show("Kein gültiger Eintrag ausgewählt,\n" +
+                    "Bitte wählen Sie einen gültigen Eintrag aus","Hinweis",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void btnSuchen_Click(object sender, EventArgs e)
         {
@@ -458,5 +462,9 @@ namespace Parfüm2025
 
         }
 
+        private void lbVorschläge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

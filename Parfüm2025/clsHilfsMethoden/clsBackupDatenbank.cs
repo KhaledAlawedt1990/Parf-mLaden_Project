@@ -8,14 +8,23 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data_Layer
+namespace clsHilfsMethoden
 {
-    public class clsBackupDatenzugriff
+    public class clsBackupDatenbank
     {
 
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
 
-        public static bool BackupDatabaseByHostname()
+        public static bool IsBackupSuccessfulByHostname()
+        {
+            return BackupDatabaseByHostname();
+        }
+
+        public static bool IsBackupSuccessfulByMacAdresse()
+        {
+            return BackupDatabaseByMacAdresse();
+        }
+        private static bool BackupDatabaseByHostname()
         {
 
             _BackupDatabaseByHostnameInOntherPath(); // Sichere die datei in anderem order.
@@ -153,7 +162,7 @@ namespace Data_Layer
             string currentMacAdresse = _GetMacAddress();  // Der aktuelle Hostname des Computers
 
             // Überprüfen, ob der Hostname übereinstimmt
-            if (currentMacAdresse!= allowedMacAdresse)
+            if (currentMacAdresse != allowedMacAdresse)
             {
                 return false;
             }
@@ -168,9 +177,9 @@ namespace Data_Layer
                     Directory.CreateDirectory(verzeichnis);
                 }
 
-               backupPath = Path.Combine(verzeichnis, dateiname);
+                backupPath = Path.Combine(verzeichnis, dateiname);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 // Werfe eine präzisere Fehlermeldung
                 throw new Exception($"Fehler beim Erstellen des Backup-Pfades: {ex.Message}", ex);
@@ -240,8 +249,8 @@ namespace Data_Layer
                 throw new Exception($"Fehler beim Erstellen des Backup-Pfades: {ex.Message}", ex);
             }
 
-        // Die Abfrage für das Backup
-        string query = $@"
+            // Die Abfrage für das Backup
+            string query = $@"
                           BACKUP DATABASE ParfümDb 
                              TO DISK = '{backupPath}' 
                                WITH FORMAT, INIT;";
@@ -286,5 +295,4 @@ namespace Data_Layer
             return string.Empty; // Falls keine MAC-Adresse gefunden wurde
         }
     }
-    
 }
