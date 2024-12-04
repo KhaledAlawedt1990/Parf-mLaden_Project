@@ -47,6 +47,8 @@
             this.lblRecord = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.dtpErstellungsdatum = new System.Windows.Forms.DateTimePicker();
+            this.erstelleEineVorlageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerkaufsDaten)).BeginInit();
             this.cmsVerkaufdaten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,7 +75,8 @@
             this.cbFilterbei.Items.AddRange(new object[] {
             "KundenName",
             "ParfümNummer",
-            "BelegID"});
+            "BelegID",
+            "erstellungsDatum"});
             this.cbFilterbei.Location = new System.Drawing.Point(92, 293);
             this.cbFilterbei.Name = "cbFilterbei";
             this.cbFilterbei.Size = new System.Drawing.Size(163, 28);
@@ -171,9 +174,10 @@
             this.cmsVerkaufdaten.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.seheVerkaufToolStripMenuItem,
             this.aktualisiereVerkaufdatentoolStripMenuItem2,
-            this.entferneVerkaufsdatenToolStripMenuItem});
+            this.entferneVerkaufsdatenToolStripMenuItem,
+            this.erstelleEineVorlageToolStripMenuItem});
             this.cmsVerkaufdaten.Name = "cmsVerkaufdaten";
-            this.cmsVerkaufdaten.Size = new System.Drawing.Size(278, 118);
+            this.cmsVerkaufdaten.Size = new System.Drawing.Size(278, 178);
             // 
             // seheVerkaufToolStripMenuItem
             // 
@@ -226,7 +230,6 @@
             this.lblRecord.Size = new System.Drawing.Size(39, 20);
             this.lblRecord.TabIndex = 15;
             this.lblRecord.Text = "###";
-            this.lblRecord.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -246,11 +249,31 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // dtpErstellungsdatum
+            // 
+            this.dtpErstellungsdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpErstellungsdatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpErstellungsdatum.Location = new System.Drawing.Point(265, 296);
+            this.dtpErstellungsdatum.Name = "dtpErstellungsdatum";
+            this.dtpErstellungsdatum.Size = new System.Drawing.Size(375, 26);
+            this.dtpErstellungsdatum.TabIndex = 16;
+            this.dtpErstellungsdatum.Visible = false;
+            this.dtpErstellungsdatum.ValueChanged += new System.EventHandler(this.dtpErstellungsdatum_ValueChanged);
+            // 
+            // erstelleEineVorlageToolStripMenuItem
+            // 
+            this.erstelleEineVorlageToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erstelleEineVorlageToolStripMenuItem.Name = "erstelleEineVorlageToolStripMenuItem";
+            this.erstelleEineVorlageToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.erstelleEineVorlageToolStripMenuItem.Text = "Erstelle eine Vorlage";
+            this.erstelleEineVorlageToolStripMenuItem.Click += new System.EventHandler(this.erstelleEineVorlageToolStripMenuItem_Click);
+            // 
             // frmVerkaufsDatenListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1607, 830);
+            this.Controls.Add(this.dtpErstellungsdatum);
             this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFilerwert);
@@ -287,5 +310,7 @@
         private System.Windows.Forms.ToolStripMenuItem aktualisiereVerkaufdatentoolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem entferneVerkaufsdatenToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.DateTimePicker dtpErstellungsdatum;
+        private System.Windows.Forms.ToolStripMenuItem erstelleEineVorlageToolStripMenuItem;
     }
 }

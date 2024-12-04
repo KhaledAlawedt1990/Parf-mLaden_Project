@@ -135,7 +135,8 @@ namespace Data_Layer
 
             string abfrage = @"select Mitarbeiter.mitarbeiterID, Mitarbeiter.personID,
                                         (Person.Vorname + ' ' + Person.Nachname) as Vollname , 
-                                        Person.Geburtstag, Person.Geschlecht, Mitarbeiter.versicherungsName, Mitarbeiter.versicherungsNummer,
+                                        Person.Geburtstag, Person.Geschlecht, Person.SteuerID,
+                                         Mitarbeiter.versicherungsName, Mitarbeiter.versicherungsNummer,
                                        Mitarbeiter.EingestelltAm, Mitarbeiter.istAktive
                                        from Person INNER JOIN Mitarbeiter ON
                                        Person.PersonID = Mitarbeiter.personID 

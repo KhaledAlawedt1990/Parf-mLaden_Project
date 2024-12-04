@@ -101,7 +101,7 @@
             this.aktualisiereParfümMengeToolStripMenuItem,
             this.entferneParfümToolStripMenuItem});
             this.cmsLager.Name = "cmsLager";
-            this.cmsLager.Size = new System.Drawing.Size(276, 118);
+            this.cmsLager.Size = new System.Drawing.Size(276, 140);
             // 
             // seheVerkaufsDetailstoolStripMenuItem1
             // 
@@ -111,6 +111,7 @@
             this.seheVerkaufsDetailstoolStripMenuItem1.Name = "seheVerkaufsDetailstoolStripMenuItem1";
             this.seheVerkaufsDetailstoolStripMenuItem1.Size = new System.Drawing.Size(275, 38);
             this.seheVerkaufsDetailstoolStripMenuItem1.Text = "Sehe Verkauf Details";
+            this.seheVerkaufsDetailstoolStripMenuItem1.Click += new System.EventHandler(this.seheVerkaufsDetailstoolStripMenuItem1_Click);
             // 
             // aktualisiereParfümMengeToolStripMenuItem
             // 

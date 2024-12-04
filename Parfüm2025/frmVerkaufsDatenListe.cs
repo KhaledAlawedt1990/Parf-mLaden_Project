@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
+using Windows.ApplicationModel.UserDataTasks;
 
 
 
@@ -84,21 +85,41 @@ namespace Parfüm2025
 
             lock (_lockObject)
             {
+                if(filterspalte == "erstellungsDatum")
+                {
+                    DateTime selectedDate = dtpErstellungsdatum.Value.Date; // Nur das Datum, keine Zeit
+
+                    // Start- und Endzeit des Tages
+                    DateTime startOfDay = selectedDate;
+                    DateTime endOfDay = selectedDate.AddDays(1).AddTicks(-1);
+
+                    // Formatieren der Werte für den Filter
+                    string startFormatted = startOfDay.ToString("MM/dd/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                    string endFormatted = endOfDay.ToString("MM/dd/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+
+                    // Filter setzen für den gesamten Tag
+                    _bindingSource.Filter = $"{filterspalte} >= #{startFormatted}# AND {filterspalte} <= #{endFormatted}#";
+                    //_bindingSource.Filter = $"{filterspalte} = #{startFormatted}#";
+                    return;
+                }
+
                 if (!string.IsNullOrEmpty(filterwert))
                 {
                     if (filterspalte == "ParfümNummer" || filterspalte == "BelegID")
                     {
+
                         _bindingSource.Filter = $"{filterspalte} = {filterwert}";
                     }
                     else if (filterspalte == "KundenName")
+                    {                  
                         _bindingSource.Filter = $"{filterspalte} Like '{filterwert}%'";
-                    
+                    }                  
                 }
                 else
                 {
                     _bindingSource.Filter = string.Empty;
                 }
-
+                
                 lblRecord.Text = _bindingSource.Count.ToString();
             }
         }
@@ -109,17 +130,27 @@ namespace Parfüm2025
 
         private void cbFilterbei_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbFilterbei.SelectedItem.ToString() == "erstellungsDatum")
+            {
+                dtpErstellungsdatum.Visible = true;
+                dtpErstellungsdatum.Focus();
+                txtFilerwert.Visible = false;
+
+            }
+            else
+            {
+                dtpErstellungsdatum.Visible = false;
+                txtFilerwert.Visible = true;
+                _bindingSource.Filter = string.Empty;
+            }
+
             if (cbFilterbei.SelectedIndex != -1)
             {
                 txtFilerwert.Clear();
                 txtFilerwert.Focus();
             }
+            
             lblRecord.Text = _bindingSource.Count.ToString();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtFilerwert_KeyPress(object sender, KeyPressEventArgs e)
@@ -228,6 +259,15 @@ namespace Parfüm2025
             }
         }
 
-       
+        private void dtpErstellungsdatum_ValueChanged(object sender, EventArgs e)
+        {
+            _Filteranwenden();
+        }
+
+        private void erstelleEineVorlageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDruckvorschau frm = new frmDruckvorschau();
+            frm.ShowDialog();
+        }
     }
 }

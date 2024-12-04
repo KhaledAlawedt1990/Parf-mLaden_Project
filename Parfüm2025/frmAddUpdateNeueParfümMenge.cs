@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Parfüm2025
 {
     public partial class frmAddUpdateNeueParfümMenge : Form
     {
-        public enum enMode { addnew = 0, update =1}
+        public enum enMode { addnew = 0, update =1, sehedetails = 2}
         public enMode _mode = enMode.addnew;
 
         private readonly object _lackObject = new object();
@@ -61,6 +62,8 @@ namespace Parfüm2025
                     }
                    
                     txtParfümNummer.Text = _einkaufsDaten.parfümNummer.ToString();
+                    txtParfümNummer.ReadOnly = true;
+
                     txtParfümName.Text = _einkaufsDaten.parfümName;
                     txtBatchNummer.Text = _einkaufsDaten.batchNummer;
                     txtParfümCode.Text = _einkaufsDaten.parfümCode;
@@ -98,13 +101,18 @@ namespace Parfüm2025
         {
             _setzeEinkaufsDatenAufStandardWerte();
 
-            if(_mode == enMode.addnew)
+            if (_mode == enMode.addnew)
             {
                 _einkaufsDaten = new clsEinkauf();
+            }
+            else if (_mode == enMode.update)
+            {
+                _ladeEinkaufsDaten();
             }
             else
             {
                 _ladeEinkaufsDaten();
+                btnSpeichern.Enabled = false;
             }
         }
 

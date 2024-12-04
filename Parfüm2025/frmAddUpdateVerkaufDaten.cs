@@ -37,7 +37,7 @@ namespace Parfüm2025
         private void _DatumEinrichten()
         {
             dtpErstellungsDatum.Format = DateTimePickerFormat.Custom;
-            dtpErstellungsDatum.CustomFormat = "dd.MM.yyyy          HH:mm";
+            dtpErstellungsDatum.CustomFormat = "dd.MM.yyyy   HH:mm";
         }
 
         private void _setzeVerkaufsDatenAufStandardWerte()
@@ -139,7 +139,15 @@ namespace Parfüm2025
         {
              
             _verkaufsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
-            _verkaufsDaten.kundeID = clsKunde.FindKundeByPersonName(txtKundeName.Text.Trim()).kundeID;
+
+            clsKunde kundedatem = clsKunde.FindKundeByPersonName(txtKundeName.Text.Trim());
+            if(kundedatem == null)
+            {
+                MessageBox.Show("Dieser Kunde existiert leider nicht im system.\nBitte geben Sie einen gültigen Kunden ein.","Fehlermeldung",
+                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+            _verkaufsDaten.kundeID = kundedatem.kundeID ;
             _verkaufsDaten.verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
            

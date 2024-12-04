@@ -36,11 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPasswort = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbAnmeldeDaten.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbAnmeldeDaten
@@ -52,10 +52,11 @@
             this.gbAnmeldeDaten.Controls.Add(this.label1);
             this.gbAnmeldeDaten.Controls.Add(this.txtPasswort);
             this.gbAnmeldeDaten.Controls.Add(this.txtUsername);
+            this.gbAnmeldeDaten.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbAnmeldeDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAnmeldeDaten.Location = new System.Drawing.Point(448, 12);
+            this.gbAnmeldeDaten.Location = new System.Drawing.Point(678, 0);
             this.gbAnmeldeDaten.Name = "gbAnmeldeDaten";
-            this.gbAnmeldeDaten.Size = new System.Drawing.Size(240, 500);
+            this.gbAnmeldeDaten.Size = new System.Drawing.Size(365, 720);
             this.gbAnmeldeDaten.TabIndex = 3;
             this.gbAnmeldeDaten.TabStop = false;
             this.gbAnmeldeDaten.Text = "Anmeldedaten";
@@ -65,7 +66,7 @@
             this.btnSchliessen.BackColor = System.Drawing.Color.White;
             this.btnSchliessen.Location = new System.Drawing.Point(20, 440);
             this.btnSchliessen.Name = "btnSchliessen";
-            this.btnSchliessen.Size = new System.Drawing.Size(198, 32);
+            this.btnSchliessen.Size = new System.Drawing.Size(312, 32);
             this.btnSchliessen.TabIndex = 5;
             this.btnSchliessen.Text = "Schließen";
             this.btnSchliessen.UseVisualStyleBackColor = false;
@@ -76,7 +77,7 @@
             this.btnEinloggen.BackColor = System.Drawing.Color.White;
             this.btnEinloggen.Location = new System.Drawing.Point(20, 392);
             this.btnEinloggen.Name = "btnEinloggen";
-            this.btnEinloggen.Size = new System.Drawing.Size(198, 32);
+            this.btnEinloggen.Size = new System.Drawing.Size(312, 32);
             this.btnEinloggen.TabIndex = 4;
             this.btnEinloggen.Text = "Einloggen";
             this.btnEinloggen.UseVisualStyleBackColor = false;
@@ -107,7 +108,8 @@
             this.txtPasswort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswort.Location = new System.Drawing.Point(20, 231);
             this.txtPasswort.Name = "txtPasswort";
-            this.txtPasswort.Size = new System.Drawing.Size(198, 28);
+            this.txtPasswort.PasswordChar = '*';
+            this.txtPasswort.Size = new System.Drawing.Size(312, 28);
             this.txtPasswort.TabIndex = 1;
             // 
             // txtUsername
@@ -115,30 +117,30 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(20, 154);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(198, 28);
+            this.txtUsername.Size = new System.Drawing.Size(312, 28);
             this.txtUsername.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.pexels_anis_salmani_208342252_11711830;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(442, 524);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.A;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(678, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogginScreen
             // 
             this.AcceptButton = this.btnEinloggen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 524);
+            this.ClientSize = new System.Drawing.Size(1043, 720);
             this.Controls.Add(this.gbAnmeldeDaten);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
@@ -147,8 +149,8 @@
             this.Text = "LogginScreen";
             this.gbAnmeldeDaten.ResumeLayout(false);
             this.gbAnmeldeDaten.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

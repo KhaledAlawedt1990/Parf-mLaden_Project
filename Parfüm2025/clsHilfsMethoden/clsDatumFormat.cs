@@ -12,6 +12,7 @@ namespace clsHilfsMethoden
         public static string DateToShort(DateTime date)
         {
             return date.ToString("dd/MMM/yyyy");
+
         }
 
        

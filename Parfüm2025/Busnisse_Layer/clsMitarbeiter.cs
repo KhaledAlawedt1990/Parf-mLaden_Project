@@ -133,7 +133,9 @@ namespace Busnisse_Layer
 
         public override bool Delete()
         {
-            bool UserEntfernt = clsUser.DeleteUserByMitarbeiterID(this.MitarbeiterID);
+            bool UserEntfernt = true;
+            if (clsUser.ExistUserForThisMitarbeiter(this.MitarbeiterID)) // wir überprüfen, Ob Benutzer für diesen Mitarbeiter existiert.
+                UserEntfernt = clsUser.DeleteUserByMitarbeiterID(this.MitarbeiterID);  // wenn Ja, dann löschen.
 
             if (!UserEntfernt)
                 return false; ;

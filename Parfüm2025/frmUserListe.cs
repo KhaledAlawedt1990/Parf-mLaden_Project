@@ -24,6 +24,7 @@ namespace Parfüm2025
         {
             _user = clsUser.GetAllUser();
             dgvUser.DataSource = _user;
+            lblRecord.Text = dgvUser.Rows.Count.ToString();
         }
 
         private void frmUserListe_Load(object sender, EventArgs e)

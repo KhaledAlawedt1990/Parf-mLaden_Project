@@ -404,7 +404,6 @@ namespace Data_Layer
             }
             return RowAffected > 0;
         }
-
         public static bool DeleteUserByMitarbeiterID(int mitarbeiterID)
         {
             int RowAffected = 0;

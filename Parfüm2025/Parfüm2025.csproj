@@ -383,5 +383,23 @@
   <ItemGroup>
     <None Include="Icons\Add New User 32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\setting_11172021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\interface_15123397.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\paint-palette_16163509.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bilder\4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

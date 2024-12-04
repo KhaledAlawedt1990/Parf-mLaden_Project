@@ -122,5 +122,12 @@ namespace Parfüm2025
             if (cbFilterbei.SelectedItem.ToString() == "ParfümNummer")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void seheVerkaufsDetailstoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int parfümNummer = (int)dgvLager.CurrentRow.Cells[0].Value;
+            frmAddUpdateNeueParfümMenge frm = new frmAddUpdateNeueParfümMenge(parfümNummer,frmAddUpdateNeueParfümMenge.enMode.sehedetails);
+            frm.ShowDialog();
+        }
     }
 }
