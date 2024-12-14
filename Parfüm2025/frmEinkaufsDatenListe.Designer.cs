@@ -91,7 +91,7 @@
             this.dgvLager.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLager.RowTemplate.Height = 30;
             this.dgvLager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLager.Size = new System.Drawing.Size(1309, 322);
+            this.dgvLager.Size = new System.Drawing.Size(1082, 322);
             this.dgvLager.TabIndex = 1;
             // 
             // cmsLager
@@ -101,7 +101,7 @@
             this.aktualisiereParfümMengeToolStripMenuItem,
             this.entferneParfümToolStripMenuItem});
             this.cmsLager.Name = "cmsLager";
-            this.cmsLager.Size = new System.Drawing.Size(276, 140);
+            this.cmsLager.Size = new System.Drawing.Size(276, 118);
             // 
             // seheVerkaufsDetailstoolStripMenuItem1
             // 
@@ -140,9 +140,9 @@
             this.btnHinzufügeNeueMenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHinzufügeNeueMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHinzufügeNeueMenge.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnHinzufügeNeueMenge.Location = new System.Drawing.Point(1109, 274);
+            this.btnHinzufügeNeueMenge.Location = new System.Drawing.Point(860, 274);
             this.btnHinzufügeNeueMenge.Name = "btnHinzufügeNeueMenge";
-            this.btnHinzufügeNeueMenge.Size = new System.Drawing.Size(224, 40);
+            this.btnHinzufügeNeueMenge.Size = new System.Drawing.Size(246, 40);
             this.btnHinzufügeNeueMenge.TabIndex = 2;
             this.btnHinzufügeNeueMenge.Text = "Hinzufüge Einkaufsdaten";
             this.btnHinzufügeNeueMenge.UseVisualStyleBackColor = false;
@@ -155,7 +155,7 @@
             this.btnAktualisereParfümMenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAktualisereParfümMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisereParfümMenge.ForeColor = System.Drawing.Color.Black;
-            this.btnAktualisereParfümMenge.Location = new System.Drawing.Point(879, 274);
+            this.btnAktualisereParfümMenge.Location = new System.Drawing.Point(630, 274);
             this.btnAktualisereParfümMenge.Name = "btnAktualisereParfümMenge";
             this.btnAktualisereParfümMenge.Size = new System.Drawing.Size(224, 40);
             this.btnAktualisereParfümMenge.TabIndex = 3;
@@ -183,7 +183,7 @@
             "ParfümNummer"});
             this.cbFilterbei.Location = new System.Drawing.Point(104, 285);
             this.cbFilterbei.Name = "cbFilterbei";
-            this.cbFilterbei.Size = new System.Drawing.Size(189, 28);
+            this.cbFilterbei.Size = new System.Drawing.Size(159, 28);
             this.cbFilterbei.TabIndex = 5;
             this.cbFilterbei.SelectedIndexChanged += new System.EventHandler(this.cbFilterbei_SelectedIndexChanged);
             // 
@@ -191,11 +191,11 @@
             // 
             this.txtFilerwert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFilerwert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtFilerwert.BackColor = System.Drawing.Color.White;
             this.txtFilerwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilerwert.Location = new System.Drawing.Point(299, 285);
+            this.txtFilerwert.Location = new System.Drawing.Point(269, 286);
             this.txtFilerwert.Name = "txtFilerwert";
-            this.txtFilerwert.Size = new System.Drawing.Size(539, 26);
+            this.txtFilerwert.Size = new System.Drawing.Size(320, 26);
             this.txtFilerwert.TabIndex = 6;
             this.txtFilerwert.TextChanged += new System.EventHandler(this.txtFilerwert_TextChanged);
             this.txtFilerwert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilerwert_KeyPress);
@@ -208,7 +208,7 @@
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.store_869636;
             this.pictureBox1.Location = new System.Drawing.Point(24, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1309, 266);
+            this.pictureBox1.Size = new System.Drawing.Size(1082, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1367, 669);
+            this.ClientSize = new System.Drawing.Size(1118, 669);
             this.Controls.Add(this.txtFilerwert);
             this.Controls.Add(this.cbFilterbei);
             this.Controls.Add(this.label1);

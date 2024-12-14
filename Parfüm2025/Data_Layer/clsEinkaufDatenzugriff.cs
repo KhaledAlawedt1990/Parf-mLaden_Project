@@ -15,7 +15,7 @@ namespace Data_Layer
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
 
         public static bool GetEinkaufDatenByParfümID(int parfümNummer, ref string parfümName, ref string batchNummer,
-                    ref string parfümCode, ref float lagerbestand, ref DateTime erstellungsDatum)
+                    ref string parfümCode, ref float lagerbestand, ref int preisKategorie,  ref DateTime erstellungsDatum)
         {
 
             bool isfound = false;
@@ -40,6 +40,7 @@ namespace Data_Layer
                                 batchNummer = (string)reader["batchNummer"];
                                 parfümCode = (string)reader["parfümCode"];
                                 lagerbestand = (float)reader["lagerbestand"];
+                                preisKategorie = (int)reader["preisKategorie"];
                                 erstellungsDatum = (DateTime)reader["erstellungsDatum"];
                             }
                         }
@@ -56,7 +57,7 @@ namespace Data_Layer
         }
 
         public static bool GetEinkaufDatenByParfümName(ref int parfümNummer, string parfümName, ref string batchNummer,
-                    ref string parfümCode, ref float lagerbestand, ref DateTime erstellungsDatum)
+                    ref string parfümCode, ref float lagerbestand, ref int preisKategorie, ref DateTime erstellungsDatum)
         {
 
             bool isfound = false;
@@ -81,6 +82,7 @@ namespace Data_Layer
                                 batchNummer = (string)reader["batchNummer"];
                                 parfümCode = (string)reader["parfümCode"];
                                 lagerbestand = (float)reader["lagerbestand"];
+                                preisKategorie = (int)reader["preisKategorie"];
                                 erstellungsDatum = (DateTime)reader["erstellungsDatum"];
 
                             }
@@ -128,12 +130,12 @@ namespace Data_Layer
             return dt;
         }
         public static bool AddNewEinkaufDaten(int parfümNummer,string parfümName, string batchNummer,
-                    string parfümCode,float lagerbestand, DateTime erstellungsDatum)
+                    string parfümCode,float lagerbestand, int preisKategorie, DateTime erstellungsDatum)
         {
             int rowAffected = 0;
 
-            string abfrage = @"Insert into Einkauf (parfümNummer,parfümName,batchNummer,parfümCode,lagerbestand,erstellungsDatum)
-                                        Values  (@parfümNummer, @parfümName, @batchNummer, @parfümCode, @lagerbestand, @erstellungsDatum)";
+            string abfrage = @"Insert into Einkauf (parfümNummer,parfümName,batchNummer,parfümCode,lagerbestand, preisKategorie, erstellungsDatum)
+                                        Values  (@parfümNummer, @parfümName, @batchNummer, @parfümCode, @lagerbestand,@preisKategorie, @erstellungsDatum)";
        
             try
             {
@@ -148,6 +150,7 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@batchNummer", batchNummer);
                         command.Parameters.AddWithValue("@parfümCode", parfümCode);
                         command.Parameters.AddWithValue("@lagerbestand", lagerbestand);
+                        command.Parameters.AddWithValue("@preisKategorie", preisKategorie);
                         command.Parameters.AddWithValue("@erstellungsDatum", erstellungsDatum);
 
                         connection.Open();
@@ -164,13 +167,14 @@ namespace Data_Layer
         }
 
         public static bool UpdateEinkaufDaten(int parfümNummer, string batchNummer,
-                    string parfümCode, float lagerbestand, DateTime erstellungsDatum)
+                    string parfümCode, float lagerbestand, int preisKategorie, DateTime erstellungsDatum)
         {
             int RowAffected = 0;
             string abfrage = @"Update Einkauf  Set
                                                   batchNummer = @batchNummer,
                                                   parfümCode  = @parfümCode,
                                                   lagerbestand = @lagerbestand,
+                                                  preisKategorie = @preisKategorie,
                                                   erstellungsDatum = @erstellungsDatum
                                             Where parfümNummer = @parfümNummer";
             try
@@ -185,6 +189,7 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@batchNummer", batchNummer);
                         command.Parameters.AddWithValue("@parfümCode", parfümCode);
                         command.Parameters.AddWithValue("@lagerbestand", lagerbestand);
+                        command.Parameters.AddWithValue("@preisKategorie", preisKategorie);
                         command.Parameters.AddWithValue("@erstellungsDatum", erstellungsDatum);
 
                         connection.Open();
@@ -218,40 +223,6 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
                         command.Parameters.AddWithValue("@neueLagerbestand", neueLagerbestand);
           
-                        connection.Open();
-                        RowAffected = command.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                throw;
-            }
-            return RowAffected > 0;
-        }
-        public static bool UpdateEinkaufDaten(string parfümName, string batchNummer,
-                 string parfümCode, float lagerbestand, DateTime erstellungsDatum)
-        {
-            int RowAffected = 0;
-            string abfrage = @"Update Einkauf  Set
-                                                  batchNummer = @batchNummer,
-                                                  parfümCode  = @parfümCode,
-                                                  lagerbestand = @lagerbestand,
-                                                  erstellungsDatum = GetDate()
-                                            Where parfümName = parfümName";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    using (SqlCommand command = new SqlCommand(abfrage, connection))
-                    {
-
-                        // Parameter hinzufügen
-                        command.Parameters.AddWithValue("@parfümName", parfümName);
-                        command.Parameters.AddWithValue("@batchNummer", batchNummer);
-                        command.Parameters.AddWithValue("@parfümCode", parfümCode);
-                        command.Parameters.AddWithValue("@lagerbestand", lagerbestand);
-
                         connection.Open();
                         RowAffected = command.ExecuteNonQuery();
                     }

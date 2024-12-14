@@ -47,8 +47,10 @@
     <Compile Include="clsMitarbeiterDatenzugriff.cs" />
     <Compile Include="clsParfümDatenzugriff.cs" />
     <Compile Include="clsPersonDatenzugriff.cs" />
+    <Compile Include="clsPreisDatenzugriff.cs" />
+    <Compile Include="clsRechnugDatenzugriff.cs" />
     <Compile Include="clsUserDatenzugriff.cs" />
-    <Compile Include="clsVerkaufDatenzugriff.cs" />
+    <Compile Include="clsRechnungsdetailsDatenzugirff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

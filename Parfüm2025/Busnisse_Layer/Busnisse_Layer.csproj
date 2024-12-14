@@ -48,8 +48,10 @@
     <Compile Include="clsMitarbeiter.cs" />
     <Compile Include="clsParfüm.cs" />
     <Compile Include="clsPerson.cs" />
+    <Compile Include="clsPreise.cs" />
+    <Compile Include="clsRechnung.cs" />
     <Compile Include="clsUser.cs" />
-    <Compile Include="clsVerkauf.cs" />
+    <Compile Include="clsRechnungsdetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

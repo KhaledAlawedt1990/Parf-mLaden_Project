@@ -187,14 +187,11 @@ namespace Parfüm2025
 
         private void hinzufügeNeuenVerkaufToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddUpdateVerkaufDaten frm = new frmAddUpdateVerkaufDaten(-1, frmAddUpdateVerkaufDaten.enMode.addnew);
-            frm.lagerbestandAktualisiert +=  _ÜberprüfeLagerbestand;
+            frmAddUpdateRechnung frm = new frmAddUpdateRechnung(-1, frmAddUpdateRechnung.enMode.addnew);
+          //  frm.lagerbestandAktualisiert +=  _ÜberprüfeLagerbestand;
             frm.ShowDialog();
 
-            if(_neuerLagerbestand < 50 && _parfümNummer != -1)
-            {
-                _SetzeNotifikation();
-            }
+ 
         }
 
         private void _ÜberprüfeLagerbestand(object sender, float neuerLagerbestand, int parfümNummer)

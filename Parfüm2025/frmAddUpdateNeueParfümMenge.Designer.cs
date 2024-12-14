@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnKategorieDetails = new System.Windows.Forms.Button();
+            this.txtPreiskategorie = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNeueMenge = new System.Windows.Forms.TextBox();
@@ -55,6 +58,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnKategorieDetails);
+            this.groupBox1.Controls.Add(this.txtPreiskategorie);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtNeueMenge);
@@ -74,18 +80,45 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 374);
+            this.groupBox1.Size = new System.Drawing.Size(432, 397);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Einkauf-daten";
             // 
+            // btnKategorieDetails
+            // 
+            this.btnKategorieDetails.Location = new System.Drawing.Point(339, 310);
+            this.btnKategorieDetails.Name = "btnKategorieDetails";
+            this.btnKategorieDetails.Size = new System.Drawing.Size(87, 25);
+            this.btnKategorieDetails.TabIndex = 18;
+            this.btnKategorieDetails.Text = "Preise";
+            this.btnKategorieDetails.UseVisualStyleBackColor = true;
+            this.btnKategorieDetails.Click += new System.EventHandler(this.btnKategorieDetails_Click);
+            // 
+            // txtPreiskategorie
+            // 
+            this.txtPreiskategorie.Location = new System.Drawing.Point(163, 309);
+            this.txtPreiskategorie.Name = "txtPreiskategorie";
+            this.txtPreiskategorie.Size = new System.Drawing.Size(170, 26);
+            this.txtPreiskategorie.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(23, 311);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "PreisKategorie:*";
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(339, 238);
+            this.textBox1.Location = new System.Drawing.Point(339, 235);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(70, 26);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(37, 26);
             this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "Gramm";
+            this.textBox1.Text = "Kg";
             // 
             // label7
             // 
@@ -99,7 +132,7 @@
             // 
             // txtNeueMenge
             // 
-            this.txtNeueMenge.Location = new System.Drawing.Point(163, 238);
+            this.txtNeueMenge.Location = new System.Drawing.Point(163, 235);
             this.txtNeueMenge.Name = "txtNeueMenge";
             this.txtNeueMenge.Size = new System.Drawing.Size(170, 26);
             this.txtNeueMenge.TabIndex = 13;
@@ -108,21 +141,22 @@
             // 
             this.txtGrammText.Location = new System.Drawing.Point(339, 271);
             this.txtGrammText.Name = "txtGrammText";
-            this.txtGrammText.Size = new System.Drawing.Size(70, 26);
+            this.txtGrammText.ReadOnly = true;
+            this.txtGrammText.Size = new System.Drawing.Size(37, 26);
             this.txtGrammText.TabIndex = 12;
-            this.txtGrammText.Text = "Gramm";
+            this.txtGrammText.Text = "Kg";
             // 
             // dtpErstellungsDatum
             // 
             this.dtpErstellungsDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpErstellungsDatum.Location = new System.Drawing.Point(163, 323);
+            this.dtpErstellungsDatum.Location = new System.Drawing.Point(163, 348);
             this.dtpErstellungsDatum.Name = "dtpErstellungsDatum";
             this.dtpErstellungsDatum.Size = new System.Drawing.Size(246, 26);
             this.dtpErstellungsDatum.TabIndex = 11;
             // 
             // txtLagerbestand
             // 
-            this.txtLagerbestand.Location = new System.Drawing.Point(163, 270);
+            this.txtLagerbestand.Location = new System.Drawing.Point(163, 271);
             this.txtLagerbestand.Name = "txtLagerbestand";
             this.txtLagerbestand.ReadOnly = true;
             this.txtLagerbestand.Size = new System.Drawing.Size(170, 26);
@@ -160,7 +194,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 325);
+            this.label6.Location = new System.Drawing.Point(5, 350);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 20);
             this.label6.TabIndex = 5;
@@ -214,18 +248,18 @@
             // btnSpeichern
             // 
             this.btnSpeichern.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpeichern.Location = new System.Drawing.Point(159, 405);
+            this.btnSpeichern.Location = new System.Drawing.Point(159, 427);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(134, 31);
             this.btnSpeichern.TabIndex = 1;
-            this.btnSpeichern.Text = "speichern";
+            this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = true;
             this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
             // 
             // btnAbbrechen
             // 
             this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbbrechen.Location = new System.Drawing.Point(310, 405);
+            this.btnAbbrechen.Location = new System.Drawing.Point(310, 427);
             this.btnAbbrechen.Name = "btnAbbrechen";
             this.btnAbbrechen.Size = new System.Drawing.Size(134, 31);
             this.btnAbbrechen.TabIndex = 2;
@@ -241,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 448);
+            this.ClientSize = new System.Drawing.Size(465, 472);
             this.Controls.Add(this.btnAbbrechen);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.groupBox1);
@@ -280,5 +314,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNeueMenge;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPreiskategorie;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnKategorieDetails;
     }
 }

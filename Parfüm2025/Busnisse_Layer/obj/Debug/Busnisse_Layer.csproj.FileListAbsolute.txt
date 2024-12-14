@@ -46,11 +46,11 @@ C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\obj\Debug
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\Busnisse_Layer.dll
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\Busnisse_Layer.pdb
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\Data_Layer.dll
+C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\clsHilfsMethoden.dll
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\Data_Layer.pdb
+C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\clsHilfsMethoden.pdb
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\obj\Debug\Busnisse_Layer.csproj.AssemblyReference.cache
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\obj\Debug\Busnisse_Layer.csproj.CoreCompileInputs.cache
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\obj\Debug\Busnisse.689CA989.Up2Date
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\obj\Debug\Busnisse_Layer.dll
 C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\obj\Debug\Busnisse_Layer.pdb
-C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\clsHilfsMethoden.dll
-C:\Parf-mLaden_Project\Parfüm2025\Busnisse_Layer\bin\Debug\clsHilfsMethoden.pdb

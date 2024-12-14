@@ -1,18 +1,21 @@
 ﻿
 using Busnisse_Layer;
 using clsHilfsMethoden;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using iTextSharp.text;
 
 namespace Parfüm2025
 {
@@ -433,38 +436,103 @@ namespace Parfüm2025
         private bool running = false;  // Gibt an, ob der Server aktiv ist
         private async void btnFreigabe_Click(object sender, EventArgs e)
         {
-            //if (running)
+            ////if (running)
+            ////{
+            ////    MessageBox.Show("Der Server läuft bereits!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ////    return; // Keine Aktion, wenn der Server bereits läuft
+            ////}
+
+            //try
             //{
-            //    MessageBox.Show("Der Server läuft bereits!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return; // Keine Aktion, wenn der Server bereits läuft
+            //    // Deaktiviere die Schaltfläche, um doppelte Klicks zu verhindern
+            //    btnFreigabe.Enabled = false;
+
+            //    // Starte den Server
+            //    running = true;
+            //    string result = await clsKomminikationsService.StartServerAsync();  // Server starten
+            //    txtServerDienst.Text = result;  // Ergebnis anzeigen
             //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Fehler: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    // Reaktiviere die Schaltfläche
+            //    btnFreigabe.Enabled = true;
+            //    clsKomminikationsService.StopServer();
+            //}
+
+        }
+        private void _ErstellePdfVonParfuem()
+        {
+            // Pfad zum Desktop des aktuellen Benutzers
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            // Name und Pfad der PDF-Datei
+            string fileName = "Parfuemliste.pdf";
+            string filePath = Path.Combine(desktopPath, fileName);
 
             try
             {
-                // Deaktiviere die Schaltfläche, um doppelte Klicks zu verhindern
-                btnFreigabe.Enabled = false;
+                // PDF speichern
+                using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                {
+                    using (Document pdfDoc = new Document())
+                    {
+                        PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
 
-                // Starte den Server
-                running = true;
-                string result = await clsKomminikationsService.StartServerAsync();  // Server starten
-                txtServerDienst.Text = result;  // Ergebnis anzeigen
+                        // Erstelle eine Tabelle mit 2 Spalten (Parfümnummer und Parfümname)
+                        PdfPTable table = new PdfPTable(2);
+                        table.WidthPercentage = 100;
+
+                        // Füge Header zur Tabelle hinzu
+                        table.AddCell("Parfümnummer");
+                        table.AddCell("Parfümname");
+
+                        // Füge die Daten aus dem DataGridView hinzu (Parfümnummer und Name)
+                        foreach (DataGridViewRow row in dgvParfüm.Rows)
+                        {
+                            if (!row.IsNewRow) // Leere Zeilen überspringen
+                            {
+                                // Überprüfen, ob die Werte in der jeweiligen Spalte vorhanden sind
+                                var parfuemNummer = row.Cells["Parfümnummer"]?.Value?.ToString();
+                                var parfuemName = row.Cells["Name"]?.Value?.ToString();
+
+                                if (!string.IsNullOrEmpty(parfuemNummer) && !string.IsNullOrEmpty(parfuemName))
+                                {
+                                    // Füge Parfümnummer und Parfümname zur Tabelle hinzu
+                                    table.AddCell(parfuemNummer);
+                                    table.AddCell(parfuemName);
+                                }
+                            }
+                        }
+
+                        // Füge die Tabelle zur PDF hinzu
+                        pdfDoc.Add(table);
+
+                        pdfDoc.Close();
+                    }
+                }
+
+                // Erfolgreiche Speicherung anzeigen
+                MessageBox.Show($"Die Datei wurde erfolgreich auf dem Desktop gespeichert:\n{filePath}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Fehler: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Fehlerbehandlung
+                MessageBox.Show($"Fehler beim Speichern der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                // Reaktiviere die Schaltfläche
-                btnFreigabe.Enabled = true;
-                clsKomminikationsService.StopServer();
-            }
-
+        }
+        private void erstelleEineParfümlisteAlsPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _ErstellePdfVonParfuem();
         }
 
-        private void lbVorschläge_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnErstelleEineParfümListePdf_Click(object sender, EventArgs e)
         {
-
+            _ErstellePdfVonParfuem();
         }
     }
 }

@@ -21,16 +21,18 @@ namespace Busnisse_Layer
         public string batchNummer { get; set; }
         public string parfümCode { get; set; }
         public float lagerbestand { get; set; }
+        public int preisKategorie { get; set; }
         public DateTime erstellungsDatum { get; set; }
 
         private clsEinkauf(int parfümNummer, string parfümName, string batchNummer, string parfümCode,
-            float lagerbestand, DateTime erstellungsDatum)
+            float lagerbestand, int preisKategorie, DateTime erstellungsDatum)
         {
             this.parfümNummer = parfümNummer;
             this.parfümName = parfümName;
             this.batchNummer = batchNummer;
             this.parfümCode = parfümCode;
             this.lagerbestand = lagerbestand;
+            this.preisKategorie = preisKategorie;
             this.erstellungsDatum = erstellungsDatum;
 
             _mode = enMode.update;
@@ -43,6 +45,7 @@ namespace Busnisse_Layer
             this.batchNummer = string.Empty;
             this.parfümCode = string.Empty;
             this.lagerbestand = 0;
+            this.preisKategorie = 1;
             this.erstellungsDatum = DateTime.Now;
 
             _mode = enMode.addnew;
@@ -51,35 +54,21 @@ namespace Busnisse_Layer
         public static clsEinkauf FindEinkaufDatenByParfümNummer(int parfümNummer)
         {
             string parfümName = string.Empty; string batchNummer = string.Empty;
-            string parfümCode = string.Empty; float lagerbestand = 0; DateTime erstellungsDatum = DateTime.Now;
+            string parfümCode = string.Empty; float lagerbestand = 0;
+            int preisKategorie = 1;  DateTime erstellungsDatum = DateTime.Now;
 
             if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümID(parfümNummer, ref parfümName, ref batchNummer,
-                                                         ref parfümCode, ref lagerbestand, ref erstellungsDatum))
+                                                         ref parfümCode, ref lagerbestand, ref preisKategorie, ref erstellungsDatum))
             {
-                return new clsEinkauf(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, erstellungsDatum);
+                return new clsEinkauf(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, preisKategorie, erstellungsDatum);
             }
             else
                 return null;
         }
-
-        public static clsEinkauf FindEinkaufDatenByParfümName(string parfümName)
-        {
-            int parfümNummer = -1; string batchNummer = string.Empty;
-            string parfümCode = string.Empty; float lagerbestand = 0; DateTime erstellungsDatum = DateTime.Now;
-
-            if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümName(ref parfümNummer, parfümName, ref batchNummer,
-                                                         ref parfümCode, ref lagerbestand, ref erstellungsDatum))
-            {
-                return new clsEinkauf(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, erstellungsDatum);
-            }
-            else
-                return null;
-        }
-
         private bool _AddNewEinkaufDaten()
         {
             return clsEinkaufDatenzugriff.AddNewEinkaufDaten(this.parfümNummer, this.parfümName, this.batchNummer,
-                                                                         this.parfümCode, this.lagerbestand, this.erstellungsDatum);
+                                                            this.parfümCode, this.lagerbestand,this.preisKategorie, this.erstellungsDatum);
         }
 
         //public bool _UpdateByParfümName()
@@ -91,7 +80,7 @@ namespace Busnisse_Layer
         public bool _UpdateByParfümNummer()
         {
             return clsEinkaufDatenzugriff.UpdateEinkaufDaten(this.parfümNummer, this.batchNummer, this.parfümCode,
-                                                                   this.lagerbestand, erstellungsDatum);
+                                                                   this.lagerbestand,this.preisKategorie, erstellungsDatum);
         }
 
         public static bool UpdateLagerbestand(int parfümNummer, float neueLagerbestand)
@@ -134,5 +123,6 @@ namespace Busnisse_Layer
         {
             return clsEinkaufDatenzugriff.GetAllEinkaufDaten();
         }
+
     }
 }

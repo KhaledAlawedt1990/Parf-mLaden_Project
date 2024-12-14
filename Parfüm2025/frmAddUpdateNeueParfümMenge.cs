@@ -42,7 +42,8 @@ namespace Parfüm2025
             txtParfümName.Clear();
             txtBatchNummer.Clear();
             txtParfümCode.Clear();
-            txtLagerbestand.Clear();
+            txtLagerbestand.Text = "0";
+            txtPreiskategorie.Clear();
             dtpErstellungsDatum.Value = DateTime.Now;
         }
 
@@ -67,8 +68,8 @@ namespace Parfüm2025
                     txtParfümName.Text = _einkaufsDaten.parfümName;
                     txtBatchNummer.Text = _einkaufsDaten.batchNummer;
                     txtParfümCode.Text = _einkaufsDaten.parfümCode;
-
                     txtLagerbestand.Text = _einkaufsDaten.lagerbestand.ToString();
+                    txtPreiskategorie.Text = _einkaufsDaten.preisKategorie.ToString();
                     dtpErstellungsDatum.Value = _einkaufsDaten.erstellungsDatum;
                     
                   
@@ -145,6 +146,7 @@ namespace Parfüm2025
             isValid &= _ValidiereEinFeld(txtBatchNummer, "BatchNummer");
             isValid &= _ValidiereEinFeld(txtParfümCode, "ParfümCode");
             isValid &= _ValidiereEinFeld(txtNeueMenge, "EinkaufsMenge");
+            isValid &= _ValidiereEinFeld(txtPreiskategorie, "PreisKategorie");
             return isValid; // Gibt zurück, ob alle Felder gültig sind
         }
 
@@ -160,14 +162,25 @@ namespace Parfüm2025
                 return -1;
         }
 
-        private void _fülleEinkaufsdaten()
+        private bool _fülleEinkaufsdaten()
         {
             _einkaufsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
             _einkaufsDaten.parfümName = txtParfümName.Text;
             _einkaufsDaten.batchNummer = txtBatchNummer.Text;
             _einkaufsDaten.parfümCode = txtParfümCode.Text;
             _einkaufsDaten.lagerbestand = _einkaufsDaten.lagerbestand + Convert.ToSingle(txtNeueMenge.Text.Trim()); // Hier addieren wir die neue Menge!!!!!
+
+            int preisKategorie = Convert.ToInt32(txtPreiskategorie.Text);
+            if(!clsPreise.IstkategorieVorhanden(preisKategorie))
+            {
+                MessageBox.Show("Diese Kategorie existiert nicht, bitte geben Sie eine Andere ein","Fehlermeldung",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            _einkaufsDaten.preisKategorie = preisKategorie;
             _einkaufsDaten.erstellungsDatum = dtpErstellungsDatum.Value;
+
+            return true;
         }
         private void _speicherEinkaufsdaten()
         {
@@ -181,7 +194,8 @@ namespace Parfüm2025
                 return;
             }
 
-            _fülleEinkaufsdaten();
+            if (!_fülleEinkaufsdaten())
+                return;
 
             try
             {
@@ -223,6 +237,12 @@ namespace Parfüm2025
         private void txtParfümNummer_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btnKategorieDetails_Click(object sender, EventArgs e)
+        {
+            frmPreisKategorieListe frm = new frmPreisKategorieListe();
+            frm.ShowDialog();
         }
     }
 }
