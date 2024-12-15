@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmeinkaufsdatenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmeinkaufsdatenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneuemitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneuemitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\ctraddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:ctraddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmaddupdateneuekunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmaddupdateneuekunde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmkundeliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmkundeliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmkundeliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmkundeliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +34,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 163,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAddUpdateNeueMitarbeiter.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueMitarbeiter.cs",
+              "RelativeDocumentMoniker": "frmAddUpdateNeueMitarbeiter.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueMitarbeiter.cs [Entwurf]",
+              "RelativeToolTip": "frmAddUpdateNeueMitarbeiter.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:31:23.897Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ctrAddUpdatePerson.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\ctrAddUpdatePerson.cs",
+              "RelativeDocumentMoniker": "ctrAddUpdatePerson.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\ctrAddUpdatePerson.cs",
+              "RelativeToolTip": "ctrAddUpdatePerson.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAiwE0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:12:38.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAddUpdateNeueKunde.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueKunde.cs",
+              "RelativeDocumentMoniker": "frmAddUpdateNeueKunde.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmAddUpdateNeueKunde.cs",
+              "RelativeToolTip": "frmAddUpdateNeueKunde.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAmwIEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:09:34.719Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -38,28 +92,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "frmKundeListe.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmKundeListe.cs",
+              "RelativeDocumentMoniker": "frmKundeListe.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmKundeListe.cs",
+              "RelativeToolTip": "frmKundeListe.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAADwv2AAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:58:27.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmKundeListe.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmKundeListe.cs",
+              "RelativeDocumentMoniker": "frmKundeListe.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmKundeListe.cs [Entwurf]",
+              "RelativeToolTip": "frmKundeListe.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:58:24.327Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T11:07:44.658Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmEinkaufsDatenListe.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmEinkaufsDatenListe.cs",
-              "RelativeDocumentMoniker": "frmEinkaufsDatenListe.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmEinkaufsDatenListe.cs [Entwurf]",
-              "RelativeToolTip": "frmEinkaufsDatenListe.cs [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T11:06:51.098Z",
-              "EditorCaption": " [Entwurf]"
             }
           ]
         },

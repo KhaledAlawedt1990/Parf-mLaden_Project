@@ -283,7 +283,7 @@ namespace Data_Layer
                 if (string.IsNullOrEmpty(Telefon))
                     command.Parameters.AddWithValue("@Telefon", DBNull.Value);
                 else
-                    command.Parameters.AddWithValue("@Telefon", Land);
+                    command.Parameters.AddWithValue("@Telefon", Telefon);
 
                 try
                 {

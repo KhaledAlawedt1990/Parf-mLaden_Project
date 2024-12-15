@@ -341,22 +341,30 @@ namespace Parfüm2025
         }
 
         private void duftEntfernenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int parfümNummer = (int)dgvParfüm.CurrentRow.Cells[0].Value;
-     
+        {   
             bool result = (MessageBox.Show("Sind Sie sicher, Sie möchten " +
               "diesen Vorgang durchführen","Hinweis",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning,
               MessageBoxDefaultButton.Button2) == DialogResult.OK);
 
-            if(result && clsParfüm.Delete(parfümNummer))
+            if (!result)
+                return;
+
+            int parfümNummer = (int)dgvParfüm.CurrentRow.Cells[0].Value;
+            clsParfüm parfuemDaten = clsParfüm.FindByParfümNummer(parfümNummer);
+
+         
+            if (parfuemDaten != null && parfuemDaten.Delete())
             {
-                MessageBox.Show("Duft wurde erfolgreich entfernt","Entfernung",
+                AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
+                tree.Delete(parfuemDaten.Name);
+
+                MessageBox.Show("Parfümdaten wurden erfolgreich entfernt","Entfernung",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 _LadeParfümDaten();
             }
             else
-                MessageBox.Show("Der Vorgang ist abgebrochen.", "Entfernung",
+                MessageBox.Show("Parfümdaten wurden nicht gefunden, \nbitte versuchen Sie es erneut.", "Entfernung",
                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -484,11 +492,12 @@ namespace Parfüm2025
                         pdfDoc.Open();
 
                         // Erstelle eine Tabelle mit 2 Spalten (Parfümnummer und Parfümname)
-                        PdfPTable table = new PdfPTable(2);
+                        PdfPTable table = new PdfPTable(3);
                         table.WidthPercentage = 100;
 
                         // Füge Header zur Tabelle hinzu
                         table.AddCell("Parfümnummer");
+                        table.AddCell("Parfümmarke");
                         table.AddCell("Parfümname");
 
                         // Füge die Daten aus dem DataGridView hinzu (Parfümnummer und Name)
@@ -498,12 +507,14 @@ namespace Parfüm2025
                             {
                                 // Überprüfen, ob die Werte in der jeweiligen Spalte vorhanden sind
                                 var parfuemNummer = row.Cells["Parfümnummer"]?.Value?.ToString();
+                                var parfuemMarke = row.Cells["Marke"]?.Value.ToString();
                                 var parfuemName = row.Cells["Name"]?.Value?.ToString();
 
-                                if (!string.IsNullOrEmpty(parfuemNummer) && !string.IsNullOrEmpty(parfuemName))
+                                if (!string.IsNullOrEmpty(parfuemNummer) && !string.IsNullOrEmpty(parfuemMarke) && !string.IsNullOrEmpty(parfuemName))
                                 {
                                     // Füge Parfümnummer und Parfümname zur Tabelle hinzu
                                     table.AddCell(parfuemNummer);
+                                    table.AddCell(parfuemMarke);
                                     table.AddCell(parfuemName);
                                 }
                             }

@@ -124,10 +124,10 @@ namespace Parfüm2025
                     txtKundeID.Text = _kunde.kundeID.ToString();
                     MessageBox.Show($"{status}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    btnSpeichern.Enabled = false;
+                    this.Close();
                 }
                 else
-                    MessageBox.Show("Fehler ist aufgetreten", "fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fehler beim Speichern ist aufgetreten", "fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

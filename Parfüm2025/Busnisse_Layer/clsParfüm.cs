@@ -81,6 +81,11 @@ namespace Busnisse_Layer
         {
             return clsParfümDatenzugriff.Delete(parfümNummer);
         }
+
+        public bool Delete()
+        {
+            return clsParfümDatenzugriff.Delete(this.parfümNummer);
+        }
         public bool Save()
         {
             switch(_mode)

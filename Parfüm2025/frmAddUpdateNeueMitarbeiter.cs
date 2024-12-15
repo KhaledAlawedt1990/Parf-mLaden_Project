@@ -119,7 +119,7 @@ namespace Parfüm2025
                 txtMitarbeiterID.Text = _mitarbeiter.MitarbeiterID.ToString();
                 MessageBox.Show($"{status}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                btnSpeicherin.Enabled = false;
+                this.Close();
             }
             else
                 MessageBox.Show("Fehler ist aufgetreten", "fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);

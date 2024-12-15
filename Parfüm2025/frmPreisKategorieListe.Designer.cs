@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPreisKategorie = new System.Windows.Forms.DataGridView();
+            this.cmsPreisKategorie = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.entfernePreisdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktualisierePreisdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAbbrechen = new System.Windows.Forms.Button();
             this.btnSpeichern = new System.Windows.Forms.Button();
@@ -45,13 +48,10 @@
             this.txtMiniMenge = new System.Windows.Forms.TextBox();
             this.txtKategorie = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmsPreisKategorie = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.entfernePreisdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktualisierePreisdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreisKategorie)).BeginInit();
+            this.cmsPreisKategorie.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.cmsPreisKategorie.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPreisKategorie
@@ -60,6 +60,9 @@
             this.dgvPreisKategorie.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvPreisKategorie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPreisKategorie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPreisKategorie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPreisKategorie.BackgroundColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -80,7 +83,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPreisKategorie.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPreisKategorie.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvPreisKategorie.EnableHeadersVisualStyles = false;
             this.dgvPreisKategorie.Location = new System.Drawing.Point(285, 0);
             this.dgvPreisKategorie.Name = "dgvPreisKategorie";
@@ -92,8 +94,37 @@
             this.dgvPreisKategorie.TabIndex = 0;
             this.dgvPreisKategorie.DoubleClick += new System.EventHandler(this.dgvPreisKategorie_DoubleClick);
             // 
+            // cmsPreisKategorie
+            // 
+            this.cmsPreisKategorie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsPreisKategorie.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.entfernePreisdatenToolStripMenuItem,
+            this.aktualisierePreisdatenToolStripMenuItem});
+            this.cmsPreisKategorie.Name = "cmsPreisKategorie";
+            this.cmsPreisKategorie.Size = new System.Drawing.Size(255, 80);
+            // 
+            // entfernePreisdatenToolStripMenuItem
+            // 
+            this.entfernePreisdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
+            this.entfernePreisdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.entfernePreisdatenToolStripMenuItem.Name = "entfernePreisdatenToolStripMenuItem";
+            this.entfernePreisdatenToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.entfernePreisdatenToolStripMenuItem.Text = "Entferne Preisdaten";
+            this.entfernePreisdatenToolStripMenuItem.Click += new System.EventHandler(this.entfernePreisdatenToolStripMenuItem_Click);
+            // 
+            // aktualisierePreisdatenToolStripMenuItem
+            // 
+            this.aktualisierePreisdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
+            this.aktualisierePreisdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aktualisierePreisdatenToolStripMenuItem.Name = "aktualisierePreisdatenToolStripMenuItem";
+            this.aktualisierePreisdatenToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.aktualisierePreisdatenToolStripMenuItem.Text = "Aktualisiere Preisdaten";
+            this.aktualisierePreisdatenToolStripMenuItem.Click += new System.EventHandler(this.aktualisierePreisdatenToolStripMenuItem_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Controls.Add(this.btnAbbrechen);
             this.groupBox1.Controls.Add(this.btnSpeichern);
@@ -105,7 +136,6 @@
             this.groupBox1.Controls.Add(this.txtMaxMenge);
             this.groupBox1.Controls.Add(this.txtMiniMenge);
             this.groupBox1.Controls.Add(this.txtKategorie);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -201,33 +231,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // cmsPreisKategorie
-            // 
-            this.cmsPreisKategorie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsPreisKategorie.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.entfernePreisdatenToolStripMenuItem,
-            this.aktualisierePreisdatenToolStripMenuItem});
-            this.cmsPreisKategorie.Name = "cmsPreisKategorie";
-            this.cmsPreisKategorie.Size = new System.Drawing.Size(255, 80);
-            // 
-            // entfernePreisdatenToolStripMenuItem
-            // 
-            this.entfernePreisdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
-            this.entfernePreisdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.entfernePreisdatenToolStripMenuItem.Name = "entfernePreisdatenToolStripMenuItem";
-            this.entfernePreisdatenToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
-            this.entfernePreisdatenToolStripMenuItem.Text = "Entferne Preisdaten";
-            this.entfernePreisdatenToolStripMenuItem.Click += new System.EventHandler(this.entfernePreisdatenToolStripMenuItem_Click);
-            // 
-            // aktualisierePreisdatenToolStripMenuItem
-            // 
-            this.aktualisierePreisdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
-            this.aktualisierePreisdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.aktualisierePreisdatenToolStripMenuItem.Name = "aktualisierePreisdatenToolStripMenuItem";
-            this.aktualisierePreisdatenToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
-            this.aktualisierePreisdatenToolStripMenuItem.Text = "Aktualisiere Preisdaten";
-            this.aktualisierePreisdatenToolStripMenuItem.Click += new System.EventHandler(this.aktualisierePreisdatenToolStripMenuItem_Click);
-            // 
             // frmPreisKategorieListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,10 +243,10 @@
             this.Text = "Preis-KategorieListe";
             this.Load += new System.EventHandler(this.frmPreisKategorieListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreisKategorie)).EndInit();
+            this.cmsPreisKategorie.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.cmsPreisKategorie.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
