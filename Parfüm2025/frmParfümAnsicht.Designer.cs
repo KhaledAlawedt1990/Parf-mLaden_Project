@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpAlleParfüms = new System.Windows.Forms.TabPage();
             this.btnErstelleEineParfümListePdf = new System.Windows.Forms.Button();
@@ -91,11 +92,11 @@
             this.tabControl1.Controls.Add(this.tabPage2HerrnDüfte);
             this.tabControl1.Controls.Add(this.tabPage3DamenDüfte);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 300);
+            this.tabControl1.Location = new System.Drawing.Point(0, 236);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1406, 571);
+            this.tabControl1.Size = new System.Drawing.Size(1406, 635);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
@@ -260,30 +261,30 @@
             // 
             this.dgvParfüm.AllowUserToAddRows = false;
             this.dgvParfüm.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            this.dgvParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvParfüm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvParfüm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParfüm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParfüm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvParfüm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParfüm.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvParfüm.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvParfüm.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvParfüm.EnableHeadersVisualStyles = false;
             this.dgvParfüm.Location = new System.Drawing.Point(17, 140);
             this.dgvParfüm.Margin = new System.Windows.Forms.Padding(2);
@@ -376,7 +377,7 @@
             this.tabPage2HerrnDüfte.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2HerrnDüfte.Name = "tabPage2HerrnDüfte";
             this.tabPage2HerrnDüfte.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2HerrnDüfte.Size = new System.Drawing.Size(1398, 532);
+            this.tabPage2HerrnDüfte.Size = new System.Drawing.Size(1398, 596);
             this.tabPage2HerrnDüfte.TabIndex = 1;
             this.tabPage2HerrnDüfte.Text = "Herrndüfte";
             // 
@@ -454,8 +455,8 @@
             // 
             this.dgvHerrefDüfte.AllowUserToAddRows = false;
             this.dgvHerrefDüfte.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvHerrefDüfte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvHerrefDüfte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHerrefDüfte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -470,7 +471,7 @@
             this.dgvHerrefDüfte.RowHeadersWidth = 60;
             this.dgvHerrefDüfte.RowTemplate.Height = 30;
             this.dgvHerrefDüfte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHerrefDüfte.Size = new System.Drawing.Size(1154, 457);
+            this.dgvHerrefDüfte.Size = new System.Drawing.Size(1387, 521);
             this.dgvHerrefDüfte.TabIndex = 10;
             // 
             // tabPage3DamenDüfte
@@ -487,7 +488,7 @@
             this.tabPage3DamenDüfte.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3DamenDüfte.Name = "tabPage3DamenDüfte";
             this.tabPage3DamenDüfte.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3DamenDüfte.Size = new System.Drawing.Size(1398, 532);
+            this.tabPage3DamenDüfte.Size = new System.Drawing.Size(1398, 596);
             this.tabPage3DamenDüfte.TabIndex = 2;
             this.tabPage3DamenDüfte.Text = "Damendüfte";
             this.tabPage3DamenDüfte.UseVisualStyleBackColor = true;
@@ -566,14 +567,22 @@
             // 
             this.dgvDamenParfüm.AllowUserToAddRows = false;
             this.dgvDamenParfüm.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvDamenParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDamenParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDamenParfüm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDamenParfüm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDamenParfüm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDamenParfüm.ContextMenuStrip = this.contextMenuStrip1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDamenParfüm.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDamenParfüm.Location = new System.Drawing.Point(2, 59);
             this.dgvDamenParfüm.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDamenParfüm.Name = "dgvDamenParfüm";
@@ -581,7 +590,7 @@
             this.dgvDamenParfüm.RowHeadersWidth = 51;
             this.dgvDamenParfüm.RowTemplate.Height = 30;
             this.dgvDamenParfüm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDamenParfüm.Size = new System.Drawing.Size(1154, 471);
+            this.dgvDamenParfüm.Size = new System.Drawing.Size(1388, 535);
             this.dgvDamenParfüm.TabIndex = 17;
             // 
             // pictureBox1
@@ -592,7 +601,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1405, 295);
+            this.pictureBox1.Size = new System.Drawing.Size(1405, 232);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;

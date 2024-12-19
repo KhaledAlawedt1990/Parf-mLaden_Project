@@ -127,14 +127,24 @@ namespace Parfüm2025
         {
             int mitarbeiterID = (int)dgvMitarbeiter.CurrentRow.Cells[0].Value;
 
-            clsMitarbeiter.deaktiviereMitarbeiter(mitarbeiterID);
+            if(!clsMitarbeiter.deaktiviereMitarbeiter(mitarbeiterID))
+            {
+                MessageBox.Show("Mitarbeiter ist schon Inaktive!", "Hinweis");
+                return;
+            }
+
             _SetzeMitarbeiterdaten();
         }
 
         private void aktiviereMitarbeiterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int mitarbeiterID = (int)dgvMitarbeiter.CurrentRow.Cells[0].Value;
-            clsMitarbeiter.aktiviereMitarbeiter(mitarbeiterID);
+
+            if(!clsMitarbeiter.aktiviereMitarbeiter(mitarbeiterID))
+            {
+                MessageBox.Show("Mitarbeiter ist schon Aktive!", "Hinweis");
+                return;
+            }
             _SetzeMitarbeiterdaten();
         }
 

@@ -31,6 +31,8 @@ namespace Parfüm2025
             // Ereignis für KeyDown hinzufügen
             this.KeyDown += frmHaupt_KeyDown;
 
+
+            this.IsMdiContainer = true;
         }
 
         // KeyDown-Ereignis für die Hauptform
@@ -75,7 +77,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.ParfuemVerwaltung))
             {
                 frmpafümAnsicht frm = new frmpafümAnsicht();
-                frm.ShowDialog();
+                frm.ShowDialog() ;
             }
             else
             {
