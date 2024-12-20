@@ -17,8 +17,6 @@ namespace Data_Layer
                               ref int permissionNum, ref bool istAktive)
         {
 
-            string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
-
             bool isfound = false;
             string abfrage = @"SELECT * From  Benutzer Where userRolle = @userRolle And userPasswort = @userPasswort";
             try
@@ -29,7 +27,7 @@ namespace Data_Layer
                     {
 
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort", verschlüsseltesPasswort);
+                        command.Parameters.AddWithValue("@userPasswort", userPasswort);
 
                         connection.Open();
                         using (SqlDataReader reader = command.ExecuteReader())
@@ -80,8 +78,8 @@ namespace Data_Layer
                                 mitarbeiterID = (int)reader["mitarbeiterID"];
                                 userRolle = (string)reader["userRolle"];
 
-                                string entschlüsseltsPasswort = clsVerschlüsselungHelfer.Encrypt((string)reader["userPasswort"]);
-                                userPasswort = entschlüsseltsPasswort;
+                                //string entschlüsseltsPasswort = clsVerschlüsselungHelfer.Encrypt((string)reader["userPasswort"]);
+                                userPasswort = (string)reader["userPasswort"];
 
                                 permissionNum = (int)reader["permissionNum"];
                                 istAktive = (bool)reader["istAktive"];
@@ -124,8 +122,8 @@ namespace Data_Layer
                                 userID = (int)reader["userID"];
                                 userRolle = (string)reader["userRolle"];
 
-                                string entschlüsseltsPasswort = clsVerschlüsselungHelfer.Decrypt((string)reader["userPasswort"]);
-                                userPasswort = entschlüsseltsPasswort;
+                                //string entschlüsseltsPasswort = clsVerschlüsselungHelfer.Decrypt((string)reader["userPasswort"]);
+                                userPasswort = (string)reader["userPasswort"];
 
                                 permissionNum = (int)reader["permissionNum"];
                                 istAktive = (bool)reader["istAktive"];
@@ -245,8 +243,8 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@mitarbeiteriD",mitarbeiterID);
                         command.Parameters.AddWithValue("@userRolle", userRolle);
 
-                        string verschlüsseltsPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
-                        command.Parameters.AddWithValue("@userPasswort",verschlüsseltsPasswort);
+                       // string verschlüsseltsPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
+                        command.Parameters.AddWithValue("@userPasswort",userPasswort);
 
                         command.Parameters.AddWithValue("@permissionNum",permissionNum);
                         command.Parameters.AddWithValue("@istAktive", istAktive);
@@ -272,7 +270,7 @@ namespace Data_Layer
         public static bool UpdateUserByMitarbeiterID(int mitarbeiterID, string userRolle, string userPasswort,
                               int permissionNum, bool istAktive)
         {
-            string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
+            //string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
             int RowAffected = 0;
             string abfrage = @"Update Benutzer Set 
                                                        userRolle = @userRolle,
@@ -290,7 +288,7 @@ namespace Data_Layer
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@mitarbeiterID", mitarbeiterID);
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort", verschlüsseltesPasswort);
+                        command.Parameters.AddWithValue("@userPasswort", userPasswort);
                         command.Parameters.AddWithValue("@permissionNum", permissionNum);
                         command.Parameters.AddWithValue("@istAktive", istAktive);
 
@@ -342,7 +340,7 @@ namespace Data_Layer
         public static bool UpdateUser(int userID, string userRolle, string userPasswort,
                              int permissionNum, bool istAktive)
         {
-            string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
+            //string verschlüsseltesPasswort = clsVerschlüsselungHelfer.Encrypt(userPasswort);
 
             int RowAffected = 0;
             string abfrage = @"Update Benutzer Set 
@@ -361,7 +359,7 @@ namespace Data_Layer
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@userID", userID);
                         command.Parameters.AddWithValue("@userRolle", userRolle);
-                        command.Parameters.AddWithValue("@userPasswort", verschlüsseltesPasswort);
+                        command.Parameters.AddWithValue("@userPasswort", userPasswort);
                         command.Parameters.AddWithValue("@permissionNum", permissionNum);
                         command.Parameters.AddWithValue("@istAktive", istAktive);
 

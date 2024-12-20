@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,26 +43,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmHaupBildschrimAnsicht.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmHaupBildschrimAnsicht.cs",
-              "RelativeDocumentMoniker": "frmHaupBildschrimAnsicht.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmHaupBildschrimAnsicht.cs*",
-              "RelativeToolTip": "frmHaupBildschrimAnsicht.cs*",
-              "ViewState": "AgIAAHgAAAAAAAAAAADwv4EAAAAhAAAAAAAAAA==",
+              "Title": "frmLogginScreen.cs",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeDocumentMoniker": "frmLogginScreen.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeToolTip": "frmLogginScreen.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwDwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:22:39.45Z",
+              "WhenOpened": "2024-12-20T15:12:46.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmHaupBildschrimAnsicht.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmHaupBildschrimAnsicht.cs",
-              "RelativeDocumentMoniker": "frmHaupBildschrimAnsicht.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmHaupBildschrimAnsicht.cs [Entwurf]*",
-              "RelativeToolTip": "frmHaupBildschrimAnsicht.cs [Entwurf]*",
+              "Title": "frmLogginScreen.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs",
+              "RelativeDocumentMoniker": "frmLogginScreen.cs",
+              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\frmLogginScreen.cs [Entwurf]",
+              "RelativeToolTip": "frmLogginScreen.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T20:22:35.888Z",
+              "WhenOpened": "2024-12-20T15:12:45.054Z",
               "EditorCaption": " [Entwurf]"
             },
             {
