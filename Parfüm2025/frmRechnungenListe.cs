@@ -31,7 +31,7 @@ namespace Parfüm2025
         private void _SetzteRechnungsdaten()
         {
             float gesamtSumme = 0;
-            _dtRechnungsdaten = clsRechnung.GetRechnungsRecordAnzahlProSeite(100, 1);
+            _dtRechnungsdaten = clsRechnung.GetRechnungsRecordAnzahlProSeite(300, 1);
             _bindingSource.DataSource = _dtRechnungsdaten;
             dgvVerkaufsDaten.DataSource = _bindingSource;
 

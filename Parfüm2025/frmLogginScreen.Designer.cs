@@ -56,7 +56,7 @@
             this.gbAnmeldeDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAnmeldeDaten.Location = new System.Drawing.Point(678, 0);
             this.gbAnmeldeDaten.Name = "gbAnmeldeDaten";
-            this.gbAnmeldeDaten.Size = new System.Drawing.Size(365, 720);
+            this.gbAnmeldeDaten.Size = new System.Drawing.Size(369, 720);
             this.gbAnmeldeDaten.TabIndex = 3;
             this.gbAnmeldeDaten.TabStop = false;
             this.gbAnmeldeDaten.Text = "Anmeldedaten";
@@ -127,7 +127,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.A;
+            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources._555;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(678, 720);
@@ -140,7 +140,7 @@
             this.AcceptButton = this.btnEinloggen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 720);
+            this.ClientSize = new System.Drawing.Size(1047, 720);
             this.Controls.Add(this.gbAnmeldeDaten);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;

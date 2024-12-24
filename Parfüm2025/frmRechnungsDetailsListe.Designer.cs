@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRechnungsDetailsListe));
             this.dgvRechnungsdetails = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.HinzufügeRechnungsdetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktualisiereRechnungsdetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entferneRechnungsdetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddRechnungsDetails = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnRealisiereRechnungsdetails = new System.Windows.Forms.Button();
             this.DetailID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BelegID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ParfümNummer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +41,14 @@
             this.Normalpreis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gesamtpreis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LagerbestandAktualisiert = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.HinzufügeRechnungsdetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktualisiereRechnungsdetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entferneRechnungsdetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddRechnungsDetails = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRealisiereRechnungsdetails = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRechnungsdetails)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,14 +59,14 @@
             this.dgvRechnungsdetails.AllowUserToDeleteRows = false;
             this.dgvRechnungsdetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRechnungsdetails.BackgroundColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRechnungsdetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRechnungsdetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRechnungsdetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRechnungsdetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DetailID,
@@ -77,14 +78,14 @@
             this.Gesamtpreis,
             this.LagerbestandAktualisiert});
             this.dgvRechnungsdetails.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRechnungsdetails.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRechnungsdetails.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRechnungsdetails.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgvRechnungsdetails, "dgvRechnungsdetails");
             this.dgvRechnungsdetails.MultiSelect = false;
@@ -93,63 +94,6 @@
             this.dgvRechnungsdetails.RowTemplate.Height = 25;
             this.dgvRechnungsdetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRechnungsdetails.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvRechnungsdetails_RowsAdded);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HinzufügeRechnungsdetailstoolStripMenuItem1,
-            this.aktualisiereRechnungsdetailsToolStripMenuItem,
-            this.entferneRechnungsdetailsToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            // 
-            // HinzufügeRechnungsdetailstoolStripMenuItem1
-            // 
-            resources.ApplyResources(this.HinzufügeRechnungsdetailstoolStripMenuItem1, "HinzufügeRechnungsdetailstoolStripMenuItem1");
-            this.HinzufügeRechnungsdetailstoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.plus_10021331;
-            this.HinzufügeRechnungsdetailstoolStripMenuItem1.Name = "HinzufügeRechnungsdetailstoolStripMenuItem1";
-            this.HinzufügeRechnungsdetailstoolStripMenuItem1.Click += new System.EventHandler(this.HinzufügeRechnungsdetailstoolStripMenuItem1_Click);
-            // 
-            // aktualisiereRechnungsdetailsToolStripMenuItem
-            // 
-            resources.ApplyResources(this.aktualisiereRechnungsdetailsToolStripMenuItem, "aktualisiereRechnungsdetailsToolStripMenuItem");
-            this.aktualisiereRechnungsdetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
-            this.aktualisiereRechnungsdetailsToolStripMenuItem.Name = "aktualisiereRechnungsdetailsToolStripMenuItem";
-            this.aktualisiereRechnungsdetailsToolStripMenuItem.Click += new System.EventHandler(this.aktualisiereRechnungsdetailsToolStripMenuItem_Click);
-            // 
-            // entferneRechnungsdetailsToolStripMenuItem
-            // 
-            resources.ApplyResources(this.entferneRechnungsdetailsToolStripMenuItem, "entferneRechnungsdetailsToolStripMenuItem");
-            this.entferneRechnungsdetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
-            this.entferneRechnungsdetailsToolStripMenuItem.Name = "entferneRechnungsdetailsToolStripMenuItem";
-            this.entferneRechnungsdetailsToolStripMenuItem.Click += new System.EventHandler(this.entferneRechnungsdetailsToolStripMenuItem_Click);
-            // 
-            // btnAddRechnungsDetails
-            // 
-            this.btnAddRechnungsDetails.BackColor = System.Drawing.Color.ForestGreen;
-            resources.ApplyResources(this.btnAddRechnungsDetails, "btnAddRechnungsDetails");
-            this.btnAddRechnungsDetails.ForeColor = System.Drawing.Color.White;
-            this.btnAddRechnungsDetails.Name = "btnAddRechnungsDetails";
-            this.btnAddRechnungsDetails.UseVisualStyleBackColor = false;
-            this.btnAddRechnungsDetails.Click += new System.EventHandler(this.btnAddRechnungsDetails_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnRealisiereRechnungsdetails
-            // 
-            this.btnRealisiereRechnungsdetails.BackColor = System.Drawing.Color.ForestGreen;
-            resources.ApplyResources(this.btnRealisiereRechnungsdetails, "btnRealisiereRechnungsdetails");
-            this.btnRealisiereRechnungsdetails.ForeColor = System.Drawing.Color.White;
-            this.btnRealisiereRechnungsdetails.Name = "btnRealisiereRechnungsdetails";
-            this.btnRealisiereRechnungsdetails.UseVisualStyleBackColor = false;
-            this.btnRealisiereRechnungsdetails.Click += new System.EventHandler(this.btnRealisiereRechnungsdetails_Click);
             // 
             // DetailID
             // 
@@ -215,10 +159,77 @@
             this.LagerbestandAktualisiert.ReadOnly = true;
             this.LagerbestandAktualisiert.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HinzufügeRechnungsdetailstoolStripMenuItem1,
+            this.aktualisiereRechnungsdetailsToolStripMenuItem,
+            this.entferneRechnungsdetailsToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            // 
+            // HinzufügeRechnungsdetailstoolStripMenuItem1
+            // 
+            resources.ApplyResources(this.HinzufügeRechnungsdetailstoolStripMenuItem1, "HinzufügeRechnungsdetailstoolStripMenuItem1");
+            this.HinzufügeRechnungsdetailstoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.plus_10021331;
+            this.HinzufügeRechnungsdetailstoolStripMenuItem1.Name = "HinzufügeRechnungsdetailstoolStripMenuItem1";
+            this.HinzufügeRechnungsdetailstoolStripMenuItem1.Click += new System.EventHandler(this.HinzufügeRechnungsdetailstoolStripMenuItem1_Click);
+            // 
+            // aktualisiereRechnungsdetailsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.aktualisiereRechnungsdetailsToolStripMenuItem, "aktualisiereRechnungsdetailsToolStripMenuItem");
+            this.aktualisiereRechnungsdetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
+            this.aktualisiereRechnungsdetailsToolStripMenuItem.Name = "aktualisiereRechnungsdetailsToolStripMenuItem";
+            this.aktualisiereRechnungsdetailsToolStripMenuItem.Click += new System.EventHandler(this.aktualisiereRechnungsdetailsToolStripMenuItem_Click);
+            // 
+            // entferneRechnungsdetailsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.entferneRechnungsdetailsToolStripMenuItem, "entferneRechnungsdetailsToolStripMenuItem");
+            this.entferneRechnungsdetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
+            this.entferneRechnungsdetailsToolStripMenuItem.Name = "entferneRechnungsdetailsToolStripMenuItem";
+            this.entferneRechnungsdetailsToolStripMenuItem.Click += new System.EventHandler(this.entferneRechnungsdetailsToolStripMenuItem_Click);
+            // 
+            // btnAddRechnungsDetails
+            // 
+            this.btnAddRechnungsDetails.BackColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.btnAddRechnungsDetails, "btnAddRechnungsDetails");
+            this.btnAddRechnungsDetails.ForeColor = System.Drawing.Color.White;
+            this.btnAddRechnungsDetails.Name = "btnAddRechnungsDetails";
+            this.btnAddRechnungsDetails.UseVisualStyleBackColor = false;
+            this.btnAddRechnungsDetails.Click += new System.EventHandler(this.btnAddRechnungsDetails_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRealisiereRechnungsdetails
+            // 
+            this.btnRealisiereRechnungsdetails.BackColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.btnRealisiereRechnungsdetails, "btnRealisiereRechnungsdetails");
+            this.btnRealisiereRechnungsdetails.ForeColor = System.Drawing.Color.White;
+            this.btnRealisiereRechnungsdetails.Name = "btnRealisiereRechnungsdetails";
+            this.btnRealisiereRechnungsdetails.UseVisualStyleBackColor = false;
+            this.btnRealisiereRechnungsdetails.Click += new System.EventHandler(this.btnRealisiereRechnungsdetails_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmRechnungsDetailsListe
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRealisiereRechnungsdetails);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddRechnungsDetails);
@@ -250,5 +261,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Normalpreis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gesamtpreis;
         private System.Windows.Forms.DataGridViewTextBoxColumn LagerbestandAktualisiert;
+        private System.Windows.Forms.Button button2;
     }
 }

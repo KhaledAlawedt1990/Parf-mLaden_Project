@@ -1,4 +1,5 @@
 ﻿using Busnisse_Layer;
+using iTextSharp.text.pdf;
 using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
@@ -6,11 +7,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.ApplicationModel.VoiceCommands;
+using iTextSharp.text;
 
 namespace Parfüm2025
 {
@@ -39,13 +42,13 @@ namespace Parfüm2025
             {
                 foreach (var details in _rechnungsDetails)
                 {
-                   string verkaufsmenge = details.verkaufsMenge.ToString() + "     kg";
-                   string lagerbestand = details.lagerbestand.ToString() + "     kg";
-                   string normalPreis = details.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
+                    string verkaufsmenge = details.verkaufsMenge.ToString() + "     kg";
+                    string lagerbestand = details.lagerbestand.ToString() + "     kg";
+                    string normalPreis = details.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     string gesamtPreis = details.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
 
-                    dgvRechnungsdetails.Rows.Add(details.detailID,details.belegID, details.parfümNummer, 
-                   verkaufsmenge, lagerbestand,normalPreis, gesamtPreis, details.lagerbestandAktualisiert);
+                    dgvRechnungsdetails.Rows.Add(details.detailID, details.belegID, details.parfümNummer,
+                   verkaufsmenge, lagerbestand, normalPreis, gesamtPreis, details.lagerbestandAktualisiert);
                 }
             }
 
@@ -56,7 +59,7 @@ namespace Parfüm2025
             _SetzeRechnungsDetailsDaten();
         }
 
-     
+
         private void aktualisiereRechnungsdetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int detailID = (int)dgvRechnungsdetails.CurrentRow.Cells[0].Value;
@@ -171,7 +174,7 @@ namespace Parfüm2025
         }
 
         private void btnRealisiereRechnungsdetails_Click(object sender, EventArgs e)
-        { 
+        {
 
             if (_rechnungsDetails.Count > 0 && _rechnungsDetails != null)
             {
@@ -190,7 +193,7 @@ namespace Parfüm2025
                                 MessageBoxIcon.Error);
                         }
 
-                        if(neueLagerbestand < 1 )
+                        if (neueLagerbestand < 1)
                         {
                             _SetzeNotifikation(element.parfümNummer);
                         }
@@ -209,7 +212,74 @@ namespace Parfüm2025
 
             _SetzeRechnungsDetailsDaten();
         }
-           
-        
+
+        private void _ErstellePdfVonParfuem()
+        {
+            // Pfad zum Desktop des aktuellen Benutzers
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            // Name und Pfad der PDF-Datei
+            string fileName = _kundenname + "_Rechnungsdetails.pdf";
+            string filePath = Path.Combine(desktopPath, fileName);
+
+            try
+            {
+                // PDF speichern
+                using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                {
+                    using (Document pdfDoc = new Document())
+                    {
+                        PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
+
+                        // Erstelle eine Tabelle mit 2 Spalten (Parfümnummer und Parfümname)
+                        PdfPTable table = new PdfPTable(2);
+                        table.WidthPercentage = 100;
+
+                        // Füge Header zur Tabelle hinzu
+                        table.AddCell("Parfümnummer");
+                        table.AddCell("VerkaufsMenge");
+
+
+                        // Füge die Daten aus dem DataGridView hinzu (Parfümnummer und Name)
+                        foreach (DataGridViewRow row in dgvRechnungsdetails.Rows)
+                        {
+                            if (!row.IsNewRow) // Leere Zeilen überspringen
+                            {
+                                // Überprüfen, ob die Werte in der jeweiligen Spalte vorhanden sind
+                                var parfuemNummer = row.Cells["parfümnummer"]?.Value?.ToString();
+                                var parfuemMarke = row.Cells["verkaufsMenge"]?.Value.ToString();
+
+                                if (!string.IsNullOrEmpty(parfuemNummer) && !string.IsNullOrEmpty(parfuemMarke))
+                                {
+                                    // Füge Parfümnummer und Parfümname zur Tabelle hinzu
+                                    table.AddCell(parfuemNummer);
+                                    table.AddCell(parfuemMarke);
+                                }
+                                    
+                            }
+                        }
+
+                        // Füge die Tabelle zur PDF hinzu
+                        pdfDoc.Add(table);
+
+                        pdfDoc.Close();
+                    }
+                }
+
+                // Erfolgreiche Speicherung anzeigen
+                MessageBox.Show($"Die Datei wurde erfolgreich auf dem Desktop gespeichert:\n{filePath}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Fehlerbehandlung
+                MessageBox.Show($"Fehler beim Speichern der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _ErstellePdfVonParfuem();
+        }
     }
 }

@@ -133,14 +133,22 @@ namespace Parfüm2025
 
         private void sendeEmailZumKundenToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            string empfaengerEmail = dgvKunde.CurrentRow.Cells[6].Value.ToString();
+             string empfaengerEmail = dgvKunde.CurrentRow.Cells[6].Value.ToString();
 
             // URL mit den Parametern für Gmail
-            string gmailUrl = $"https://mail.google.com/mail/u/0/?view=cm&fs=1&to={empfaengerEmail}";
+            // string gmailUrl = $"https://mail.google.com/mail/u/0/?view=cm&fs=1&to={empfaengerEmail}";
             //string gmailUrl = //$"https://mail.google.com/mail/u/0/#inbox?compose=new";
 
             // Öffne die URL im Standard-Webbrowser
-            System.Diagnostics.Process.Start(gmailUrl);
+            //System.Diagnostics.Process.Start(gmailUrl);
+
+            string outlock = $"mailto:{empfaengerEmail}";
+
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = outlock,
+                UseShellExecute = true
+            });
         }
 
         private void deaktiviereKundeToolStripMenuItem_Click_1(object sender, EventArgs e)

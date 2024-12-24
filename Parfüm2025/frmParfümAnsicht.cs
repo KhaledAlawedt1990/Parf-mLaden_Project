@@ -397,7 +397,8 @@ namespace Parfüm2025
         private void _FilterAnwendenFürParfüms()
         {
             string spalteName = cbFilterBei.SelectedItem.ToString();
-            string filterwert = txtFilterWert.Text.Trim();
+            string filterwert = txtFilterWert.Text;
+            string[] wort = filterwert.Split(' ');
 
             lock (_filterLock)
             {
@@ -411,7 +412,14 @@ namespace Parfüm2025
                         }
                         else
                         {
-                            _bindingSourceParfüm.Filter = $" {spalteName} Like '{filterwert}%'";
+                            if (wort.Length == 1)
+                            {
+                                _bindingSourceParfüm.Filter = $" {spalteName} Like '%{wort[0]}%'";
+                            }
+                            else if(wort.Length > 1)
+                            {
+                                _bindingSourceParfüm.Filter = $"{spalteName} Like '%{wort[0]}%' OR {spalteName} Like '%{wort[1]}%'";
+                            }
                         }
                     }
                     else

@@ -110,8 +110,8 @@ namespace Parfüm2025
             if (!_ValiedereEinloggenFelder())
                 return;
 
-            if (!_CheckProduktSchluessel())
-                return;
+            //if (!_CheckProduktSchluessel())
+            //    return;
 
             _Einlogging();
         }

@@ -449,5 +449,26 @@
   <ItemGroup>
     <None Include="Icons\bill_1052856.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Black[76143].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alowidat Final Logo-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alowidat Final Logo-021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alowidat Final Logo-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Haupbildschirm.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,14 +29,14 @@ namespace clsHilfsMethoden
 
             _BackupDatabaseByHostnameInOntherPath(); // Sichere die datei in anderem order.
 
-            string allowedHostName = "HAMSSA"; // Der Name des Computers, der das Backup durchführen darf
-            string currentHostName = Environment.MachineName;  // Der aktuelle Hostname des Computers
+            //string allowedHostName = "HAMSSA"; // Der Name des Computers, der das Backup durchführen darf
+            //string currentHostName = Environment.MachineName;  // Der aktuelle Hostname des Computers
 
-            // Überprüfen, ob der Hostname übereinstimmt
-            if (currentHostName != allowedHostName)
-            {
-                return false;
-            }
+            //// Überprüfen, ob der Hostname übereinstimmt
+            //if (currentHostName != allowedHostName)
+            //{
+            //    return false;
+            //}
 
             string backupPath;
 
@@ -93,14 +93,14 @@ namespace clsHilfsMethoden
         private static bool _BackupDatabaseByHostnameInOntherPath()
         {
 
-            string allowedHostName = "HAMSSA"; // Der Name des Computers, der das Backup durchführen darf
-            string currentHostName = Environment.MachineName;  // Der aktuelle Hostname des Computers
+            //string allowedHostName = "HAMSSA"; // Der Name des Computers, der das Backup durchführen darf
+            //string currentHostName = Environment.MachineName;  // Der aktuelle Hostname des Computers
 
-            // Überprüfen, ob der Hostname übereinstimmt
-            if (currentHostName != allowedHostName)
-            {
-                return false;
-            }
+            //// Überprüfen, ob der Hostname übereinstimmt
+            //if (currentHostName != allowedHostName)
+            //{
+            //    return false;
+            //}
 
             string backupPath;
             try
@@ -158,14 +158,14 @@ namespace clsHilfsMethoden
         {
             _BackupDatabaseByMacAdresseInOntherPath(); //Sichere die Datei in einem anderen Order.
 
-            string allowedMacAdresse = "E8-6F-38-BD-13-E9"; // Der MacAdresse des Computers, der das Backup durchführen darf
-            string currentMacAdresse = _GetMacAddress();  // Der aktuelle Hostname des Computers
+            //string allowedMacAdresse = "E8-6F-38-BD-13-E9"; // Der MacAdresse des Computers, der das Backup durchführen darf
+            //string currentMacAdresse = _GetMacAddress();  // Der aktuelle Hostname des Computers
 
-            // Überprüfen, ob der Hostname übereinstimmt
-            if (currentMacAdresse != allowedMacAdresse)
-            {
-                return false;
-            }
+            //// Überprüfen, ob der Hostname übereinstimmt
+            //if (currentMacAdresse != allowedMacAdresse)
+            //{
+            //    return false;
+            //}
 
             string backupPath;
             try
@@ -222,14 +222,14 @@ namespace clsHilfsMethoden
         private static bool _BackupDatabaseByMacAdresseInOntherPath()
         {
 
-            string allowedMacAdresse = "E8-6F-38-BD-13-E9"; // Der MacAdresse des Computers, der das Backup durchführen darf
-            string currentMacAdresse = _GetMacAddress();  // Der aktuelle Hostname des Computers
+            //string allowedMacAdresse = "E8-6F-38-BD-13-E9"; // Der MacAdresse des Computers, der das Backup durchführen darf
+            //string currentMacAdresse = _GetMacAddress();  // Der aktuelle Hostname des Computers
 
-            // Überprüfen, ob der Hostname übereinstimmt
-            if (currentMacAdresse != allowedMacAdresse)
-            {
-                return false;
-            }
+            //// Überprüfen, ob der Hostname übereinstimmt
+            //if (currentMacAdresse != allowedMacAdresse)
+            //{
+            //    return false;
+            //}
 
             string backupPath;
             try

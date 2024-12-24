@@ -223,7 +223,7 @@ namespace Parfüm2025
         private void _BackupDatabase()
         {
 
-            if(DateTime.Now.DayOfWeek == DayOfWeek.Friday)
+            if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday || DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
             {
                 // Überprüfen, ob Backup schon durchgeführt wurde
                 string letzterBackupTag = Properties.Settings.Default.LetztesBackupDatum;

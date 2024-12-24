@@ -110,35 +110,37 @@ namespace Parfüm2025
               
                 dgvVerkaufsdaten.Rows.Add(
                     item.parfümNummer,
-                    "Öl Parfüm", 19,
+                    item.verkaufsMenge + " Kg"
+                    , 19,
                     item.normalPreis,
                     item.gesamtPreis);
             }
-            AddOrUpdateSummeRow();
+            //AddOrUpdateSummeRow();
+            UpdateSummeRow();
         }
 
-        private void AddOrUpdateSummeRow()
-        {
-            // Prüfen, ob die Summenzeile bereits existiert
-            if (dgvVerkaufsdaten.Rows.Count > 0 && dgvVerkaufsdaten.Rows[dgvVerkaufsdaten.Rows.Count -1 ].Tag?.ToString() == "Summe")
-            {
-                UpdateSummeRow();
-                return;
-            }
+        //private void AddOrUpdateSummeRow()
+        //{
+        //    // Prüfen, ob die Summenzeile bereits existiert
+        //    if (dgvVerkaufsdaten.Rows.Count > 0 && dgvVerkaufsdaten.Rows[dgvVerkaufsdaten.Rows.Count -1 ].Tag?.ToString() == "Summe")
+        //    {
+        //        UpdateSummeRow();
+        //        return;
+        //    }
 
-            // Summenzeile erstellen
-            DataGridViewRow summeRow = new DataGridViewRow();
-            summeRow.CreateCells(dgvVerkaufsdaten);
-            summeRow.Tag = "Summe"; // Markiere diese Zeile als Summenzeile
-            summeRow.DefaultCellStyle.Font = new System.Drawing.Font(dgvVerkaufsdaten.Font, FontStyle.Bold);
-            summeRow.DefaultCellStyle.BackColor = Color.LightGray; // Optisch hervorheben
+        //    // Summenzeile erstellen
+        //    DataGridViewRow summeRow = new DataGridViewRow();
+        //    summeRow.CreateCells(dgvVerkaufsdaten);
+        //    summeRow.Tag = "Summe"; // Markiere diese Zeile als Summenzeile
+        //    summeRow.DefaultCellStyle.Font = new System.Drawing.Font(dgvVerkaufsdaten.Font, FontStyle.Bold);
+        //    summeRow.DefaultCellStyle.BackColor = Color.LightGray; // Optisch hervorheben
 
-            summeRow.Cells[0].Value = "Summe"; // Text in der ersten Spalte
-            summeRow.Cells[4].Value = gesamtpreis; // Initialer Summenwert in der letzten Spalte
+        //    summeRow.Cells[0].Value = "Summe"; // Text in der ersten Spalte
+        //    summeRow.Cells[4].Value = gesamtpreis; // Initialer Summenwert in der letzten Spalte
 
-            dgvVerkaufsdaten.Rows.Add(summeRow);
-           UpdateSummeRow(); // Initiale Berechnung
-        }
+        //    dgvVerkaufsdaten.Rows.Add(summeRow);
+        //   UpdateSummeRow(); // Initiale Berechnung
+        //}
         private void UpdateSummeRow()
         {
             float summe = 0;
@@ -146,21 +148,14 @@ namespace Parfüm2025
             // Summe aller relevanten Zeilen berechnen
             foreach (DataGridViewRow row in dgvVerkaufsdaten.Rows)
             {
-                // Überspringe die Summenzeile selbst
-                if (row.Tag?.ToString() == "Summe") continue;
-
-                if (row.Cells["Gesamtpreis"].Value != null)
+                if (row.Cells["Gesamt"].Value != null)
                 {
                     float gesamtpreis = 0;
-                    if (float.TryParse(row.Cells["Gesamtpreis"].Value.ToString(), out gesamtpreis))
+                    if (float.TryParse(row.Cells["Gesamt"].Value.ToString(), out gesamtpreis))
                         this.gesamtpreis = gesamtpreis;
-                        summe += gesamtpreis;
+                    summe += gesamtpreis;
                 }
             }
-
-            // Summenwert in die Summenzeile eintragen
-            DataGridViewRow summeRow = dgvVerkaufsdaten.Rows[dgvVerkaufsdaten.Rows.Count - 1];
-            summeRow.Cells[4].Value = summe.ToString("C"); // Formatierung als Währung
 
             _BearbeiteSteuerdaten(summe);
         }
@@ -169,6 +164,7 @@ namespace Parfüm2025
         {
             // Bruttobetrag anzeigen
             lblBrutto.Text = summe.ToString("C");
+    
 
             // Steueranteil berechnen und anzeigen
             float steuer = (summe * 19) / 119;
@@ -183,7 +179,7 @@ namespace Parfüm2025
             
             lblNetto.Text = nettoPreis.ToString("C");
 
-            lblRechnungsbetrag.Text = summe.ToString("C");
+           // lblRechnungsbetrag.Text = summe.ToString("C");
         }
         private void UpdateDataGridViewHeight()
         {

@@ -4493,7 +4493,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hamssa\\.nuget\\packages\\": {},
+    "C:\\Users\\Abdal\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -4502,7 +4502,7 @@
       "projectUniqueName": "C:\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
       "projectName": "Parfüm2025",
       "projectPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
-      "packagesPath": "C:\\Users\\Hamssa\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Abdal\\.nuget\\packages\\",
       "outputPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
@@ -4511,7 +4511,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hamssa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abdal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4537,7 +4537,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       }
     },
     "frameworks": {
