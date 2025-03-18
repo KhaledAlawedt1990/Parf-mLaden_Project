@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtFilerwert = new System.Windows.Forms.TextBox();
             this.cbFilterbei = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,9 +50,12 @@
             this.lblRecord = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.dtpErstellungsdatum = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerkaufsDaten)).BeginInit();
             this.cmsVerkaufdaten.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +63,12 @@
             // 
             this.txtFilerwert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFilerwert.BackColor = System.Drawing.Color.White;
+            this.txtFilerwert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtFilerwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilerwert.Location = new System.Drawing.Point(265, 295);
+            this.txtFilerwert.Location = new System.Drawing.Point(261, 383);
+            this.txtFilerwert.Multiline = true;
             this.txtFilerwert.Name = "txtFilerwert";
-            this.txtFilerwert.Size = new System.Drawing.Size(360, 26);
+            this.txtFilerwert.Size = new System.Drawing.Size(360, 33);
             this.txtFilerwert.TabIndex = 13;
             this.txtFilerwert.TextChanged += new System.EventHandler(this.txtFilerwert_TextChanged);
             this.txtFilerwert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilerwert_KeyPress);
@@ -72,16 +76,16 @@
             // cbFilterbei
             // 
             this.cbFilterbei.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbFilterbei.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterbei.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterbei.FormattingEnabled = true;
             this.cbFilterbei.Items.AddRange(new object[] {
             "KundenName",
             "ParfümNummer",
             "BelegID",
             "erstellungsDatum"});
-            this.cbFilterbei.Location = new System.Drawing.Point(92, 293);
+            this.cbFilterbei.Location = new System.Drawing.Point(92, 383);
             this.cbFilterbei.Name = "cbFilterbei";
-            this.cbFilterbei.Size = new System.Drawing.Size(163, 28);
+            this.cbFilterbei.Size = new System.Drawing.Size(163, 32);
             this.cbFilterbei.TabIndex = 12;
             this.cbFilterbei.SelectedIndexChanged += new System.EventHandler(this.cbFilterbei_SelectedIndexChanged);
             // 
@@ -89,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 296);
+            this.label1.Location = new System.Drawing.Point(12, 389);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 11;
@@ -98,13 +102,13 @@
             // btnAktualisereVerkaufsDaten
             // 
             this.btnAktualisereVerkaufsDaten.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAktualisereVerkaufsDaten.BackColor = System.Drawing.Color.White;
+            this.btnAktualisereVerkaufsDaten.BackColor = System.Drawing.Color.DimGray;
             this.btnAktualisereVerkaufsDaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAktualisereVerkaufsDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAktualisereVerkaufsDaten.ForeColor = System.Drawing.Color.Black;
-            this.btnAktualisereVerkaufsDaten.Location = new System.Drawing.Point(716, 282);
+            this.btnAktualisereVerkaufsDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAktualisereVerkaufsDaten.ForeColor = System.Drawing.Color.White;
+            this.btnAktualisereVerkaufsDaten.Location = new System.Drawing.Point(675, 376);
             this.btnAktualisereVerkaufsDaten.Name = "btnAktualisereVerkaufsDaten";
-            this.btnAktualisereVerkaufsDaten.Size = new System.Drawing.Size(224, 40);
+            this.btnAktualisereVerkaufsDaten.Size = new System.Drawing.Size(242, 40);
             this.btnAktualisereVerkaufsDaten.TabIndex = 10;
             this.btnAktualisereVerkaufsDaten.Text = "Aktualisiere VerkaufsDaten";
             this.btnAktualisereVerkaufsDaten.UseVisualStyleBackColor = false;
@@ -113,13 +117,13 @@
             // btnHinzufügeVerkaufsDaten
             // 
             this.btnHinzufügeVerkaufsDaten.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHinzufügeVerkaufsDaten.BackColor = System.Drawing.Color.White;
+            this.btnHinzufügeVerkaufsDaten.BackColor = System.Drawing.Color.DimGray;
             this.btnHinzufügeVerkaufsDaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHinzufügeVerkaufsDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHinzufügeVerkaufsDaten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnHinzufügeVerkaufsDaten.Location = new System.Drawing.Point(946, 282);
+            this.btnHinzufügeVerkaufsDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHinzufügeVerkaufsDaten.ForeColor = System.Drawing.Color.White;
+            this.btnHinzufügeVerkaufsDaten.Location = new System.Drawing.Point(923, 376);
             this.btnHinzufügeVerkaufsDaten.Name = "btnHinzufügeVerkaufsDaten";
-            this.btnHinzufügeVerkaufsDaten.Size = new System.Drawing.Size(224, 40);
+            this.btnHinzufügeVerkaufsDaten.Size = new System.Drawing.Size(242, 40);
             this.btnHinzufügeVerkaufsDaten.TabIndex = 9;
             this.btnHinzufügeVerkaufsDaten.Text = "Hinzufüge Verkaufsdaten";
             this.btnHinzufügeVerkaufsDaten.UseVisualStyleBackColor = false;
@@ -129,46 +133,46 @@
             // 
             this.dgvVerkaufsDaten.AllowUserToAddRows = false;
             this.dgvVerkaufsDaten.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvVerkaufsDaten.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            this.dgvVerkaufsDaten.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVerkaufsDaten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVerkaufsDaten.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerkaufsDaten.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerkaufsDaten.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVerkaufsDaten.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerkaufsDaten.ContextMenuStrip = this.cmsVerkaufdaten;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVerkaufsDaten.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVerkaufsDaten.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVerkaufsDaten.EnableHeadersVisualStyles = false;
-            this.dgvVerkaufsDaten.Location = new System.Drawing.Point(16, 327);
+            this.dgvVerkaufsDaten.Location = new System.Drawing.Point(16, 421);
             this.dgvVerkaufsDaten.MultiSelect = false;
             this.dgvVerkaufsDaten.Name = "dgvVerkaufsDaten";
             this.dgvVerkaufsDaten.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerkaufsDaten.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerkaufsDaten.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvVerkaufsDaten.RowTemplate.Height = 25;
             this.dgvVerkaufsDaten.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVerkaufsDaten.Size = new System.Drawing.Size(1158, 463);
+            this.dgvVerkaufsDaten.Size = new System.Drawing.Size(1158, 369);
             this.dgvVerkaufsDaten.TabIndex = 8;
             this.dgvVerkaufsDaten.DoubleClick += new System.EventHandler(this.dgvVerkaufsDaten_DoubleClick);
             // 
@@ -264,33 +268,59 @@
             // 
             // dtpErstellungsdatum
             // 
-            this.dtpErstellungsdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpErstellungsdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpErstellungsdatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpErstellungsdatum.Location = new System.Drawing.Point(265, 295);
+            this.dtpErstellungsdatum.Location = new System.Drawing.Point(261, 386);
             this.dtpErstellungsdatum.Name = "dtpErstellungsdatum";
-            this.dtpErstellungsdatum.Size = new System.Drawing.Size(375, 26);
+            this.dtpErstellungsdatum.Size = new System.Drawing.Size(360, 29);
             this.dtpErstellungsdatum.TabIndex = 16;
             this.dtpErstellungsdatum.Visible = false;
             this.dtpErstellungsdatum.ValueChanged += new System.EventHandler(this.dtpErstellungsdatum_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(492, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 25);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Verkaufsdaten";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1188, 44);
+            this.panel1.TabIndex = 19;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.store_869636;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Verkaufsdaten2;
+            this.pictureBox1.Location = new System.Drawing.Point(230, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1158, 266);
+            this.pictureBox1.Size = new System.Drawing.Size(629, 314);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
             // frmVerkaufsDatenListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1190, 830);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtpErstellungsdatum);
             this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.label2);
@@ -300,12 +330,13 @@
             this.Controls.Add(this.btnAktualisereVerkaufsDaten);
             this.Controls.Add(this.btnHinzufügeVerkaufsDaten);
             this.Controls.Add(this.dgvVerkaufsDaten);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "frmVerkaufsDatenListe";
-            this.Text = "frmVerkaufsDatenListe";
+            this.Text = "Verkaufsdaten";
             this.Load += new System.EventHandler(this.frmVerkaufsDatenListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerkaufsDaten)).EndInit();
             this.cmsVerkaufdaten.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -320,7 +351,6 @@
         private System.Windows.Forms.Button btnAktualisereVerkaufsDaten;
         private System.Windows.Forms.Button btnHinzufügeVerkaufsDaten;
         private System.Windows.Forms.DataGridView dgvVerkaufsDaten;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblRecord;
         private System.Windows.Forms.ContextMenuStrip cmsVerkaufdaten;
@@ -332,5 +362,8 @@
         private System.Windows.Forms.ToolStripMenuItem GeheZurRechnungsdetailstoolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem erstelleEineRechnungsvorlageToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

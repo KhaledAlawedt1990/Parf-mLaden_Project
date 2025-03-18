@@ -135,7 +135,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.LagerVerwaltung))
             {
                 frmEinkaufsDatenListe frm = new frmEinkaufsDatenListe();
-                frm.ShowDialog();
+                frm.Show();
             }
             else
                 MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
@@ -149,7 +149,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.LagerVerwaltung))
             {
                 frmVerkaufsDatenListe frm = new frmVerkaufsDatenListe();
-                frm.ShowDialog();
+                frm.Show();
             }
             else
                 MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",

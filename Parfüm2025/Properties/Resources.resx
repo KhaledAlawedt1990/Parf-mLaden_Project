@@ -124,8 +124,11 @@
   <data name="update_7411697" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\update_7411697.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="store_5622610" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\store_5622610.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EinkaufDaten1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EinkaufDaten1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_5953478 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\delete_5953478 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="perfume_50293511" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\perfume_5029351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +136,14 @@
   <data name="computer_120061447" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\computer_12006144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="People 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\People 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="store_56226103" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\store_5622610.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sign_out 32 -23" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\sign_out 32 -2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tester_41572772" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\tester_4157277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sign_out 32 -21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\sign_out 32 -2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,11 +166,14 @@
   <data name="Abed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Abed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users 642" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\users 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="store_5622610" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\store_5622610.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="People 641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\People 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kunde5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kunde5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="555" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\555.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +181,14 @@
   <data name="selling_6428694" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\selling_6428694.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kunde3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kunde3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="details 322" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\details 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Verkaufsdaten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Verkaufsdaten.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="entry_152092753" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\entry_15209275.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +199,8 @@
   <data name="computer_120061443" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\computer_12006144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\users 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kunde4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kunde4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="perfume_50293512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\perfume_5029351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,11 +208,17 @@
   <data name="Logo-Black[76143]" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo-Black[76143].png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EinkaufDaten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EinkaufDaten.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tester_41572771" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\tester_4157277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="details 323" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\details 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf-file-format_6795752" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\pdf-file-format_6795752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new-employee_13271134" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\new-employee_13271134.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="perfume_1241933" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\perfume_1241933.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,14 +241,14 @@
   <data name="People 643" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\People 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add-user_4925272" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\add-user_492527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="computer_12006144" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\computer_12006144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add-user_492527" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\add-user_492527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kunde2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kunde2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="details 321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\details 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,11 +259,14 @@
   <data name="A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Bilder\A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="perfume_5029351" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\perfume_5029351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="users 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\users 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="perfume_12419332" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\perfume_1241933.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perfume_5029351" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\perfume_5029351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="recycle_17163818" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\recycle_17163818.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,17 +274,23 @@
   <data name="Users 2 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Users 2 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Verkaufsdaten1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Verkaufsdaten1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pexels-anis-salmani-208342252-11711830" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Bilder\pexels-anis-salmani-208342252-11711830.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add New User 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Add New User 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="People 644" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\People 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Verkaufsdaten2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Verkaufsdaten2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="details 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\details 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computer_120061446" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\computer_12006144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maths_140528941" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\maths_14052894.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,11 +346,14 @@
   <data name="unemployed_97729491" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\unemployed_9772949.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="computer_120061446" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\computer_12006144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="details 323" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\details 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="entry_152092751" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\entry_15209275.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kunden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kunden.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="perfume_12419331" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\perfume_1241933.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,8 +367,8 @@
   <data name="Users 2 644" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Users 2 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="People 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\People 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="recycle_171638182" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\recycle_17163818.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="computer_120061441" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\computer_12006144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,8 +385,8 @@
   <data name="store_56226101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\store_5622610.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="file_15112322" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\file_15112322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tester_41572772" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\tester_4157277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="store_56226102" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\store_5622610.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -367,10 +397,10 @@
   <data name="bill_1052856" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\bill_1052856.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new-employee_13271134" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\new-employee_13271134.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="People 644" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\People 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users 644" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="users 642" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\users 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="selling_64286943" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -397,8 +427,8 @@
   <data name="Alowidat Final Logo-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alowidat Final Logo-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_5953478 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\delete_5953478 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="users 644" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\users 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PersonDetails 321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\PersonDetails 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,14 +439,17 @@
   <data name="Users 2 641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Users 2 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pdf-file-format_6795752" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\pdf-file-format_6795752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-user_4925272" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\add-user_492527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Haupbildschirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Haupbildschirm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Delete 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="recycle_171638182" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\recycle_17163818.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="file_15112322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\file_15112322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refresh_57912761" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\refresh_5791276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -424,7 +457,7 @@
   <data name="entry_152092752" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\entry_15209275.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Haupbildschirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Haupbildschirm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="emplyees" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emplyees.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace Busnisse_Layer
 {
@@ -18,20 +19,24 @@ namespace Busnisse_Layer
 
         public int parfümNummer { get; set; }
         public string parfümName { get; set; }
-        public string batchNummer { get; set; }
+        public string hauptBatchNummer { get; set; }
+        public string sekundäreBatchNummer { get; set; }
         public string parfümCode { get; set; }
-        public float lagerbestand { get; set; }
+        public float? lagerBestandHaupt { get; set; }
+        public float? lagerBestandSekundär { get; set; } //für sekundäreBatchNummer falls vorhanden.
         public int preisKategorie { get; set; }
         public DateTime erstellungsDatum { get; set; }
 
-        private clsEinkauf(int parfümNummer, string parfümName, string batchNummer, string parfümCode,
-            float lagerbestand, int preisKategorie, DateTime erstellungsDatum)
+        private clsEinkauf(int parfümNummer, string parfümName, string parfümCode, string hauptBatchNummer, float? lagerBestandHaupt,
+            string sekundäreBatchNummer,float? lagerBestandSekundär, int preisKategorie, DateTime erstellungsDatum)
         {
             this.parfümNummer = parfümNummer;
             this.parfümName = parfümName;
-            this.batchNummer = batchNummer;
+            this.hauptBatchNummer = hauptBatchNummer;
+            this.sekundäreBatchNummer = sekundäreBatchNummer;
             this.parfümCode = parfümCode;
-            this.lagerbestand = lagerbestand;
+            this.lagerBestandHaupt = lagerBestandHaupt;
+            this.lagerBestandSekundär = lagerBestandSekundär; //lagerBestandHaupt für sekundäreBatchNummer falls vorhanden.
             this.preisKategorie = preisKategorie;
             this.erstellungsDatum = erstellungsDatum;
 
@@ -42,9 +47,11 @@ namespace Busnisse_Layer
         {
             this.parfümNummer = -1;
             this.parfümName = string.Empty;
-            this.batchNummer = string.Empty;
-            this.parfümCode = string.Empty;
-            this.lagerbestand = 0;
+            this.parfümCode = null;
+            this.hauptBatchNummer = null;
+            this.sekundäreBatchNummer = null;
+            this.lagerBestandHaupt = null;
+            this.lagerBestandSekundär = null;
             this.preisKategorie = 1;
             this.erstellungsDatum = DateTime.Now;
 
@@ -53,39 +60,44 @@ namespace Busnisse_Layer
 
         public static clsEinkauf FindEinkaufDatenByParfümNummer(int parfümNummer)
         {
-            string parfümName = string.Empty; string batchNummer = string.Empty;
-            string parfümCode = string.Empty; float lagerbestand = 0;
+            string parfümName = string.Empty; string hauptBatchNummer = null; string sekundäreBatchNummer = null;
+            string parfümCode = string.Empty; float? lagerBestandHaupt = null; float? lagerBestandSekundär = null;
             int preisKategorie = 1;  DateTime erstellungsDatum = DateTime.Now;
 
-            if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümID(parfümNummer, ref parfümName, ref batchNummer,
-                                                         ref parfümCode, ref lagerbestand, ref preisKategorie, ref erstellungsDatum))
+            if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümID(parfümNummer, ref parfümName, ref parfümCode,ref hauptBatchNummer,
+                                   ref lagerBestandHaupt, ref sekundäreBatchNummer, ref lagerBestandSekundär, ref preisKategorie, ref erstellungsDatum))
             {
-                return new clsEinkauf(parfümNummer, parfümName, batchNummer, parfümCode, lagerbestand, preisKategorie, erstellungsDatum);
+                return new clsEinkauf(parfümNummer, parfümName, parfümCode, hauptBatchNummer, lagerBestandHaupt,
+                                                              sekundäreBatchNummer, lagerBestandSekundär, preisKategorie, erstellungsDatum);
             }
             else
                 return null;
         }
         private bool _AddNewEinkaufDaten()
         {
-            return clsEinkaufDatenzugriff.AddNewEinkaufDaten(this.parfümNummer, this.parfümName, this.batchNummer,
-                                                            this.parfümCode, this.lagerbestand,this.preisKategorie, this.erstellungsDatum);
+            return clsEinkaufDatenzugriff.AddNewEinkaufDaten(this.parfümNummer, this.parfümName, this.parfümCode, this.hauptBatchNummer, this.lagerBestandHaupt
+                ,this.sekundäreBatchNummer, this.lagerBestandSekundär,this.preisKategorie, this.erstellungsDatum);
         }
 
         //public bool _UpdateByParfümName()
         //{
-        //    return clsEinkaufDatenzugriff.UpdateMengeByParfümName(this.parfümName, this.batchNummer, this.parfümCode,
-        //                                                           this.lagerbestand, erstellungsDatum);
+        //    return clsEinkaufDatenzugriff.UpdateMengeByParfümName(this.parfümName, this.hauptBatchNummer, this.parfümCode,
+        //                                                           this.lagerBestandHaupt, erstellungsDatum);
         //}
 
         public bool _UpdateByParfümNummer()
         {
-            return clsEinkaufDatenzugriff.UpdateEinkaufDaten(this.parfümNummer, this.batchNummer, this.parfümCode,
-                                                                   this.lagerbestand,this.preisKategorie, erstellungsDatum);
+            return clsEinkaufDatenzugriff.UpdateEinkaufDaten(this.parfümNummer, this.parfümName, this.parfümCode, this.hauptBatchNummer, this.lagerBestandHaupt
+                , this.sekundäreBatchNummer, this.lagerBestandSekundär, this.preisKategorie, this.erstellungsDatum);
         }
 
-        public static bool UpdateLagerbestand(int parfümNummer, float neueLagerbestand)
+        public static bool UpdateLagerBestandHaupt(int parfümNummer, float? lagerBestandHaup)
         {
-            return clsEinkaufDatenzugriff.UpdateLagerbestand(parfümNummer, neueLagerbestand);
+            return clsEinkaufDatenzugriff.UpdateLagerBestandHaupt(parfümNummer, lagerBestandHaup);
+        }
+        public static bool UpdateLagerBestandSekundär(int parfümNummer, string sekundärBatchNummer, float? lagerBestandSekundär)
+        {
+            return clsEinkaufDatenzugriff.UpdateLagerbestandSekundäre(parfümNummer,sekundärBatchNummer, lagerBestandSekundär);
         }
         public bool Save()
         {
@@ -119,6 +131,7 @@ namespace Busnisse_Layer
             return clsEinkaufDatenzugriff.DeleteEinkaufDaten(this.parfümNummer);
         }
 
+  
         public static DataTable GetAllEinkaufDaten()
         {
             return clsEinkaufDatenzugriff.GetAllEinkaufDaten();

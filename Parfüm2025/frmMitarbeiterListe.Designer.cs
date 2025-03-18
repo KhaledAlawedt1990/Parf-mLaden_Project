@@ -52,9 +52,12 @@
             this.cbFilterBei = new System.Windows.Forms.ComboBox();
             this.btnAktualisieren = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMitarbeiter)).BeginInit();
             this.cmsMitarbeiter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMitarbeiter
@@ -86,7 +89,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMitarbeiter.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMitarbeiter.EnableHeadersVisualStyles = false;
-            this.dgvMitarbeiter.Location = new System.Drawing.Point(12, 326);
+            this.dgvMitarbeiter.Location = new System.Drawing.Point(12, 414);
             this.dgvMitarbeiter.MultiSelect = false;
             this.dgvMitarbeiter.Name = "dgvMitarbeiter";
             this.dgvMitarbeiter.ReadOnly = true;
@@ -101,7 +104,7 @@
             this.dgvMitarbeiter.RowHeadersWidth = 60;
             this.dgvMitarbeiter.RowTemplate.Height = 30;
             this.dgvMitarbeiter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMitarbeiter.Size = new System.Drawing.Size(1529, 453);
+            this.dgvMitarbeiter.Size = new System.Drawing.Size(1548, 377);
             this.dgvMitarbeiter.TabIndex = 1;
             // 
             // cmsMitarbeiter
@@ -204,7 +207,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 296);
+            this.label1.Location = new System.Drawing.Point(13, 380);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 24);
             this.label1.TabIndex = 3;
@@ -212,10 +215,12 @@
             // 
             // txtFilterwert
             // 
+            this.txtFilterwert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtFilterwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterwert.Location = new System.Drawing.Point(298, 295);
+            this.txtFilterwert.Location = new System.Drawing.Point(295, 374);
+            this.txtFilterwert.Multiline = true;
             this.txtFilterwert.Name = "txtFilterwert";
-            this.txtFilterwert.Size = new System.Drawing.Size(503, 26);
+            this.txtFilterwert.Size = new System.Drawing.Size(392, 35);
             this.txtFilterwert.TabIndex = 4;
             this.txtFilterwert.TextChanged += new System.EventHandler(this.txtFilterwert_TextChanged);
             this.txtFilterwert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterwert_KeyPress);
@@ -245,12 +250,13 @@
             // btnAddnewMitarbeiter
             // 
             this.btnAddnewMitarbeiter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddnewMitarbeiter.BackColor = System.Drawing.Color.Gold;
-            this.btnAddnewMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddnewMitarbeiter.BackColor = System.Drawing.Color.Gray;
+            this.btnAddnewMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddnewMitarbeiter.ForeColor = System.Drawing.Color.White;
             this.btnAddnewMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1261, 276);
+            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1269, 361);
             this.btnAddnewMitarbeiter.Name = "btnAddnewMitarbeiter";
-            this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(283, 49);
+            this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(291, 49);
             this.btnAddnewMitarbeiter.TabIndex = 7;
             this.btnAddnewMitarbeiter.Text = "Hinzufüge einen neun Mitarbeiter";
             this.btnAddnewMitarbeiter.UseVisualStyleBackColor = false;
@@ -258,26 +264,27 @@
             // 
             // cbFilterBei
             // 
-            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterBei.FormattingEnabled = true;
             this.cbFilterBei.Items.AddRange(new object[] {
             "Vollname",
             "MitarbeiterID"});
-            this.cbFilterBei.Location = new System.Drawing.Point(103, 293);
+            this.cbFilterBei.Location = new System.Drawing.Point(104, 376);
             this.cbFilterBei.Name = "cbFilterBei";
-            this.cbFilterBei.Size = new System.Drawing.Size(189, 28);
+            this.cbFilterBei.Size = new System.Drawing.Size(185, 32);
             this.cbFilterBei.TabIndex = 8;
             this.cbFilterBei.SelectedIndexChanged += new System.EventHandler(this.cbFilterBei_SelectedIndexChanged);
             // 
             // btnAktualisieren
             // 
             this.btnAktualisieren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAktualisieren.BackColor = System.Drawing.Color.Gold;
-            this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAktualisieren.BackColor = System.Drawing.Color.Gray;
+            this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAktualisieren.ForeColor = System.Drawing.Color.White;
             this.btnAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAktualisieren.Location = new System.Drawing.Point(972, 276);
+            this.btnAktualisieren.Location = new System.Drawing.Point(972, 362);
             this.btnAktualisieren.Name = "btnAktualisieren";
-            this.btnAktualisieren.Size = new System.Drawing.Size(283, 49);
+            this.btnAktualisieren.Size = new System.Drawing.Size(291, 49);
             this.btnAktualisieren.TabIndex = 10;
             this.btnAktualisieren.Text = "Aktualisiere Mitarbeiterdaten";
             this.btnAktualisieren.UseVisualStyleBackColor = false;
@@ -287,20 +294,43 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Alowidat_Final_Logo_02;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.emplyees;
+            this.pictureBox1.Location = new System.Drawing.Point(567, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1525, 267);
+            this.pictureBox1.Size = new System.Drawing.Size(457, 301);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(16, 311);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1544, 45);
+            this.panel1.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(665, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Mitarbeiterverwaltung";
             // 
             // frmMitarbeiterListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1572, 823);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAktualisieren);
             this.Controls.Add(this.cbFilterBei);
@@ -316,6 +346,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMitarbeiter)).EndInit();
             this.cmsMitarbeiter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +373,7 @@
         private System.Windows.Forms.ToolStripMenuItem HinzufügeBenutzerrechtetoolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem AktualisiereBenutzerrechtetoolStripMenuItem2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }

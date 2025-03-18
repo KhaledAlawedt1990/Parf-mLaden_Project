@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,9 +41,11 @@ namespace Parfüm2025
 
             txtParfümNummer.Clear();
             txtParfümName.Clear();
-            txtBatchNummer.Clear();
+            txtHauptBatchNummer.Clear();
+            txtSekundärBachNummer.Clear();
+            txtMengeOfHauptBachNummer.Clear();
+            txtMengeOfSekundärBatchNummer.Clear();
             txtParfümCode.Clear();
-            txtLagerbestand.Text = "0";
             txtPreiskategorie.Clear();
             dtpErstellungsDatum.Value = DateTime.Now;
         }
@@ -66,9 +69,11 @@ namespace Parfüm2025
                     txtParfümNummer.ReadOnly = true;
 
                     txtParfümName.Text = _einkaufsDaten.parfümName;
-                    txtBatchNummer.Text = _einkaufsDaten.batchNummer;
+                    txtHauptBatchNummer.Text = _einkaufsDaten.hauptBatchNummer;
+                    txtSekundärBachNummer.Text = _einkaufsDaten.sekundäreBatchNummer; //zweite batchnummer falls vorhanden
                     txtParfümCode.Text = _einkaufsDaten.parfümCode;
-                    txtLagerbestand.Text = _einkaufsDaten.lagerbestand.ToString();
+                    txtLagerbestandHaupt.Text = _einkaufsDaten.lagerBestandHaupt.ToString();
+                    txtLagebestandSekundär.Text = _einkaufsDaten.lagerBestandSekundär.ToString();
                     txtPreiskategorie.Text = _einkaufsDaten.preisKategorie.ToString();
                     dtpErstellungsDatum.Value = _einkaufsDaten.erstellungsDatum;
                     
@@ -143,32 +148,34 @@ namespace Parfüm2025
             bool isValid = true;
 
             isValid = _ValidiereEinFeld(txtParfümName, "ParfümName");
-            isValid &= _ValidiereEinFeld(txtBatchNummer, "BatchNummer");
             isValid &= _ValidiereEinFeld(txtParfümCode, "ParfümCode");
-            isValid &= _ValidiereEinFeld(txtNeueMenge, "EinkaufsMenge");
+            isValid &= _ValidiereEinFeld(txtMengeOfHauptBachNummer, "EinkaufsMenge");
             isValid &= _ValidiereEinFeld(txtPreiskategorie, "PreisKategorie");
             return isValid; // Gibt zurück, ob alle Felder gültig sind
-        }
-
-        private float _HatNeueMengeGültigeNummer(string neueMenge)
-        {
-            float MengeNummer;
-
-            if (float.TryParse(neueMenge, out MengeNummer))
-            {
-                return MengeNummer;
-            }
-            else
-                return -1;
         }
 
         private bool _fülleEinkaufsdaten()
         {
             _einkaufsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
-            _einkaufsDaten.parfümName = txtParfümName.Text;
-            _einkaufsDaten.batchNummer = txtBatchNummer.Text;
             _einkaufsDaten.parfümCode = txtParfümCode.Text;
-            _einkaufsDaten.lagerbestand = _einkaufsDaten.lagerbestand + Convert.ToSingle(txtNeueMenge.Text.Trim()); // Hier addieren wir die neue Menge!!!!!
+            _einkaufsDaten.parfümName = txtParfümName.Text;
+            _einkaufsDaten.hauptBatchNummer = txtHauptBatchNummer.Text;
+            _einkaufsDaten.sekundäreBatchNummer = txtSekundärBachNummer.Text;
+
+            float? hauptMenge = string.IsNullOrWhiteSpace(txtMengeOfHauptBachNummer.Text) ? 0
+            : Convert.ToSingle(txtMengeOfHauptBachNummer.Text);
+
+            float? sekundärMenge = string.IsNullOrWhiteSpace(txtMengeOfSekundärBatchNummer.Text) ? 0
+                : Convert.ToSingle(txtMengeOfSekundärBatchNummer.Text);
+
+            /*
+              ?? 0 Bedeutung >>> Wenn _einkaufsDaten.lagerBestandHaupt bereits einen Wert hat (z. B. 5.0), dann bleibt dieser Wert erhalten.
+                  Falls _einkaufsDaten.lagerBestandHaupt null ist, wird 0 verwendet.
+             */
+            // Falls lagerBestandHaupt null ist, setze es auf 0, dann addiere die Menge
+            _einkaufsDaten.lagerBestandHaupt = (_einkaufsDaten.lagerBestandHaupt ?? 0) + hauptMenge;
+            _einkaufsDaten.lagerBestandSekundär = (_einkaufsDaten.lagerBestandSekundär ?? 0) + sekundärMenge;
+
 
             int preisKategorie = Convert.ToInt32(txtPreiskategorie.Text);
             if(!clsPreise.IstkategorieVorhanden(preisKategorie))
@@ -182,15 +189,32 @@ namespace Parfüm2025
 
             return true;
         }
+        private float _HatDieEingabeGültigeNummer(string neueMenge)
+        {
+            float MengeNummer;
+
+            if (float.TryParse(neueMenge, out MengeNummer))
+            {
+                return MengeNummer;
+            }
+            else
+                return -1;
+        }
         private void _speicherEinkaufsdaten()
         {
            
             if (!_ValiedereEinkaufsdatenMenge())
                 return;
 
-            if (_HatNeueMengeGültigeNummer(txtNeueMenge.Text.Trim()) == -1)
+            if (!string.IsNullOrEmpty(txtMengeOfHauptBachNummer.Text) && _HatDieEingabeGültigeNummer(txtMengeOfHauptBachNummer.Text.Trim()) == -1)
             {
-                errorProvider1.SetError(txtNeueMenge, "Der Feld nimmt nur Nummer auf");
+                errorProvider1.SetError(txtMengeOfHauptBachNummer, "Der Feld nimmt nur Nummer auf");
+                return;
+            }
+
+            if(!string.IsNullOrEmpty(txtMengeOfSekundärBatchNummer.Text) && _HatDieEingabeGültigeNummer(txtMengeOfSekundärBatchNummer.Text.Trim()) == -1)
+            {
+                errorProvider1.SetError(txtMengeOfSekundärBatchNummer, "Der Feld nimmt nur Nummer auf");
                 return;
             }
 
@@ -243,6 +267,11 @@ namespace Parfüm2025
         {
             frmPreisKategorieListe frm = new frmPreisKategorieListe();
             frm.ShowDialog();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

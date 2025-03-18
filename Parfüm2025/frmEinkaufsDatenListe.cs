@@ -1,4 +1,5 @@
 ﻿using Busnisse_Layer;
+using iText.Layout.Element;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,26 +29,59 @@ namespace Parfüm2025
             frmAddUpdateNeueParfümMenge frm = new frmAddUpdateNeueParfümMenge(-1, frmAddUpdateNeueParfümMenge.enMode.addnew);
             frm.ShowDialog();
 
-            _setzeEinkaufsDaten();
+            _LoadEinkaufDateFromDataBase();
         }
-
-        private void _setzeEinkaufsDaten()
+        private void _LoadEinkaufDateFromDataBase()
         {
             _dtEinkaufsdaten = clsEinkauf.GetAllEinkaufDaten();
             _bindingSource.DataSource = _dtEinkaufsdaten;
-            dgvLager.DataSource = _bindingSource;
+            dgvLager.DataSource = _bindingSource; 
+
+            if (_dtEinkaufsdaten != null && _dtEinkaufsdaten.Rows.Count > 0)
+            {
+
+                // Iteration durch alle Zeilen des DataGridView
+                foreach (DataGridViewRow row in dgvLager.Rows)
+                {
+                    if (row.Cells["lagerBestandHaupt"].Value != DBNull.Value)
+                    {
+                        float lagerBestandHaupt = Convert.ToSingle(row.Cells["lagerBestandHaupt"].Value);
+
+                        if (lagerBestandHaupt < 3)
+                        {
+                            if (lagerBestandHaupt < 1)
+                            {
+                                row.Cells["lagerBestandHaupt"].Style.BackColor = Color.Red;
+                                row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.White;
+                            }
+                            else
+                            {
+                                row.Cells["lagerBestandHaupt"].Style.BackColor = Color.Orange;
+                                row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.White;
+                            }
+                        }
+                        else
+                        {
+                            row.Cells["lagerBestandHaupt"].Style.BackColor = Color.White;
+                            row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.Black;
+                        }
+                    }
+                }
+
+            }
         }
+
         private void frmLagerListe_Load(object sender, EventArgs e)
         {
             cbFilterbei.SelectedIndex = 0;
             cbFilterbei.DropDownStyle = ComboBoxStyle.DropDownList; // verhindert die ComboBox Einträge zu ändern.
-             
-            _setzeEinkaufsDaten();
+
+            _LoadEinkaufDateFromDataBase();
         }
 
         private void btnAktualisereParfümMenge_Click(object sender, EventArgs e)
         {
-            _setzeEinkaufsDaten();  // Nur zum Aktualisieren....
+            _LoadEinkaufDateFromDataBase();  // Nur zum Aktualisieren....
         }
 
         private void aktualisiereParfümMengeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,7 +90,7 @@ namespace Parfüm2025
             frmAddUpdateNeueParfümMenge frm = new frmAddUpdateNeueParfümMenge(parfümNummer, frmAddUpdateNeueParfümMenge.enMode.update);
             frm.ShowDialog();
 
-            _setzeEinkaufsDaten();
+            _LoadEinkaufDateFromDataBase();
         }
 
         private void entferneParfümToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,7 +109,7 @@ namespace Parfüm2025
             {
                 MessageBox.Show("Einkaufsdaten erfolgreich entfernt", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                _setzeEinkaufsDaten();
+                _LoadEinkaufDateFromDataBase();
             }
             else
                 MessageBox.Show("Fehler beim Entfernen der Einkaufsdaten ist aufgetreten.", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);

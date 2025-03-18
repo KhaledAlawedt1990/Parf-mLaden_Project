@@ -393,9 +393,39 @@ namespace Parfüm2025.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EinkaufDaten {
+            get {
+                object obj = ResourceManager.GetObject("EinkaufDaten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EinkaufDaten1 {
+            get {
+                object obj = ResourceManager.GetObject("EinkaufDaten1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap email_15254895 {
             get {
                 object obj = ResourceManager.GetObject("email_15254895", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emplyees {
+            get {
+                object obj = ResourceManager.GetObject("emplyees", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +496,56 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap interface_15123397 {
             get {
                 object obj = ResourceManager.GetObject("interface_15123397", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kunde2 {
+            get {
+                object obj = ResourceManager.GetObject("Kunde2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kunde3 {
+            get {
+                object obj = ResourceManager.GetObject("kunde3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kunde4 {
+            get {
+                object obj = ResourceManager.GetObject("Kunde4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kunde5 {
+            get {
+                object obj = ResourceManager.GetObject("Kunde5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kunden {
+            get {
+                object obj = ResourceManager.GetObject("Kunden", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1076,6 +1156,36 @@ namespace Parfüm2025.Properties {
         internal static System.Drawing.Bitmap users_644 {
             get {
                 object obj = ResourceManager.GetObject("users 644", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Verkaufsdaten {
+            get {
+                object obj = ResourceManager.GetObject("Verkaufsdaten", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Verkaufsdaten1 {
+            get {
+                object obj = ResourceManager.GetObject("Verkaufsdaten1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Verkaufsdaten2 {
+            get {
+                object obj = ResourceManager.GetObject("Verkaufsdaten2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

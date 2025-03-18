@@ -470,5 +470,38 @@
   <ItemGroup>
     <None Include="Resources\Haupbildschirm.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kunden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kunde2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kunde3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kunde4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kunde5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EinkaufDaten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EinkaufDaten1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verkaufsdaten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verkaufsdaten1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verkaufsdaten2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emplyees.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace Parfüm2025
         private string _kundenname;
         List<clsRechnungsdetails> _rechnungsDetails;
 
-        public delegate void Databack(object senden, float lagerbestand, int parfümNummer);
+        public delegate void Databack(object sender, float lagerbestand);
         public event Databack lagerbestandAktualisiert;
         public frmRechnungsDetailsListe(int belegID, string kundenname)
         {
@@ -37,13 +37,12 @@ namespace Parfüm2025
         {
             _rechnungsDetails = clsRechnungsdetails.LadeRechnungsDetails(_belegID);
             dgvRechnungsdetails.Rows.Clear();
-
             if (_rechnungsDetails.Count > 0)
             {
                 foreach (var details in _rechnungsDetails)
                 {
                     string verkaufsmenge = details.verkaufsMenge.ToString() + "     kg";
-                    string lagerbestand = details.lagerbestand.ToString() + "     kg";
+                    string lagerbestand = details.lagerBestandHaupt.ToString() + "     kg";
                     string normalPreis = details.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     string gesamtPreis = details.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
 
@@ -52,7 +51,7 @@ namespace Parfüm2025
                 }
             }
 
-            _setzePassendeFarbeFürLagerbestand();
+            //_setzePassendeFarbeFürLagerbestand();
         }
         private void frmRechnungsDetailsListe_Load(object sender, EventArgs e)
         {
@@ -77,6 +76,33 @@ namespace Parfüm2025
                    .AddText($"Der Lagerbestand für die ParfümNummer {parfümNummer} ist gefallen. Bitte prüfen Sie die Bestände.")
                    .SetToastDuration(ToastDuration.Short) // Toast länger anzeigen
                      .Show();
+
+            string folder = @"C:\Fehlende Parfüm Menge";
+            string path = Path.Combine(folder, "Fehlende Menge.txt");
+            try
+            {
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                if (!File.Exists(path))
+                {
+                    // Datei erstellen und sofort schließen
+                    using (FileStream fs = File.Create(path))
+                    {
+                        // Dateistream muss geschlossen werden, bevor weiter mit AppendAllText gearbeitet wird.
+                    }
+                }
+                // Füge den Text an das Ende der Datei an
+                string logMessage = $"Der Lagerbestand für die ParfümNummer {parfümNummer} ist gefallen." +
+                                    $" Bitte prüfen Sie die Bestände. [{DateTime.Now}]{Environment.NewLine}";
+                File.AppendAllText(path, logMessage);
+            }
+            catch (Exception ex)
+            {
+                // Fehlerbehandlung
+                MessageBox.Show($"Fehler beim Schreiben der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private float _ToFloat(string text)
         {
@@ -124,29 +150,37 @@ namespace Parfüm2025
                 MessageBox.Show("Fehler beim Entfernen der Rechnungsdetails ist aufgetreten.", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void _setzePassendeFarbeFürLagerbestand()
-        {
-            foreach (DataGridViewRow row in dgvRechnungsdetails.Rows)
-            {
-                if (row.Cells["lagerbestand"].Value != null) // Sicherstellen, dass die Zelle nicht null ist
-                {
-                    // Konvertiere den Zellwert in einen float
-                    float lagerbestand = _ToFloat(row.Cells["lagerbestand"].Value.ToString());
+        //private void _setzePassendeFarbeFürLagerbestand()
+        //{
+        //    foreach (DataGridViewRow row in dgvRechnungsdetails.Rows)
+        //    {
+        //        if (row.Cells["lagerBestandHaupt"].Value != null) // Sicherstellen, dass die Zelle nicht null ist
+        //        {
+        //            // Konvertiere den Zellwert in einen float
+        //            float lagerbestand = _ToFloat(row.Cells["lagerBestandHaupt"].Value.ToString());
 
-                    // Beispiel: Verwende den lagerbestand-Wert
-                    if (lagerbestand < 1)
-                    {
-                        row.Cells["lagerbestand"].Style.BackColor = Color.Red;
-                        row.Cells["lagerbestand"].Style.ForeColor = Color.White; // Weißer Text
-                    }
-                    else
-                    {
-                        row.Cells["lagerbestand"].Style.BackColor = Color.White;
-                        row.Cells["lagerbestand"].Style.ForeColor = Color.Black; // Schwarzer Text
-                    }
-                }
-            }
-        }
+        //            // Beispiel: Verwende den lagerBestandHaupt-Wert
+        //            if (lagerbestand < 3)
+        //            {
+        //                if (lagerbestand < 1)
+        //                {
+        //                    row.Cells["lagerBestandHaupt"].Style.BackColor = Color.Red;
+        //                    row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.White; // Weißer Text
+        //                }
+        //                else
+        //                {
+        //                    row.Cells["lagerBestandHaupt"].Style.BackColor = Color.Orange;
+        //                    row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.White; // Weißer Text
+        //                }
+        //            }
+        //            else
+        //            {
+        //                row.Cells["lagerBestandHaupt"].Style.BackColor = Color.White;
+        //                row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.Black; // Schwarzer Text
+        //            }
+        //        }
+        //    }
+        //}
 
         private void HinzufügeRechnungsdetailstoolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -164,6 +198,7 @@ namespace Parfüm2025
         private void btnAddRechnungsDetails_Click(object sender, EventArgs e)
         {
             frmAddUpdateRechnungsDetails frm = new frmAddUpdateRechnungsDetails(-1, _belegID, _kundenname, frmAddUpdateRechnungsDetails.enMode.addnew);
+
             frm.ShowDialog();
             _SetzeRechnungsDetailsDaten();
         }
@@ -182,10 +217,11 @@ namespace Parfüm2025
                 {
                     if (element.lagerbestandAktualisiert == false)
                     {
-                        float neueLagerbestand = element.lagerbestand - element.verkaufsMenge;
-                        clsEinkauf.UpdateLagerbestand(element.parfümNummer, neueLagerbestand);
+                        float lagerBestandHaupt = element.lagerBestandHaupt - element.verkaufsMenge;
+                        //hier bestätigen wir den Verkauf und ziehen wir realistisch die gebrauchte Menge von dem LagerbestanHaupt ab.
+                        clsEinkauf.UpdateLagerBestandHaupt(element.parfümNummer, lagerBestandHaupt);
 
-                        if (!clsRechnungsdetails.SetzeLagerbestandAktualisiert(element.detailID, neueLagerbestand, true))
+                        if (!clsRechnungsdetails.SetzeLagerbestandAktualisiert(element.detailID, lagerBestandHaupt, true))
                         {
                             MessageBox.Show($"Fehler beim Aktualisieren des Lagerbestands für Detail-ID {element.detailID}. Bitte überprüfen Sie die Daten und versuchen Sie es erneut.",
                                 "Lagerbestand-Fehler",
@@ -193,7 +229,7 @@ namespace Parfüm2025
                                 MessageBoxIcon.Error);
                         }
 
-                        if (neueLagerbestand < 1)
+                        if (lagerBestandHaupt < 3)
                         {
                             _SetzeNotifikation(element.parfümNummer);
                         }

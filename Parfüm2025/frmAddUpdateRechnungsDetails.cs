@@ -27,6 +27,9 @@ namespace Parfüm2025
         clsRechnungsdetails _rechnungsDetailsDaten;
         public delegate void GesamtSummeBack(object senden, float GesamtSumme);
         public event GesamtSummeBack sendeGesamtSumme;
+
+        public delegate void Databack(object sender, float lagerbestand);
+        public event Databack lagerbestandAktualisiert;
         public frmAddUpdateRechnungsDetails(int detailID, int belegID, string kundenname, enMode mode)
         {
             InitializeComponent();
@@ -40,7 +43,7 @@ namespace Parfüm2025
         {
             txtParfümNummer.Clear();
             txtVerkaufsMenge.Clear();
-            txtLagerbestand.Text = "0";
+            txtLagerbestandHaupt.Text = "0";
             txtNormalPreis.Clear();
             txtGesamtPreis.Clear();
         }
@@ -66,7 +69,9 @@ namespace Parfüm2025
                     txtVerkaufsMenge.Text = _rechnungsDetailsDaten.verkaufsMenge.ToString();
    
                     // Lagerbestand abrufen
-                    txtLagerbestand.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).lagerbestand.ToString();
+                    txtLagerbestandHaupt.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).lagerBestandHaupt.ToString();
+                    //wir suchen nach dem zusätzlichen Lagerbestand für die zweite sekundäreBatchNummer
+                    txtLagerBestandSekundär.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).lagerBestandSekundär.ToString();
                     // Preise formatieren
                     txtNormalPreis.Text = _rechnungsDetailsDaten.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     txtGesamtPreis.Text = _rechnungsDetailsDaten.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
@@ -132,19 +137,54 @@ namespace Parfüm2025
             _rechnungsDetailsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
             _rechnungsDetailsDaten.verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
-            float lagerbestand = Convert.ToSingle(txtLagerbestand.Text.Trim());
+            float lagerBestandHaupt =string.IsNullOrEmpty(txtLagerbestandHaupt.Text) ? 0 :  Convert.ToSingle(txtLagerbestandHaupt.Text);
+            float lagerBestandSekundär = string.IsNullOrEmpty(txtLagerBestandSekundär.Text) ? 0 : Convert.ToSingle(txtLagerBestandSekundär.Text) ; //für sekundäreBatchNummer
             float verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
-            if(lagerbestand < verkaufsMenge)
+            if (lagerBestandHaupt < 0.7)
+            {
+                MessageBox.Show("Warnung: Der Lagerbestand ist unter 0.7! Bitte nachbestellen.",
+                                "Niedriger Lagerbestand",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+
+                return false;
+            }
+            // Lagerbestand prüfen 
+            if (lagerBestandHaupt >= verkaufsMenge)
+            {
+                _rechnungsDetailsDaten.lagerBestandHaupt = lagerBestandHaupt;
+            }
+            else if ((lagerBestandHaupt + lagerBestandSekundär) >= verkaufsMenge) // Falls zusätzlicher Lagerbestand verwendet werden muss
+            {
+                // Berechnen, wie viel aus dem zusätzlichen Lagerbestand benötigt wird
+                float fehlendeMenge = verkaufsMenge - lagerBestandHaupt;
+
+                // Ziehe die benötigte Menge vom zusätzlichen Lagerbestand ab
+                lagerBestandSekundär = lagerBestandSekundär - fehlendeMenge;
+
+                // Setze den Lagerbestand auf die Verkaufsmenge + lagerBestandSekundär.
+                lagerBestandHaupt = verkaufsMenge + lagerBestandSekundär;
+               
+                // Update Datenbank
+                clsEinkauf.UpdateLagerBestandHaupt(_rechnungsDetailsDaten.parfümNummer, lagerBestandHaupt);
+                //wir setzen sekundärBatchNummer zu HauptBatchNummer, wenn LagerbestandSekundär leer ist.
+                string sekundärBatchNummer = clsEinkauf.FindEinkaufDatenByParfümNummer(Convert.ToInt32(txtParfümNummer.Text)).sekundäreBatchNummer;
+                clsEinkauf.UpdateLagerBestandSekundär(_rechnungsDetailsDaten.parfümNummer, sekundärBatchNummer,null);
+
+                //update lagerbestnd in _rechnungsdetails 
+                _rechnungsDetailsDaten.lagerBestandHaupt = lagerBestandHaupt;
+            }
+            else
             {
                 MessageBox.Show("Die Verkaufsmenge überschreitet den Lagerbestand. Bitte passen Sie die Menge an.",
-                  "Warnung",
-                  MessageBoxButtons.OK,
-                  MessageBoxIcon.Warning);
+                     "Warnung",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Warning);
                 return false;
             }
 
-            _rechnungsDetailsDaten.lagerbestand = Convert.ToSingle(txtLagerbestand.Text.Trim());
+               
             _rechnungsDetailsDaten.normalPreis = _ExtractNumber(txtNormalPreis.Text.Trim()) ;
             if (!string.IsNullOrEmpty(txtGesamtPreis.Text))
             {
@@ -291,13 +331,21 @@ namespace Parfüm2025
                 clsEinkauf einkaufsdaten = clsEinkauf.FindEinkaufDatenByParfümNummer(parfümNum);
                 if (einkaufsdaten != null)
                 {
-                    txtLagerbestand.Text = einkaufsdaten.lagerbestand.ToString();
+                    txtLagerbestandHaupt.Text = einkaufsdaten.lagerBestandHaupt.ToString();
+                    txtLagerBestandSekundär.Text = einkaufsdaten.lagerBestandSekundär.ToString();
                 }
                 else
-                    txtLagerbestand.Text = "0";
+                {
+                    txtLagerbestandHaupt.Text = "0";
+                    txtLagerBestandSekundär.Text = "0";
+                }
+
             }
             else
-                txtLagerbestand.Clear();
+            {
+                txtLagerbestandHaupt.Clear();
+                txtLagerBestandSekundär.Clear();
+            }
         }
         private void chMitSteuer_CheckedChanged(object sender, EventArgs e)
         {
