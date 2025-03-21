@@ -141,31 +141,35 @@ namespace Parfüm2025
             float lagerBestandSekundär = string.IsNullOrEmpty(txtLagerBestandSekundär.Text) ? 0 : Convert.ToSingle(txtLagerBestandSekundär.Text) ; //für sekundäreBatchNummer
             float verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
-            if (lagerBestandHaupt < 0.7)
-            {
-                MessageBox.Show("Warnung: Der Lagerbestand ist unter 0.7! Bitte nachbestellen.",
-                                "Niedriger Lagerbestand",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-
-                return false;
-            }
-            // Lagerbestand prüfen 
-            if (lagerBestandHaupt >= verkaufsMenge)
+                // Lagerbestand prüfen 
+            if (lagerBestandHaupt >= verkaufsMenge && (lagerBestandHaupt - verkaufsMenge > 0.7f) )
             {
                 _rechnungsDetailsDaten.lagerBestandHaupt = lagerBestandHaupt;
+                lagerBestandHaupt -= verkaufsMenge;
             }
             else if ((lagerBestandHaupt + lagerBestandSekundär) >= verkaufsMenge) // Falls zusätzlicher Lagerbestand verwendet werden muss
             {
+                // Berechne den verbleibenden Lagerbestand nach dem Verkauf
+                float verbleibenderLagerbestand = (lagerBestandHaupt + lagerBestandSekundär) - verkaufsMenge;
+                if (verbleibenderLagerbestand  < 0.7f)
+                {
+                    MessageBox.Show("Warnung: Der Lagerbestand ist unter 0.7! Bitte nachbestellen.",
+                                    "Niedriger Lagerbestand",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+
+                    return false; //Verkauf wird abgebrochen.
+                }
                 // Berechnen, wie viel aus dem zusätzlichen Lagerbestand benötigt wird
                 float fehlendeMenge = verkaufsMenge - lagerBestandHaupt;
 
                 // Ziehe die benötigte Menge vom zusätzlichen Lagerbestand ab
-                lagerBestandSekundär = lagerBestandSekundär - fehlendeMenge;
+                // Berechnung korrigiert, damit kein negativer Lagerbestand entsteht
+                lagerBestandSekundär = Math.Max(0,lagerBestandSekundär - fehlendeMenge);
 
                 // Setze den Lagerbestand auf die Verkaufsmenge + lagerBestandSekundär.
                 lagerBestandHaupt = verkaufsMenge + lagerBestandSekundär;
-               
+
                 // Update Datenbank
                 clsEinkauf.UpdateLagerBestandHaupt(_rechnungsDetailsDaten.parfümNummer, lagerBestandHaupt);
                 //wir setzen sekundärBatchNummer zu HauptBatchNummer, wenn LagerbestandSekundär leer ist.
@@ -174,6 +178,7 @@ namespace Parfüm2025
 
                 //update lagerbestnd in _rechnungsdetails 
                 _rechnungsDetailsDaten.lagerBestandHaupt = lagerBestandHaupt;
+
             }
             else
             {
@@ -194,7 +199,7 @@ namespace Parfüm2025
             return true;
         }
 
-        private float _ExtractNumber(string text)
+        private decimal _ExtractNumber(string text)
         {
             // Entfernt alle Tausendertrennzeichen (Punkte in deutscher Kultur)
             string cleanedInput = text.Replace(".", "");
@@ -206,14 +211,14 @@ namespace Parfüm2025
             numericPart = numericPart.Replace(',', '.');
 
             // Versucht, die gefilterte Zeichenkette in eine Zahl umzuwandeln
-            if (float.TryParse(numericPart, NumberStyles.Float, CultureInfo.InvariantCulture, out float number))
+            if (decimal.TryParse(numericPart, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal number))
             {
                 return number;
             }
             else
             {
                 MessageBox.Show($"Die Eingabe {text} enthält keine gültige Zahl.");
-                return 0f;
+                return 0;
             }
         }
         private bool _ExistiertParfümNummer()
@@ -237,13 +242,13 @@ namespace Parfüm2025
                 return;
 
 
-            if (_ExtractNumber(txtVerkaufsMenge.Text.Trim()) == 0f)
+            if (_ExtractNumber(txtVerkaufsMenge.Text.Trim()) == 0)
             {
                 errorProvider1.SetError(txtVerkaufsMenge, "Der Feld nimmt nur Nummer auf");
                 return;
             }
 
-            if (_ExtractNumber(txtNormalPreis.Text.Trim()) == 0f)
+            if (_ExtractNumber(txtNormalPreis.Text.Trim()) == 0)
             {
                 errorProvider1.SetError(txtNormalPreis, "Der Feld nimmt nur Nummer auf");
                 return;
@@ -254,11 +259,6 @@ namespace Parfüm2025
 
             if (_rechnungsDetailsDaten.Save())
             {
-
-                // Wir geben die gesamtsumme zurückt for die Rechnungsform.
-                float gesamtSumme = 0;
-                 gesamtSumme+= _rechnungsDetailsDaten.gesamtPreis;
-                this.sendeGesamtSumme?.Invoke(this, gesamtSumme); 
 
                 MessageBox.Show($"Verkauf Daten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

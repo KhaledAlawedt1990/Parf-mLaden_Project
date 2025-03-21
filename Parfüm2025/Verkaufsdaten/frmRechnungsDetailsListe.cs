@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.ApplicationModel.VoiceCommands;
 using iTextSharp.text;
+using iText.StyledXmlParser.Jsoup.Nodes;
 
 namespace Parfüm2025
 {
@@ -210,14 +211,22 @@ namespace Parfüm2025
 
         private void btnRealisiereRechnungsdetails_Click(object sender, EventArgs e)
         {
-
+            decimal totalGesamtPreis = 0;
+            int belegID = -1;
             if (_rechnungsDetails.Count > 0 && _rechnungsDetails != null)
             {
                 foreach (var element in _rechnungsDetails)
                 {
                     if (element.lagerbestandAktualisiert == false)
                     {
-                        float lagerBestandHaupt = element.lagerBestandHaupt - element.verkaufsMenge;
+                        belegID = element.belegID;
+
+                        if (element.gesamtPreis != 0.0m)
+                            totalGesamtPreis += element.gesamtPreis;
+                        else
+                            totalGesamtPreis += element.normalPreis;
+
+                            float lagerBestandHaupt = element.lagerBestandHaupt - element.verkaufsMenge;
                         //hier bestätigen wir den Verkauf und ziehen wir realistisch die gebrauchte Menge von dem LagerbestanHaupt ab.
                         clsEinkauf.UpdateLagerBestandHaupt(element.parfümNummer, lagerBestandHaupt);
 
@@ -233,9 +242,15 @@ namespace Parfüm2025
                         {
                             _SetzeNotifikation(element.parfümNummer);
                         }
-
                     }
 
+                }
+                if (!clsRechnung.UpdateGesamtPreis(belegID, totalGesamtPreis))
+                {
+                    MessageBox.Show($"Fehler beim Aktualisieren des Gesamtpreises für Beleg-ID {belegID}.",
+                        "Update Gesamtpreis-Fehler",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
             else
@@ -249,73 +264,73 @@ namespace Parfüm2025
             _SetzeRechnungsDetailsDaten();
         }
 
-        private void _ErstellePdfVonParfuem()
-        {
-            // Pfad zum Desktop des aktuellen Benutzers
-            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        //private void _ErstellePdfVonParfuem()
+        //{
+        //    // Pfad zum Desktop des aktuellen Benutzers
+        //    string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            // Name und Pfad der PDF-Datei
-            string fileName = _kundenname + "_Rechnungsdetails.pdf";
-            string filePath = Path.Combine(desktopPath, fileName);
+        //    // Name und Pfad der PDF-Datei
+        //    string fileName = _kundenname + "_Rechnungsdetails.pdf";
+        //    string filePath = Path.Combine(desktopPath, fileName);
 
-            try
-            {
-                // PDF speichern
-                using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-                {
-                    using (Document pdfDoc = new Document())
-                    {
-                        PdfWriter.GetInstance(pdfDoc, stream);
-                        pdfDoc.Open();
+        //    try
+        //    {
+        //        // PDF speichern
+        //        using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+        //        {
+        //            using (Document pdfDoc = new Document())
+        //            {
+        //                PdfWriter.GetInstance(pdfDoc, stream);
+        //                pdfDoc.Open();
 
-                        // Erstelle eine Tabelle mit 2 Spalten (Parfümnummer und Parfümname)
-                        PdfPTable table = new PdfPTable(2);
-                        table.WidthPercentage = 100;
+        //                // Erstelle eine Tabelle mit 2 Spalten (Parfümnummer und Parfümname)
+        //                PdfPTable table = new PdfPTable(2);
+        //                table.WidthPercentage = 100;
 
-                        // Füge Header zur Tabelle hinzu
-                        table.AddCell("Parfümnummer");
-                        table.AddCell("VerkaufsMenge");
+        //                // Füge Header zur Tabelle hinzu
+        //                table.AddCell("Parfümnummer");
+        //                table.AddCell("VerkaufsMenge");
 
 
-                        // Füge die Daten aus dem DataGridView hinzu (Parfümnummer und Name)
-                        foreach (DataGridViewRow row in dgvRechnungsdetails.Rows)
-                        {
-                            if (!row.IsNewRow) // Leere Zeilen überspringen
-                            {
-                                // Überprüfen, ob die Werte in der jeweiligen Spalte vorhanden sind
-                                var parfuemNummer = row.Cells["parfümnummer"]?.Value?.ToString();
-                                var parfuemMarke = row.Cells["verkaufsMenge"]?.Value.ToString();
+        //                // Füge die Daten aus dem DataGridView hinzu (Parfümnummer und Name)
+        //                foreach (DataGridViewRow row in dgvRechnungsdetails.Rows)
+        //                {
+        //                    if (!row.IsNewRow) // Leere Zeilen überspringen
+        //                    {
+        //                        // Überprüfen, ob die Werte in der jeweiligen Spalte vorhanden sind
+        //                        var parfuemNummer = row.Cells["parfümnummer"]?.Value?.ToString();
+        //                        var parfuemMarke = row.Cells["verkaufsMenge"]?.Value.ToString();
 
-                                if (!string.IsNullOrEmpty(parfuemNummer) && !string.IsNullOrEmpty(parfuemMarke))
-                                {
-                                    // Füge Parfümnummer und Parfümname zur Tabelle hinzu
-                                    table.AddCell(parfuemNummer);
-                                    table.AddCell(parfuemMarke);
-                                }
+        //                        if (!string.IsNullOrEmpty(parfuemNummer) && !string.IsNullOrEmpty(parfuemMarke))
+        //                        {
+        //                            // Füge Parfümnummer und Parfümname zur Tabelle hinzu
+        //                            table.AddCell(parfuemNummer);
+        //                            table.AddCell(parfuemMarke);
+        //                        }
                                     
-                            }
-                        }
+        //                    }
+        //                }
 
-                        // Füge die Tabelle zur PDF hinzu
-                        pdfDoc.Add(table);
+        //                // Füge die Tabelle zur PDF hinzu
+        //                pdfDoc.Add(table);
 
-                        pdfDoc.Close();
-                    }
-                }
+        //                pdfDoc.Close();
+        //            }
+        //        }
 
-                // Erfolgreiche Speicherung anzeigen
-                MessageBox.Show($"Die Datei wurde erfolgreich auf dem Desktop gespeichert:\n{filePath}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                // Fehlerbehandlung
-                MessageBox.Show($"Fehler beim Speichern der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        // Erfolgreiche Speicherung anzeigen
+        //        MessageBox.Show($"Die Datei wurde erfolgreich auf dem Desktop gespeichert:\n{filePath}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Fehlerbehandlung
+        //        MessageBox.Show($"Fehler beim Speichern der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void button2_Click(object sender, EventArgs e)
         {
-            _ErstellePdfVonParfuem();
+           // _ErstellePdfVonParfuem();
         }
     }
 }

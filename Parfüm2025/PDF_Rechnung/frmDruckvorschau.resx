@@ -135,7 +135,7 @@
   <metadata name="Gesamt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="label28.Text" xml:space="preserve">
+  <data name="lblFirmadaten.Text" xml:space="preserve">
     <value>Alowidat Parfümerie
 Obere Königsstr 22
 34117 Kassel

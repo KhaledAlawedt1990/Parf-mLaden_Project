@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "py3Tq3nNDbI=",
+  "dgSpecHash": "WhmqihnA3Fg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\Parfüm2025.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hamssa\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
-    "C:\\Users\\Hamssa\\.nuget\\packages\\itext\\9.0.0\\itext.9.0.0.nupkg.sha512",
-    "C:\\Users\\Hamssa\\.nuget\\packages\\itext.commons\\9.0.0\\itext.commons.9.0.0.nupkg.sha512",
-    "C:\\Users\\Hamssa\\.nuget\\packages\\itext7\\9.0.0\\itext7.9.0.0.nupkg.sha512",
+    "C:\\Users\\Hamssa\\.nuget\\packages\\itext\\9.1.0\\itext.9.1.0.nupkg.sha512",
+    "C:\\Users\\Hamssa\\.nuget\\packages\\itext.commons\\9.1.0\\itext.commons.9.1.0.nupkg.sha512",
+    "C:\\Users\\Hamssa\\.nuget\\packages\\itext7\\9.1.0\\itext7.9.1.0.nupkg.sha512",
     "C:\\Users\\Hamssa\\.nuget\\packages\\itextsharp\\5.5.13.4\\itextsharp.5.5.13.4.nupkg.sha512",
     "C:\\Users\\Hamssa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Hamssa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",

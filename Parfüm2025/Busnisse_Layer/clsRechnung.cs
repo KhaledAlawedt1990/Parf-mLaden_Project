@@ -23,9 +23,9 @@ namespace Busnisse_Layer
             get { return clsKunde.FindKundeByID(this.kundeID); }
         }
         public DateTime erstellungsDatum { get; set; }
-        public float gesammtSumme { get; set; }
+        public decimal gesammtSumme { get; set; }
 
-        private clsRechnung(int belegID, int kundeID, DateTime erstellungsdatum, float gesamtSumme)
+        private clsRechnung(int belegID, int kundeID, DateTime erstellungsdatum, decimal gesamtSumme)
         {
             this.belegID = belegID;
             this.kundeID = kundeID;
@@ -77,7 +77,7 @@ namespace Busnisse_Layer
         }
         public static clsRechnung Find(int belegID)
         {
-            int kundeID = -1; DateTime erstellungsDatum = DateTime.Now; float gesammtSumme = 0;
+            int kundeID = -1; DateTime erstellungsDatum = DateTime.Now; decimal gesammtSumme = 0;
 
             if (clsRechnugDatenzugriff.GetRechnungByID(belegID, ref kundeID, ref erstellungsDatum, ref gesammtSumme))
             {
@@ -89,7 +89,7 @@ namespace Busnisse_Layer
 
         public static clsRechnung FindByKundeID(int kundeID)
         {
-            int belegID = -1; DateTime erstellungsDatum = DateTime.Now; float gesammtSumme = 0;
+            int belegID = -1; DateTime erstellungsDatum = DateTime.Now; decimal gesammtSumme = 0;
 
             if (clsRechnugDatenzugriff.GetRechnungByKundeID(ref belegID, kundeID, ref erstellungsDatum, ref gesammtSumme))
             {
@@ -107,6 +107,15 @@ namespace Busnisse_Layer
         public bool Delete()
         {
             return clsRechnugDatenzugriff.DeleteRechnung(this.belegID);
+        }
+
+        public static bool UpdateGesamtPreis(int belegID, decimal GesamtPreis)
+        {
+            return clsRechnugDatenzugriff.UpdateGesatmPreis(belegID, GesamtPreis);
+        }
+        public static DataTable GetBestandsaufnahmeVonKunden(int kundeID)
+        {
+            return clsRechnugDatenzugriff.GetBestandsaufnahmeVonKunden(kundeID);
         }
     }
 }

@@ -149,7 +149,6 @@ namespace Parfüm2025
 
             isValid = _ValidiereEinFeld(txtParfümName, "ParfümName");
             isValid &= _ValidiereEinFeld(txtParfümCode, "ParfümCode");
-            isValid &= _ValidiereEinFeld(txtMengeOfHauptBachNummer, "EinkaufsMenge");
             isValid &= _ValidiereEinFeld(txtPreiskategorie, "PreisKategorie");
             return isValid; // Gibt zurück, ob alle Felder gültig sind
         }

@@ -77,7 +77,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.ParfuemVerwaltung))
             {
                 frmpafümAnsicht frm = new frmpafümAnsicht();
-                frm.ShowDialog() ;
+                frm.Show() ;
             }
             else
             {
@@ -93,7 +93,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.KundenVerwaltung))
             {
                 frmKundeListe frm = new frmKundeListe();
-                frm.ShowDialog();
+                frm.Show();
             }
             else
                 MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
@@ -107,7 +107,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.MitarbeiterVerwaltung))
             {
                 frmMitarbeiterListe frm = new frmMitarbeiterListe();
-                frm.ShowDialog();
+                frm.Show();
             }
             else
                 MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
@@ -121,7 +121,7 @@ namespace Parfüm2025
             if (clsPermissionService.HatBerechtigung(clsGlobaleKlasse.currentUser.permissionNum, clsPermissionService.KundenVerwaltung))
             {
                 frmUserListe frm = new frmUserListe();
-                frm.ShowDialog();
+                frm.Show();
             }
             else
                 MessageBox.Show("Sie haben nicht die erforderlichen Berechtigungen, um auf diese Funktion zuzugreifen. Bitte wenden Sie sich an den Administrator, um die erforderlichen Rechte zu erhalten.",
@@ -252,6 +252,12 @@ namespace Parfüm2025
         private void frmHaupBildschrimAnsicht_Load(object sender, EventArgs e)
         {
             _BackupDatabase();
+        }
+
+        private void produkeVerwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProdukts frm = new frmProdukts();
+            frm.Show();
         }
     }
 }

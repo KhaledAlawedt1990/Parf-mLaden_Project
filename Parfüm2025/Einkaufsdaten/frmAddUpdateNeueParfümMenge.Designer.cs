@@ -96,7 +96,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 518);
+            this.groupBox1.Size = new System.Drawing.Size(481, 502);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Einkauf-daten";
@@ -121,11 +121,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 372);
+            this.label11.Location = new System.Drawing.Point(7, 374);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(183, 20);
+            this.label11.Size = new System.Drawing.Size(181, 20);
             this.label11.TabIndex = 24;
-            this.label11.Text = "LagerBestandSekundär:";
+            this.label11.Text = "SekundärLagerbestand:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // textBox3
@@ -164,11 +164,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 259);
+            this.label9.Location = new System.Drawing.Point(69, 259);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 20);
+            this.label9.Size = new System.Drawing.Size(121, 20);
             this.label9.TabIndex = 19;
-            this.label9.Text = "SekundärBatchNummer:";
+            this.label9.Text = "SekundärLotNr:";
             // 
             // btnKategorieDetails
             // 
@@ -290,9 +290,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(32, 339);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 20);
+            this.label5.Size = new System.Drawing.Size(156, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "LagerBestandHaupt:";
+            this.label5.Text = "HauptLagerbestand:";
             // 
             // label4
             // 
@@ -306,11 +306,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 175);
+            this.label3.Location = new System.Drawing.Point(94, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 20);
+            this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "HauptBatchNummer:";
+            this.label3.Text = "HauptLotNr:";
             // 
             // label2
             // 

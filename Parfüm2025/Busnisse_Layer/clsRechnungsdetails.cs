@@ -25,26 +25,16 @@ namespace Busnisse_Layer
         public int parfümNummer { get; set; }    
         public float verkaufsMenge{ get; set; }
         public float lagerBestandHaupt { get; set; }
-        public float normalPreis { get; set; }
-        public float gesamtPreis { get; set; }
+        public decimal normalPreis { get; set; }
+        public decimal gesamtPreis { get; set; }
         public bool lagerbestandAktualisiert { get; set; }
         public clsEinkauf einkaufInofs { get; set; }
         private clsRechnungsdetails(int detailID, int belegID, int parfümNummer, float verkaufsMenge,
-            float lagerbestandHaupt, float normalPreis, float gesamtPreis, bool lagerbestandAktualisiert)
+            float lagerbestandHaupt, decimal normalPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
         {
             this.detailID = detailID;
             this.belegID = belegID;
             this.parfümNummer = parfümNummer;
-            this.einkaufInofs = clsEinkauf.FindEinkaufDatenByParfümNummer(parfümNummer);
-            if (this.einkaufInofs != null)
-            {
-                string sekundärBatchNummer = this.einkaufInofs.sekundäreBatchNummer;
-            }
-            else
-            {
-                // Fehlerbehandlung oder Standardwert setzen
-                string sekundärBatchNummer = "Nicht vorhanden";
-            }
             this.verkaufsMenge = verkaufsMenge;
             this.lagerBestandHaupt = lagerbestandHaupt;
             this.normalPreis = normalPreis;
@@ -97,8 +87,8 @@ namespace Busnisse_Layer
                                 parfümNummer = (int)reader["parfümNummer"],
                                 verkaufsMenge = (float)reader["verkaufsMenge"],
                                 lagerBestandHaupt = (float)reader["lagerBestandHaupt"],
-                                normalPreis = (float)reader["normalPreis"],
-                                gesamtPreis = (float)reader["gesamtPreis"],
+                                normalPreis = (decimal)reader["normalPreis"],
+                                gesamtPreis = (decimal)reader["gesamtPreis"],
                                 lagerbestandAktualisiert = (bool)reader["lagerbestandAktualisiert"]
                             });
                         }
@@ -114,7 +104,7 @@ namespace Busnisse_Layer
         public static clsRechnungsdetails Find(int detailID)
         {
             int belegID = -1;  int parfümNummer = -1; float verkaufsMenge = 0, lagerbestandHaupt = 0;
-            float normalPreis = 0, gesamtPreis = 0; bool lagerbestandAktualisiert = false;
+            decimal normalPreis = 0, gesamtPreis = 0; bool lagerbestandAktualisiert = false;
 
             if (clsRechnungsdetailsDatenzugriff.GetRechnungsDetailsByID(detailID, ref belegID, ref parfümNummer, ref verkaufsMenge,
                                                   ref lagerbestandHaupt, ref normalPreis, ref gesamtPreis, ref lagerbestandAktualisiert))

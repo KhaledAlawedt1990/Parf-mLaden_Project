@@ -14,7 +14,7 @@ namespace Data_Layer
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
         public static string connectionString { get { return ConnectionString; } }
 
-        public static bool GetRechnungByID(int belegID, ref int kundeID, ref DateTime erstellungsdatum, ref float gesamtSumme)
+        public static bool GetRechnungByID(int belegID, ref int kundeID, ref DateTime erstellungsdatum, ref decimal gesamtSumme)
         {
 
             bool isfound = false;
@@ -42,7 +42,7 @@ namespace Data_Layer
                                 if (reader["GesamtSumme"] == DBNull.Value)
                                     gesamtSumme = 0;
                                 else
-                                   gesamtSumme = (float)reader["GesamtSumme"];
+                                   gesamtSumme = (decimal)reader["GesamtSumme"];
                             }
                         }
                     }
@@ -56,7 +56,44 @@ namespace Data_Layer
 
             return isfound;
         }
-        public static bool GetRechnungByKundeID(ref int belegID, int kundeID, ref DateTime erstellungsdatum, ref float gesamtSumme)
+        public static DataTable GetBestandsaufnahmeVonKunden(int kundeID)
+        {
+
+            DataTable dt = new DataTable();
+
+            string abfrage = @"SP_Get_BestandsaufnahmeVonKunde ";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(abfrage, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@KundeID", kundeID);
+
+                        try
+                        {
+                            connection.Open();
+                            using (SqlDataAdapter da = new SqlDataAdapter(command))
+                            {
+                                da.Fill(dt);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Fehler: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw;
+            }
+
+            return dt;
+        }
+        public static bool GetRechnungByKundeID(ref int belegID, int kundeID, ref DateTime erstellungsdatum, ref decimal gesamtSumme)
         {
 
             bool isfound = false;
@@ -80,7 +117,7 @@ namespace Data_Layer
 
                                 belegID = (int)reader["belegID"];
                                 erstellungsdatum = (DateTime)reader["ErstellungsDatum"];
-                                gesamtSumme = (float)reader["GesamtSumme"];
+                                gesamtSumme = (decimal)reader["GesamtSumme"];
                             }
                         }
                     }
@@ -95,7 +132,7 @@ namespace Data_Layer
             return isfound;
         }
 
-        public static  int NeueRechnungErstellen(int KundeID, float gesamtSumme)
+        public static  int NeueRechnungErstellen(int KundeID, decimal gesamtSumme)
         {
             int belegID = -1;
             string query = @"INSERT INTO Rechnung (KundeID, Erstellungsdatum, GesamtSumme)
@@ -126,7 +163,7 @@ namespace Data_Layer
             return belegID;
         }
 
-        public static bool UpdateRechnung(int belegID, int KundeID, float GesamtSumme)
+        public static bool UpdateRechnung(int belegID, int KundeID, decimal GesamtSumme)
         {
             int rowAffected = 0;
             string query = @"Update Rechnung Set 
@@ -144,6 +181,31 @@ namespace Data_Layer
                     command.Parameters.AddWithValue("@belegID", belegID);
                     command.Parameters.AddWithValue("@KundeID", KundeID);
                     command.Parameters.AddWithValue("@Erstellungsdatum", DateTime.Now);
+                    command.Parameters.AddWithValue("@GesamtSumme", GesamtSumme);
+
+                    rowAffected = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return rowAffected > 0;
+        }
+        public static bool UpdateGesatmPreis(int belegID, decimal GesamtSumme)
+        {
+            int rowAffected = 0;
+            string query = @"Update Rechnung Set 
+                                                GesamtSumme += @GesamtSumme
+                                       Where belegID = @belegID; ";
+
+            try
+            {
+                using (var connection = new SqlConnection(ConnectionString))
+                using (var command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    command.Parameters.AddWithValue("@belegID", belegID);
                     command.Parameters.AddWithValue("@GesamtSumme", GesamtSumme);
 
                     rowAffected = command.ExecuteNonQuery();

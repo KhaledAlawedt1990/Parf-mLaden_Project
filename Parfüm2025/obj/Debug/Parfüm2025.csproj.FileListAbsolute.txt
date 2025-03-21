@@ -234,3 +234,6 @@ C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.fr
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmPreisKategorie.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmPreisKategorieListe.resources
 C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmRechnungsDetailsListe.resources
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmProdukts.resources
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmAddUpdateProdukts.resources
+C:\Users\Hamssa\Desktop\Parf-mLaden_Project\Parfüm2025\obj\Debug\Parfüm2025.frmLiefereProdukt.resources

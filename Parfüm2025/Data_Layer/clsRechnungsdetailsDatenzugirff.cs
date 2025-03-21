@@ -16,7 +16,7 @@ namespace Data_Layer
         public static  string connectionString { get { return ConnectionString; } }
 
         public static bool GetRechnungsDetailsByID(int detailsID, ref int belegID, ref int parfümNummer,
-              ref float verkaufsMenge, ref float lagerbestandHaupt, ref float normalPreis, ref float gesamtPreis, ref bool lagerbestandAktualisiert)
+              ref float verkaufsMenge, ref float lagerbestandHaupt, ref decimal normalPreis, ref decimal gesamtPreis, ref bool lagerbestandAktualisiert)
         {
 
             bool isfound = false;
@@ -41,8 +41,8 @@ namespace Data_Layer
                                 parfümNummer = (int)reader["parfümNummer"];                              
                                 verkaufsMenge = (float)reader["verkaufsMenge"];
                                 lagerbestandHaupt = (float)reader["lagerBestandHaupt"];
-                                normalPreis = (float)reader["normalPreis"];
-                                gesamtPreis = (float)reader["gesamtPreis"];
+                                normalPreis = (decimal)reader["normalPreis"];
+                                gesamtPreis = (decimal)reader["gesamtPreis"];
                                 lagerbestandAktualisiert = (bool)reader["lagerbestandAktualisiert"];
                             }
                         }
@@ -87,7 +87,7 @@ namespace Data_Layer
         }
 
         public static int AddNewRechnungsDetailsDaten(int belegID, int parfümNummer,float verkaufsMenge,
-             float lagerbestandHaupt, float normalerPreis, float gesamtPreis, bool lagerbestandAktualisiert)
+             float lagerbestandHaupt, decimal normalerPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
         {
             int detailsID = -1;
 
@@ -128,7 +128,7 @@ namespace Data_Layer
         }
 
         public static bool UpdateRechnungsDetails(int detailID, int belegID, int parfümNummer, float verkaufsMenge,
-             float lagerbestandHaupt, float normalerPreis, float gesamtPreis, bool lagerbestandAktualisiert)
+             float lagerbestandHaupt, decimal normalerPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
         {
             int RowAffected = 0;
             string abfrage = @"Update RechnungsDetails 

@@ -48,224 +48,251 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsDruckerService.cs" />
-    <Compile Include="clsGlobaleKlasse.cs" />
-    <Compile Include="frmAddUpdateRechnung.cs">
+    <Compile Include="frmAddUpdatProdukts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateRechnung.Designer.cs">
+    <Compile Include="frmAddUpdatProdukts.Designer.cs">
+      <DependentUpon>frmAddUpdatProdukts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiefereProdukt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiefereProdukt.Designer.cs">
+      <DependentUpon>frmLiefereProdukt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdukts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdukts.Designer.cs">
+      <DependentUpon>frmProdukts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Golbale\clsDruckerService.cs" />
+    <Compile Include="Golbale\clsGlobaleKlasse.cs" />
+    <Compile Include="Verkaufsdaten\frmAddUpdateRechnung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verkaufsdaten\frmAddUpdateRechnung.Designer.cs">
       <DependentUpon>frmAddUpdateRechnung.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDruckvorschau.cs">
+    <Compile Include="PDF_Rechnung\frmDruckvorschau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDruckvorschau.Designer.cs">
+    <Compile Include="PDF_Rechnung\frmDruckvorschau.Designer.cs">
       <DependentUpon>frmDruckvorschau.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHaupBildschrimAnsicht.cs">
+    <Compile Include="MainScreen\frmHaupBildschrimAnsicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHaupBildschrimAnsicht.Designer.cs">
+    <Compile Include="MainScreen\frmHaupBildschrimAnsicht.Designer.cs">
       <DependentUpon>frmHaupBildschrimAnsicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrAddUpdatePerson.cs">
+    <Compile Include="CtrPerson\ctrAddUpdatePerson.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrAddUpdatePerson.Designer.cs">
+    <Compile Include="CtrPerson\ctrAddUpdatePerson.Designer.cs">
       <DependentUpon>ctrAddUpdatePerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateNeueKunde.cs">
+    <Compile Include="Kunden\frmAddUpdateNeueKunde.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateNeueKunde.Designer.cs">
+    <Compile Include="Kunden\frmAddUpdateNeueKunde.Designer.cs">
       <DependentUpon>frmAddUpdateNeueKunde.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateNeueMitarbeiter.cs">
+    <Compile Include="Mitarbeiter\frmAddUpdateNeueMitarbeiter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateNeueMitarbeiter.Designer.cs">
+    <Compile Include="Mitarbeiter\frmAddUpdateNeueMitarbeiter.Designer.cs">
       <DependentUpon>frmAddUpdateNeueMitarbeiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateNeueParfümMenge.cs">
+    <Compile Include="Einkaufsdaten\frmAddUpdateNeueParfümMenge.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateNeueParfümMenge.Designer.cs">
+    <Compile Include="Einkaufsdaten\frmAddUpdateNeueParfümMenge.Designer.cs">
       <DependentUpon>frmAddUpdateNeueParfümMenge.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateNeueUser.cs">
+    <Compile Include="Users\frmAddUpdateNeueUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateNeueUser.Designer.cs">
+    <Compile Include="Users\frmAddUpdateNeueUser.Designer.cs">
       <DependentUpon>frmAddUpdateNeueUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateRechnungsDetails.cs">
+    <Compile Include="Verkaufsdaten\frmAddUpdateRechnungsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateRechnungsDetails.Designer.cs">
+    <Compile Include="Verkaufsdaten\frmAddUpdateRechnungsDetails.Designer.cs">
       <DependentUpon>frmAddUpdateRechnungsDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKundeListe.cs">
+    <Compile Include="Kunden\frmKundeListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKundeListe.Designer.cs">
+    <Compile Include="Kunden\frmKundeListe.Designer.cs">
       <DependentUpon>frmKundeListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEinkaufsDatenListe.cs">
+    <Compile Include="Einkaufsdaten\frmEinkaufsDatenListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEinkaufsDatenListe.Designer.cs">
+    <Compile Include="Einkaufsdaten\frmEinkaufsDatenListe.Designer.cs">
       <DependentUpon>frmEinkaufsDatenListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKundenSucheAnsicht.cs">
+    <Compile Include="Kunden\frmKundenSucheAnsicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKundenSucheAnsicht.Designer.cs">
+    <Compile Include="Kunden\frmKundenSucheAnsicht.Designer.cs">
       <DependentUpon>frmKundenSucheAnsicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKundeSucheFilter.cs">
+    <Compile Include="Kunden\frmKundeSucheFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKundeSucheFilter.Designer.cs">
+    <Compile Include="Kunden\frmKundeSucheFilter.Designer.cs">
       <DependentUpon>frmKundeSucheFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLizenzEigabeBildschirm.cs">
+    <Compile Include="Golbale\frmLizenzEigabeBildschirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLizenzEigabeBildschirm.Designer.cs">
+    <Compile Include="Golbale\frmLizenzEigabeBildschirm.Designer.cs">
       <DependentUpon>frmLizenzEigabeBildschirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogginScreen.cs">
+    <Compile Include="LoginScreen\frmLogginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogginScreen.Designer.cs">
+    <Compile Include="LoginScreen\frmLogginScreen.Designer.cs">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMitarbeiterListe.cs">
+    <Compile Include="Mitarbeiter\frmMitarbeiterListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMitarbeiterListe.Designer.cs">
+    <Compile Include="Mitarbeiter\frmMitarbeiterListe.Designer.cs">
       <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOverly.cs">
+    <Compile Include="Golbale\frmOverly.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOverly.Designer.cs">
+    <Compile Include="Golbale\frmOverly.Designer.cs">
       <DependentUpon>frmOverly.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmParfümAnsicht.cs">
+    <Compile Include="Parfuem\frmParfümAnsicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmParfümAnsicht.Designer.cs">
+    <Compile Include="Parfuem\frmParfümAnsicht.Designer.cs">
       <DependentUpon>frmParfümAnsicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUpdateNewPerfum.cs">
+    <Compile Include="Parfuem\frmAddUpdateNewPerfum.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdateNewPerfum.Designer.cs">
+    <Compile Include="Parfuem\frmAddUpdateNewPerfum.Designer.cs">
       <DependentUpon>frmAddUpdateNewPerfum.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPreisKategorie.cs">
+    <Compile Include="Preise\frmPreisKategorie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPreisKategorie.Designer.cs">
+    <Compile Include="Preise\frmPreisKategorie.Designer.cs">
       <DependentUpon>frmPreisKategorie.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPreisKategorieListe.cs">
+    <Compile Include="Preise\frmPreisKategorieListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPreisKategorieListe.Designer.cs">
+    <Compile Include="Preise\frmPreisKategorieListe.Designer.cs">
       <DependentUpon>frmPreisKategorieListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRechnungsDetailsListe.cs">
+    <Compile Include="Verkaufsdaten\frmRechnungsDetailsListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRechnungsDetailsListe.Designer.cs">
+    <Compile Include="Verkaufsdaten\frmRechnungsDetailsListe.Designer.cs">
       <DependentUpon>frmRechnungsDetailsListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserListe.cs">
+    <Compile Include="Users\frmUserListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserListe.Designer.cs">
+    <Compile Include="Users\frmUserListe.Designer.cs">
       <DependentUpon>frmUserListe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRechnungenListe.cs">
+    <Compile Include="Verkaufsdaten\frmRechnungenListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRechnungenListe.Designer.cs">
+    <Compile Include="Verkaufsdaten\frmRechnungenListe.Designer.cs">
       <DependentUpon>frmRechnungenListe.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAddUpdateRechnung.resx">
+    <EmbeddedResource Include="frmAddUpdatProdukts.resx">
+      <DependentUpon>frmAddUpdatProdukts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiefereProdukt.resx">
+      <DependentUpon>frmLiefereProdukt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdukts.resx">
+      <DependentUpon>frmProdukts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verkaufsdaten\frmAddUpdateRechnung.resx">
       <DependentUpon>frmAddUpdateRechnung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDruckvorschau.resx">
+    <EmbeddedResource Include="PDF_Rechnung\frmDruckvorschau.resx">
       <DependentUpon>frmDruckvorschau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHaupBildschrimAnsicht.resx">
+    <EmbeddedResource Include="MainScreen\frmHaupBildschrimAnsicht.resx">
       <DependentUpon>frmHaupBildschrimAnsicht.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrAddUpdatePerson.resx">
+    <EmbeddedResource Include="CtrPerson\ctrAddUpdatePerson.resx">
       <DependentUpon>ctrAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateNeueKunde.resx">
+    <EmbeddedResource Include="Kunden\frmAddUpdateNeueKunde.resx">
       <DependentUpon>frmAddUpdateNeueKunde.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateNeueMitarbeiter.resx">
+    <EmbeddedResource Include="Mitarbeiter\frmAddUpdateNeueMitarbeiter.resx">
       <DependentUpon>frmAddUpdateNeueMitarbeiter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateNeueParfümMenge.resx">
+    <EmbeddedResource Include="Einkaufsdaten\frmAddUpdateNeueParfümMenge.resx">
       <DependentUpon>frmAddUpdateNeueParfümMenge.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateNeueUser.resx">
+    <EmbeddedResource Include="Users\frmAddUpdateNeueUser.resx">
       <DependentUpon>frmAddUpdateNeueUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateRechnungsDetails.resx">
+    <EmbeddedResource Include="Verkaufsdaten\frmAddUpdateRechnungsDetails.resx">
       <DependentUpon>frmAddUpdateRechnungsDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKundeListe.resx">
+    <EmbeddedResource Include="Kunden\frmKundeListe.resx">
       <DependentUpon>frmKundeListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEinkaufsDatenListe.resx">
+    <EmbeddedResource Include="Einkaufsdaten\frmEinkaufsDatenListe.resx">
       <DependentUpon>frmEinkaufsDatenListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKundenSucheAnsicht.resx">
+    <EmbeddedResource Include="Kunden\frmKundenSucheAnsicht.resx">
       <DependentUpon>frmKundenSucheAnsicht.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKundeSucheFilter.resx">
+    <EmbeddedResource Include="Kunden\frmKundeSucheFilter.resx">
       <DependentUpon>frmKundeSucheFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLizenzEigabeBildschirm.resx">
+    <EmbeddedResource Include="Golbale\frmLizenzEigabeBildschirm.resx">
       <DependentUpon>frmLizenzEigabeBildschirm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogginScreen.resx">
+    <EmbeddedResource Include="LoginScreen\frmLogginScreen.resx">
       <DependentUpon>frmLogginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMitarbeiterListe.resx">
+    <EmbeddedResource Include="Mitarbeiter\frmMitarbeiterListe.resx">
       <DependentUpon>frmMitarbeiterListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOverly.resx">
+    <EmbeddedResource Include="Golbale\frmOverly.resx">
       <DependentUpon>frmOverly.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmParfümAnsicht.resx">
+    <EmbeddedResource Include="Parfuem\frmParfümAnsicht.resx">
       <DependentUpon>frmParfümAnsicht.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUpdateNewPerfum.resx">
+    <EmbeddedResource Include="Parfuem\frmAddUpdateNewPerfum.resx">
       <DependentUpon>frmAddUpdateNewPerfum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPreisKategorie.resx">
+    <EmbeddedResource Include="Preise\frmPreisKategorie.resx">
       <DependentUpon>frmPreisKategorie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPreisKategorieListe.resx">
+    <EmbeddedResource Include="Preise\frmPreisKategorieListe.resx">
       <DependentUpon>frmPreisKategorieListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRechnungsDetailsListe.resx">
+    <EmbeddedResource Include="Verkaufsdaten\frmRechnungsDetailsListe.resx">
       <DependentUpon>frmRechnungsDetailsListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUserListe.resx">
+    <EmbeddedResource Include="Users\frmUserListe.resx">
       <DependentUpon>frmUserListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRechnungenListe.resx">
+    <EmbeddedResource Include="Verkaufsdaten\frmRechnungenListe.resx">
       <DependentUpon>frmRechnungenListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -384,7 +411,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="itext7">
-      <Version>9.0.0</Version>
+      <Version>9.1.0</Version>
     </PackageReference>
     <PackageReference Include="iTextSharp">
       <Version>5.5.13.4</Version>
@@ -502,6 +529,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\emplyees.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produkts.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

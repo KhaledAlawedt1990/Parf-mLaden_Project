@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Windows.ApplicationModel.UserDataTasks;
+using Windows.ApplicationModel.VoiceCommands;
 
 
 
@@ -30,34 +31,13 @@ namespace Parfüm2025
         }
         private void _SetzteRechnungsdaten()
         {
-            float gesamtSumme = 0;
             _dtRechnungsdaten = clsRechnung.GetRechnungsRecordAnzahlProSeite(300, 1);
-            _bindingSource.DataSource = _dtRechnungsdaten;
-            dgvVerkaufsDaten.DataSource = _bindingSource;
-
-            //Wie Bekommen die Gesamtsumme aus der Liste für alle Gesamtpreise.
-            foreach (DataRow row in _dtRechnungsdaten.Rows)
+            if (_dtRechnungsdaten != null && _dtRechnungsdaten.Rows.Count > 0)
             {
-                if (row["BelegID"] != DBNull.Value)
-                {
-                    int belegID = Convert.ToInt32(row["BelegID"]);
-                    List<clsRechnungsdetails> rechnugnsdetails = clsRechnungsdetails.LadeRechnungsDetails(belegID);
-
-                    foreach (var element in rechnugnsdetails)
-                    {
-                        gesamtSumme += element.gesamtPreis;
-                    }
-
-                    row["GesamtSumme"] = gesamtSumme;
-                }
-
-                gesamtSumme = 0;
+                _bindingSource.DataSource = _dtRechnungsdaten;
+                dgvVerkaufsDaten.DataSource = _bindingSource;
+                lblRecord.Text = _bindingSource.Count.ToString();
             }
-
-            // Setze die GesamtSumme 
-
-            //  _setzePassendeFarbeFürLagerbestand();
-            lblRecord.Text = _bindingSource.Count.ToString();
         }
         private void btnAktualisereVerkaufsDaten_Click(object sender, EventArgs e)
         {
@@ -241,6 +221,43 @@ namespace Parfüm2025
             frm.ShowDialog();
 
             _SetzteRechnungsdaten();
+        }
+
+        private void _LoadBestansaufnahmeVonKunden()
+        {
+            string kundenName = dgvVerkaufsDaten.CurrentRow.Cells[1].Value.ToString();
+            int kundenID = clsKunde.FindKundeByPersonName(kundenName).kundeID;
+
+            DataTable dt = clsRechnung.GetBestandsaufnahmeVonKunden(kundenID);
+            if(dt != null && dt.Rows.Count > 0)
+            {
+                txtJahr.Text = dt.Rows[0]["Jahr"].ToString();
+                txtVollname.Text = dt.Rows[0]["Vollname"].ToString();
+                txtGesamtSumme.Text = dt.Rows[0]["Gesamtsumme"].ToString();
+                txtAnzahlRechnung.Text = dt.Rows[0]["AnzahlRechnungen"].ToString();
+            }
+        }
+        private void seheBestandsaufnahmeVomKundenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _LoadBestansaufnahmeVonKunden();
+        }
+
+        private void _RemoveDatan()
+        {
+            txtJahr.Clear();
+            txtVollname.Clear();
+            txtGesamtSumme.Clear();
+            txtAnzahlRechnung.Clear();
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            _RemoveDatan();
+        }
+
+        private void btnKundeBestandAnzeigen_Click(object sender, EventArgs e)
+        {
+            _RemoveDatan();
+            _LoadBestansaufnahmeVonKunden();
         }
     }
 }

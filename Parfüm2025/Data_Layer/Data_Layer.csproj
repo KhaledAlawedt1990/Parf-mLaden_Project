@@ -48,6 +48,7 @@
     <Compile Include="clsParfümDatenzugriff.cs" />
     <Compile Include="clsPersonDatenzugriff.cs" />
     <Compile Include="clsPreisDatenzugriff.cs" />
+    <Compile Include="clsProduktDatenzugriff.cs" />
     <Compile Include="clsRechnugDatenzugriff.cs" />
     <Compile Include="clsUserDatenzugriff.cs" />
     <Compile Include="clsRechnungsdetailsDatenzugirff.cs" />
@@ -58,6 +59,9 @@
       <Project>{0461c194-ce2d-40a6-a75e-fdf9a29e6383}</Project>
       <Name>HilfsMethoden</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SPTables\Produktes_SPs.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

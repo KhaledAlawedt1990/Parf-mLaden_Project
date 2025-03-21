@@ -38,11 +38,10 @@ namespace Data_Layer
 
                                 parfümName = (string)reader["parfümName"];
                                 parfümCode = (string)reader["parfümCode"];
-                                hauptBatchNummer = reader["hauptBatchNummer"] != DBNull.Value ? (string)reader["hauptBatchNummer"] : null;
-                                sekundäreBatchNummer = reader["sekundäreBatchNummer"] != DBNull.Value ? (string)reader["sekundäreBatchNummer"] : null;
-                                lagerBestandHaupt = reader["lagerBestandHaupt"] != DBNull.Value ? Convert.ToSingle(reader["lagerBestandHaupt"]): (float?)null;
-
-                                lagerBestandSekundär = reader["lagerBestandSekundär"] != DBNull.Value ? Convert.ToSingle(reader["lagerBestandSekundär"]): (float?)null;
+                                hauptBatchNummer = reader["HauptLotNr"] != DBNull.Value ? (string)reader["HauptLotNr"] : null;
+                                sekundäreBatchNummer = reader["SekundärLotNr"] != DBNull.Value ? (string)reader["SekundärLotNr"] : null;
+                                lagerBestandHaupt = reader["HauptLagerbestand"] != DBNull.Value ? Convert.ToSingle(reader["HauptLagerbestand"]) : (float?)null;
+                                lagerBestandSekundär = reader["SekundärLagerbestand"] != DBNull.Value ? Convert.ToSingle(reader["SekundärLagerbestand"]): (float?)null;
                                 preisKategorie = (int)reader["preisKategorie"];
                                 erstellungsDatum = (DateTime)reader["erstellungsDatum"];
                             }
@@ -83,10 +82,10 @@ namespace Data_Layer
 
                                 parfümNummer = (int)reader["parfümNummer"];
                                 parfümCode = (string)reader["parfümCode"];
-                                hauptBatchNummer = reader["hauptBatchNummer"] != DBNull.Value ? (string)reader["hauptBatchNummer"] : null;
-                                sekundäreBatchNummer = reader["sekundäreBatchNummer"] != DBNull.Value ? (string)reader["sekundäreBatchNummer"] : null;
-                                lagerBestandHaupt = reader["lagerBestandHaupt"] != DBNull.Value ? (float)reader["lagerBestandHaupt"] : (float?)null;
-                                lagerBestandSekundär = reader["lagerBestandSekundär"] != DBNull.Value ? Convert.ToSingle(reader["lagerBestandSekundär"]) : (float?)null;
+                                hauptBatchNummer = reader["HauptLotNr"] != DBNull.Value ? (string)reader["HauptLotNr"] : null;
+                                sekundäreBatchNummer = reader["SekundärLotNr"] != DBNull.Value ? (string)reader["SekundärLotNr"] : null;
+                                lagerBestandHaupt = reader["HauptLagerbestand"] != DBNull.Value ? Convert.ToSingle(reader["HauptLagerbestand"]) : (float?)null;
+                                lagerBestandSekundär = reader["SekundärLagerbestand"] != DBNull.Value ? Convert.ToSingle(reader["SekundärLagerbestand"]) : (float?)null;
                                 preisKategorie = (int)reader["preisKategorie"];
                                 erstellungsDatum = (DateTime)reader["erstellungsDatum"];
 
@@ -140,10 +139,10 @@ namespace Data_Layer
         {
             int rowAffected = 0;
 
-            string abfrage = @"Insert into Einkauf (parfümNummer,parfümName,parfümCode,hauptBatchNummer,lagerBestandHaupt, sekundäreBatchNummer
-                                             ,lagerBestandSekundär,preisKategorie, erstellungsDatum)
-                                        Values  (@parfümNummer,@parfümName,@parfümCode,@hauptBatchNummer,@lagerBestandHaupt, @sekundäreBatchNummer
-                                             ,@lagerBestandSekundär,@preisKategorie, @erstellungsDatum)";
+            string abfrage = @"Insert into Einkauf (parfümNummer,parfümName,parfümCode,HauptLotNr,HauptLagerbestand, SekundärLotNr
+                                             ,SekundärLagerbestand,preisKategorie, erstellungsDatum)
+                                        Values  (@parfümNummer,@parfümName,@parfümCode,@HauptLotNr,@HauptLagerbestand, @SekundärLotNr
+                                             ,@SekundärLagerbestand,@preisKategorie, @erstellungsDatum)";
        
             try
             {
@@ -156,10 +155,10 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
                         command.Parameters.AddWithValue("@parfümName", parfümName);
                         command.Parameters.AddWithValue("@parfümCode", parfümCode);
-                        command.Parameters.AddWithValue("@hauptBatchNummer", hauptBatchNummer ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@lagerBestandHaupt", lagerBestandHaupt ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@sekundäreBatchNummer", sekundäreBatchNummer??(object)DBNull.Value);
-                        command.Parameters.AddWithValue("@lagerBestandSekundär", lagerBestandSekundär ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@HauptLotNr", hauptBatchNummer ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@HauptLagerbestand", lagerBestandHaupt ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SekundärLotNr", sekundäreBatchNummer??(object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SekundärLagerbestand", lagerBestandSekundär ?? (object)DBNull.Value);
                         command.Parameters.AddWithValue("@preisKategorie", preisKategorie);
                         command.Parameters.AddWithValue("@erstellungsDatum", erstellungsDatum);
 
@@ -184,10 +183,10 @@ namespace Data_Layer
             string abfrage = @"Update Einkauf  Set
                                                   parfümName = @parfümName,
                                                   parfümCode  = @parfümCode,
-                                                  hauptBatchNummer= @hauptBatchNummer,
-                                                   lagerBestandHaupt= @lagerBestandHaupt,
-                                                  sekundäreBatchNummer = @sekundäreBatchNummer,
-                                                   lagerBestandSekundär = @lagerBestandSekundär,
+                                                  HauptLotNr= @HauptLotNr,
+                                                    HauptLagerbestand= @HauptLagerbestand,
+                                                    SekundärLotNr = @SekundärLotNr,
+                                                   SekundärLagerbestand = @SekundärLagerbestand,
                                                   preisKategorie = @preisKategorie,
                                                   erstellungsDatum = @erstellungsDatum
                                             Where parfümNummer = @parfümNummer";
@@ -202,10 +201,10 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
                         command.Parameters.AddWithValue("@parfümName", parfümName);
                         command.Parameters.AddWithValue("@parfümCode", parfümCode);
-                        command.Parameters.AddWithValue("@hauptBatchNummer", hauptBatchNummer ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@lagerBestandHaupt", lagerBestandHaupt ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@sekundäreBatchNummer", sekundäreBatchNummer ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@lagerBestandSekundär", lagerBestandSekundär ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@HauptLotNr", hauptBatchNummer ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@HauptLagerbestand", lagerBestandHaupt ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SekundärLotNr", sekundäreBatchNummer ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SekundärLagerbestand", lagerBestandSekundär ?? (object)DBNull.Value);
                         command.Parameters.AddWithValue("@preisKategorie", preisKategorie);
                         command.Parameters.AddWithValue("@erstellungsDatum", erstellungsDatum);
 
@@ -226,7 +225,7 @@ namespace Data_Layer
         {
             int RowAffected = 0;
             string abfrage = @"Update Einkauf  Set
-                                                  lagerBestandHaupt = @lagerBestandHaupt,
+                                                  HauptLagerbestand = @HauptLagerbestand,
                                                   erstellungsDatum = GetDate()
                                             Where parfümNummer = @parfümNummer";
             try
@@ -238,7 +237,7 @@ namespace Data_Layer
 
                         // Parameter hinzufügen
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
-                        command.Parameters.AddWithValue("@lagerBestandHaupt", lagerBestandHaupt);
+                        command.Parameters.AddWithValue("@HauptLagerbestand", lagerBestandHaupt);
 
                         connection.Open();
                         RowAffected = command.ExecuteNonQuery();
@@ -255,9 +254,9 @@ namespace Data_Layer
         {
             int RowAffected = 0;
             string abfrage = @"Update Einkauf Set
-                            lagerBestandSekundär = @lagerBestandSekundär,
-                            hauptBatchNummer = sekundäreBatchNummer,     -- Hier wird die aktuelle Sekundärnummer zur Hauptnummer
-                            sekundäreBatchNummer = NULL,          -- Sekundärnummer wird gelöscht
+                            SekundärLagerbestand = @SekundärLagerbestand,
+                            HauptLotNr = SekundärLotNr,     -- Hier wird die aktuelle Sekundärnummer zur Hauptnummer
+                            SekundärLotNr = NULL,          -- Sekundärnummer wird gelöscht
                             erstellungsDatum = GetDate()
                         Where parfümNummer = @parfümNummer";
 
@@ -269,7 +268,7 @@ namespace Data_Layer
                     {
                         // Parameter setzen
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);
-                        command.Parameters.AddWithValue("@lagerBestandSekundär", lagerBestandSekundär ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SekundärLagerbestand", lagerBestandSekundär ?? (object)DBNull.Value);
                        // command.Parameters.AddWithValue("@lagerBestandSekundär", lagerBestandSekundär ?? (object)DBNull.Value);
 
                         connection.Open();
