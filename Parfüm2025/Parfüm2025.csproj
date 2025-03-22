@@ -48,22 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAddUpdatProdukts.cs">
+    <Compile Include="Produkte\frmAddUpdatProdukts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUpdatProdukts.Designer.cs">
+    <Compile Include="Produkte\frmAddUpdatProdukts.Designer.cs">
       <DependentUpon>frmAddUpdatProdukts.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLiefereProdukt.cs">
+    <Compile Include="Produkte\frmLiefereProdukt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLiefereProdukt.Designer.cs">
+    <Compile Include="Produkte\frmLiefereProdukt.Designer.cs">
       <DependentUpon>frmLiefereProdukt.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProdukts.cs">
+    <Compile Include="Produkte\frmProdukts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProdukts.Designer.cs">
+    <Compile Include="Produkte\frmProdukts.Designer.cs">
       <DependentUpon>frmProdukts.cs</DependentUpon>
     </Compile>
     <Compile Include="Golbale\clsDruckerService.cs" />
@@ -214,13 +214,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAddUpdatProdukts.resx">
+    <EmbeddedResource Include="Produkte\frmAddUpdatProdukts.resx">
       <DependentUpon>frmAddUpdatProdukts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLiefereProdukt.resx">
+    <EmbeddedResource Include="Produkte\frmLiefereProdukt.resx">
       <DependentUpon>frmLiefereProdukt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProdukts.resx">
+    <EmbeddedResource Include="Produkte\frmProdukts.resx">
       <DependentUpon>frmProdukts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Verkaufsdaten\frmAddUpdateRechnung.resx">
