@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.parfümVerwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parfümAnsichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HinzufügeNeueParfümtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +51,6 @@
             this.hinzufügeNeuenVerkaufToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ausloggenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ausloggenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.produkeVerwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,23 @@
             this.menuStrip1.Size = new System.Drawing.Size(1542, 103);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Haupbildschirm;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1542, 783);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // parfümVerwaltungToolStripMenuItem
             // 
@@ -260,32 +277,17 @@
             this.ausloggenToolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.sign_out_32__26;
             this.ausloggenToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ausloggenToolStripMenuItem1.Name = "ausloggenToolStripMenuItem1";
-            this.ausloggenToolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.ausloggenToolStripMenuItem1.Size = new System.Drawing.Size(175, 38);
             this.ausloggenToolStripMenuItem1.Text = "Ausloggen";
             this.ausloggenToolStripMenuItem1.Click += new System.EventHandler(this.ausloggenToolStripMenuItem1_Click);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Haupbildschirm;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 103);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1542, 783);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // produkeVerwaltungToolStripMenuItem
             // 
             this.produkeVerwaltungToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.produkeVerwaltungToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.Produkt1;
+            this.produkeVerwaltungToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.produkeVerwaltungToolStripMenuItem.Name = "produkeVerwaltungToolStripMenuItem";
-            this.produkeVerwaltungToolStripMenuItem.Size = new System.Drawing.Size(170, 99);
+            this.produkeVerwaltungToolStripMenuItem.Size = new System.Drawing.Size(233, 99);
             this.produkeVerwaltungToolStripMenuItem.Text = "Produke Verwaltung";
             this.produkeVerwaltungToolStripMenuItem.Click += new System.EventHandler(this.produkeVerwaltungToolStripMenuItem_Click);
             // 

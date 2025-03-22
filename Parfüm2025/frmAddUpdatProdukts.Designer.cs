@@ -101,7 +101,7 @@
             // btnSpeichern
             // 
             this.btnSpeichern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSpeichern.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSpeichern.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnSpeichern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSpeichern.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpeichern.ForeColor = System.Drawing.Color.White;
@@ -116,7 +116,7 @@
             // btnSchließen
             // 
             this.btnSchließen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSchließen.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSchließen.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnSchließen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchließen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchließen.ForeColor = System.Drawing.Color.White;

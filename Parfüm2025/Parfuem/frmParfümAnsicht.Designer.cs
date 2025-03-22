@@ -177,16 +177,14 @@
             // btnDatenAktualisieren
             // 
             this.btnDatenAktualisieren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDatenAktualisieren.BackColor = System.Drawing.Color.Gold;
+            this.btnDatenAktualisieren.BackColor = System.Drawing.Color.White;
             this.btnDatenAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatenAktualisieren.Image = global::Parfüm2025.Properties.Resources.update_7411697;
-            this.btnDatenAktualisieren.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDatenAktualisieren.Location = new System.Drawing.Point(900, 94);
+            this.btnDatenAktualisieren.Image = global::Parfüm2025.Properties.Resources.update1;
+            this.btnDatenAktualisieren.Location = new System.Drawing.Point(1113, 95);
             this.btnDatenAktualisieren.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatenAktualisieren.Name = "btnDatenAktualisieren";
-            this.btnDatenAktualisieren.Size = new System.Drawing.Size(242, 41);
+            this.btnDatenAktualisieren.Size = new System.Drawing.Size(44, 40);
             this.btnDatenAktualisieren.TabIndex = 21;
-            this.btnDatenAktualisieren.Text = "Aktualisiere Parfümdaten";
             this.btnDatenAktualisieren.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDatenAktualisieren.UseVisualStyleBackColor = false;
             this.btnDatenAktualisieren.Click += new System.EventHandler(this.btnDatenAktualisieren_Click);

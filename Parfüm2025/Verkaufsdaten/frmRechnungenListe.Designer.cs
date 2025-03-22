@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtFilerwert = new System.Windows.Forms.TextBox();
             this.cbFilterbei = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +41,12 @@
             this.dgvVerkaufsDaten = new System.Windows.Forms.DataGridView();
             this.cmsVerkaufdaten = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.GeheZurRechnungsdetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.aktualisiereVerkaufdatentoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.entferneVerkaufsdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.erstelleEineRechnungsvorlageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRecord = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -60,11 +65,6 @@
             this.btnKundeBestandAnzeigen = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GeheZurRechnungsdetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktualisiereVerkaufdatentoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.entferneVerkaufsdatenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.erstelleEineRechnungsvorlageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerkaufsDaten)).BeginInit();
             this.cmsVerkaufdaten.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,15 +115,15 @@
             // btnAktualisereVerkaufsDaten
             // 
             this.btnAktualisereVerkaufsDaten.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAktualisereVerkaufsDaten.BackColor = System.Drawing.Color.DimGray;
+            this.btnAktualisereVerkaufsDaten.BackColor = System.Drawing.Color.White;
             this.btnAktualisereVerkaufsDaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAktualisereVerkaufsDaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisereVerkaufsDaten.ForeColor = System.Drawing.Color.White;
-            this.btnAktualisereVerkaufsDaten.Location = new System.Drawing.Point(675, 376);
+            this.btnAktualisereVerkaufsDaten.Image = global::Parfüm2025.Properties.Resources.update1;
+            this.btnAktualisereVerkaufsDaten.Location = new System.Drawing.Point(877, 376);
             this.btnAktualisereVerkaufsDaten.Name = "btnAktualisereVerkaufsDaten";
-            this.btnAktualisereVerkaufsDaten.Size = new System.Drawing.Size(242, 40);
+            this.btnAktualisereVerkaufsDaten.Size = new System.Drawing.Size(40, 40);
             this.btnAktualisereVerkaufsDaten.TabIndex = 10;
-            this.btnAktualisereVerkaufsDaten.Text = "Aktualisiere VerkaufsDaten";
             this.btnAktualisereVerkaufsDaten.UseVisualStyleBackColor = false;
             this.btnAktualisereVerkaufsDaten.Click += new System.EventHandler(this.btnAktualisereVerkaufsDaten_Click);
             // 
@@ -146,43 +146,43 @@
             // 
             this.dgvVerkaufsDaten.AllowUserToAddRows = false;
             this.dgvVerkaufsDaten.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvVerkaufsDaten.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            this.dgvVerkaufsDaten.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvVerkaufsDaten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVerkaufsDaten.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerkaufsDaten.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerkaufsDaten.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVerkaufsDaten.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerkaufsDaten.ContextMenuStrip = this.cmsVerkaufdaten;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVerkaufsDaten.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVerkaufsDaten.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvVerkaufsDaten.EnableHeadersVisualStyles = false;
             this.dgvVerkaufsDaten.Location = new System.Drawing.Point(1, 422);
             this.dgvVerkaufsDaten.MultiSelect = false;
             this.dgvVerkaufsDaten.Name = "dgvVerkaufsDaten";
             this.dgvVerkaufsDaten.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerkaufsDaten.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerkaufsDaten.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvVerkaufsDaten.RowTemplate.Height = 25;
             this.dgvVerkaufsDaten.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVerkaufsDaten.Size = new System.Drawing.Size(1158, 369);
@@ -208,10 +208,60 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(353, 6);
             // 
+            // GeheZurRechnungsdetailstoolStripMenuItem1
+            // 
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.details_32;
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.Name = "GeheZurRechnungsdetailstoolStripMenuItem1";
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.Size = new System.Drawing.Size(356, 38);
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.Text = "Gehe zur Rechnungsdetails";
+            this.GeheZurRechnungsdetailstoolStripMenuItem1.Click += new System.EventHandler(this.GeheZurRechnungsdetailstoolStripMenuItem1_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(353, 6);
+            // 
+            // aktualisiereVerkaufdatentoolStripMenuItem2
+            // 
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.refresh_57912761;
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.Name = "aktualisiereVerkaufdatentoolStripMenuItem2";
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.Size = new System.Drawing.Size(356, 38);
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.Text = "Aktualisiere Rechnung";
+            this.aktualisiereVerkaufdatentoolStripMenuItem2.Click += new System.EventHandler(this.aktualisiereVerkaufdatentoolStripMenuItem2_Click);
+            // 
+            // entferneVerkaufsdatenToolStripMenuItem
+            // 
+            this.entferneVerkaufsdatenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entferneVerkaufsdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_1;
+            this.entferneVerkaufsdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.entferneVerkaufsdatenToolStripMenuItem.Name = "entferneVerkaufsdatenToolStripMenuItem";
+            this.entferneVerkaufsdatenToolStripMenuItem.Size = new System.Drawing.Size(356, 38);
+            this.entferneVerkaufsdatenToolStripMenuItem.Text = "Entferne Rechnung";
+            this.entferneVerkaufsdatenToolStripMenuItem.Click += new System.EventHandler(this.entferneVerkaufsdatenToolStripMenuItem_Click);
+            // 
+            // erstelleEineRechnungsvorlageToolStripMenuItem
+            // 
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.bill_1052856;
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.Name = "erstelleEineRechnungsvorlageToolStripMenuItem";
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.Size = new System.Drawing.Size(356, 38);
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.Text = "Erstelle eine Rechnungsvorlage";
+            this.erstelleEineRechnungsvorlageToolStripMenuItem.Click += new System.EventHandler(this.erstelleEineRechnungsvorlageToolStripMenuItem_Click);
+            // 
+            // seheBestandsaufnahmeVomKundenToolStripMenuItem
+            // 
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.ApplicationType;
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Name = "seheBestandsaufnahmeVomKundenToolStripMenuItem";
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Size = new System.Drawing.Size(356, 38);
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Text = "Sehe Bestandsaufnahme Vom Kunden";
+            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Click += new System.EventHandler(this.seheBestandsaufnahmeVomKundenToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -257,7 +307,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(494, 9);
+            this.label3.Location = new System.Drawing.Point(500, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 25);
             this.label3.TabIndex = 18;
@@ -267,11 +317,11 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1188, 44);
+            this.panel1.Size = new System.Drawing.Size(1188, 54);
             this.panel1.TabIndex = 19;
             // 
             // txtJahr
@@ -373,9 +423,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(769, 68);
+            this.groupBox1.Location = new System.Drawing.Point(6, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 287);
+            this.groupBox1.Size = new System.Drawing.Size(409, 277);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bestandsaufnahme Information";
@@ -383,7 +433,7 @@
             // btnKundeBestandAnzeigen
             // 
             this.btnKundeBestandAnzeigen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKundeBestandAnzeigen.BackColor = System.Drawing.Color.IndianRed;
+            this.btnKundeBestandAnzeigen.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnKundeBestandAnzeigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKundeBestandAnzeigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKundeBestandAnzeigen.ForeColor = System.Drawing.Color.White;
@@ -398,7 +448,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReset.BackColor = System.Drawing.Color.IndianRed;
+            this.btnReset.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.White;
@@ -416,62 +466,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Verkaufsdaten2;
-            this.pictureBox1.Location = new System.Drawing.Point(363, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(418, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 332);
+            this.pictureBox1.Size = new System.Drawing.Size(330, 313);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            // 
-            // GeheZurRechnungsdetailstoolStripMenuItem1
-            // 
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.details_32;
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.Name = "GeheZurRechnungsdetailstoolStripMenuItem1";
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.Size = new System.Drawing.Size(356, 38);
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.Text = "Gehe zur Rechnungsdetails";
-            this.GeheZurRechnungsdetailstoolStripMenuItem1.Click += new System.EventHandler(this.GeheZurRechnungsdetailstoolStripMenuItem1_Click);
-            // 
-            // aktualisiereVerkaufdatentoolStripMenuItem2
-            // 
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.refresh_57912761;
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.Name = "aktualisiereVerkaufdatentoolStripMenuItem2";
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.Size = new System.Drawing.Size(356, 38);
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.Text = "Aktualisiere Rechnung";
-            this.aktualisiereVerkaufdatentoolStripMenuItem2.Click += new System.EventHandler(this.aktualisiereVerkaufdatentoolStripMenuItem2_Click);
-            // 
-            // entferneVerkaufsdatenToolStripMenuItem
-            // 
-            this.entferneVerkaufsdatenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entferneVerkaufsdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_1;
-            this.entferneVerkaufsdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.entferneVerkaufsdatenToolStripMenuItem.Name = "entferneVerkaufsdatenToolStripMenuItem";
-            this.entferneVerkaufsdatenToolStripMenuItem.Size = new System.Drawing.Size(356, 38);
-            this.entferneVerkaufsdatenToolStripMenuItem.Text = "Entferne Rechnung";
-            this.entferneVerkaufsdatenToolStripMenuItem.Click += new System.EventHandler(this.entferneVerkaufsdatenToolStripMenuItem_Click);
-            // 
-            // erstelleEineRechnungsvorlageToolStripMenuItem
-            // 
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.bill_1052856;
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.Name = "erstelleEineRechnungsvorlageToolStripMenuItem";
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.Size = new System.Drawing.Size(356, 38);
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.Text = "Erstelle eine Rechnungsvorlage";
-            this.erstelleEineRechnungsvorlageToolStripMenuItem.Click += new System.EventHandler(this.erstelleEineRechnungsvorlageToolStripMenuItem_Click);
-            // 
-            // seheBestandsaufnahmeVomKundenToolStripMenuItem
-            // 
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.ApplicationType;
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Name = "seheBestandsaufnahmeVomKundenToolStripMenuItem";
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Size = new System.Drawing.Size(356, 38);
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Text = "Sehe Bestandsaufnahme Vom Kunden";
-            this.seheBestandsaufnahmeVomKundenToolStripMenuItem.Click += new System.EventHandler(this.seheBestandsaufnahmeVomKundenToolStripMenuItem_Click);
             // 
             // frmVerkaufsDatenListe
             // 

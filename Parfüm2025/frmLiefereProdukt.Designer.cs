@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtGelieferteMenge = new System.Windows.Forms.TextBox();
-            this.txtProduktName = new System.Windows.Forms.TextBox();
-            this.rbHauptGeschäft = new System.Windows.Forms.RadioButton();
-            this.txtTotoMenge = new System.Windows.Forms.TextBox();
             this.rbDezGeschäft = new System.Windows.Forms.RadioButton();
+            this.txtTotoMenge = new System.Windows.Forms.TextBox();
+            this.rbHauptGeschäft = new System.Windows.Forms.RadioButton();
             this.lblGelieferteMenge = new System.Windows.Forms.Label();
+            this.txtGelieferteMenge = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtProduktName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLiefern = new System.Windows.Forms.Button();
@@ -77,35 +77,26 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Produkt Name:";
             // 
-            // label7
+            // rbDezGeschäft
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(44, 138);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 20);
-            this.label7.TabIndex = 53;
-            this.label7.Text = "TotalMenge:";
+            this.rbDezGeschäft.AutoSize = true;
+            this.rbDezGeschäft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDezGeschäft.Location = new System.Drawing.Point(220, 190);
+            this.rbDezGeschäft.Name = "rbDezGeschäft";
+            this.rbDezGeschäft.Size = new System.Drawing.Size(117, 22);
+            this.rbDezGeschäft.TabIndex = 55;
+            this.rbDezGeschäft.Text = "Dez Geschäft";
+            this.rbDezGeschäft.UseVisualStyleBackColor = true;
             // 
-            // txtGelieferteMenge
+            // txtTotoMenge
             // 
-            this.txtGelieferteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGelieferteMenge.Location = new System.Drawing.Point(148, 82);
-            this.txtGelieferteMenge.Multiline = true;
-            this.txtGelieferteMenge.Name = "txtGelieferteMenge";
-            this.txtGelieferteMenge.Size = new System.Drawing.Size(193, 33);
-            this.txtGelieferteMenge.TabIndex = 48;
-            // 
-            // txtProduktName
-            // 
-            this.txtProduktName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduktName.Location = new System.Drawing.Point(144, 33);
-            this.txtProduktName.Multiline = true;
-            this.txtProduktName.Name = "txtProduktName";
-            this.txtProduktName.ReadOnly = true;
-            this.txtProduktName.Size = new System.Drawing.Size(193, 33);
-            this.txtProduktName.TabIndex = 46;
+            this.txtTotoMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotoMenge.Location = new System.Drawing.Point(148, 133);
+            this.txtTotoMenge.Multiline = true;
+            this.txtTotoMenge.Name = "txtTotoMenge";
+            this.txtTotoMenge.ReadOnly = true;
+            this.txtTotoMenge.Size = new System.Drawing.Size(193, 33);
+            this.txtTotoMenge.TabIndex = 49;
             // 
             // rbHauptGeschäft
             // 
@@ -120,27 +111,6 @@
             this.rbHauptGeschäft.Text = "Haupt Geschäft";
             this.rbHauptGeschäft.UseVisualStyleBackColor = true;
             // 
-            // txtTotoMenge
-            // 
-            this.txtTotoMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotoMenge.Location = new System.Drawing.Point(148, 133);
-            this.txtTotoMenge.Multiline = true;
-            this.txtTotoMenge.Name = "txtTotoMenge";
-            this.txtTotoMenge.ReadOnly = true;
-            this.txtTotoMenge.Size = new System.Drawing.Size(193, 33);
-            this.txtTotoMenge.TabIndex = 49;
-            // 
-            // rbDezGeschäft
-            // 
-            this.rbDezGeschäft.AutoSize = true;
-            this.rbDezGeschäft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDezGeschäft.Location = new System.Drawing.Point(220, 190);
-            this.rbDezGeschäft.Name = "rbDezGeschäft";
-            this.rbDezGeschäft.Size = new System.Drawing.Size(117, 22);
-            this.rbDezGeschäft.TabIndex = 55;
-            this.rbDezGeschäft.Text = "Dez Geschäft";
-            this.rbDezGeschäft.UseVisualStyleBackColor = true;
-            // 
             // lblGelieferteMenge
             // 
             this.lblGelieferteMenge.AutoSize = true;
@@ -151,6 +121,36 @@
             this.lblGelieferteMenge.Size = new System.Drawing.Size(136, 20);
             this.lblGelieferteMenge.TabIndex = 51;
             this.lblGelieferteMenge.Text = "Gelieferte Menge:";
+            // 
+            // txtGelieferteMenge
+            // 
+            this.txtGelieferteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGelieferteMenge.Location = new System.Drawing.Point(148, 82);
+            this.txtGelieferteMenge.Multiline = true;
+            this.txtGelieferteMenge.Name = "txtGelieferteMenge";
+            this.txtGelieferteMenge.Size = new System.Drawing.Size(193, 33);
+            this.txtGelieferteMenge.TabIndex = 48;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(44, 138);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 20);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "TotalMenge:";
+            // 
+            // txtProduktName
+            // 
+            this.txtProduktName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduktName.Location = new System.Drawing.Point(144, 33);
+            this.txtProduktName.Multiline = true;
+            this.txtProduktName.Name = "txtProduktName";
+            this.txtProduktName.ReadOnly = true;
+            this.txtProduktName.Size = new System.Drawing.Size(193, 33);
+            this.txtProduktName.TabIndex = 46;
             // 
             // panel1
             // 
@@ -176,7 +176,7 @@
             // btnLiefern
             // 
             this.btnLiefern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLiefern.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLiefern.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnLiefern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLiefern.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLiefern.ForeColor = System.Drawing.Color.White;
@@ -191,7 +191,7 @@
             // btnSchließen
             // 
             this.btnSchließen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSchließen.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSchließen.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnSchließen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchließen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchließen.ForeColor = System.Drawing.Color.White;
