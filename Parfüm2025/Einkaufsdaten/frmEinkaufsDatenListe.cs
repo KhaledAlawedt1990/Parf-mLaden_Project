@@ -57,9 +57,9 @@ namespace Parfüm2025
                 {
                     float lagerBestandHaupt = Convert.ToSingle(row.Cells["HauptLagerbestand"].Value);
 
-                    if (lagerBestandHaupt < 3)
+                    if (lagerBestandHaupt < 3000)
                     {
-                        if (lagerBestandHaupt < 1)
+                        if (lagerBestandHaupt < 1000)
                         {
                             row.Cells["HauptLagerbestand"].Style.BackColor = Color.Red;
                             row.Cells["HauptLagerbestand"].Style.ForeColor = Color.White;

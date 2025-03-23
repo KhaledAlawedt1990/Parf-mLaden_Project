@@ -16,7 +16,7 @@ namespace Data_Layer
         public static  string connectionString { get { return ConnectionString; } }
 
         public static bool GetRechnungsDetailsByID(int detailsID, ref int belegID, ref int parfümNummer,
-              ref float verkaufsMenge, ref float lagerbestandHaupt, ref decimal normalPreis, ref decimal gesamtPreis, ref bool lagerbestandAktualisiert)
+              ref float verkaufsMenge, ref float HauptLagerbestand, ref decimal normalPreis, ref decimal gesamtPreis, ref bool lagerbestandAktualisiert)
         {
 
             bool isfound = false;
@@ -40,7 +40,7 @@ namespace Data_Layer
                                 belegID = (int)reader["belegID"];
                                 parfümNummer = (int)reader["parfümNummer"];                              
                                 verkaufsMenge = (float)reader["verkaufsMenge"];
-                                lagerbestandHaupt = (float)reader["lagerBestandHaupt"];
+                                HauptLagerbestand = (float)reader["HauptLagerbestand"];
                                 normalPreis = (decimal)reader["normalPreis"];
                                 gesamtPreis = (decimal)reader["gesamtPreis"];
                                 lagerbestandAktualisiert = (bool)reader["lagerbestandAktualisiert"];
@@ -87,12 +87,12 @@ namespace Data_Layer
         }
 
         public static int AddNewRechnungsDetailsDaten(int belegID, int parfümNummer,float verkaufsMenge,
-             float lagerbestandHaupt, decimal normalerPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
+             float HauptLagerbestand, decimal normalerPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
         {
             int detailsID = -1;
 
-            string abfrage = @"Insert into RechnungsDetails (belegID, parfümNummer,verkaufsMenge,lagerbestandHaupt, normalPreis, gesamtPreis, lagerbestandAktualisiert)
-                                        Values  (@belegID, @parfümNummer, @verkaufsMenge, @lagerbestandHaupt, @normalPreis, @gesamtPreis, @lagerbestandAktualisiert)
+            string abfrage = @"Insert into RechnungsDetails (belegID, parfümNummer,verkaufsMenge,HauptLagerbestand, normalPreis, gesamtPreis, lagerbestandAktualisiert)
+                                        Values  (@belegID, @parfümNummer, @verkaufsMenge, @HauptLagerbestand, @normalPreis, @gesamtPreis, @lagerbestandAktualisiert)
                                  Select Scope_Identity()";
 
             try
@@ -106,7 +106,7 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@belegID", belegID);
                        command.Parameters.AddWithValue("@parfümNummer", parfümNummer);              
                         command.Parameters.AddWithValue("@verkaufsMenge", verkaufsMenge);
-                        command.Parameters.AddWithValue("@lagerbestandHaupt", lagerbestandHaupt);
+                        command.Parameters.AddWithValue("@HauptLagerbestand", HauptLagerbestand);
                         command.Parameters.AddWithValue("@normalPreis", normalerPreis);
                         command.Parameters.AddWithValue("@gesamtPreis", gesamtPreis);
                         command.Parameters.AddWithValue("@lagerbestandAktualisiert", lagerbestandAktualisiert);
@@ -128,7 +128,7 @@ namespace Data_Layer
         }
 
         public static bool UpdateRechnungsDetails(int detailID, int belegID, int parfümNummer, float verkaufsMenge,
-             float lagerbestandHaupt, decimal normalerPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
+             float HauptLagerbestand, decimal normalerPreis, decimal gesamtPreis, bool lagerbestandAktualisiert)
         {
             int RowAffected = 0;
             string abfrage = @"Update RechnungsDetails 
@@ -136,7 +136,7 @@ namespace Data_Layer
                                                    belegID = @belegID,
                                                   parfümNummer = @parfümNummer,                                              
                                                   verkaufsMenge = @verkaufsMenge,
-                                                  lagerbestandHaupt = @lagerbestandHaupt,
+                                                  HauptLagerbestand = @HauptLagerbestand,
                                                   normalPreis  = @normalPreis,
                                                   gesamtPreis = @gesamtPreis,
                                      lagerbestandAktualisiert = @lagerbestandAktualisiert
@@ -154,7 +154,7 @@ namespace Data_Layer
                         command.Parameters.AddWithValue("@belegID", belegID);
                         command.Parameters.AddWithValue("@parfümNummer", parfümNummer);            
                         command.Parameters.AddWithValue("@verkaufsMenge", verkaufsMenge);
-                        command.Parameters.AddWithValue("@lagerbestandHaupt", lagerbestandHaupt);
+                        command.Parameters.AddWithValue("@HauptLagerbestand", HauptLagerbestand);
                         command.Parameters.AddWithValue("@normalPreis", normalerPreis);
                         command.Parameters.AddWithValue("@gesamtPreis", gesamtPreis);
                         command.Parameters.AddWithValue("@lagerbestandAktualisiert", lagerbestandAktualisiert);
@@ -196,14 +196,14 @@ namespace Data_Layer
             return RowAffected > 0;
         }
 
-        public static bool SetzeLagerbestandAktualisiert(int detailID, float lagerbestandHaupt, bool lagerbestandAktualisiert)
+        public static bool SetzeLagerbestandAktualisiert(int detailID, float HauptLagerbestand, bool lagerbestandAktualisiert)
         {
             int RowAffected = 0;
 
             string abfrage = @"Update RechnungsDetails 
                                          Set
                                          lagerbestandAktualisiert = @lagerbestandAktualisiert,
-                                          lagerbestandHaupt   = @lagerbestandHaupt
+                                          HauptLagerbestand   = @HauptLagerbestand
                                   Where detailID = @detailID";
             try
             {
@@ -213,7 +213,7 @@ namespace Data_Layer
                     {
                         command.Parameters.AddWithValue("@detailID", detailID);
                         command.Parameters.AddWithValue("@lagerbestandAktualisiert", lagerbestandAktualisiert);
-                        command.Parameters.AddWithValue("@lagerbestandHaupt", lagerbestandHaupt);
+                        command.Parameters.AddWithValue("@HauptLagerbestand", HauptLagerbestand);
 
                         //Öffene die verbindung und ausführe den Befehl
                         connection.Open();

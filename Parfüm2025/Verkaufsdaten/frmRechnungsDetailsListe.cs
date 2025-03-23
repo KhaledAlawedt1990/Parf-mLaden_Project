@@ -42,8 +42,8 @@ namespace Parfüm2025
             {
                 foreach (var details in _rechnungsDetails)
                 {
-                    string verkaufsmenge = details.verkaufsMenge.ToString() + "     kg";
-                    string lagerbestand = details.lagerBestandHaupt.ToString() + "     kg";
+                    string verkaufsmenge = details.verkaufsMenge.ToString() + "     Gr";
+                    string lagerbestand = details.HauptLagerbestand.ToString() + "     Gr";
                     string normalPreis = details.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     string gesamtPreis = details.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
 
@@ -74,7 +74,7 @@ namespace Parfüm2025
         {
             new ToastContentBuilder()
                  .AddText("Achtung: Niedriger Lagerbestand!")
-                   .AddText($"Der Lagerbestand für die ParfümNummer {parfümNummer} ist gefallen. Bitte prüfen Sie die Bestände.")
+                   .AddText($"Der Lagerbestand für die ParfümNummer {parfümNummer} ist  gefallen. Bitte prüfen Sie die Bestände.")
                    .SetToastDuration(ToastDuration.Short) // Toast länger anzeigen
                      .Show();
 
@@ -155,29 +155,29 @@ namespace Parfüm2025
         //{
         //    foreach (DataGridViewRow row in dgvRechnungsdetails.Rows)
         //    {
-        //        if (row.Cells["lagerBestandHaupt"].Value != null) // Sicherstellen, dass die Zelle nicht null ist
+        //        if (row.Cells["HauptLagerbestand"].Value != null) // Sicherstellen, dass die Zelle nicht null ist
         //        {
         //            // Konvertiere den Zellwert in einen float
-        //            float lagerbestand = _ToFloat(row.Cells["lagerBestandHaupt"].Value.ToString());
+        //            float lagerbestand = _ToFloat(row.Cells["HauptLagerbestand"].Value.ToString());
 
-        //            // Beispiel: Verwende den lagerBestandHaupt-Wert
+        //            // Beispiel: Verwende den HauptLagerbestand-Wert
         //            if (lagerbestand < 3)
         //            {
         //                if (lagerbestand < 1)
         //                {
-        //                    row.Cells["lagerBestandHaupt"].Style.BackColor = Color.Red;
-        //                    row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.White; // Weißer Text
+        //                    row.Cells["HauptLagerbestand"].Style.BackColor = Color.Red;
+        //                    row.Cells["HauptLagerbestand"].Style.ForeColor = Color.White; // Weißer Text
         //                }
         //                else
         //                {
-        //                    row.Cells["lagerBestandHaupt"].Style.BackColor = Color.Orange;
-        //                    row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.White; // Weißer Text
+        //                    row.Cells["HauptLagerbestand"].Style.BackColor = Color.Orange;
+        //                    row.Cells["HauptLagerbestand"].Style.ForeColor = Color.White; // Weißer Text
         //                }
         //            }
         //            else
         //            {
-        //                row.Cells["lagerBestandHaupt"].Style.BackColor = Color.White;
-        //                row.Cells["lagerBestandHaupt"].Style.ForeColor = Color.Black; // Schwarzer Text
+        //                row.Cells["HauptLagerbestand"].Style.BackColor = Color.White;
+        //                row.Cells["HauptLagerbestand"].Style.ForeColor = Color.Black; // Schwarzer Text
         //            }
         //        }
         //    }
@@ -226,7 +226,7 @@ namespace Parfüm2025
                         else
                             totalGesamtPreis += element.normalPreis;
 
-                            float lagerBestandHaupt = element.lagerBestandHaupt - element.verkaufsMenge;
+                            float lagerBestandHaupt = element.HauptLagerbestand - element.verkaufsMenge;
                         //hier bestätigen wir den Verkauf und ziehen wir realistisch die gebrauchte Menge von dem LagerbestanHaupt ab.
                         clsEinkauf.UpdateLagerBestandHaupt(element.parfümNummer, lagerBestandHaupt);
 
@@ -238,7 +238,7 @@ namespace Parfüm2025
                                 MessageBoxIcon.Error);
                         }
 
-                        if (lagerBestandHaupt < 3)
+                        if (lagerBestandHaupt < 3000)
                         {
                             _SetzeNotifikation(element.parfümNummer);
                         }

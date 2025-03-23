@@ -19,11 +19,11 @@ namespace Busnisse_Layer
 
         public int parfümNummer { get; set; }
         public string parfümName { get; set; }
-        public string hauptBatchNummer { get; set; }
-        public string sekundäreBatchNummer { get; set; }
+        public string HauptLotNr { get; set; }
+        public string SekundärLotNr { get; set; }
         public string parfümCode { get; set; }
-        public float? lagerBestandHaupt { get; set; }
-        public float? lagerBestandSekundär { get; set; } //für sekundäreBatchNummer falls vorhanden.
+        public float? HauptLagerbestand { get; set; }
+        public float? SekundärLagerbestand { get; set; } //für SekundärLotNr falls vorhanden.
         public int preisKategorie { get; set; }
         public DateTime erstellungsDatum { get; set; }
 
@@ -32,11 +32,11 @@ namespace Busnisse_Layer
         {
             this.parfümNummer = parfümNummer;
             this.parfümName = parfümName;
-            this.hauptBatchNummer = hauptBatchNummer;
-            this.sekundäreBatchNummer = sekundäreBatchNummer;
+            this.HauptLotNr = hauptBatchNummer;
+            this.SekundärLotNr = sekundäreBatchNummer;
             this.parfümCode = parfümCode;
-            this.lagerBestandHaupt = lagerBestandHaupt;
-            this.lagerBestandSekundär = lagerBestandSekundär; //lagerBestandHaupt für sekundäreBatchNummer falls vorhanden.
+            this.HauptLagerbestand = lagerBestandHaupt;
+            this.SekundärLagerbestand = lagerBestandSekundär; //HauptLagerbestand für SekundärLotNr falls vorhanden.
             this.preisKategorie = preisKategorie;
             this.erstellungsDatum = erstellungsDatum;
 
@@ -48,10 +48,10 @@ namespace Busnisse_Layer
             this.parfümNummer = -1;
             this.parfümName = string.Empty;
             this.parfümCode = null;
-            this.hauptBatchNummer = null;
-            this.sekundäreBatchNummer = null;
-            this.lagerBestandHaupt = null;
-            this.lagerBestandSekundär = null;
+            this.HauptLotNr = null;
+            this.SekundärLotNr = null;
+            this.HauptLagerbestand = null;
+            this.SekundärLagerbestand = null;
             this.preisKategorie = 1;
             this.erstellungsDatum = DateTime.Now;
 
@@ -75,20 +75,20 @@ namespace Busnisse_Layer
         }
         private bool _AddNewEinkaufDaten()
         {
-            return clsEinkaufDatenzugriff.AddNewEinkaufDaten(this.parfümNummer, this.parfümName, this.parfümCode, this.hauptBatchNummer, this.lagerBestandHaupt
-                ,this.sekundäreBatchNummer, this.lagerBestandSekundär,this.preisKategorie, this.erstellungsDatum);
+            return clsEinkaufDatenzugriff.AddNewEinkaufDaten(this.parfümNummer, this.parfümName, this.parfümCode, this.HauptLotNr, this.HauptLagerbestand
+                ,this.SekundärLotNr, this.SekundärLagerbestand,this.preisKategorie, this.erstellungsDatum);
         }
 
         //public bool _UpdateByParfümName()
         //{
-        //    return clsEinkaufDatenzugriff.UpdateMengeByParfümName(this.parfümName, this.hauptBatchNummer, this.parfümCode,
-        //                                                           this.lagerBestandHaupt, erstellungsDatum);
+        //    return clsEinkaufDatenzugriff.UpdateMengeByParfümName(this.parfümName, this.HauptLotNr, this.parfümCode,
+        //                                                           this.HauptLagerbestand, erstellungsDatum);
         //}
 
         public bool _UpdateByParfümNummer()
         {
-            return clsEinkaufDatenzugriff.UpdateEinkaufDaten(this.parfümNummer, this.parfümName, this.parfümCode, this.hauptBatchNummer, this.lagerBestandHaupt
-                , this.sekundäreBatchNummer, this.lagerBestandSekundär, this.preisKategorie, this.erstellungsDatum);
+            return clsEinkaufDatenzugriff.UpdateEinkaufDaten(this.parfümNummer, this.parfümName, this.parfümCode, this.HauptLotNr, this.HauptLagerbestand
+                , this.SekundärLotNr, this.SekundärLagerbestand, this.preisKategorie, this.erstellungsDatum);
         }
 
         public static bool UpdateLagerBestandHaupt(int parfümNummer, float? lagerBestandHaup)

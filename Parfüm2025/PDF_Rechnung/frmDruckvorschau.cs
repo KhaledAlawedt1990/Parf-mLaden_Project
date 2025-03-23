@@ -100,7 +100,7 @@ namespace Parfüm2025
 
                         // Datenzeilen hinzufügen
                         table.AddCell(new PdfPCell(new Phrase(item.parfümNummer.ToString(), FontFactory.GetFont("Arial", 10))));
-                        table.AddCell(new PdfPCell(new Phrase(item.verkaufsMenge.ToString() + " Kg", FontFactory.GetFont("Arial", 10))));
+                        table.AddCell(new PdfPCell(new Phrase(item.verkaufsMenge.ToString() + " Gr", FontFactory.GetFont("Arial", 10))));
                         table.AddCell(new PdfPCell(new Phrase("19%", FontFactory.GetFont("Arial", 10))));
                         table.AddCell(new PdfPCell(new Phrase(item.normalPreis.ToString("C"), FontFactory.GetFont("Arial", 10))));
                         table.AddCell(new PdfPCell(new Phrase(item.gesamtPreis.ToString("C"), FontFactory.GetFont("Arial", 10))));
@@ -269,7 +269,7 @@ namespace Parfüm2025
         {
             PdfPCell headerCell;
 
-            string[] headers = { "ParfümNummer", "Menge (Kg)", "Steuer (%)", "Normalpreis (€)", "Gesamtpreis (€)" };
+            string[] headers = { "ParfümNummer", "Menge (Gr)", "Steuer (%)", "Normalpreis (€)", "Gesamtpreis (€)" };
             foreach (string header in headers)
             {
                 headerCell = new PdfPCell(new Phrase(header, FontFactory.GetFont("Arial", 12.ToString(), Font.Bold)));
@@ -343,7 +343,7 @@ namespace Parfüm2025
               
                 dgvVerkaufsdaten.Rows.Add(
                     item.parfümNummer,
-                    item.verkaufsMenge + " Kg"
+                    item.verkaufsMenge + " Gr"
                     , 19,
                     item.normalPreis,
                     item.gesamtPreis);
@@ -376,7 +376,7 @@ namespace Parfüm2025
             lblNetto.Text = netto.ToString("C");
 
             // Steueranteil berechnen und anzeigen
-           float steuer = (summeEinzelpreis * 19) / 119;
+           float steuer = (summeEinzelpreis * 19 / 100);
             lblSteuer.Text = steuer.ToString("C");
 
             float brutto = netto + steuer;

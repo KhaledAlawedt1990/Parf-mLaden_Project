@@ -139,13 +139,13 @@
     <value>True</value>
   </metadata>
   <data name="Verkaufsmenge.HeaderText" xml:space="preserve">
-    <value>Verkaufsmenge In kg</value>
+    <value>Verkaufsmenge In Gr</value>
   </data>
   <metadata name="Lagerbestand.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Lagerbestand.HeaderText" xml:space="preserve">
-    <value>lagerBestandHaupt in kg</value>
+    <value>HauptLagerbestand in Gr</value>
   </data>
   <metadata name="Normalpreis.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -169,37 +169,6 @@
     <value>23, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 118</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvRechnungsdetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-9, 75</value>
-  </data>
-  <data name="dgvRechnungsdetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1385, 367</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dgvRechnungsdetails.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dgvRechnungsdetails.Name" xml:space="preserve">
-    <value>dgvRechnungsdetails</value>
-  </data>
-  <data name="&gt;&gt;dgvRechnungsdetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvRechnungsdetails.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dgvRechnungsdetails.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="HinzufügeRechnungsdetailstoolStripMenuItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
@@ -236,6 +205,37 @@
   </data>
   <data name="entferneRechnungsdetailsToolStripMenuItem.Text" xml:space="preserve">
     <value>Entferne Rechnungsdetails</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 118</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvRechnungsdetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-9, 75</value>
+  </data>
+  <data name="dgvRechnungsdetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1385, 367</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgvRechnungsdetails.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvRechnungsdetails.Name" xml:space="preserve">
+    <value>dgvRechnungsdetails</value>
+  </data>
+  <data name="&gt;&gt;dgvRechnungsdetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvRechnungsdetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvRechnungsdetails.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="btnAddRechnungsDetails.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -417,6 +417,24 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Rechnungsdetails-Liste</value>
   </data>
+  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Name" xml:space="preserve">
+    <value>HinzufügeRechnungsdetailstoolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
+    <value>aktualisiereRechnungsdetailsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
+    <value>entferneRechnungsdetailsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;DetailID.Name" xml:space="preserve">
     <value>DetailID</value>
   </data>
@@ -464,24 +482,6 @@
   </data>
   <data name="&gt;&gt;LagerbestandAktualisiert.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Name" xml:space="preserve">
-    <value>HinzufügeRechnungsdetailstoolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
-    <value>aktualisiereRechnungsdetailsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
-    <value>entferneRechnungsdetailsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmRechnungsDetailsListe</value>

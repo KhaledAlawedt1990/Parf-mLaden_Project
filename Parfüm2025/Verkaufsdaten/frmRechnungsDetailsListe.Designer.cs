@@ -29,18 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRechnungsDetailsListe));
             this.dgvRechnungsdetails = new System.Windows.Forms.DataGridView();
-            this.DetailID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BelegID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ParfümNummer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Verkaufsmenge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Normalpreis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gesamtpreis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LagerbestandAktualisiert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.HinzufügeRechnungsdetailstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aktualisiereRechnungsdetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +43,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.DetailID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BelegID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ParfümNummer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verkaufsmenge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Normalpreis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gesamtpreis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LagerbestandAktualisiert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRechnungsdetails)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,14 +62,14 @@
             this.dgvRechnungsdetails.AllowUserToDeleteRows = false;
             this.dgvRechnungsdetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRechnungsdetails.BackgroundColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRechnungsdetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRechnungsdetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRechnungsdetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRechnungsdetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DetailID,
@@ -81,14 +81,14 @@
             this.Gesamtpreis,
             this.LagerbestandAktualisiert});
             this.dgvRechnungsdetails.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRechnungsdetails.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRechnungsdetails.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRechnungsdetails.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgvRechnungsdetails, "dgvRechnungsdetails");
             this.dgvRechnungsdetails.MultiSelect = false;
@@ -97,70 +97,6 @@
             this.dgvRechnungsdetails.RowTemplate.Height = 25;
             this.dgvRechnungsdetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRechnungsdetails.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvRechnungsdetails_RowsAdded);
-            // 
-            // DetailID
-            // 
-            this.DetailID.FillWeight = 30F;
-            resources.ApplyResources(this.DetailID, "DetailID");
-            this.DetailID.Name = "DetailID";
-            this.DetailID.ReadOnly = true;
-            this.DetailID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // BelegID
-            // 
-            this.BelegID.FillWeight = 30F;
-            resources.ApplyResources(this.BelegID, "BelegID");
-            this.BelegID.Name = "BelegID";
-            this.BelegID.ReadOnly = true;
-            this.BelegID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ParfümNummer
-            // 
-            this.ParfümNummer.FillWeight = 30F;
-            resources.ApplyResources(this.ParfümNummer, "ParfümNummer");
-            this.ParfümNummer.Name = "ParfümNummer";
-            this.ParfümNummer.ReadOnly = true;
-            this.ParfümNummer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Verkaufsmenge
-            // 
-            this.Verkaufsmenge.FillWeight = 40F;
-            resources.ApplyResources(this.Verkaufsmenge, "Verkaufsmenge");
-            this.Verkaufsmenge.Name = "Verkaufsmenge";
-            this.Verkaufsmenge.ReadOnly = true;
-            this.Verkaufsmenge.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Lagerbestand
-            // 
-            this.Lagerbestand.FillWeight = 40F;
-            resources.ApplyResources(this.Lagerbestand, "Lagerbestand");
-            this.Lagerbestand.Name = "Lagerbestand";
-            this.Lagerbestand.ReadOnly = true;
-            this.Lagerbestand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Normalpreis
-            // 
-            this.Normalpreis.FillWeight = 30F;
-            resources.ApplyResources(this.Normalpreis, "Normalpreis");
-            this.Normalpreis.Name = "Normalpreis";
-            this.Normalpreis.ReadOnly = true;
-            this.Normalpreis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Gesamtpreis
-            // 
-            this.Gesamtpreis.FillWeight = 30F;
-            resources.ApplyResources(this.Gesamtpreis, "Gesamtpreis");
-            this.Gesamtpreis.Name = "Gesamtpreis";
-            this.Gesamtpreis.ReadOnly = true;
-            this.Gesamtpreis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // LagerbestandAktualisiert
-            // 
-            this.LagerbestandAktualisiert.FillWeight = 40F;
-            resources.ApplyResources(this.LagerbestandAktualisiert, "LagerbestandAktualisiert");
-            this.LagerbestandAktualisiert.Name = "LagerbestandAktualisiert";
-            this.LagerbestandAktualisiert.ReadOnly = true;
-            this.LagerbestandAktualisiert.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // contextMenuStrip1
             // 
@@ -241,6 +177,70 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
             // 
+            // DetailID
+            // 
+            this.DetailID.FillWeight = 30F;
+            resources.ApplyResources(this.DetailID, "DetailID");
+            this.DetailID.Name = "DetailID";
+            this.DetailID.ReadOnly = true;
+            this.DetailID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BelegID
+            // 
+            this.BelegID.FillWeight = 30F;
+            resources.ApplyResources(this.BelegID, "BelegID");
+            this.BelegID.Name = "BelegID";
+            this.BelegID.ReadOnly = true;
+            this.BelegID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ParfümNummer
+            // 
+            this.ParfümNummer.FillWeight = 30F;
+            resources.ApplyResources(this.ParfümNummer, "ParfümNummer");
+            this.ParfümNummer.Name = "ParfümNummer";
+            this.ParfümNummer.ReadOnly = true;
+            this.ParfümNummer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Verkaufsmenge
+            // 
+            this.Verkaufsmenge.FillWeight = 40F;
+            resources.ApplyResources(this.Verkaufsmenge, "Verkaufsmenge");
+            this.Verkaufsmenge.Name = "Verkaufsmenge";
+            this.Verkaufsmenge.ReadOnly = true;
+            this.Verkaufsmenge.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Lagerbestand
+            // 
+            this.Lagerbestand.FillWeight = 40F;
+            resources.ApplyResources(this.Lagerbestand, "Lagerbestand");
+            this.Lagerbestand.Name = "Lagerbestand";
+            this.Lagerbestand.ReadOnly = true;
+            this.Lagerbestand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Normalpreis
+            // 
+            this.Normalpreis.FillWeight = 30F;
+            resources.ApplyResources(this.Normalpreis, "Normalpreis");
+            this.Normalpreis.Name = "Normalpreis";
+            this.Normalpreis.ReadOnly = true;
+            this.Normalpreis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Gesamtpreis
+            // 
+            this.Gesamtpreis.FillWeight = 30F;
+            resources.ApplyResources(this.Gesamtpreis, "Gesamtpreis");
+            this.Gesamtpreis.Name = "Gesamtpreis";
+            this.Gesamtpreis.ReadOnly = true;
+            this.Gesamtpreis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // LagerbestandAktualisiert
+            // 
+            this.LagerbestandAktualisiert.FillWeight = 40F;
+            resources.ApplyResources(this.LagerbestandAktualisiert, "LagerbestandAktualisiert");
+            this.LagerbestandAktualisiert.Name = "LagerbestandAktualisiert";
+            this.LagerbestandAktualisiert.ReadOnly = true;
+            this.LagerbestandAktualisiert.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // frmRechnungsDetailsListe
             // 
             resources.ApplyResources(this, "$this");
@@ -273,6 +273,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRealisiereRechnungsdetails;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DetailID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BelegID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ParfümNummer;
@@ -281,7 +283,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Normalpreis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gesamtpreis;
         private System.Windows.Forms.DataGridViewTextBoxColumn LagerbestandAktualisiert;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
     }
 }

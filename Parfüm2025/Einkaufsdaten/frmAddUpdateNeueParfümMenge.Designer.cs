@@ -108,7 +108,8 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(37, 26);
             this.textBox4.TabIndex = 26;
-            this.textBox4.Text = "Kg";
+            this.textBox4.Text = "Gr";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLagebestandSekundär
             // 
@@ -135,7 +136,8 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(37, 26);
             this.textBox3.TabIndex = 23;
-            this.textBox3.Text = "Kg";
+            this.textBox3.Text = "Gr";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMengeOfSekundärBatchNummer
             // 
@@ -203,7 +205,8 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(37, 26);
             this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "Kg";
+            this.textBox1.Text = "Gr";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -229,7 +232,8 @@
             this.txtGrammText.ReadOnly = true;
             this.txtGrammText.Size = new System.Drawing.Size(37, 26);
             this.txtGrammText.TabIndex = 12;
-            this.txtGrammText.Text = "Kg";
+            this.txtGrammText.Text = "Gr";
+            this.txtGrammText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtpErstellungsDatum
             // 

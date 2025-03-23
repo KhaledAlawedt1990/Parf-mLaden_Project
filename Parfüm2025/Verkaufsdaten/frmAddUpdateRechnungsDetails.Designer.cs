@@ -105,7 +105,8 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(36, 26);
             this.textBox3.TabIndex = 28;
-            this.textBox3.Text = "Kg";
+            this.textBox3.Text = "Gr";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLagerBestandSekundär
             // 
@@ -205,7 +206,8 @@
             this.textBox1.ShortcutsEnabled = false;
             this.textBox1.Size = new System.Drawing.Size(36, 26);
             this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "Kg";
+            this.textBox1.Text = "Gr";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -228,11 +230,12 @@
             // txtGrammText
             // 
             this.txtGrammText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtGrammText.Location = new System.Drawing.Point(402, 203);
+            this.txtGrammText.Location = new System.Drawing.Point(402, 201);
             this.txtGrammText.Name = "txtGrammText";
             this.txtGrammText.Size = new System.Drawing.Size(36, 26);
             this.txtGrammText.TabIndex = 12;
-            this.txtGrammText.Text = "Kg";
+            this.txtGrammText.Text = "Gr";
+            this.txtGrammText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLagerbestandHaupt
             // 

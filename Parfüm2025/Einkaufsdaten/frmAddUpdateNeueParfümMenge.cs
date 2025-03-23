@@ -68,12 +68,15 @@ namespace Parfüm2025
                     txtParfümNummer.Text = _einkaufsDaten.parfümNummer.ToString();
                     txtParfümNummer.ReadOnly = true;
 
+                    //die namen in der Klasse clsEinkaufdaten wurden geändert.  wird von HauptBatchNummer zu HauptLotNr und so weiter.
                     txtParfümName.Text = _einkaufsDaten.parfümName;
-                    txtHauptBatchNummer.Text = _einkaufsDaten.hauptBatchNummer;
-                    txtSekundärBachNummer.Text = _einkaufsDaten.sekundäreBatchNummer; //zweite batchnummer falls vorhanden
+                    txtHauptBatchNummer.Text = _einkaufsDaten.HauptLotNr; 
+                    txtSekundärBachNummer.Text = _einkaufsDaten.SekundärLotNr; //zweite batchnummer falls vorhanden
                     txtParfümCode.Text = _einkaufsDaten.parfümCode;
-                    txtLagerbestandHaupt.Text = _einkaufsDaten.lagerBestandHaupt.ToString();
-                    txtLagebestandSekundär.Text = _einkaufsDaten.lagerBestandSekundär.ToString();
+                    txtLagerbestandHaupt.Text = _einkaufsDaten.HauptLagerbestand.ToString();
+                    //txtMengeOfHauptBachNummer.Text = _einkaufsDaten.HauptLagerbestand.ToString();
+                    //txtMengeOfSekundärBatchNummer.Text = _einkaufsDaten.SekundärLagerbestand.ToString();
+                    txtLagebestandSekundär.Text = _einkaufsDaten.SekundärLagerbestand.ToString();
                     txtPreiskategorie.Text = _einkaufsDaten.preisKategorie.ToString();
                     dtpErstellungsDatum.Value = _einkaufsDaten.erstellungsDatum;
                     
@@ -158,8 +161,8 @@ namespace Parfüm2025
             _einkaufsDaten.parfümNummer = Convert.ToInt32(txtParfümNummer.Text);
             _einkaufsDaten.parfümCode = txtParfümCode.Text;
             _einkaufsDaten.parfümName = txtParfümName.Text;
-            _einkaufsDaten.hauptBatchNummer = txtHauptBatchNummer.Text;
-            _einkaufsDaten.sekundäreBatchNummer = txtSekundärBachNummer.Text;
+            _einkaufsDaten.HauptLotNr = txtHauptBatchNummer.Text;
+            _einkaufsDaten.SekundärLotNr = txtSekundärBachNummer.Text;
 
             float? hauptMenge = string.IsNullOrWhiteSpace(txtMengeOfHauptBachNummer.Text) ? 0
             : Convert.ToSingle(txtMengeOfHauptBachNummer.Text);
@@ -168,12 +171,14 @@ namespace Parfüm2025
                 : Convert.ToSingle(txtMengeOfSekundärBatchNummer.Text);
 
             /*
-              ?? 0 Bedeutung >>> Wenn _einkaufsDaten.lagerBestandHaupt bereits einen Wert hat (z. B. 5.0), dann bleibt dieser Wert erhalten.
-                  Falls _einkaufsDaten.lagerBestandHaupt null ist, wird 0 verwendet.
+              ?? 0 Bedeutung >>> Wenn _einkaufsDaten.HauptLagerbestand bereits einen Wert hat (z. B. 5.0), dann bleibt dieser Wert erhalten.
+                  Falls _einkaufsDaten.HauptLagerbestand null ist, wird 0 verwendet.
              */
-            // Falls lagerBestandHaupt null ist, setze es auf 0, dann addiere die Menge
-            _einkaufsDaten.lagerBestandHaupt = (_einkaufsDaten.lagerBestandHaupt ?? 0) + hauptMenge;
-            _einkaufsDaten.lagerBestandSekundär = (_einkaufsDaten.lagerBestandSekundär ?? 0) + sekundärMenge;
+            // Falls HauptLagerbestand null ist, setze es auf 0, dann addiere die Menge
+            if(hauptMenge != 0f)
+                _einkaufsDaten.HauptLagerbestand = (_einkaufsDaten.HauptLagerbestand ?? 0) + hauptMenge;
+            if(sekundärMenge != 0f)
+                 _einkaufsDaten.SekundärLagerbestand = (_einkaufsDaten.SekundärLagerbestand ?? 0) + sekundärMenge;
 
 
             int preisKategorie = Convert.ToInt32(txtPreiskategorie.Text);

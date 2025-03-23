@@ -69,9 +69,9 @@ namespace Parfüm2025
                     txtVerkaufsMenge.Text = _rechnungsDetailsDaten.verkaufsMenge.ToString();
    
                     // Lagerbestand abrufen
-                    txtLagerbestandHaupt.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).lagerBestandHaupt.ToString();
-                    //wir suchen nach dem zusätzlichen Lagerbestand für die zweite sekundäreBatchNummer
-                    txtLagerBestandSekundär.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).lagerBestandSekundär.ToString();
+                    txtLagerbestandHaupt.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).HauptLagerbestand.ToString();
+                    //wir suchen nach dem zusätzlichen Lagerbestand für die zweite SekundärLotNr
+                    txtLagerBestandSekundär.Text = clsEinkauf.FindEinkaufDatenByParfümNummer(_rechnungsDetailsDaten.parfümNummer).SekundärLagerbestand.ToString();
                     // Preise formatieren
                     txtNormalPreis.Text = _rechnungsDetailsDaten.normalPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
                     txtGesamtPreis.Text = _rechnungsDetailsDaten.gesamtPreis.ToString("C", CultureInfo.GetCultureInfo("de-DE"));
@@ -138,22 +138,22 @@ namespace Parfüm2025
             _rechnungsDetailsDaten.verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
             float lagerBestandHaupt =string.IsNullOrEmpty(txtLagerbestandHaupt.Text) ? 0 :  Convert.ToSingle(txtLagerbestandHaupt.Text);
-            float lagerBestandSekundär = string.IsNullOrEmpty(txtLagerBestandSekundär.Text) ? 0 : Convert.ToSingle(txtLagerBestandSekundär.Text) ; //für sekundäreBatchNummer
+            float lagerBestandSekundär = string.IsNullOrEmpty(txtLagerBestandSekundär.Text) ? 0 : Convert.ToSingle(txtLagerBestandSekundär.Text) ; //für SekundärLotNr
             float verkaufsMenge = Convert.ToSingle(txtVerkaufsMenge.Text.Trim());
 
-                // Lagerbestand prüfen 
-            if (lagerBestandHaupt >= verkaufsMenge && (lagerBestandHaupt - verkaufsMenge > 0.7f) )
+                // Lagerbestand prüfen ob < 700 Gram ist 
+            if (lagerBestandHaupt >= verkaufsMenge && (lagerBestandHaupt - verkaufsMenge > 700) )
             {
-                _rechnungsDetailsDaten.lagerBestandHaupt = lagerBestandHaupt;
+                _rechnungsDetailsDaten.HauptLagerbestand = lagerBestandHaupt;
                 lagerBestandHaupt -= verkaufsMenge;
             }
             else if ((lagerBestandHaupt + lagerBestandSekundär) >= verkaufsMenge) // Falls zusätzlicher Lagerbestand verwendet werden muss
             {
                 // Berechne den verbleibenden Lagerbestand nach dem Verkauf
                 float verbleibenderLagerbestand = (lagerBestandHaupt + lagerBestandSekundär) - verkaufsMenge;
-                if (verbleibenderLagerbestand  < 0.7f)
+                if (verbleibenderLagerbestand  < 700)
                 {
-                    MessageBox.Show("Warnung: Der Lagerbestand ist unter 0.7! Bitte nachbestellen.",
+                    MessageBox.Show("Warnung: Der Lagerbestand ist genau 700 Gram! Bitte nachbestellen.",
                                     "Niedriger Lagerbestand",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
@@ -167,17 +167,17 @@ namespace Parfüm2025
                 // Berechnung korrigiert, damit kein negativer Lagerbestand entsteht
                 lagerBestandSekundär = Math.Max(0,lagerBestandSekundär - fehlendeMenge);
 
-                // Setze den Lagerbestand auf die Verkaufsmenge + lagerBestandSekundär.
+                // Setze den Lagerbestand auf die Verkaufsmenge + SekundärLagerbestand.
                 lagerBestandHaupt = verkaufsMenge + lagerBestandSekundär;
 
                 // Update Datenbank
                 clsEinkauf.UpdateLagerBestandHaupt(_rechnungsDetailsDaten.parfümNummer, lagerBestandHaupt);
                 //wir setzen sekundärBatchNummer zu HauptBatchNummer, wenn LagerbestandSekundär leer ist.
-                string sekundärBatchNummer = clsEinkauf.FindEinkaufDatenByParfümNummer(Convert.ToInt32(txtParfümNummer.Text)).sekundäreBatchNummer;
+                string sekundärBatchNummer = clsEinkauf.FindEinkaufDatenByParfümNummer(Convert.ToInt32(txtParfümNummer.Text)).SekundärLotNr;
                 clsEinkauf.UpdateLagerBestandSekundär(_rechnungsDetailsDaten.parfümNummer, sekundärBatchNummer,null);
 
                 //update lagerbestnd in _rechnungsdetails 
-                _rechnungsDetailsDaten.lagerBestandHaupt = lagerBestandHaupt;
+                _rechnungsDetailsDaten.HauptLagerbestand = lagerBestandHaupt;
 
             }
             else
@@ -331,8 +331,8 @@ namespace Parfüm2025
                 clsEinkauf einkaufsdaten = clsEinkauf.FindEinkaufDatenByParfümNummer(parfümNum);
                 if (einkaufsdaten != null)
                 {
-                    txtLagerbestandHaupt.Text = einkaufsdaten.lagerBestandHaupt.ToString();
-                    txtLagerBestandSekundär.Text = einkaufsdaten.lagerBestandSekundär.ToString();
+                    txtLagerbestandHaupt.Text = einkaufsdaten.HauptLagerbestand.ToString();
+                    txtLagerBestandSekundär.Text = einkaufsdaten.SekundärLagerbestand.ToString();
                 }
                 else
                 {
@@ -376,9 +376,9 @@ namespace Parfüm2025
 
                 if (float.TryParse(formattedVerkaufsmenge, out float verkaufsmenge))
                 {
-                    float verkaufsmengeInGramm = verkaufsmenge * 1000;
-                    float PreisProEinheit = clsPreise.BerechneParfuemPreis(verkaufsmengeInGramm, preisKategorie);
-                    float berechnePreis = verkaufsmengeInGramm * PreisProEinheit;
+                  
+                    float PreisProEinheit = clsPreise.BerechneParfuemPreis(verkaufsmenge, preisKategorie);
+                    float berechnePreis = verkaufsmenge * PreisProEinheit;
                     txtNormalPreis.Text = berechnePreis.ToString();
                 }
                 else

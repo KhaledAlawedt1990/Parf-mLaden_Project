@@ -24,7 +24,7 @@ namespace Busnisse_Layer
         public int belegID { get; set; }
         public int parfümNummer { get; set; }    
         public float verkaufsMenge{ get; set; }
-        public float lagerBestandHaupt { get; set; }
+        public float HauptLagerbestand { get; set; }
         public decimal normalPreis { get; set; }
         public decimal gesamtPreis { get; set; }
         public bool lagerbestandAktualisiert { get; set; }
@@ -36,7 +36,7 @@ namespace Busnisse_Layer
             this.belegID = belegID;
             this.parfümNummer = parfümNummer;
             this.verkaufsMenge = verkaufsMenge;
-            this.lagerBestandHaupt = lagerbestandHaupt;
+            this.HauptLagerbestand = lagerbestandHaupt;
             this.normalPreis = normalPreis;
             this.gesamtPreis = gesamtPreis;
             this.lagerbestandAktualisiert = lagerbestandAktualisiert;
@@ -50,7 +50,7 @@ namespace Busnisse_Layer
             this.belegID = -1;
             this.parfümNummer = -1;
             this.verkaufsMenge = 0;
-            this.lagerBestandHaupt = 0;
+            this.HauptLagerbestand = 0;
             this.normalPreis = 0;
             this.gesamtPreis = 0;
             this.lagerbestandAktualisiert = false;
@@ -61,7 +61,7 @@ namespace Busnisse_Layer
         {
             string query = @"SELECT detailID, belegID, parfümNummer, 
                                                  verkaufsMenge,
-                                                 lagerBestandHaupt,
+                                                 HauptLagerbestand,
                                                  normalPreis,
                                                  gesamtPreis,
                                                  lagerbestandAktualisiert
@@ -86,7 +86,7 @@ namespace Busnisse_Layer
                                 belegID = (int)reader["belegID"],
                                 parfümNummer = (int)reader["parfümNummer"],
                                 verkaufsMenge = (float)reader["verkaufsMenge"],
-                                lagerBestandHaupt = (float)reader["lagerBestandHaupt"],
+                                HauptLagerbestand = (float)reader["HauptLagerbestand"],
                                 normalPreis = (decimal)reader["normalPreis"],
                                 gesamtPreis = (decimal)reader["gesamtPreis"],
                                 lagerbestandAktualisiert = (bool)reader["lagerbestandAktualisiert"]
@@ -103,12 +103,12 @@ namespace Busnisse_Layer
         }
         public static clsRechnungsdetails Find(int detailID)
         {
-            int belegID = -1;  int parfümNummer = -1; float verkaufsMenge = 0, lagerbestandHaupt = 0;
+            int belegID = -1;  int parfümNummer = -1; float verkaufsMenge = 0, HauptLagerbestand = 0;
             decimal normalPreis = 0, gesamtPreis = 0; bool lagerbestandAktualisiert = false;
 
             if (clsRechnungsdetailsDatenzugriff.GetRechnungsDetailsByID(detailID, ref belegID, ref parfümNummer, ref verkaufsMenge,
-                                                  ref lagerbestandHaupt, ref normalPreis, ref gesamtPreis, ref lagerbestandAktualisiert))
-                return new clsRechnungsdetails(detailID, belegID, parfümNummer, verkaufsMenge, lagerbestandHaupt, normalPreis, gesamtPreis, lagerbestandAktualisiert);
+                                                  ref HauptLagerbestand, ref normalPreis, ref gesamtPreis, ref lagerbestandAktualisiert))
+                return new clsRechnungsdetails(detailID, belegID, parfümNummer, verkaufsMenge, HauptLagerbestand, normalPreis, gesamtPreis, lagerbestandAktualisiert);
             else
                 return null;
         }
@@ -116,7 +116,7 @@ namespace Busnisse_Layer
         private bool _AddNewRechnungsdetails()
         {
             this.detailID = clsRechnungsdetailsDatenzugriff.AddNewRechnungsDetailsDaten(this.belegID,this.parfümNummer, this.verkaufsMenge,
-                                       this.lagerBestandHaupt, this.normalPreis, this.gesamtPreis, this.lagerbestandAktualisiert);
+                                       this.HauptLagerbestand, this.normalPreis, this.gesamtPreis, this.lagerbestandAktualisiert);
 
             return (this.detailID != -1);
         }
@@ -124,7 +124,7 @@ namespace Busnisse_Layer
         private bool _UpdateRechnungsdetails()
         {
             return clsRechnungsdetailsDatenzugriff.UpdateRechnungsDetails(this.detailID,this.belegID, this.parfümNummer, this.verkaufsMenge,
-                                                        this.lagerBestandHaupt, this.normalPreis, this.gesamtPreis, this.lagerbestandAktualisiert);
+                                                        this.HauptLagerbestand, this.normalPreis, this.gesamtPreis, this.lagerbestandAktualisiert);
         }
 
        public bool Save()
@@ -155,9 +155,9 @@ namespace Busnisse_Layer
             return clsRechnungsdetailsDatenzugriff.GetRecordAnzahlProSeite(zeileProSeite, seiteNummer);
         }
         
-        public static bool SetzeLagerbestandAktualisiert(int detailID, float lagerBestandHaupt, bool lagerbestandAktualisiert)
+        public static bool SetzeLagerbestandAktualisiert(int detailID, float HauptLagerbestand, bool lagerbestandAktualisiert)
         {
-            return clsRechnungsdetailsDatenzugriff.SetzeLagerbestandAktualisiert(detailID, lagerBestandHaupt, lagerbestandAktualisiert);
+            return clsRechnungsdetailsDatenzugriff.SetzeLagerbestandAktualisiert(detailID, HauptLagerbestand, lagerbestandAktualisiert);
         }
     }
 }
