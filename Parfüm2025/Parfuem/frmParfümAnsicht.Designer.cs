@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpAlleParfüms = new System.Windows.Forms.TabPage();
             this.btnErstelleEineParfümListePdf = new System.Windows.Forms.Button();
@@ -70,7 +70,8 @@
             this.txtDamenParfümFilterBeiMarke = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDamenParfüm = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpAlleParfüms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParfüm)).BeginInit();
@@ -79,7 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHerrefDüfte)).BeginInit();
             this.tabPage3DamenDüfte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDamenParfüm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,11 +92,11 @@
             this.tabControl1.Controls.Add(this.tabPage2HerrnDüfte);
             this.tabControl1.Controls.Add(this.tabPage3DamenDüfte);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 236);
+            this.tabControl1.Location = new System.Drawing.Point(0, 82);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1406, 635);
+            this.tabControl1.Size = new System.Drawing.Size(1406, 789);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
@@ -119,20 +120,22 @@
             this.tpAlleParfüms.Margin = new System.Windows.Forms.Padding(2);
             this.tpAlleParfüms.Name = "tpAlleParfüms";
             this.tpAlleParfüms.Padding = new System.Windows.Forms.Padding(2);
-            this.tpAlleParfüms.Size = new System.Drawing.Size(1398, 596);
+            this.tpAlleParfüms.Size = new System.Drawing.Size(1398, 750);
             this.tpAlleParfüms.TabIndex = 0;
             this.tpAlleParfüms.Text = "Unisexdüfte";
             // 
             // btnErstelleEineParfümListePdf
             // 
             this.btnErstelleEineParfümListePdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnErstelleEineParfümListePdf.BackColor = System.Drawing.Color.Gold;
-            this.btnErstelleEineParfümListePdf.Location = new System.Drawing.Point(896, 40);
+            this.btnErstelleEineParfümListePdf.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnErstelleEineParfümListePdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnErstelleEineParfümListePdf.ForeColor = System.Drawing.Color.White;
+            this.btnErstelleEineParfümListePdf.Location = new System.Drawing.Point(1195, 30);
             this.btnErstelleEineParfümListePdf.Margin = new System.Windows.Forms.Padding(2);
             this.btnErstelleEineParfümListePdf.Name = "btnErstelleEineParfümListePdf";
-            this.btnErstelleEineParfümListePdf.Size = new System.Drawing.Size(494, 35);
+            this.btnErstelleEineParfümListePdf.Size = new System.Drawing.Size(195, 42);
             this.btnErstelleEineParfümListePdf.TabIndex = 26;
-            this.btnErstelleEineParfümListePdf.Text = "Erstelle eine Pdf-Datei aus Parfümliste";
+            this.btnErstelleEineParfümListePdf.Text = "Erstelle Pdf";
             this.btnErstelleEineParfümListePdf.UseVisualStyleBackColor = false;
             this.btnErstelleEineParfümListePdf.Click += new System.EventHandler(this.btnErstelleEineParfümListePdf_Click);
             // 
@@ -140,26 +143,27 @@
             // 
             this.lbVorschläge.FormattingEnabled = true;
             this.lbVorschläge.ItemHeight = 20;
-            this.lbVorschläge.Location = new System.Drawing.Point(375, 70);
+            this.lbVorschläge.Location = new System.Drawing.Point(370, 70);
             this.lbVorschläge.Name = "lbVorschläge";
-            this.lbVorschläge.Size = new System.Drawing.Size(232, 164);
+            this.lbVorschläge.Size = new System.Drawing.Size(263, 184);
             this.lbVorschläge.TabIndex = 24;
             this.lbVorschläge.Visible = false;
             this.lbVorschläge.Click += new System.EventHandler(this.lbVorschläge_Click_1);
             // 
             // txtFilterWert
             // 
-            this.txtFilterWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterWert.Location = new System.Drawing.Point(334, 107);
+            this.txtFilterWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilterWert.Location = new System.Drawing.Point(332, 103);
+            this.txtFilterWert.Multiline = true;
             this.txtFilterWert.Name = "txtFilterWert";
-            this.txtFilterWert.Size = new System.Drawing.Size(413, 29);
+            this.txtFilterWert.Size = new System.Drawing.Size(413, 33);
             this.txtFilterWert.TabIndex = 23;
             this.txtFilterWert.TextChanged += new System.EventHandler(this.txtFilterWert_TextChanged);
             this.txtFilterWert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterWert_KeyPress);
             // 
             // cbFilterBei
             // 
-            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterBei.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterBei.FormattingEnabled = true;
             this.cbFilterBei.Items.AddRange(new object[] {
             "ParfümNummer",
@@ -168,9 +172,9 @@
             "Kategorie",
             "Duftrichtung",
             "Jahreszeiten"});
-            this.cbFilterBei.Location = new System.Drawing.Point(108, 107);
+            this.cbFilterBei.Location = new System.Drawing.Point(108, 103);
             this.cbFilterBei.Name = "cbFilterBei";
-            this.cbFilterBei.Size = new System.Drawing.Size(218, 28);
+            this.cbFilterBei.Size = new System.Drawing.Size(218, 32);
             this.cbFilterBei.TabIndex = 22;
             this.cbFilterBei.SelectedIndexChanged += new System.EventHandler(this.cbFilterBei_SelectedIndexChanged);
             // 
@@ -192,7 +196,9 @@
             // btnNeuParfümHinzufügen
             // 
             this.btnNeuParfümHinzufügen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNeuParfümHinzufügen.BackColor = System.Drawing.Color.Gold;
+            this.btnNeuParfümHinzufügen.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnNeuParfümHinzufügen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNeuParfümHinzufügen.ForeColor = System.Drawing.Color.White;
             this.btnNeuParfümHinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNeuParfümHinzufügen.Location = new System.Drawing.Point(1161, 95);
             this.btnNeuParfümHinzufügen.Margin = new System.Windows.Forms.Padding(2);
@@ -205,11 +211,13 @@
             // 
             // btnSuchen
             // 
-            this.btnSuchen.BackColor = System.Drawing.Color.Gold;
-            this.btnSuchen.Location = new System.Drawing.Point(611, 35);
+            this.btnSuchen.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuchen.ForeColor = System.Drawing.Color.White;
+            this.btnSuchen.Location = new System.Drawing.Point(637, 31);
             this.btnSuchen.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuchen.Name = "btnSuchen";
-            this.btnSuchen.Size = new System.Drawing.Size(127, 35);
+            this.btnSuchen.Size = new System.Drawing.Size(127, 42);
             this.btnSuchen.TabIndex = 18;
             this.btnSuchen.Text = "Suche";
             this.btnSuchen.UseVisualStyleBackColor = false;
@@ -219,12 +227,13 @@
             // 
             this.txtParfümSuchen.BackColor = System.Drawing.Color.White;
             this.txtParfümSuchen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtParfümSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParfümSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParfümSuchen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtParfümSuchen.Location = new System.Drawing.Point(375, 37);
+            this.txtParfümSuchen.Location = new System.Drawing.Point(370, 36);
             this.txtParfümSuchen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtParfümSuchen.Multiline = true;
             this.txtParfümSuchen.Name = "txtParfümSuchen";
-            this.txtParfümSuchen.Size = new System.Drawing.Size(232, 29);
+            this.txtParfümSuchen.Size = new System.Drawing.Size(263, 34);
             this.txtParfümSuchen.TabIndex = 16;
             this.txtParfümSuchen.TextChanged += new System.EventHandler(this.txtParfümSuchen_TextChanged);
             this.txtParfümSuchen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtParfümSuchen_KeyDown);
@@ -258,30 +267,30 @@
             // 
             this.dgvParfüm.AllowUserToAddRows = false;
             this.dgvParfüm.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            this.dgvParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvParfüm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvParfüm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParfüm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParfüm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvParfüm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParfüm.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvParfüm.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvParfüm.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvParfüm.EnableHeadersVisualStyles = false;
             this.dgvParfüm.Location = new System.Drawing.Point(17, 140);
             this.dgvParfüm.Margin = new System.Windows.Forms.Padding(2);
@@ -292,7 +301,7 @@
             this.dgvParfüm.RowTemplate.Height = 30;
             this.dgvParfüm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParfüm.ShowCellErrors = false;
-            this.dgvParfüm.Size = new System.Drawing.Size(1376, 389);
+            this.dgvParfüm.Size = new System.Drawing.Size(1376, 543);
             this.dgvParfüm.TabIndex = 3;
             // 
             // contextMenuStrip1
@@ -452,8 +461,8 @@
             // 
             this.dgvHerrefDüfte.AllowUserToAddRows = false;
             this.dgvHerrefDüfte.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvHerrefDüfte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvHerrefDüfte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHerrefDüfte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -564,8 +573,8 @@
             // 
             this.dgvDamenParfüm.AllowUserToAddRows = false;
             this.dgvDamenParfüm.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvDamenParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDamenParfüm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDamenParfüm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -582,25 +591,34 @@
             this.dgvDamenParfüm.Size = new System.Drawing.Size(1388, 535);
             this.dgvDamenParfüm.TabIndex = 17;
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Alowidat_Final_Logo_02;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1398, 219);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.OliveDrab;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1405, 68);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(541, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Parfüm Verwaltung";
             // 
             // frmpafümAnsicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1405, 862);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmpafümAnsicht";
@@ -617,7 +635,8 @@
             this.tabPage3DamenDüfte.ResumeLayout(false);
             this.tabPage3DamenDüfte.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDamenParfüm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -659,7 +678,8 @@
         private System.Windows.Forms.ListBox lbVorschläge;
         private System.Windows.Forms.ToolStripMenuItem erstelleEineParfümlisteAlsPDFToolStripMenuItem;
         private System.Windows.Forms.Button btnErstelleEineParfümListePdf;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
