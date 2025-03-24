@@ -102,7 +102,7 @@ namespace Parfüm2025
             _preisDaten.kategorie = Convert.ToInt32(txtKategorie.Text);
             _preisDaten.miniMenge = Convert.ToInt32(txtMiniMenge.Text);
             _preisDaten.maxMenge = Convert.ToInt32(txtMaxMenge.Text);
-            _preisDaten.preisProEinheit = Convert.ToSingle(txtPreisProEinheit.Text);
+            _preisDaten.preisProEinheit = Convert.ToSingle(txtPreisProEinheit.Text.Replace('.',','));
         }
         private void btnSpeichern_Click(object sender, EventArgs e)
         {

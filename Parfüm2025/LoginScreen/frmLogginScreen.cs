@@ -163,5 +163,10 @@ namespace Parfüm2025
             }
             return true;
         }
+
+        private void gbAnmeldeDaten_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,3 +54,7 @@ C:\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\obj\Debug\HilfsMethoden.cspr
 C:\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\obj\Debug\HilfsMet.AAF8E864.Up2Date
 C:\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\obj\Debug\clsHilfsMethoden.dll
 C:\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\obj\Debug\clsHilfsMethoden.pdb
+C:\Users\khale\Desktop\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\khale\Desktop\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
+C:\Users\khale\Desktop\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\bin\Debug\System.ValueTuple.dll
+C:\Users\khale\Desktop\Parf-mLaden_Project\Parfüm2025\clsHilfsMethoden\obj\Debug\HilfsMet.AAF8E864.Up2Date
