@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
+  "WorkspaceRootPath": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\parfuem\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\hamssa\\desktop\\parf-mladen_project\\parf\u00FCm2025\\parfuem\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:parfuem\\frmaddupdatenewperfum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\loginscreen\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\loginscreen\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:loginscreen\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\loginscreen\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\loginscreen\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:loginscreen\\frmlogginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\preise\\frmpreiskategorieliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\preise\\frmpreiskategorieliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:preise\\frmpreiskategorieliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\preise\\frmpreiskategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\preise\\frmpreiskategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:preise\\frmpreiskategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\parfuem\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\parfuem\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:parfuem\\frmparf\u00FCmansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\mainscreen\\frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\mainscreen\\frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:mainscreen\\frmhaupbildschrimansicht.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,120 +38,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "frmLogginScreen.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs",
               "RelativeDocumentMoniker": "LoginScreen\\frmLogginScreen.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs",
+              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs",
               "RelativeToolTip": "LoginScreen\\frmLogginScreen.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAmwKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T02:20:05.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T02:20:05.425Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "frmLogginScreen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs",
               "RelativeDocumentMoniker": "LoginScreen\\frmLogginScreen.cs",
               "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs [Design]",
-              "RelativeToolTip": "LoginScreen\\frmLogginScreen.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\LoginScreen\\frmLogginScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T02:15:04.119Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-24T02:15:04.119Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmAddUpdateNewPerfum.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmAddUpdateNewPerfum.cs",
+              "Title": "frmAddUpdateNewPerfum.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmAddUpdateNewPerfum.cs",
               "RelativeDocumentMoniker": "Parfuem\\frmAddUpdateNewPerfum.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmAddUpdateNewPerfum.cs [Design]",
-              "RelativeToolTip": "Parfuem\\frmAddUpdateNewPerfum.cs [Design]",
+              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmAddUpdateNewPerfum.cs [Entwurf]",
+              "RelativeToolTip": "Parfuem\\frmAddUpdateNewPerfum.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T02:06:16.799Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Entwurf]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "frmPreisKategorieListe.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorieListe.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorieListe.cs",
               "RelativeDocumentMoniker": "Preise\\frmPreisKategorieListe.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorieListe.cs",
+              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorieListe.cs",
               "RelativeToolTip": "Preise\\frmPreisKategorieListe.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAAAFsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T02:03:44.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T02:03:44.5Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "frmParf\u00FCmAnsicht.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmParf\u00FCmAnsicht.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmParf\u00FCmAnsicht.cs",
               "RelativeDocumentMoniker": "Parfuem\\frmParf\u00FCmAnsicht.cs",
               "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmParf\u00FCmAnsicht.cs [Design]",
-              "RelativeToolTip": "Parfuem\\frmParf\u00FCmAnsicht.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Parfuem\\frmParf\u00FCmAnsicht.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T02:06:24.116Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-24T02:06:24.116Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "frmPreisKategorie.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorie.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorie.cs",
               "RelativeDocumentMoniker": "Preise\\frmPreisKategorie.cs",
               "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorie.cs [Design]",
-              "RelativeToolTip": "Preise\\frmPreisKategorie.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Preise\\frmPreisKategorie.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T02:03:40.096Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-24T02:03:40.096Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "frmHaupBildschrimAnsicht.cs",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\MainScreen\\frmHaupBildschrimAnsicht.cs",
+              "DocumentMoniker": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\MainScreen\\frmHaupBildschrimAnsicht.cs",
               "RelativeDocumentMoniker": "MainScreen\\frmHaupBildschrimAnsicht.cs",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\MainScreen\\frmHaupBildschrimAnsicht.cs",
+              "ToolTip": "C:\\Users\\Hamssa\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\MainScreen\\frmHaupBildschrimAnsicht.cs",
               "RelativeToolTip": "MainScreen\\frmHaupBildschrimAnsicht.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAtwAEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T01:37:28.182Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 56,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2025-03-24T01:37:28.182Z"
             }
           ]
         }
