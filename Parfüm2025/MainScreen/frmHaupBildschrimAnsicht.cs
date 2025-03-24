@@ -18,8 +18,6 @@ namespace Parfüm2025
 {
     public partial class frmHaupBildschrimAnsicht : Form
     {
-        private float _neuerLagerbestand = -1;
-        private int _parfümNummer = -1;
         private frmOverly _overlay;
         public frmHaupBildschrimAnsicht()
         {
@@ -60,16 +58,16 @@ namespace Parfüm2025
         }
         private void clsHaupBildschrimAnsicht_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _overlay = null; // Setze die Overlay-Instanz zurück
+            //_overlay = null; // Setze die Overlay-Instanz zurück
 
-            // Benutzer ausloggen (aktiven Benutzer zurücksetzen)
-            if (clsGlobaleKlasse.currentUser != null)
-                clsGlobaleKlasse.currentUser = null;
+            //// Benutzer ausloggen (aktiven Benutzer zurücksetzen)
+            //if (clsGlobaleKlasse.currentUser != null)
+            //    clsGlobaleKlasse.currentUser = null;
 
-            // Anwendung vollständig beenden
-            //Application.Exit();
+            //// Anwendung vollständig beenden
+            ////Application.Exit();
 
-            this.Close();
+            //this.Close();
         }
 
         private void parfümAnsichtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,6 +158,15 @@ namespace Parfüm2025
 
         private void ausloggenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            _overlay = null; // Setze die Overlay-Instanz zurück
+
+            // Benutzer ausloggen (aktiven Benutzer zurücksetzen)
+            if (clsGlobaleKlasse.currentUser != null)
+                clsGlobaleKlasse.currentUser = null;
+
+            // Anwendung vollständig beenden
+            //Application.Exit();
+
             this.Close();
         }
 
@@ -194,24 +201,6 @@ namespace Parfüm2025
             frm.ShowDialog();
 
  
-        }
-
-        private void _ÜberprüfeLagerbestand(object sender, float neuerLagerbestand, int parfümNummer)
-        {
-            _neuerLagerbestand = neuerLagerbestand;
-            _parfümNummer = parfümNummer;
-        }
-
-        private void _SetzeNotifikation()
-        {
-            new ToastContentBuilder()
-                 .AddText("Achtung: Niedriger Lagerbestand!")
-                   .AddText($"Der Lagerbestand für die ParfümNummer {_parfümNummer} ist unter 50 gefallen. Bitte prüfen Sie die Bestände.")
-                   .SetToastDuration(ToastDuration.Long) // Toast länger anzeigen
-                     .Show();
-
-            _neuerLagerbestand = -1;  // neuelagerbestand zurücksetzen
-            _parfümNummer = -1;    // parfümNummer zurücksetzen 
         }
 
         private void sucheEinenKundenToolStripMenuItem_Click(object sender, EventArgs e)
