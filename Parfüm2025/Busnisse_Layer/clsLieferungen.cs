@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Runtime.InteropServices;
 using Busnisse_Layer;
+using Microsoft.SqlServer.Server;
 using ParfümDb_DataLayer;
 
 namespace ParfümDb_BusinessLayer
@@ -17,8 +18,7 @@ namespace ParfümDb_BusinessLayer
               public int? LieferungID { get; set; }
         public int? ProduktID { get; set; }
         public clsProdukte ProdukteInfo { get; set; }
-        public int KundeID { get; set; }
-        public clsKunde KundeInfo { get; set; }
+        public string KundeName { get; set; }
         public bool? HauptGechäft { get; set; }
         public bool? DezGeschäft { get; set; }
         public int? GelieferteMenge { get; set; }
@@ -29,7 +29,7 @@ namespace ParfümDb_BusinessLayer
             this.LieferungID = null;
             this.LieferungID = null;
             this.ProduktID = null;
-            this.KundeID = -1;
+            this.KundeName = null;
             this.HauptGechäft = false;
             this.DezGeschäft = false;
             this.GelieferteMenge = null;
@@ -39,12 +39,12 @@ namespace ParfümDb_BusinessLayer
 
 
         private clsLieferungen(
-int? LieferungID,int? ProduktID, int KundeID,bool? HauptGeschäft, bool? DezGeschäft, int? GelieferteMenge)
+int? LieferungID,int? ProduktID, string KundeName,bool? HauptGeschäft, bool? DezGeschäft, int? GelieferteMenge)
         {
             this.LieferungID = LieferungID;
             this.ProduktID = ProduktID;
             this.ProdukteInfo = clsProdukte.FindByProduktID(ProduktID);
-            this.KundeID = KundeID;
+            this.KundeName = KundeName;
             this.HauptGechäft = HauptGeschäft;
             this.DezGeschäft = DezGeschäft;
             this.GelieferteMenge = GelieferteMenge;
@@ -57,7 +57,7 @@ int? LieferungID,int? ProduktID, int KundeID,bool? HauptGeschäft, bool? DezGesc
        private bool _AddNewLieferungen()
        {
         this.LieferungID = clsLieferungenData.AddNewLieferungen(
-this.ProduktID, this.KundeID,this.HauptGechäft, this.DezGeschäft, this.GelieferteMenge);
+this.ProduktID, this.KundeName,this.HauptGechäft, this.DezGeschäft, this.GelieferteMenge);
 
             return (this.LieferungID != null);
 
@@ -65,10 +65,10 @@ this.ProduktID, this.KundeID,this.HauptGechäft, this.DezGeschäft, this.Geliefe
 
 
        public static bool AddNewLieferungen(ref int? LieferungID,int? ProduktID, 
-           int KundeID, bool HauptGeschäft, bool DezGeschäft, int? GelieferteMenge)
+           string KundeName, bool HauptGeschäft, bool DezGeschäft, int? GelieferteMenge)
         {
         LieferungID = clsLieferungenData.AddNewLieferungen(
-ProduktID, KundeID, HauptGeschäft, DezGeschäft,  GelieferteMenge);
+ProduktID, KundeName, HauptGeschäft, DezGeschäft,  GelieferteMenge);
 
             return (LieferungID != null);
 
@@ -78,15 +78,15 @@ ProduktID, KundeID, HauptGeschäft, DezGeschäft,  GelieferteMenge);
        private bool _UpdateLieferungen()
        {
         return clsLieferungenData.UpdateLieferungenByID(
-this.LieferungID, this.ProduktID, this.KundeID,this.HauptGechäft, this.DezGeschäft, this.GelieferteMenge       );
+this.LieferungID, this.ProduktID, this.KundeName,this.HauptGechäft, this.DezGeschäft, this.GelieferteMenge       );
        }
 
 
        public static bool UpdateLieferungenByID(
-int? LieferungID,int? ProduktID, int KundeID, bool HauptGeschäft, bool DezGeschäft, int? GelieferteMenge     )
+int? LieferungID,int? ProduktID, string KundeName, bool HauptGeschäft, bool DezGeschäft, int? GelieferteMenge     )
         {
         return clsLieferungenData.UpdateLieferungenByID(
-LieferungID, ProduktID, KundeID,HauptGeschäft, DezGeschäft, GelieferteMenge);
+LieferungID, ProduktID, KundeName,HauptGeschäft, DezGeschäft, GelieferteMenge);
 
         }
 
@@ -99,16 +99,16 @@ LieferungID, ProduktID, KundeID,HauptGeschäft, DezGeschäft, GelieferteMenge);
                 return null;
             }
             int? ProduktID = null;
-            int KundeID = -1;
+            string KundeName = null;
             bool? HauptGeschäft = false;
             bool? DezGeschäft = false;
             int? GelieferteMenge = null;
             bool IsFound = clsLieferungenData.GetLieferungenInfoByID(LieferungID,
- ref ProduktID,  ref KundeID, ref HauptGeschäft, ref DezGeschäft, ref GelieferteMenge);
+ ref ProduktID,  ref KundeName, ref HauptGeschäft, ref DezGeschäft, ref GelieferteMenge);
 
            if(IsFound)
                return new clsLieferungen(
- LieferungID,  ProduktID,  KundeID, HauptGeschäft, DezGeschäft, GelieferteMenge);
+ LieferungID,  ProduktID,  KundeName, HauptGeschäft, DezGeschäft, GelieferteMenge);
             else
                 return  null;
         }

@@ -11,7 +11,7 @@ namespace ParfümDb_DataLayer
     {
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
 
-        public static bool GetLieferungenInfoByID(int? LieferungID , ref int? ProduktID, ref int KundeID,
+        public static bool GetLieferungenInfoByID(int? LieferungID , ref int? ProduktID, ref string Kunde,
             ref bool? HauptGeschäft , ref bool? DezGeschäft, ref int? GelieferteMenge)
             {
                 bool isFound = false;
@@ -34,7 +34,7 @@ namespace ParfümDb_DataLayer
                                 isFound = true;
 
                                 ProduktID = reader["ProduktID"] != DBNull.Value ? (int?)reader["ProduktID"] : null;
-                            KundeID = (int)reader["KundeID"];
+                              Kunde  = reader["KundeName"] != DBNull.Value ? reader["KundeName"].ToString() : null;
                              HauptGeschäft = reader["HauptGeschäft"] != DBNull.Value ? (bool?)reader["HauptGeschäft"] : null;
                              DezGeschäft = reader["DezGeschäft"] != DBNull.Value ? (bool?)reader["DezGeschäft"] : null;
                             GelieferteMenge = reader["GelieferteMenge"] != DBNull.Value ? (int?)reader["GelieferteMenge"] : null;
@@ -58,7 +58,7 @@ namespace ParfümDb_DataLayer
 
     using (SqlConnection connection = new SqlConnection(ConnectionString))
     {
-        string query = @"Select L.LieferungID, P.ProduktName, L.KundeID, L.HauptGeschäft, L.DezGeschäft,
+        string query = @"Select L.LieferungID, P.ProduktName, L.KundeName, L.HauptGeschäft, L.DezGeschäft,
                      L.GelieferteMenge, P.Total, L.Lieferdatum
                      From Lieferungen as L 
                      Inner Join Produkte as P
@@ -81,22 +81,22 @@ namespace ParfümDb_DataLayer
 
 }
 
-         public static int? AddNewLieferungen(int? ProduktID, int KundeID, bool? HauptGeschäft, bool? DezGeschäft, int? GelieferteMenge)
+         public static int? AddNewLieferungen(int? ProduktID, string KundeName, bool? HauptGeschäft, bool? DezGeschäft, int? GelieferteMenge)
         {
             int? LieferungID = null;
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                string query = @"Insert Into Lieferungen ([ProduktID],[KundeID],[HauptGeschäft],[DezGeschäft],[GelieferteMenge],[Lieferdatum])
-                            Values (@ProduktID,@KundeID, @HauptGeschäft,@DezGeschäft ,@GelieferteMenge,@Lieferdatum)
+                string query = @"Insert Into Lieferungen ([ProduktID],[KundeName],[HauptGeschäft],[DezGeschäft],[GelieferteMenge],[Lieferdatum])
+                            Values (@ProduktID,@KundeName, @HauptGeschäft,@DezGeschäft ,@GelieferteMenge,@Lieferdatum)
                             SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@ProduktID", ProduktID ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("@KundeID", KundeID);
-                    command.Parameters.AddWithValue("@HauptGeschäft", HauptGeschäft);
-                    command.Parameters.AddWithValue("@DezGeschäft", DezGeschäft);
+                    command.Parameters.AddWithValue("@KundeName", KundeName ?? (object)DBNull.Value);
+                    command.Parameters.AddWithValue("@HauptGeschäft", HauptGeschäft ?? (object)DBNull.Value);
+                    command.Parameters.AddWithValue("@DezGeschäft", DezGeschäft ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@GelieferteMenge", GelieferteMenge ?? (object)DBNull.Value);
                    
                     command.Parameters.AddWithValue("@Lieferdatum", DateTime.Now.Date);
@@ -118,7 +118,7 @@ namespace ParfümDb_DataLayer
         }
 
 
-         public static bool UpdateLieferungenByID(int? LieferungID, int? ProduktID, int KundeID,
+         public static bool UpdateLieferungenByID(int? LieferungID, int? ProduktID, string KundeName,
               bool? HauptGeschäft, bool? DezGeschäft , int? GelieferteMenge)
         {
             int rowsAffected = 0;
@@ -128,7 +128,7 @@ namespace ParfümDb_DataLayer
                 string query = @"Update Lieferungen
                                     set 
                                          [ProduktID] = @ProduktID,
-                                         [KundeID] = @KundeID,
+                                         [KundeName] = @KundeName,
                                          [HauptGeschäft]  = @HauptGeschäft,
                                           [ezGeschäft] =@DezGeschäft ,
                                          [GelieferteMenge] = @GelieferteMenge,
@@ -140,9 +140,9 @@ namespace ParfümDb_DataLayer
                 {
                     command.Parameters.AddWithValue("@LieferungID", LieferungID);
                     command.Parameters.AddWithValue("@ProduktID", ProduktID ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("@KundeID", KundeID);
-                    command.Parameters.AddWithValue("@HauptGeschäft", HauptGeschäft);
-                    command.Parameters.AddWithValue("@DezGeschäft", DezGeschäft);
+                    command.Parameters.AddWithValue("@KundeName", KundeName ?? (object)DBNull.Value);
+                    command.Parameters.AddWithValue("@HauptGeschäft", HauptGeschäft ?? (object)DBNull.Value);
+                    command.Parameters.AddWithValue("@DezGeschäft", DezGeschäft ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@GelieferteMenge", GelieferteMenge ?? (object)DBNull.Value);
               
                     command.Parameters.AddWithValue("@Lieferdatum", DateTime.Now.Date);

@@ -106,7 +106,8 @@ namespace Parfüm2025
                 return false;
             }
            _lieferungen.GelieferteMenge  = gelieferteMenge;
-            _lieferungen.KundeID = clsKunde.FindKundeByPersonName(cbKunde.Text).kundeID; 
+            _lieferungen.KundeName = (cbKunde.SelectedIndex != -1) ? cbKunde.Text : null;
+
             if (rbHauptGeschäft.Checked)
                 _lieferungen.HauptGechäft = true;
             else if(rbDezGeschäft.Checked)
@@ -125,7 +126,7 @@ namespace Parfüm2025
          
            
             txtGelieferteMenge.Text = _lieferungen.GelieferteMenge.ToString();
-            cbKunde.Text = _lieferungen.KundeID.ToString();
+            cbKunde.Text = _lieferungen.KundeName;
             if (_lieferungen.HauptGechäft == true)
                 rbHauptGeschäft.Checked = true;
             else if (_lieferungen.DezGeschäft == true)

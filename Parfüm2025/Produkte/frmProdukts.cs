@@ -118,8 +118,7 @@ namespace Parfüm2025
         private void _Anzeigen(clsProdukte produktes, clsLieferungen lieferung)
         {
             txtProduktName.Text = produktes.ProduktName;
-            string kundeName = clsKunde.FindKundeByID(lieferung.KundeID).Vollname;
-            txtAnKunde.Text = kundeName;    
+            txtAnKunde.Text = lieferung.KundeName;    
             txtGekaufteMenge.Text = produktes.GekaufteMenge.ToString();
             txtGelieferteMenge.Text = lieferung.GelieferteMenge.ToString();
             txtTotoMenge.Text = produktes.Total.ToString();
