@@ -66,8 +66,8 @@ namespace Parfüm2025
         }
         private void _füllePersonDaten()
         {
-            _persondaten.Vorname = txtVorname.Text;
-            _persondaten.Nachname = txtNachname.Text;
+            _persondaten.Vorname = txtVorname.Text.Trim();
+            _persondaten.Nachname = txtNachname.Text.Trim();
             _persondaten.GeburtsTag = dtpGeburtstag.Value;
             _persondaten.Geschlecht = Convert.ToChar(cbGeschlecht.SelectedItem.ToString());
             _persondaten.SteuerID = txtSteuerID.Text;

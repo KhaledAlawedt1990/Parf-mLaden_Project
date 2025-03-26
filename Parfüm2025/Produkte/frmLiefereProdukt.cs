@@ -48,12 +48,13 @@ namespace Parfüm2025
         {
             cbKunde.Items.Clear(); // Verhindert doppelte Einträge
 
-            DataTable dt = clsLieferungen.GetAllLieferungen();
-            if (dt != null && dt.Rows.Count > 0) // Prüfen, ob Daten vorhanden sind
+            DataTable dt = clsKunde.GetAllKundeName();
+            if (dt != null && dt.Rows.Count > 0)
             {
+              
                 foreach (DataRow row in dt.Rows)
                 {
-                    cbKunde.Items.Add(row["Kunde"].ToString());
+                    cbKunde.Items.Add(row["Vollname"]);
                 }
             }
 
@@ -105,7 +106,7 @@ namespace Parfüm2025
                 return false;
             }
            _lieferungen.GelieferteMenge  = gelieferteMenge;
-          _lieferungen.Kunde = cbKunde.Text;
+            _lieferungen.KundeID = clsKunde.FindKundeByPersonName(cbKunde.Text).kundeID; 
             if (rbHauptGeschäft.Checked)
                 _lieferungen.HauptGechäft = true;
             else if(rbDezGeschäft.Checked)
@@ -124,7 +125,7 @@ namespace Parfüm2025
          
            
             txtGelieferteMenge.Text = _lieferungen.GelieferteMenge.ToString();
-            cbKunde.Text = _lieferungen.Kunde;
+            cbKunde.Text = _lieferungen.KundeID.ToString();
             if (_lieferungen.HauptGechäft == true)
                 rbHauptGeschäft.Checked = true;
             else if (_lieferungen.DezGeschäft == true)

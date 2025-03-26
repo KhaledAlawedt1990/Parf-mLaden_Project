@@ -1,4 +1,5 @@
-﻿using iText.StyledXmlParser.Node;
+﻿using Busnisse_Layer;
+using iText.StyledXmlParser.Node;
 using iText.Svg.Utils;
 using iTextSharp.text.xml;
 using ParfümDb_BusinessLayer;
@@ -32,6 +33,7 @@ namespace Parfüm2025
             txtGekaufteMenge.Clear();
             txtGelieferteMenge.Clear();
             txtTotoMenge.Clear();
+            txtAnKunde.Clear();
             rbHauptGeschäft.Checked = false;
             rbDezGeschäft.Checked = false;
         }
@@ -96,8 +98,8 @@ namespace Parfüm2025
         {
             _ResetDefaultValues();
 
-            int produkID = (int)dgvProdukts.CurrentRow.Cells[1].Value;
-            clsProdukte produktes = clsProdukte.FindByProduktID(produkID);
+            string ProduktName = dgvProdukts.CurrentRow.Cells[1].Value.ToString();
+            clsProdukte produktes = clsProdukte.FindByProduktName(ProduktName);
             if(produktes == null)
             {
                 MessageBox.Show("Keiner Produkt wurde gefunden", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -116,6 +118,8 @@ namespace Parfüm2025
         private void _Anzeigen(clsProdukte produktes, clsLieferungen lieferung)
         {
             txtProduktName.Text = produktes.ProduktName;
+            string kundeName = clsKunde.FindKundeByID(lieferung.KundeID).Vollname;
+            txtAnKunde.Text = kundeName;    
             txtGekaufteMenge.Text = produktes.GekaufteMenge.ToString();
             txtGelieferteMenge.Text = lieferung.GelieferteMenge.ToString();
             txtTotoMenge.Text = produktes.Total.ToString();

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilerwert = new System.Windows.Forms.TextBox();
@@ -59,6 +59,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVerkaufen = new System.Windows.Forms.Button();
             this.btnAktualisieren = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAnKunde = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdukts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -72,7 +74,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1422, 66);
             this.panel1.TabIndex = 1;
@@ -97,7 +99,7 @@
             this.txtFilerwert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtFilerwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFilerwert.Location = new System.Drawing.Point(380, 542);
-            this.txtFilerwert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFilerwert.Margin = new System.Windows.Forms.Padding(4);
             this.txtFilerwert.Multiline = true;
             this.txtFilerwert.Name = "txtFilerwert";
             this.txtFilerwert.Size = new System.Drawing.Size(536, 38);
@@ -113,7 +115,7 @@
             "ProduktID",
             "ProduktName"});
             this.cbFilterbei.Location = new System.Drawing.Point(136, 544);
-            this.cbFilterbei.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbFilterbei.Margin = new System.Windows.Forms.Padding(4);
             this.cbFilterbei.Name = "cbFilterbei";
             this.cbFilterbei.Size = new System.Drawing.Size(235, 33);
             this.cbFilterbei.TabIndex = 9;
@@ -134,42 +136,42 @@
             // 
             this.dgvProdukts.AllowUserToAddRows = false;
             this.dgvProdukts.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvProdukts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            this.dgvProdukts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProdukts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProdukts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdukts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdukts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvProdukts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdukts.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdukts.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvProdukts.EnableHeadersVisualStyles = false;
             this.dgvProdukts.Location = new System.Drawing.Point(16, 586);
-            this.dgvProdukts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProdukts.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProdukts.Name = "dgvProdukts";
             this.dgvProdukts.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdukts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdukts.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvProdukts.RowHeadersWidth = 51;
             this.dgvProdukts.RowTemplate.Height = 30;
             this.dgvProdukts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -181,7 +183,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.Location = new System.Drawing.Point(21, 503);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1391, 21);
             this.panel2.TabIndex = 11;
@@ -197,8 +199,8 @@
             this.btnAbbrechen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbbrechen.ForeColor = System.Drawing.Color.White;
-            this.btnAbbrechen.Location = new System.Drawing.Point(659, 352);
-            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbbrechen.Location = new System.Drawing.Point(560, 340);
+            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbbrechen.Name = "btnAbbrechen";
             this.btnAbbrechen.Size = new System.Drawing.Size(141, 49);
             this.btnAbbrechen.TabIndex = 38;
@@ -214,7 +216,7 @@
             this.btnKaufen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKaufen.ForeColor = System.Drawing.Color.White;
             this.btnKaufen.Location = new System.Drawing.Point(1088, 539);
-            this.btnKaufen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaufen.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaufen.Name = "btnKaufen";
             this.btnKaufen.Size = new System.Drawing.Size(153, 42);
             this.btnKaufen.TabIndex = 39;
@@ -229,8 +231,8 @@
             this.btnAnzeigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnzeigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnzeigen.ForeColor = System.Drawing.Color.White;
-            this.btnAnzeigen.Location = new System.Drawing.Point(318, 353);
-            this.btnAnzeigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnzeigen.Location = new System.Drawing.Point(219, 341);
+            this.btnAnzeigen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnzeigen.Name = "btnAnzeigen";
             this.btnAnzeigen.Size = new System.Drawing.Size(141, 49);
             this.btnAnzeigen.TabIndex = 42;
@@ -245,8 +247,8 @@
             this.btLoeschen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoeschen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLoeschen.ForeColor = System.Drawing.Color.White;
-            this.btLoeschen.Location = new System.Drawing.Point(487, 352);
-            this.btLoeschen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLoeschen.Location = new System.Drawing.Point(388, 340);
+            this.btLoeschen.Margin = new System.Windows.Forms.Padding(4);
             this.btLoeschen.Name = "btLoeschen";
             this.btLoeschen.Size = new System.Drawing.Size(141, 49);
             this.btLoeschen.TabIndex = 43;
@@ -256,6 +258,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtAnKunde);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.rbDezGeschäft);
             this.groupBox1.Controls.Add(this.rbHauptGeschäft);
             this.groupBox1.Controls.Add(this.btLoeschen);
@@ -272,9 +276,9 @@
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 86);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1391, 410);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -284,8 +288,8 @@
             // 
             this.rbDezGeschäft.AutoSize = true;
             this.rbDezGeschäft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDezGeschäft.Location = new System.Drawing.Point(456, 279);
-            this.rbDezGeschäft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDezGeschäft.Location = new System.Drawing.Point(403, 278);
+            this.rbDezGeschäft.Margin = new System.Windows.Forms.Padding(4);
             this.rbDezGeschäft.Name = "rbDezGeschäft";
             this.rbDezGeschäft.Size = new System.Drawing.Size(142, 28);
             this.rbDezGeschäft.TabIndex = 45;
@@ -296,8 +300,8 @@
             // 
             this.rbHauptGeschäft.AutoSize = true;
             this.rbHauptGeschäft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHauptGeschäft.Location = new System.Drawing.Point(268, 279);
-            this.rbHauptGeschäft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbHauptGeschäft.Location = new System.Drawing.Point(215, 278);
+            this.rbHauptGeschäft.Margin = new System.Windows.Forms.Padding(4);
             this.rbHauptGeschäft.Name = "rbHauptGeschäft";
             this.rbHauptGeschäft.Size = new System.Drawing.Size(159, 28);
             this.rbHauptGeschäft.TabIndex = 44;
@@ -308,8 +312,8 @@
             // 
             this.txtGekaufteMenge.BackColor = System.Drawing.Color.White;
             this.txtGekaufteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGekaufteMenge.Location = new System.Drawing.Point(268, 106);
-            this.txtGekaufteMenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGekaufteMenge.Location = new System.Drawing.Point(215, 105);
+            this.txtGekaufteMenge.Margin = new System.Windows.Forms.Padding(4);
             this.txtGekaufteMenge.Multiline = true;
             this.txtGekaufteMenge.Name = "txtGekaufteMenge";
             this.txtGekaufteMenge.ReadOnly = true;
@@ -321,7 +325,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(116, 223);
+            this.label7.Location = new System.Drawing.Point(63, 222);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 25);
@@ -332,8 +336,8 @@
             // 
             this.txtProduktName.BackColor = System.Drawing.Color.White;
             this.txtProduktName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduktName.Location = new System.Drawing.Point(268, 46);
-            this.txtProduktName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProduktName.Location = new System.Drawing.Point(215, 45);
+            this.txtProduktName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProduktName.Multiline = true;
             this.txtProduktName.Name = "txtProduktName";
             this.txtProduktName.ReadOnly = true;
@@ -345,7 +349,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(69, 166);
+            this.label6.Location = new System.Drawing.Point(16, 165);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(162, 25);
@@ -356,12 +360,12 @@
             // 
             this.txtGelieferteMenge.BackColor = System.Drawing.Color.White;
             this.txtGelieferteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGelieferteMenge.Location = new System.Drawing.Point(268, 159);
-            this.txtGelieferteMenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGelieferteMenge.Location = new System.Drawing.Point(215, 158);
+            this.txtGelieferteMenge.Margin = new System.Windows.Forms.Padding(4);
             this.txtGelieferteMenge.Multiline = true;
             this.txtGelieferteMenge.Name = "txtGelieferteMenge";
             this.txtGelieferteMenge.ReadOnly = true;
-            this.txtGelieferteMenge.Size = new System.Drawing.Size(343, 40);
+            this.txtGelieferteMenge.Size = new System.Drawing.Size(159, 40);
             this.txtGelieferteMenge.TabIndex = 32;
             // 
             // label5
@@ -369,7 +373,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(73, 110);
+            this.label5.Location = new System.Drawing.Point(20, 109);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(158, 25);
@@ -380,12 +384,12 @@
             // 
             this.txtTotoMenge.BackColor = System.Drawing.Color.White;
             this.txtTotoMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotoMenge.Location = new System.Drawing.Point(268, 214);
-            this.txtTotoMenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotoMenge.Location = new System.Drawing.Point(215, 213);
+            this.txtTotoMenge.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotoMenge.Multiline = true;
             this.txtTotoMenge.Name = "txtTotoMenge";
             this.txtTotoMenge.ReadOnly = true;
-            this.txtTotoMenge.Size = new System.Drawing.Size(343, 40);
+            this.txtTotoMenge.Size = new System.Drawing.Size(159, 40);
             this.txtTotoMenge.TabIndex = 33;
             // 
             // label4
@@ -393,7 +397,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(93, 53);
+            this.label4.Location = new System.Drawing.Point(40, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 25);
@@ -403,8 +407,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Produkts;
-            this.pictureBox1.Location = new System.Drawing.Point(744, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(852, 27);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(488, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,7 +423,7 @@
             this.btnVerkaufen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerkaufen.ForeColor = System.Drawing.Color.White;
             this.btnVerkaufen.Location = new System.Drawing.Point(1251, 539);
-            this.btnVerkaufen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerkaufen.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerkaufen.Name = "btnVerkaufen";
             this.btnVerkaufen.Size = new System.Drawing.Size(153, 42);
             this.btnVerkaufen.TabIndex = 40;
@@ -435,13 +439,37 @@
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ForeColor = System.Drawing.Color.White;
             this.btnAktualisieren.Location = new System.Drawing.Point(926, 539);
-            this.btnAktualisieren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAktualisieren.Margin = new System.Windows.Forms.Padding(4);
             this.btnAktualisieren.Name = "btnAktualisieren";
             this.btnAktualisieren.Size = new System.Drawing.Size(153, 42);
             this.btnAktualisieren.TabIndex = 41;
             this.btnAktualisieren.Text = "Aktualisieren";
             this.btnAktualisieren.UseVisualStyleBackColor = false;
             this.btnAktualisieren.Click += new System.EventHandler(this.btnAktualisieren_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(383, 165);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 25);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "An:";
+            // 
+            // txtAnKunde
+            // 
+            this.txtAnKunde.BackColor = System.Drawing.Color.White;
+            this.txtAnKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnKunde.Location = new System.Drawing.Point(432, 158);
+            this.txtAnKunde.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAnKunde.Multiline = true;
+            this.txtAnKunde.Name = "txtAnKunde";
+            this.txtAnKunde.ReadOnly = true;
+            this.txtAnKunde.Size = new System.Drawing.Size(327, 40);
+            this.txtAnKunde.TabIndex = 47;
             // 
             // frmProdukts
             // 
@@ -458,7 +486,7 @@
             this.Controls.Add(this.dgvProdukts);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProdukts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProdukts";
@@ -502,5 +530,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVerkaufen;
         private System.Windows.Forms.Button btnAktualisieren;
+        private System.Windows.Forms.TextBox txtAnKunde;
+        private System.Windows.Forms.Label label3;
     }
 }
