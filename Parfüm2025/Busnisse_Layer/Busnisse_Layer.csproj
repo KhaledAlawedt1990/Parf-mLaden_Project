@@ -45,11 +45,12 @@
   <ItemGroup>
     <Compile Include="clsKunde.cs" />
     <Compile Include="clsEinkauf.cs" />
+    <Compile Include="clsLieferungen.cs" />
     <Compile Include="clsMitarbeiter.cs" />
     <Compile Include="clsParfüm.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsPreise.cs" />
-    <Compile Include="clsProduktes.cs" />
+    <Compile Include="clsProdukte.cs" />
     <Compile Include="clsRechnung.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsRechnungsdetails.cs" />

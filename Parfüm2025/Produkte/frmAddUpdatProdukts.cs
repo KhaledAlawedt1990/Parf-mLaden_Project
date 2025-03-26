@@ -15,12 +15,12 @@ namespace Parfüm2025
     {
         enum enMode { Addnew = 1, Update = 2 }
         enMode _Mode;
-        clsProduktes _produkts;
 
-        public frmAddUpdateProdukts(clsProduktes produkts)
+        clsProdukte _produkts;
+        public frmAddUpdateProdukts(clsProdukte produktes)
         {
             InitializeComponent();
-            this._produkts = produkts;
+            this._produkts = produktes;
         }
 
         private void _ResetDefaultValues()
@@ -56,12 +56,13 @@ namespace Parfüm2025
         private void _FillProduktData()
         {
             if (_Mode == enMode.Addnew)
-                _produkts = new clsProduktes();
+                _produkts = new clsProdukte();
 
             _produkts.ProduktName = txtProduktName.Text;
-             int gekaufteMenge = Convert.ToInt32(txtGekaufteMenge.Text);
+            int gekaufteMenge = Convert.ToInt32(txtGekaufteMenge.Text);
             _produkts.GekaufteMenge = gekaufteMenge;
             _produkts.Total = _produkts.Total + gekaufteMenge;
+
         }
         private void _LoadData()
         {
@@ -79,10 +80,10 @@ namespace Parfüm2025
 
             _FillProduktData();
 
-            string status = _Mode == enMode.Addnew ? "hinzugefügt" : "aktualisiert";
+            //string status = _Mode == enMode.Addnew ? "hinzugefügt" : "aktualisiert";
             if (_produkts.Save())
             {
-                MessageBox.Show($"Das Produkt wurde erfolgreich {status}.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Das Produkt wurde erfolgreich {status}.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _Mode = enMode.Update; //aktualisiere den Mode
                 this.Close();
             }

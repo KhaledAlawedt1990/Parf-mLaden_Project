@@ -72,8 +72,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(980, 54);
+            this.panel1.Size = new System.Drawing.Size(1422, 66);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -82,9 +83,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(424, 15);
+            this.label1.Location = new System.Drawing.Point(623, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.Size = new System.Drawing.Size(130, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Produkts";
             // 
@@ -94,10 +96,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFilerwert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtFilerwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilerwert.Location = new System.Drawing.Point(285, 440);
+            this.txtFilerwert.Location = new System.Drawing.Point(380, 542);
+            this.txtFilerwert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFilerwert.Multiline = true;
             this.txtFilerwert.Name = "txtFilerwert";
-            this.txtFilerwert.Size = new System.Drawing.Size(317, 32);
+            this.txtFilerwert.Size = new System.Drawing.Size(536, 38);
             this.txtFilerwert.TabIndex = 10;
             this.txtFilerwert.TextChanged += new System.EventHandler(this.txtFilerwert_TextChanged);
             // 
@@ -109,9 +112,10 @@
             this.cbFilterbei.Items.AddRange(new object[] {
             "ProduktID",
             "ProduktName"});
-            this.cbFilterbei.Location = new System.Drawing.Point(102, 442);
+            this.cbFilterbei.Location = new System.Drawing.Point(136, 544);
+            this.cbFilterbei.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbFilterbei.Name = "cbFilterbei";
-            this.cbFilterbei.Size = new System.Drawing.Size(177, 28);
+            this.cbFilterbei.Size = new System.Drawing.Size(235, 33);
             this.cbFilterbei.TabIndex = 9;
             this.cbFilterbei.SelectedIndexChanged += new System.EventHandler(this.cbFilterbei_SelectedIndexChanged);
             // 
@@ -119,9 +123,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 448);
+            this.label2.Location = new System.Drawing.Point(16, 551);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Filter bei:";
             // 
@@ -153,7 +158,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProdukts.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProdukts.EnableHeadersVisualStyles = false;
-            this.dgvProdukts.Location = new System.Drawing.Point(12, 476);
+            this.dgvProdukts.Location = new System.Drawing.Point(16, 586);
+            this.dgvProdukts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProdukts.Name = "dgvProdukts";
             this.dgvProdukts.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -164,18 +170,20 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProdukts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProdukts.RowHeadersWidth = 51;
             this.dgvProdukts.RowTemplate.Height = 30;
             this.dgvProdukts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProdukts.Size = new System.Drawing.Size(961, 317);
+            this.dgvProdukts.Size = new System.Drawing.Size(1396, 390);
             this.dgvProdukts.TabIndex = 7;
             this.dgvProdukts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdukts_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Location = new System.Drawing.Point(16, 409);
+            this.panel2.Location = new System.Drawing.Point(21, 503);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(951, 17);
+            this.panel2.Size = new System.Drawing.Size(1391, 21);
             this.panel2.TabIndex = 11;
             // 
             // errorProvider1
@@ -189,9 +197,10 @@
             this.btnAbbrechen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbbrechen.ForeColor = System.Drawing.Color.White;
-            this.btnAbbrechen.Location = new System.Drawing.Point(402, 286);
+            this.btnAbbrechen.Location = new System.Drawing.Point(659, 352);
+            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbbrechen.Name = "btnAbbrechen";
-            this.btnAbbrechen.Size = new System.Drawing.Size(106, 40);
+            this.btnAbbrechen.Size = new System.Drawing.Size(141, 49);
             this.btnAbbrechen.TabIndex = 38;
             this.btnAbbrechen.Text = "Abbrechen";
             this.btnAbbrechen.UseVisualStyleBackColor = false;
@@ -204,9 +213,10 @@
             this.btnKaufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaufen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKaufen.ForeColor = System.Drawing.Color.White;
-            this.btnKaufen.Location = new System.Drawing.Point(730, 438);
+            this.btnKaufen.Location = new System.Drawing.Point(1088, 539);
+            this.btnKaufen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKaufen.Name = "btnKaufen";
-            this.btnKaufen.Size = new System.Drawing.Size(115, 34);
+            this.btnKaufen.Size = new System.Drawing.Size(153, 42);
             this.btnKaufen.TabIndex = 39;
             this.btnKaufen.Text = "Kaufen";
             this.btnKaufen.UseVisualStyleBackColor = false;
@@ -219,9 +229,10 @@
             this.btnAnzeigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnzeigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnzeigen.ForeColor = System.Drawing.Color.White;
-            this.btnAnzeigen.Location = new System.Drawing.Point(146, 287);
+            this.btnAnzeigen.Location = new System.Drawing.Point(318, 353);
+            this.btnAnzeigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnzeigen.Name = "btnAnzeigen";
-            this.btnAnzeigen.Size = new System.Drawing.Size(106, 40);
+            this.btnAnzeigen.Size = new System.Drawing.Size(141, 49);
             this.btnAnzeigen.TabIndex = 42;
             this.btnAnzeigen.Text = "Anzeigen";
             this.btnAnzeigen.UseVisualStyleBackColor = false;
@@ -234,9 +245,10 @@
             this.btLoeschen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoeschen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLoeschen.ForeColor = System.Drawing.Color.White;
-            this.btLoeschen.Location = new System.Drawing.Point(273, 286);
+            this.btLoeschen.Location = new System.Drawing.Point(487, 352);
+            this.btLoeschen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btLoeschen.Name = "btLoeschen";
-            this.btLoeschen.Size = new System.Drawing.Size(106, 40);
+            this.btLoeschen.Size = new System.Drawing.Size(141, 49);
             this.btLoeschen.TabIndex = 43;
             this.btLoeschen.Text = "Löschen";
             this.btLoeschen.UseVisualStyleBackColor = false;
@@ -259,9 +271,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 70);
+            this.groupBox1.Location = new System.Drawing.Point(21, 86);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(951, 333);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1391, 410);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produkt Information";
@@ -270,9 +284,10 @@
             // 
             this.rbDezGeschäft.AutoSize = true;
             this.rbDezGeschäft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDezGeschäft.Location = new System.Drawing.Point(342, 227);
+            this.rbDezGeschäft.Location = new System.Drawing.Point(456, 279);
+            this.rbDezGeschäft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbDezGeschäft.Name = "rbDezGeschäft";
-            this.rbDezGeschäft.Size = new System.Drawing.Size(117, 22);
+            this.rbDezGeschäft.Size = new System.Drawing.Size(142, 28);
             this.rbDezGeschäft.TabIndex = 45;
             this.rbDezGeschäft.Text = "Dez Geschäft";
             this.rbDezGeschäft.UseVisualStyleBackColor = true;
@@ -281,9 +296,10 @@
             // 
             this.rbHauptGeschäft.AutoSize = true;
             this.rbHauptGeschäft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHauptGeschäft.Location = new System.Drawing.Point(201, 227);
+            this.rbHauptGeschäft.Location = new System.Drawing.Point(268, 279);
+            this.rbHauptGeschäft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbHauptGeschäft.Name = "rbHauptGeschäft";
-            this.rbHauptGeschäft.Size = new System.Drawing.Size(129, 22);
+            this.rbHauptGeschäft.Size = new System.Drawing.Size(159, 28);
             this.rbHauptGeschäft.TabIndex = 44;
             this.rbHauptGeschäft.Text = "Haupt Geschäft";
             this.rbHauptGeschäft.UseVisualStyleBackColor = true;
@@ -292,11 +308,12 @@
             // 
             this.txtGekaufteMenge.BackColor = System.Drawing.Color.White;
             this.txtGekaufteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGekaufteMenge.Location = new System.Drawing.Point(201, 86);
+            this.txtGekaufteMenge.Location = new System.Drawing.Point(268, 106);
+            this.txtGekaufteMenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGekaufteMenge.Multiline = true;
             this.txtGekaufteMenge.Name = "txtGekaufteMenge";
             this.txtGekaufteMenge.ReadOnly = true;
-            this.txtGekaufteMenge.Size = new System.Drawing.Size(258, 33);
+            this.txtGekaufteMenge.Size = new System.Drawing.Size(343, 40);
             this.txtGekaufteMenge.TabIndex = 31;
             // 
             // label7
@@ -304,9 +321,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(87, 181);
+            this.label7.Location = new System.Drawing.Point(116, 223);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 20);
+            this.label7.Size = new System.Drawing.Size(123, 25);
             this.label7.TabIndex = 37;
             this.label7.Text = "TotalMenge:";
             // 
@@ -314,11 +332,12 @@
             // 
             this.txtProduktName.BackColor = System.Drawing.Color.White;
             this.txtProduktName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduktName.Location = new System.Drawing.Point(201, 37);
+            this.txtProduktName.Location = new System.Drawing.Point(268, 46);
+            this.txtProduktName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProduktName.Multiline = true;
             this.txtProduktName.Name = "txtProduktName";
             this.txtProduktName.ReadOnly = true;
-            this.txtProduktName.Size = new System.Drawing.Size(258, 33);
+            this.txtProduktName.Size = new System.Drawing.Size(343, 40);
             this.txtProduktName.TabIndex = 30;
             // 
             // label6
@@ -326,9 +345,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(52, 135);
+            this.label6.Location = new System.Drawing.Point(69, 166);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 20);
+            this.label6.Size = new System.Drawing.Size(162, 25);
             this.label6.TabIndex = 36;
             this.label6.Text = "GelieferteMenge:";
             // 
@@ -336,11 +356,12 @@
             // 
             this.txtGelieferteMenge.BackColor = System.Drawing.Color.White;
             this.txtGelieferteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGelieferteMenge.Location = new System.Drawing.Point(201, 129);
+            this.txtGelieferteMenge.Location = new System.Drawing.Point(268, 159);
+            this.txtGelieferteMenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGelieferteMenge.Multiline = true;
             this.txtGelieferteMenge.Name = "txtGelieferteMenge";
             this.txtGelieferteMenge.ReadOnly = true;
-            this.txtGelieferteMenge.Size = new System.Drawing.Size(258, 33);
+            this.txtGelieferteMenge.Size = new System.Drawing.Size(343, 40);
             this.txtGelieferteMenge.TabIndex = 32;
             // 
             // label5
@@ -348,9 +369,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(55, 89);
+            this.label5.Location = new System.Drawing.Point(73, 110);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 20);
+            this.label5.Size = new System.Drawing.Size(158, 25);
             this.label5.TabIndex = 35;
             this.label5.Text = "GekaufteMenge:";
             // 
@@ -358,11 +380,12 @@
             // 
             this.txtTotoMenge.BackColor = System.Drawing.Color.White;
             this.txtTotoMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotoMenge.Location = new System.Drawing.Point(201, 174);
+            this.txtTotoMenge.Location = new System.Drawing.Point(268, 214);
+            this.txtTotoMenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotoMenge.Multiline = true;
             this.txtTotoMenge.Name = "txtTotoMenge";
             this.txtTotoMenge.ReadOnly = true;
-            this.txtTotoMenge.Size = new System.Drawing.Size(258, 33);
+            this.txtTotoMenge.Size = new System.Drawing.Size(343, 40);
             this.txtTotoMenge.TabIndex = 33;
             // 
             // label4
@@ -370,18 +393,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(70, 43);
+            this.label4.Location = new System.Drawing.Point(93, 53);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 20);
+            this.label4.Size = new System.Drawing.Size(142, 25);
             this.label4.TabIndex = 34;
             this.label4.Text = "Produkt Name:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.Produkts;
-            this.pictureBox1.Location = new System.Drawing.Point(558, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(744, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(366, 245);
+            this.pictureBox1.Size = new System.Drawing.Size(488, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -393,9 +418,10 @@
             this.btnVerkaufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerkaufen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerkaufen.ForeColor = System.Drawing.Color.White;
-            this.btnVerkaufen.Location = new System.Drawing.Point(852, 438);
+            this.btnVerkaufen.Location = new System.Drawing.Point(1251, 539);
+            this.btnVerkaufen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVerkaufen.Name = "btnVerkaufen";
-            this.btnVerkaufen.Size = new System.Drawing.Size(115, 34);
+            this.btnVerkaufen.Size = new System.Drawing.Size(153, 42);
             this.btnVerkaufen.TabIndex = 40;
             this.btnVerkaufen.Text = "Verkaufen";
             this.btnVerkaufen.UseVisualStyleBackColor = false;
@@ -408,9 +434,10 @@
             this.btnAktualisieren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ForeColor = System.Drawing.Color.White;
-            this.btnAktualisieren.Location = new System.Drawing.Point(608, 438);
+            this.btnAktualisieren.Location = new System.Drawing.Point(926, 539);
+            this.btnAktualisieren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAktualisieren.Name = "btnAktualisieren";
-            this.btnAktualisieren.Size = new System.Drawing.Size(115, 34);
+            this.btnAktualisieren.Size = new System.Drawing.Size(153, 42);
             this.btnAktualisieren.TabIndex = 41;
             this.btnAktualisieren.Text = "Aktualisieren";
             this.btnAktualisieren.UseVisualStyleBackColor = false;
@@ -418,9 +445,9 @@
             // 
             // frmProdukts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 805);
+            this.ClientSize = new System.Drawing.Size(1422, 991);
             this.Controls.Add(this.btnAktualisieren);
             this.Controls.Add(this.btnVerkaufen);
             this.Controls.Add(this.panel2);
@@ -431,6 +458,7 @@
             this.Controls.Add(this.dgvProdukts);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProdukts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProdukts";

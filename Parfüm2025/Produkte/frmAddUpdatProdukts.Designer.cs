@@ -47,19 +47,21 @@
             // txtProduktName
             // 
             this.txtProduktName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduktName.Location = new System.Drawing.Point(146, 21);
+            this.txtProduktName.Location = new System.Drawing.Point(195, 26);
+            this.txtProduktName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProduktName.Multiline = true;
             this.txtProduktName.Name = "txtProduktName";
-            this.txtProduktName.Size = new System.Drawing.Size(193, 33);
+            this.txtProduktName.Size = new System.Drawing.Size(256, 40);
             this.txtProduktName.TabIndex = 46;
             // 
             // txtGekaufteMenge
             // 
             this.txtGekaufteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGekaufteMenge.Location = new System.Drawing.Point(146, 71);
+            this.txtGekaufteMenge.Location = new System.Drawing.Point(195, 87);
+            this.txtGekaufteMenge.Margin = new System.Windows.Forms.Padding(4);
             this.txtGekaufteMenge.Multiline = true;
             this.txtGekaufteMenge.Name = "txtGekaufteMenge";
-            this.txtGekaufteMenge.Size = new System.Drawing.Size(193, 33);
+            this.txtGekaufteMenge.Size = new System.Drawing.Size(256, 40);
             this.txtGekaufteMenge.TabIndex = 48;
             // 
             // lblGekaufteMenge
@@ -67,9 +69,10 @@
             this.lblGekaufteMenge.AutoSize = true;
             this.lblGekaufteMenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGekaufteMenge.ForeColor = System.Drawing.Color.Black;
-            this.lblGekaufteMenge.Location = new System.Drawing.Point(7, 77);
+            this.lblGekaufteMenge.Location = new System.Drawing.Point(9, 95);
+            this.lblGekaufteMenge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGekaufteMenge.Name = "lblGekaufteMenge";
-            this.lblGekaufteMenge.Size = new System.Drawing.Size(133, 20);
+            this.lblGekaufteMenge.Size = new System.Drawing.Size(163, 25);
             this.lblGekaufteMenge.TabIndex = 51;
             this.lblGekaufteMenge.Text = "Gekaufte Menge:";
             // 
@@ -78,9 +81,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(26, 27);
+            this.label4.Location = new System.Drawing.Point(35, 33);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 20);
+            this.label4.Size = new System.Drawing.Size(142, 25);
             this.label4.TabIndex = 50;
             this.label4.Text = "Produkt Name:";
             // 
@@ -91,9 +95,11 @@
             this.groupBox1.Controls.Add(this.txtGekaufteMenge);
             this.groupBox1.Controls.Add(this.txtProduktName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 72);
+            this.groupBox1.Location = new System.Drawing.Point(16, 89);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 128);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(467, 145);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produkt Information";
@@ -105,9 +111,10 @@
             this.btnSpeichern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSpeichern.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpeichern.ForeColor = System.Drawing.Color.White;
-            this.btnSpeichern.Location = new System.Drawing.Point(97, 206);
+            this.btnSpeichern.Location = new System.Drawing.Point(123, 252);
+            this.btnSpeichern.Margin = new System.Windows.Forms.Padding(4);
             this.btnSpeichern.Name = "btnSpeichern";
-            this.btnSpeichern.Size = new System.Drawing.Size(106, 40);
+            this.btnSpeichern.Size = new System.Drawing.Size(141, 49);
             this.btnSpeichern.TabIndex = 58;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = false;
@@ -120,9 +127,10 @@
             this.btnSchließen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchließen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchließen.ForeColor = System.Drawing.Color.White;
-            this.btnSchließen.Location = new System.Drawing.Point(245, 206);
+            this.btnSchließen.Location = new System.Drawing.Point(326, 252);
+            this.btnSchließen.Margin = new System.Windows.Forms.Padding(4);
             this.btnSchließen.Name = "btnSchließen";
-            this.btnSchließen.Size = new System.Drawing.Size(106, 40);
+            this.btnSchließen.Size = new System.Drawing.Size(141, 49);
             this.btnSchließen.TabIndex = 57;
             this.btnSchließen.Text = "Schließen";
             this.btnSchließen.UseVisualStyleBackColor = false;
@@ -134,8 +142,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 43);
+            this.panel1.Size = new System.Drawing.Size(495, 53);
             this.panel1.TabIndex = 61;
             // 
             // label1
@@ -143,9 +152,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 9);
+            this.label1.Location = new System.Drawing.Point(181, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 24);
+            this.label1.Size = new System.Drawing.Size(94, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kaufen";
             // 
@@ -155,13 +165,14 @@
             // 
             // frmAddUpdateProdukts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 265);
+            this.ClientSize = new System.Drawing.Size(495, 322);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSchließen);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddUpdateProdukts";

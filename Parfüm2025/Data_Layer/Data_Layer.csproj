@@ -44,11 +44,12 @@
   <ItemGroup>
     <Compile Include="clsKundeDatenzugriff.cs" />
     <Compile Include="clsEinkaufDatenzugriff.cs" />
+    <Compile Include="clsLieferungenDatenzugriff.cs" />
     <Compile Include="clsMitarbeiterDatenzugriff.cs" />
     <Compile Include="clsParfümDatenzugriff.cs" />
     <Compile Include="clsPersonDatenzugriff.cs" />
     <Compile Include="clsPreisDatenzugriff.cs" />
-    <Compile Include="clsProduktDatenzugriff.cs" />
+    <Compile Include="clsProdukteDatenzugriff.cs" />
     <Compile Include="clsRechnugDatenzugriff.cs" />
     <Compile Include="clsUserDatenzugriff.cs" />
     <Compile Include="clsRechnungsdetailsDatenzugirff.cs" />
@@ -61,7 +62,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SPTables\Produktes_SPs.sql" />
+    <Folder Include="SPTables\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

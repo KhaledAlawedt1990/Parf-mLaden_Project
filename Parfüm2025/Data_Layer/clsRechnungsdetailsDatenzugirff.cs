@@ -39,8 +39,8 @@ namespace Data_Layer
 
                                 belegID = (int)reader["belegID"];
                                 parfümNummer = (int)reader["parfümNummer"];                              
-                                verkaufsMenge = (float)reader["verkaufsMenge"];
-                                HauptLagerbestand = (float)reader["HauptLagerbestand"];
+                                verkaufsMenge = Convert.ToSingle(reader["verkaufsMenge"]);
+                                HauptLagerbestand = Convert.ToSingle(reader["HauptLagerbestand"]);
                                 normalPreis = (decimal)reader["normalPreis"];
                                 gesamtPreis = (decimal)reader["gesamtPreis"];
                                 lagerbestandAktualisiert = (bool)reader["lagerbestandAktualisiert"];

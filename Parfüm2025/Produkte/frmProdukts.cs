@@ -19,7 +19,7 @@ namespace Parfüm2025
     {
         enum enMode { Addnew = 1, Update = 2}
         enMode _Mode;
-        clsProduktes _produkts;
+        clsLieferungen _lieferungen;
         BindingSource _bindingSource;
         public frmProdukts()
         {
@@ -38,7 +38,7 @@ namespace Parfüm2025
 
         private void _LoadProduktDataFromDatabase()
         {
-            DataTable dt = clsProduktes.GetAllProduktes();
+            DataTable dt = clsLieferungen.GetAllLieferungen();
             if (dt != null && dt.Rows.Count > 0)
             {
                 _bindingSource.DataSource = dt;
@@ -61,8 +61,8 @@ namespace Parfüm2025
 
         private void btnAktualisieren_Click(object sender, EventArgs e)
         {
-            int produktID = (int)dgvProdukts.CurrentRow.Cells[0].Value;
-            clsProduktes produkts = clsProduktes.FindByProduktID(produktID);
+            string produktName = dgvProdukts.CurrentRow.Cells[1].Value.ToString();
+            clsProdukte produkts = clsProdukte.FindByProduktName(produktName);
             if (produkts == null)
             {
                 MessageBox.Show("Keiner Produkt wurde gefunden", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -81,16 +81,9 @@ namespace Parfüm2025
 
         private void btnVerkaufen_Click(object sender, EventArgs e)
         {
-            int produktID = (int)dgvProdukts.CurrentRow.Cells[0].Value;
-            clsProduktes produkts = clsProduktes.FindByProduktID(produktID);
-            if (produkts == null)
-            {
-                MessageBox.Show("Keiner Produkt wurde gefunden", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            frmLiefereProdukt frm = new frmLiefereProdukt(produkts);
-            frm.ShowDialog();
-
+            frmLiefereProdukt lieferung = new frmLiefereProdukt();
+            lieferung.ShowDialog();
+           
             _LoadProduktDataFromDatabase();
         }
 
@@ -103,45 +96,53 @@ namespace Parfüm2025
         {
             _ResetDefaultValues();
 
-            int produkID = (int)dgvProdukts.CurrentRow.Cells[0].Value;
-            clsProduktes produktes = clsProduktes.FindByProduktID(produkID);
+            int produkID = (int)dgvProdukts.CurrentRow.Cells[1].Value;
+            clsProdukte produktes = clsProdukte.FindByProduktID(produkID);
             if(produktes == null)
             {
-                MessageBox.Show("Keine Produkt wurde gefunden", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Keiner Produkt wurde gefunden", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            _Anzeigen(produktes);
+            int lieferungID = (int)dgvProdukts.CurrentRow.Cells[0].Value;
+            clsLieferungen lieferung = clsLieferungen.FindByLieferungID(lieferungID);
+            if (lieferung == null)
+            {
+                MessageBox.Show("Keine Lieferung wurde gefunden", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            _Anzeigen(produktes,lieferung);
         }
-        private void _Anzeigen(clsProduktes produktes)
+        private void _Anzeigen(clsProdukte produktes, clsLieferungen lieferung)
         {
             txtProduktName.Text = produktes.ProduktName;
             txtGekaufteMenge.Text = produktes.GekaufteMenge.ToString();
-            txtGelieferteMenge.Text = produktes.GelieferteMenge.ToString();
+            txtGelieferteMenge.Text = lieferung.GelieferteMenge.ToString();
             txtTotoMenge.Text = produktes.Total.ToString();
 
-            if (produktes.HauptGeschäft == true)
+            if (lieferung.HauptGechäft== true)
                 rbHauptGeschäft.Checked = true;
-            else if(produktes.DezGeschäft == true)
+            else if(lieferung.DezGeschäft == true)
                 rbDezGeschäft.Checked = true;
         }
 
         private void btLoeschen_Click(object sender, EventArgs e)
         {
-            int produkID = (int)dgvProdukts.CurrentRow.Cells[0].Value;
+            int lieferungID = (int)dgvProdukts.CurrentRow.Cells[0].Value;
             bool warnung = MessageBox.Show("Sind Sie sicher, Sie möchten diesen Vorgang durchführen", "Warnung", MessageBoxButtons.YesNo,
                                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes;
 
             if (!warnung)
                 return;
 
-            if(clsProduktes.DeleteProduktes(produkID))
+            if(clsLieferungen.DeleteLieferungen(lieferungID))
             {
-                MessageBox.Show($"Produkt mit der ID [ {produkID} ] wurde erfolgreich entfernt", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Produkt mit der ID [ {lieferungID} ] wurde erfolgreich entfernt", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _LoadProduktDataFromDatabase();
                 _ResetDefaultValues();
             }
             else
-                MessageBox.Show($"Fehler bei der Entfernung des Produktes mit der ID {produkID} ist aufgetreten", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Fehler bei der Entfernung des Produktes mit der ID {lieferungID} ist aufgetreten", "Fehlermeldung", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cbFilterbei_SelectedIndexChanged(object sender, EventArgs e)
