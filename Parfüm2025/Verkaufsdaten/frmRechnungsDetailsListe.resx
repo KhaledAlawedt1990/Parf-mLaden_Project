@@ -417,24 +417,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Rechnungsdetails-Liste</value>
   </data>
-  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Name" xml:space="preserve">
-    <value>HinzufügeRechnungsdetailstoolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
-    <value>aktualisiereRechnungsdetailsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
-    <value>entferneRechnungsdetailsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;DetailID.Name" xml:space="preserve">
     <value>DetailID</value>
   </data>
@@ -482,6 +464,24 @@
   </data>
   <data name="&gt;&gt;LagerbestandAktualisiert.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Name" xml:space="preserve">
+    <value>HinzufügeRechnungsdetailstoolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;HinzufügeRechnungsdetailstoolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
+    <value>aktualisiereRechnungsdetailsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aktualisiereRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Name" xml:space="preserve">
+    <value>entferneRechnungsdetailsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;entferneRechnungsdetailsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmRechnungsDetailsListe</value>

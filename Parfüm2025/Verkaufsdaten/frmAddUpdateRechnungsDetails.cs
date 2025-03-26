@@ -260,24 +260,24 @@ namespace Parfüm2025
             if (_rechnungsDetailsDaten.Save())
             {
 
-                MessageBox.Show($"Verkauf Daten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Verkauf Daten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
+                //    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _mode = enMode.update; // wir aktualisieren den Status des Objects.
 
-                //Wir fragen, ob man noch details hinzufügen will.
-                bool AddMore = MessageBox.Show("Wollen Sie noch Details zur Liste Addieren?", "Frage",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes;
+               // //Wir fragen, ob man noch details hinzufügen will.
+               // //bool AddMore = MessageBox.Show("Wollen Sie noch Details zur Liste Addieren?", "Frage",
+               //MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes;
 
-                if (AddMore)
-                {
-                    //Zurücksetze die Felder für neue Eingabe...
-                    _setzeVerkaufsDatenAufStandardWerte();
-                    txtParfümNummer.Focus();
-                    chMitSteuer.Checked = false;
-                    _rechnungsDetailsDaten = new clsRechnungsdetails(); // Neue Instanz hinzufügen.
-                }
-                else
-                    this.Close();
+               // if (AddMore)
+               // {
+               //     //Zurücksetze die Felder für neue Eingabe...
+               //     _setzeVerkaufsDatenAufStandardWerte();
+               //     txtParfümNummer.Focus();
+               //     chMitSteuer.Checked = false;
+               //     _rechnungsDetailsDaten = new clsRechnungsdetails(); // Neue Instanz hinzufügen.
+               // }
+               // else
+               this.Close();
             }
             else
                 MessageBox.Show("Fehler beim Speichern der Rechnungsdetails ist aufgetreten", "Fehlermeldung",

@@ -156,7 +156,6 @@ namespace Parfüm2025
             {
                 string selectedItem = lbVorschläge.SelectedItem.ToString();
                 txtKundenname.Text = selectedItem;
-                MessageBox.Show($"Ausgewählt: {selectedItem}");
                 lbVorschläge.Visible = false;
             }
             else
@@ -172,8 +171,8 @@ namespace Parfüm2025
             if (_rechnungsDaten.Save())
             {
 
-                MessageBox.Show($"Rechnungsdaten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Rechnungsdaten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
+                //    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtBelegID.Text = _rechnungsDaten.belegID.ToString();
 
                 _mode = enMode.update; // wir aktualisieren den Object.
