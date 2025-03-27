@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMitarbeiter = new System.Windows.Forms.DataGridView();
             this.cmsMitarbeiter = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.HinzufügeBenutzerrechtetoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +90,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMitarbeiter.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMitarbeiter.EnableHeadersVisualStyles = false;
-            this.dgvMitarbeiter.Location = new System.Drawing.Point(12, 414);
+            this.dgvMitarbeiter.Location = new System.Drawing.Point(16, 510);
+            this.dgvMitarbeiter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMitarbeiter.MultiSelect = false;
             this.dgvMitarbeiter.Name = "dgvMitarbeiter";
             this.dgvMitarbeiter.ReadOnly = true;
@@ -97,18 +99,23 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMitarbeiter.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMitarbeiter.RowHeadersWidth = 60;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            this.dgvMitarbeiter.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMitarbeiter.RowTemplate.Height = 30;
             this.dgvMitarbeiter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMitarbeiter.Size = new System.Drawing.Size(1548, 377);
+            this.dgvMitarbeiter.Size = new System.Drawing.Size(2064, 464);
             this.dgvMitarbeiter.TabIndex = 1;
+            this.dgvMitarbeiter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMitarbeiter_CellContentClick);
+            this.dgvMitarbeiter.DoubleClick += new System.EventHandler(this.dgvMitarbeiter_DoubleClick);
             // 
             // cmsMitarbeiter
             // 
+            this.cmsMitarbeiter.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsMitarbeiter.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HinzufügeBenutzerrechtetoolStripMenuItem1,
             this.AktualisiereBenutzerrechtetoolStripMenuItem2,
@@ -120,7 +127,7 @@
             this.deaktiviereMitarbeiterToolStripMenuItem,
             this.aktiviereMitarbeiterToolStripMenuItem});
             this.cmsMitarbeiter.Name = "cmsMitarbeiter";
-            this.cmsMitarbeiter.Size = new System.Drawing.Size(295, 282);
+            this.cmsMitarbeiter.Size = new System.Drawing.Size(353, 282);
             this.cmsMitarbeiter.Opening += new System.ComponentModel.CancelEventHandler(this.cmsMitarbeiter_Opening);
             // 
             // HinzufügeBenutzerrechtetoolStripMenuItem1
@@ -129,7 +136,7 @@
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Image = global::Parfüm2025.Properties.Resources.add_user_492527;
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Name = "HinzufügeBenutzerrechtetoolStripMenuItem1";
-            this.HinzufügeBenutzerrechtetoolStripMenuItem1.Size = new System.Drawing.Size(294, 38);
+            this.HinzufügeBenutzerrechtetoolStripMenuItem1.Size = new System.Drawing.Size(352, 38);
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Text = "Hinzufüge Benutzerrechte";
             this.HinzufügeBenutzerrechtetoolStripMenuItem1.Click += new System.EventHandler(this.HinzufügeBenutzerrechtetoolStripMenuItem1_Click);
             // 
@@ -139,7 +146,7 @@
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Image = global::Parfüm2025.Properties.Resources.recycle_17163818;
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Name = "AktualisiereBenutzerrechtetoolStripMenuItem2";
-            this.AktualisiereBenutzerrechtetoolStripMenuItem2.Size = new System.Drawing.Size(294, 38);
+            this.AktualisiereBenutzerrechtetoolStripMenuItem2.Size = new System.Drawing.Size(352, 38);
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Text = "Aktualisiere Benutzerrechte";
             this.AktualisiereBenutzerrechtetoolStripMenuItem2.Click += new System.EventHandler(this.AktualisiereBenutzerrechtetoolStripMenuItem2_Click);
             // 
@@ -149,14 +156,14 @@
             this.seheMitarbeiterDetailsToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.details_32;
             this.seheMitarbeiterDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.seheMitarbeiterDetailsToolStripMenuItem.Name = "seheMitarbeiterDetailsToolStripMenuItem";
-            this.seheMitarbeiterDetailsToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
+            this.seheMitarbeiterDetailsToolStripMenuItem.Size = new System.Drawing.Size(352, 38);
             this.seheMitarbeiterDetailsToolStripMenuItem.Text = "Sehe Mitarbeiter Details ";
             this.seheMitarbeiterDetailsToolStripMenuItem.Click += new System.EventHandler(this.seheMitarbeiterDetailsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(291, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(349, 6);
             // 
             // aktualisiereMitarbeiterdatenToolStripMenuItem
             // 
@@ -164,7 +171,7 @@
             this.aktualisiereMitarbeiterdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.refresh_5791276;
             this.aktualisiereMitarbeiterdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aktualisiereMitarbeiterdatenToolStripMenuItem.Name = "aktualisiereMitarbeiterdatenToolStripMenuItem";
-            this.aktualisiereMitarbeiterdatenToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
+            this.aktualisiereMitarbeiterdatenToolStripMenuItem.Size = new System.Drawing.Size(352, 38);
             this.aktualisiereMitarbeiterdatenToolStripMenuItem.Text = "Aktualisiere Mitarbeiterdaten";
             this.aktualisiereMitarbeiterdatenToolStripMenuItem.Click += new System.EventHandler(this.aktualisiereMitarbeiterdatenToolStripMenuItem_Click);
             // 
@@ -174,14 +181,14 @@
             this.entferneMitarbeiterdatenToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.delete_5953478__1_;
             this.entferneMitarbeiterdatenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.entferneMitarbeiterdatenToolStripMenuItem.Name = "entferneMitarbeiterdatenToolStripMenuItem";
-            this.entferneMitarbeiterdatenToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
+            this.entferneMitarbeiterdatenToolStripMenuItem.Size = new System.Drawing.Size(352, 38);
             this.entferneMitarbeiterdatenToolStripMenuItem.Text = "Entferne Mitarbeiterdaten";
             this.entferneMitarbeiterdatenToolStripMenuItem.Click += new System.EventHandler(this.entferneMitarbeiterdatenToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(291, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(349, 6);
             // 
             // deaktiviereMitarbeiterToolStripMenuItem
             // 
@@ -189,7 +196,7 @@
             this.deaktiviereMitarbeiterToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.unemployed_9772949;
             this.deaktiviereMitarbeiterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deaktiviereMitarbeiterToolStripMenuItem.Name = "deaktiviereMitarbeiterToolStripMenuItem";
-            this.deaktiviereMitarbeiterToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
+            this.deaktiviereMitarbeiterToolStripMenuItem.Size = new System.Drawing.Size(352, 38);
             this.deaktiviereMitarbeiterToolStripMenuItem.Text = "Deaktiviere Mitarbeiter";
             this.deaktiviereMitarbeiterToolStripMenuItem.Click += new System.EventHandler(this.deaktiviereMitarbeiterToolStripMenuItem_Click);
             // 
@@ -199,7 +206,7 @@
             this.aktiviereMitarbeiterToolStripMenuItem.Image = global::Parfüm2025.Properties.Resources.tester_4157277;
             this.aktiviereMitarbeiterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aktiviereMitarbeiterToolStripMenuItem.Name = "aktiviereMitarbeiterToolStripMenuItem";
-            this.aktiviereMitarbeiterToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
+            this.aktiviereMitarbeiterToolStripMenuItem.Size = new System.Drawing.Size(352, 38);
             this.aktiviereMitarbeiterToolStripMenuItem.Text = "Aktiviere Mitarbeiter";
             this.aktiviereMitarbeiterToolStripMenuItem.Click += new System.EventHandler(this.aktiviereMitarbeiterToolStripMenuItem_Click);
             // 
@@ -207,9 +214,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 380);
+            this.label1.Location = new System.Drawing.Point(17, 468);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
+            this.label1.Size = new System.Drawing.Size(114, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Filter bei:";
             // 
@@ -217,10 +225,11 @@
             // 
             this.txtFilterwert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtFilterwert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterwert.Location = new System.Drawing.Point(295, 374);
+            this.txtFilterwert.Location = new System.Drawing.Point(393, 460);
+            this.txtFilterwert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFilterwert.Multiline = true;
             this.txtFilterwert.Name = "txtFilterwert";
-            this.txtFilterwert.Size = new System.Drawing.Size(392, 35);
+            this.txtFilterwert.Size = new System.Drawing.Size(521, 42);
             this.txtFilterwert.TabIndex = 4;
             this.txtFilterwert.TextChanged += new System.EventHandler(this.txtFilterwert_TextChanged);
             this.txtFilterwert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterwert_KeyPress);
@@ -230,9 +239,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 794);
+            this.label2.Location = new System.Drawing.Point(16, 977);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Record:";
             // 
@@ -241,22 +251,24 @@
             this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(90, 794);
+            this.lblRecord.Location = new System.Drawing.Point(120, 977);
+            this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(39, 20);
+            this.lblRecord.Size = new System.Drawing.Size(48, 25);
             this.lblRecord.TabIndex = 6;
             this.lblRecord.Text = "###";
             // 
             // btnAddnewMitarbeiter
             // 
             this.btnAddnewMitarbeiter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddnewMitarbeiter.BackColor = System.Drawing.Color.Gray;
+            this.btnAddnewMitarbeiter.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAddnewMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnewMitarbeiter.ForeColor = System.Drawing.Color.White;
             this.btnAddnewMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1269, 361);
+            this.btnAddnewMitarbeiter.Location = new System.Drawing.Point(1692, 444);
+            this.btnAddnewMitarbeiter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddnewMitarbeiter.Name = "btnAddnewMitarbeiter";
-            this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(291, 49);
+            this.btnAddnewMitarbeiter.Size = new System.Drawing.Size(388, 60);
             this.btnAddnewMitarbeiter.TabIndex = 7;
             this.btnAddnewMitarbeiter.Text = "Hinzufüge einen neun Mitarbeiter";
             this.btnAddnewMitarbeiter.UseVisualStyleBackColor = false;
@@ -269,9 +281,10 @@
             this.cbFilterBei.Items.AddRange(new object[] {
             "Vollname",
             "MitarbeiterID"});
-            this.cbFilterBei.Location = new System.Drawing.Point(104, 376);
+            this.cbFilterBei.Location = new System.Drawing.Point(139, 463);
+            this.cbFilterBei.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbFilterBei.Name = "cbFilterBei";
-            this.cbFilterBei.Size = new System.Drawing.Size(185, 32);
+            this.cbFilterBei.Size = new System.Drawing.Size(245, 37);
             this.cbFilterBei.TabIndex = 8;
             this.cbFilterBei.SelectedIndexChanged += new System.EventHandler(this.cbFilterBei_SelectedIndexChanged);
             // 
@@ -282,9 +295,10 @@
             this.btnAktualisieren.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAktualisieren.ForeColor = System.Drawing.Color.White;
             this.btnAktualisieren.Image = global::Parfüm2025.Properties.Resources.update1;
-            this.btnAktualisieren.Location = new System.Drawing.Point(1219, 362);
+            this.btnAktualisieren.Location = new System.Drawing.Point(1625, 446);
+            this.btnAktualisieren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAktualisieren.Name = "btnAktualisieren";
-            this.btnAktualisieren.Size = new System.Drawing.Size(44, 46);
+            this.btnAktualisieren.Size = new System.Drawing.Size(59, 57);
             this.btnAktualisieren.TabIndex = 10;
             this.btnAktualisieren.UseVisualStyleBackColor = false;
             this.btnAktualisieren.Click += new System.EventHandler(this.btnAktualisieren_Click);
@@ -294,21 +308,23 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Parfüm2025.Properties.Resources.emplyees;
-            this.pictureBox1.Location = new System.Drawing.Point(567, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(756, 68);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(457, 301);
+            this.pictureBox1.Size = new System.Drawing.Size(609, 370);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1572, 45);
+            this.panel1.Size = new System.Drawing.Size(1924, 55);
             this.panel1.TabIndex = 12;
             // 
             // label3
@@ -317,17 +333,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(665, 8);
+            this.label3.Location = new System.Drawing.Point(801, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 29);
+            this.label3.Size = new System.Drawing.Size(321, 36);
             this.label3.TabIndex = 4;
             this.label3.Text = "Mitarbeiterverwaltung";
             // 
             // frmMitarbeiterListe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1572, 823);
+            this.ClientSize = new System.Drawing.Size(1924, 1013);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAktualisieren);
@@ -338,6 +355,7 @@
             this.Controls.Add(this.txtFilterwert);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvMitarbeiter);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMitarbeiterListe";
             this.Text = "frmMitarbeiterListe";
             this.Load += new System.EventHandler(this.frmMitarbeiterListe_Load);

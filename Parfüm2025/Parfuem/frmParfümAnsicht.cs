@@ -358,9 +358,6 @@ namespace Parfüm2025
                 AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
                 tree.Delete(parfuemDaten.Name);
 
-                MessageBox.Show("Parfümdaten wurden erfolgreich entfernt","Entfernung",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 _LadeParfümDaten();
             }
             else
@@ -424,7 +421,11 @@ namespace Parfüm2025
                         else
                             _bindingSourceParfüm.Filter = string.Empty;
                     }
+                    else
+                        _bindingSourceParfüm.Filter = null;
                 }
+                else
+                    _bindingSourceParfüm.Filter = null;
             }
            // _MarkiereParfümZeilen();
         }
@@ -469,6 +470,8 @@ namespace Parfüm2025
         }
         private void txtFilterWert_TextChanged(object sender, EventArgs e)
         {
+        //    if (string.IsNullOrEmpty(txtFilterWert.Text))
+        //        _bindingSourceParfüm.Filter = null;
             _FilterAnwendenFürParfüms();
         }
 

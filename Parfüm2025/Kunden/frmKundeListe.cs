@@ -179,5 +179,12 @@ namespace Parfüm2025
         {
 
         }
+
+        private void dgvKunde_DoubleClick(object sender, EventArgs e)
+        {
+            int personID = (int)dgvKunde.CurrentRow.Cells[1].Value;
+            frmAddUpdateNeueKunde frm = new frmAddUpdateNeueKunde(personID, false);
+            frm.ShowDialog();
+        }
     }
 }

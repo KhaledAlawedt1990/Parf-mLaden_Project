@@ -168,7 +168,7 @@ namespace Parfüm2025
                 return;
             }
 
-            if (filterSpalte == "ProduktID")
+            if (filterSpalte == "LieferungID")
                 _bindingSource.Filter = $"{filterSpalte} = {filterWert}";
             else if (filterSpalte == "ProduktName")
                 _bindingSource.Filter = $"{filterSpalte} Like '{filterWert}%'";
@@ -179,7 +179,7 @@ namespace Parfüm2025
         {
             string filterSpalte = cbFilterbei.Text;
             string filterWert = txtFilerwert.Text.Trim();
-            if (!string.IsNullOrEmpty(filterWert) && filterSpalte == "ProduktID" && !_IsNummer(filterWert))
+            if (!string.IsNullOrEmpty(filterWert) && filterSpalte == "LieferungID" && !_IsNummer(filterWert))
             {
                 MessageBox.Show("Bitte geben Sie eine gültige Nummer ein", "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

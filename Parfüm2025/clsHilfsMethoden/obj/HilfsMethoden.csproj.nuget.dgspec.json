@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj": {}
+    "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj": {}
   },
   "projects": {
-    "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj": {
+    "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj",
+        "projectUniqueName": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj",
         "projectName": "clsHilfsMethoden",
-        "projectPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj",
-        "packagesPath": "C:\\Users\\Abdal\\.nuget\\packages\\",
-        "outputPath": "C:\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\obj\\",
+        "projectPath": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\HilfsMethoden.csproj",
+        "packagesPath": "C:\\Users\\khale\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parfüm2025\\clsHilfsMethoden\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "UsingMicrosoftNETSdk": false,
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Abdal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\khale\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

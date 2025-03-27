@@ -1,332 +1,158 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Windows.ApplicationModel.Activation;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System.IO;
 using Busnisse_Layer;
-using Windows.ApplicationModel.VoiceCommands;
 using clsHilfsMethoden;
-using System.Reflection;
-using System.Drawing.Imaging;
-using System.Security.Cryptography;
-using Windows.UI.Xaml.Media;
 
 namespace Parfüm2025
 {
     public partial class frmDruckvorschau : Form
     {
-        int ZeileHinzugefügt = 0;
-        List<clsRechnungsdetails> _verkaufsdatenListe;
-        clsKunde _kudedaten;
-        int _belegID;
-        public frmDruckvorschau(int belegID,List<clsRechnungsdetails> verkaufsdatenListe, clsKunde kudedaten)
+        private Panel pnlFooter;
+        private Label lblFooter;
+
+        private const int MAX_ZEILEN_PRO_SEITE = 17;
+        private int ZeileHinzugefügt = 0;
+        private List<clsRechnungsdetails> _verkaufsdatenListe;
+        private clsKunde _kudedaten;
+        private int _belegID;
+
+        // Diese Felder werden zur Aggregation verwendet
+        private float _einzelPreis = 0;
+        private float _gesamtPreis = 0;
+
+        public frmDruckvorschau(int belegID, List<clsRechnungsdetails> verkaufsdatenListe, clsKunde kudedaten)
         {
             InitializeComponent();
+            this.Size = new Size(800, 1150);
+            InitializeFooter();
 
             _verkaufsdatenListe = verkaufsdatenListe;
-
-            lblDatum.Text = DateTime.Now.ToString();
             _kudedaten = kudedaten;
             _belegID = belegID;
-        }
-        private void btnAbbrechen_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            lblDatum.Text = DateTime.Now.Date.ToString("MM/dd/yyyy");
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void InitializeFooter()
         {
-         
-        }
-
-        private void _SaveToPdf()
-        {
-            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string kundenname = _kudedaten.Vollname;
-            string rechnungsDatum = clsDatumFormat.DateToShort(DateTime.Now.Date);
-            string fileName = kundenname + rechnungsDatum + ".pdf";
-            string filePath = Path.Combine(desktopPath, fileName);
-
-            try
+            pnlFooter = new Panel
             {
-                using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-                {
-                    Document pdfDoc = new Document(PageSize.A4, 50, 50, 50, 50);
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
-
-                    // **Firmendaten oben rechts**
-                    _AddCompanyInfo(pdfDoc);
-
-                    _AddLargeTextWithBeautifulFont(pdfDoc, writer);
-                    // Kundendaten
-                    _AddCustomerInfo(pdfDoc, writer);
-
-                    PdfPTable table = new PdfPTable(5);
-                    table.WidthPercentage = 100;
-                    table.SetWidths(new float[] { 20f, 20f, 15f, 20f, 25f });
-
-                    // Kopfzeile definieren
-                    AddTableHeader(table);
-
-                    float pageHeight = pdfDoc.PageSize.Height - pdfDoc.TopMargin - pdfDoc.BottomMargin; // Verfügbare Höhe
-                    float currentHeight = 0; // Aktuelle Höhe der Tabelle
-                    float rowHeight = 20f; // Durchschnittliche Höhe einer Zeile
-                    float footerHeight = 10f; // Höhe für die Fußzeile, falls nötig
-                    foreach (var item in _verkaufsdatenListe)
-                    {
-                        // Berechne, ob eine neue Zeile Platz hat
-                        if (currentHeight + rowHeight + footerHeight > pageHeight)
-                        {
-                            pdfDoc.Add(table); // Bisherige Tabelle hinzufügen
-                            pdfDoc.NewPage();  // Neue Seite erstellen
-
-                            // Neue Tabelle mit Kopfzeile auf neuer Seite
-                            table = new PdfPTable(5);
-                            table.WidthPercentage = 100;
-                            table.SetWidths(new float[] { 20f, 20f, 15f, 20f, 25f });
-                            AddTableHeader(table);
-
-                            currentHeight = 0; // Höhe zurücksetzen
-                        }
-
-                        // Datenzeilen hinzufügen
-                        table.AddCell(new PdfPCell(new Phrase(item.parfümNummer.ToString(), FontFactory.GetFont("Arial", 10))));
-                        table.AddCell(new PdfPCell(new Phrase(item.verkaufsMenge.ToString() + " Gr", FontFactory.GetFont("Arial", 10))));
-                        table.AddCell(new PdfPCell(new Phrase("19%", FontFactory.GetFont("Arial", 10))));
-                        table.AddCell(new PdfPCell(new Phrase(item.normalPreis.ToString("C"), FontFactory.GetFont("Arial", 10))));
-                        table.AddCell(new PdfPCell(new Phrase(item.gesamtPreis.ToString("C"), FontFactory.GetFont("Arial", 10))));
-
-                        currentHeight += rowHeight; // Aktuelle Höhe aktualisieren
-                    }
-
-
-                    pdfDoc.Add(table);
-
-                    // Summen und Steuerinformationen
-                    pdfDoc.Add(new Paragraph("\n"));
-                    pdfDoc.Add(new Paragraph($"Netto: {lblNetto.Text}"));
-                    pdfDoc.Add(new Paragraph($"Steuer (19%): {lblSteuer.Text}"));
-                    pdfDoc.Add(new Paragraph($"Brutto: {lblBrutto.Text}"));
-
-                    pdfDoc.Close();
-                }
-
-                MessageBox.Show($"Die Datei wurde erfolgreich gespeichert:\n{filePath}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Fehler beim Speichern der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-      
-        private void _AddCompanyInfo(Document pdfDoc)
-        {
-            // Definiere die Farben für die Firma
-            BaseColor companyColor = new BaseColor(0, 51, 102);  // Dunkelblau
-            // Schriftart definieren
-            iTextSharp.text.Font font = FontFactory.GetFont("Arial", 9);
-            font.Color = companyColor;
-            // Firmendaten hinzufügen
-            Paragraph companyInfo = new Paragraph
-            {
-                Alignment = Element.ALIGN_RIGHT // Rechts ausrichten
+                Height = 30,
+                Dock = DockStyle.Bottom,
+                BackColor = Color.YellowGreen,
+                Visible = true
             };
 
-            companyInfo.Add(new Chunk("Alowidat Parfümerie\n", font));
-            companyInfo.Add(new Chunk("Obere Königsstr 22\n", font));
-            companyInfo.Add(new Chunk("34117 Kassel\n", font));
-            companyInfo.Add(new Chunk("Deutschland\n", font));
-            companyInfo.Add(new Chunk("USt-ID: DE319000676\n", font));
-            companyInfo.Add(new Chunk("Telefon: +491777975434\n", font));
-            companyInfo.Add(new Chunk("E-Mail: info@alowidat.de\n", font));
-            companyInfo.Add(new Chunk("Webseite: Www.alowidat.de\n", font));
-            companyInfo.Add(new Chunk("IBAN: DE48520503530002219019\n", font));
-            companyInfo.Add(new Chunk("BIC: HELADEF1KAS\n", font));
-            companyInfo.Add(new Chunk("\n"));
-            pdfDoc.Add(companyInfo); // Firmendaten ins PDF-Dokument einfügen
+            lblFooter = new Label
+            {
+                Dock = DockStyle.Fill,
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.White,
+                Font = new System.Drawing.Font("Lato", 12, FontStyle.Regular),
+                Text = "Diese Vorlage wurde von Alowidat erstellt",
+                Visible = true
+            };
+
+            pnlFooter.Controls.Add(lblFooter);
+            // Wir fügen das Footer-Panel zum Hauptpanel hinzu,
+            // damit es immer am unteren Rand von pnlHaupPanel erscheint.
+            this.pnlHaupPanel.Controls.Add(pnlFooter);
+            pnlFooter.BringToFront();
         }
-        //private void AddCustomerInfo(Document pdfDoc)
-        //{
-        //    BaseColor customColor = new BaseColor(255, 0, 0); // Rot (RGB)
-        //    BaseColor customColor2 = new BaseColor(0, 255, 0); // Grün (RGB)
-        //    BaseColor customColor3 = new BaseColor(0, 0, 255); // Blau (RGB)
-        //    BaseColor customColor4 = new BaseColor(128, 128, 128); // Grau (RGB)
-        //                                                           // Verwende eine Standard-Schriftart (z.B. Helvetica)
-        //                                                           // Schriftart definieren
-        //    iTextSharp.text.Font font = FontFactory.GetFont("Arial", 12);
-        //    font.Color = customColor2;
-        //    // Firmendaten hinzufügen
-        //    Paragraph companyInfo = new Paragraph
-        //    { 
-        //        Alignment = Element.ALIGN_TOP // Rechts ausrichten
-        //    };
 
-        //    companyInfo.Add(new Chunk($"Rechnung für: {_kudedaten.Vollname}\n", font));       
-        //    companyInfo.Add(new Chunk($"Straße: {_kudedaten.Straße}\n", font));
-        //    companyInfo.Add(new Chunk($"Stadt: {_kudedaten.Stadt}\n", font));
-        //    companyInfo.Add(new Chunk($"Datum: {DateTime.Now:dd.MM.yyyy}\n", font));
-        //    companyInfo.Add(new Chunk("\n"));
-        //    pdfDoc.Add(companyInfo); // Firmendaten ins PDF-Dokument einfügen
+        #region PDF-Erstellung
 
-        //}
-        private void _AddLargeTextWithBeautifulFont(Document pdfDoc, PdfWriter writer)
+        private void SaveAllPagesToPdf()
         {
-            try
-            {
-                // Benutzerspezifische Schriftart (z.B. Arial, wenn du eine andere Schriftart verwenden möchtest, musst du den Pfad zur TTF-Datei angeben)
-                string fontPath = @"C:\Windows\Fonts\Arial.ttf"; // Pfad zur Schriftart-Datei (TTF)
-                BaseFont customFont = BaseFont.CreateFont(fontPath, BaseFont.CP1252, BaseFont.EMBEDDED);
-                iTextSharp.text.Font font = new iTextSharp.text.Font(customFont, 40); // Schriftgröße 40 für das Wort "Alowidat"
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string filePath = Path.Combine(desktopPath, "Rechnung.pdf");
 
-                // Holen Sie sich den PdfContentByte von PdfWriter
-                PdfContentByte cb = writer.DirectContent;
-
-                // Beginne den Text zu schreiben und setze die Schriftart und -größe
-                cb.BeginText();
-                cb.SetFontAndSize(customFont, 40); // Schriftgröße 40
-                cb.SetTextMatrix(50f, pdfDoc.PageSize.Height - 80f); // Position des Textes (oben links)
-                cb.ShowText("Alowidat"); // Text anzeigen
-                cb.EndText();
-            }
-            catch (Exception ex)
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            using (Document pdfDoc = new Document(PageSize.A4))
             {
-                MessageBox.Show($"Fehler beim Hinzufügen des Textes: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+
+                int totalRows = _verkaufsdatenListe.Count;
+                int startIndex = 0;
+
+                // Setze die Aggregationsvariablen zurück
+                _einzelPreis = 0;
+                _gesamtPreis = 0;
+
+                while (startIndex < totalRows)
+                {
+                    // Lade die aktuellen 17 Zeilen aus der Liste
+                    var aktuelleSeiteDaten = _verkaufsdatenListe.Skip(startIndex).Take(MAX_ZEILEN_PRO_SEITE).ToList();
+
+                    
+
+                    dgvVerkaufsdaten.Rows.Clear();
+                    foreach (var item in aktuelleSeiteDaten)
+                    {
+                        dgvVerkaufsdaten.Rows.Add(
+                            item.parfümNummer,
+                            $"{item.verkaufsMenge} Gr",
+                            19,
+                            item.normalPreis.ToString("C"),
+                            item.gesamtPreis.ToString("C")
+                        );
+                    }
+
+                    SaveCurrentPageToPdf(pdfDoc);
+                    startIndex += MAX_ZEILEN_PRO_SEITE;
+                }
+
+                // Auf der letzten Seite fügen wir nun die Summen hinzu.
+                // Berechne Netto, Steuer und Brutto aus _gesamtPreis
+                // Angenommen: Brutto = _gesamtPreis, Netto = Brutto / 1,19, Steuer = Brutto - Netto
+                             // Aktualisiere die Labels
+                lblNetto.Text = _einzelPreis.ToString("C");
+                lblSteuer.Text = 0.ToString("C");
+                lblBrutto.Text = _gesamtPreis.ToString("C");
+
+                // Erstelle eine Tabelle, um die Summen anzuzeigen
+                PdfPTable summaryTable = new PdfPTable(2);
+                summaryTable.WidthPercentage = 100;
+                summaryTable.AddCell("Netto:");
+                summaryTable.AddCell(lblNetto.Text);
+                summaryTable.AddCell("Steuer:");
+                summaryTable.AddCell(lblSteuer.Text);
+                summaryTable.AddCell("Brutto:");
+                summaryTable.AddCell(lblBrutto.Text);
+
+                pdfDoc.Add(summaryTable);
+                pdfDoc.Close();
             }
+
+            MessageBox.Show($"PDF gespeichert: {filePath}");
         }
-     
-        private void _AddCustomerInfo(Document pdfDoc, PdfWriter writer)
+
+        private void SaveCurrentPageToPdf(Document pdfDoc)
         {
-            BaseColor customColor = new BaseColor(255, 0, 0); // Rot (RGB)
-            BaseColor customColor2 = new BaseColor(0, 255, 0); // Grün (RGB)
-            BaseColor customColor3 = new BaseColor(0, 0, 255); // Blau (RGB)
-            BaseColor customColor4 = new BaseColor(128, 128, 128); // Grau (RGB)
-            // Verwende eine Standard-Schriftart (z.B. Helvetica)
-            BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-           // iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12); // Setze die Schriftart und -größe
-            
-
-            // Holen Sie sich den PdfContentByte von PdfWriter
-            PdfContentByte cb = writer.DirectContent;
-
-            try
+            using (Bitmap bitmap = new Bitmap(pnlHaupPanel.DisplayRectangle.Width, pnlHaupPanel.DisplayRectangle.Height))
             {
-                // Beginne mit dem Text, der in einer spezifischen Position auf der Seite erscheinen soll
-                cb.BeginText();
-                cb.SetFontAndSize(baseFont, 12); // Setze die Schriftart und -größe
-                cb.SetTextMatrix(50f, pdfDoc.PageSize.Height - 140f); // Position für die Kundendaten (vom oberen Rand nach unten)
-                cb.ShowText($"Rechnung für: {_kudedaten.Vollname}"); // Text: Rechnung für
-                cb.EndText();
+                pnlHaupPanel.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, bitmap.Width, bitmap.Height));
 
-                // Weitere Kundendaten auf die gleiche Weise hinzufügen
-                cb.BeginText();
-                cb.SetFontAndSize(baseFont, 12);
-                cb.SetTextMatrix(50f, pdfDoc.PageSize.Height - 160f); // Neue Position für die Straße
-                cb.ShowText($"Straße: {_kudedaten.Straße}");
-                cb.EndText();
+                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(bitmap, System.Drawing.Imaging.ImageFormat.Png);
+                // Passe die Skalierung an, damit der Inhalt gut auf A4 passt
+                pdfImage.ScaleToFit(pdfDoc.PageSize.Width - 20, pdfDoc.PageSize.Height - 20);
+                pdfImage.Alignment = iTextSharp.text.Image.ALIGN_CENTER;
 
-                cb.BeginText();
-                cb.SetFontAndSize(baseFont, 12);
-                cb.SetTextMatrix(50f, pdfDoc.PageSize.Height - 180f); // Neue Position für die Stadt
-                cb.ShowText($"Stadt: {_kudedaten.Stadt}");
-                cb.EndText();
-
-                cb.BeginText();
-                cb.SetFontAndSize(baseFont, 12);
-                cb.SetTextMatrix(50f, pdfDoc.PageSize.Height - 200f); // Neue Position für das Datum
-                cb.ShowText($"Datum: {DateTime.Now:dd.MM.yyyy}");
-                cb.EndText();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Fehler beim Hinzufügen der Kundendaten: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pdfDoc.Add(pdfImage);
+                pdfDoc.NewPage();
             }
         }
-        //private void _AddCustomerInfo(Document pdfDoc)
-        //{
-        //    // Kundendaten nach oben verschieben
-        //    iTextSharp.text.Font font = FontFactory.GetFont("Arial", 12);
+        #endregion
 
-        //    // Keine Leerzeilen, direkt oben einfügen
-        //    pdfDoc.Add(new Paragraph($"Rechnung für: {_kudedaten.Vollname}", font));
-        //    pdfDoc.Add(new Paragraph($"Straße: {_kudedaten.Straße}", font));
-        //    pdfDoc.Add(new Paragraph($"Stadt: {_kudedaten.Stadt}", font));
-        //    pdfDoc.Add(new Paragraph($"Datum: {DateTime.Now:dd.MM.yyyy}", font));
-        //    pdfDoc.Add(new Paragraph("\n")); // Optionaler Abstand zwischen Kundendaten und den folgenden Tabellen
-        //}
-
-        // 🔹 Methode zur Wiederholung der Kopfzeile auf jeder Seite
-        private void AddTableHeader(PdfPTable table)
-        {
-            PdfPCell headerCell;
-
-            string[] headers = { "ParfümNummer", "Menge (Gr)", "Steuer (%)", "Normalpreis (€)", "Gesamtpreis (€)" };
-            foreach (string header in headers)
-            {
-                headerCell = new PdfPCell(new Phrase(header, FontFactory.GetFont("Arial", 12.ToString(), Font.Bold)));
-                headerCell.BackgroundColor = new BaseColor(200, 200, 200);
-                headerCell.HorizontalAlignment = Element.ALIGN_CENTER;
-                table.AddCell(headerCell);
-            }
-        }
-        //private void SavePanelToPdf()
-        //{
-        //    // Pfad zum Desktop des aktuellen Benutzers
-        //    string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
-        //    string kundenname = _kudedaten.Vollname;
-        //    string rechnungsDatum = clsDatumFormat.DateToShort(DateTime.Now.Date);
-        //    // Name und Pfad der PDF-Datei
-        //    string fileName = kundenname + rechnungsDatum + ".pdf";
-        //    string filePath = Path.Combine(desktopPath, fileName);
-
-        //    try
-        //    {
-        //        // Bitmap aus dem Panel erstellen
-        //        using (Bitmap bitmap = new Bitmap(pnlHaupPanel.Width, pnlHaupPanel.Height))
-        //        {
-        //            pnlHaupPanel.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, pnlHaupPanel.Width, pnlHaupPanel.Height));
-
-        //            // PDF speichern
-        //            using (FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-        //            {
-        //                using (Document pdfDoc = new Document(new iTextSharp.text.Rectangle(bitmap.Width, bitmap.Height)))
-        //                {
-        //                    PdfWriter.GetInstance(pdfDoc, stream);
-        //                    pdfDoc.Open();
-
-        //                    // Konvertiere Bitmap zu iTextSharp-Image
-        //                    iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(bitmap, System.Drawing.Imaging.ImageFormat.Png);
-
-        //                    // Skalierung auf 15 % der Originalgröße
-        //                    pdfImage.ScalePercent(90);
-
-        //                    pdfImage.Alignment = iTextSharp.text.Image.ALIGN_CENTER;
-
-        //                    // Füge das Bild zur PDF hinzu
-        //                    pdfDoc.Add(pdfImage);
-
-        //                    pdfDoc.Close();
-        //                }
-        //            }
-
-        //            MessageBox.Show($"Die Datei wurde erfolgreich auf dem Desktop gespeichert:\n{filePath}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Fehler beim Speichern der Datei: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+        #region Datenanzeige und -bearbeitung
 
         public void _FülleKundedaten()
         {
@@ -338,72 +164,77 @@ namespace Parfüm2025
         public void _FülleRechnungsdetails()
         {
             lblBelegID.Text = _belegID.ToString();
+
+            dgvVerkaufsdaten.SuspendLayout();
+            dgvVerkaufsdaten.Rows.Clear();
+
             foreach (var item in _verkaufsdatenListe)
             {
-              
                 dgvVerkaufsdaten.Rows.Add(
                     item.parfümNummer,
-                    item.verkaufsMenge + " Gr"
-                    , 19,
-                    item.normalPreis,
-                    item.gesamtPreis);
+                    $"{item.verkaufsMenge} Gr",
+                    19,
+                    item.normalPreis.ToString("C"),
+                    item.gesamtPreis.ToString("C")
+                );
             }
-            //AddOrUpdateSummeRow();
+
+            dgvVerkaufsdaten.ResumeLayout();
             UpdateSummeRow();
         }
+
         private void UpdateSummeRow()
         {
             float summeEinzelPreis = 0;
+            float summeGesamtPreis = 0;
 
-            // Summe aller relevanten Zeilen berechnen
+            // Verwende NumberStyles.Currency, falls die Werte formatiert sind
             foreach (DataGridViewRow row in dgvVerkaufsdaten.Rows)
             {
-                if (row.Cells["Einzelpreis"].Value != null)
+                if (row.Cells[3].Value != null &&
+                    float.TryParse(row.Cells[3].Value.ToString(), NumberStyles.Currency, CultureInfo.CurrentCulture, out float einzelPreis))
                 {
-                    float einzelpreis= 0;
-                    if (float.TryParse(row.Cells["Einzelpreis"].Value.ToString(), out einzelpreis))
-                          summeEinzelPreis += einzelpreis;
+                    summeEinzelPreis += einzelPreis;
+                    _einzelPreis += summeGesamtPreis; 
+                }
+                if (row.Cells[4].Value != null &&
+                    float.TryParse(row.Cells[4].Value.ToString(), NumberStyles.Currency, CultureInfo.CurrentCulture, out float gesamtPreis))
+                {
+                    summeGesamtPreis += gesamtPreis;
+                    _gesamtPreis += summeGesamtPreis;
                 }
             }
 
-            _BearbeiteSteuerdaten(summeEinzelPreis);
+            _BearbeiteSteuerdaten(summeGesamtPreis, summeEinzelPreis);
         }
 
-        private void _BearbeiteSteuerdaten(float summeEinzelpreis)
+        private void _BearbeiteSteuerdaten(float summeGesamtPreis, float summeEinzelPreis)
         {
-            // Bruttobetrag anzeigen
-            float netto = summeEinzelpreis;
-            lblNetto.Text = netto.ToString("C");
+            // Hier nehmen wir an, dass summeGesamtPreis den Bruttobetrag darstellt.
+          
+            
 
-            // Steueranteil berechnen und anzeigen
-           float steuer = (summeEinzelpreis * 19 / 100);
-            lblSteuer.Text = steuer.ToString("C");
-
-            float brutto = netto + steuer;
-            lblBrutto.Text = brutto.ToString("C");
-
-           // lblRechnungsbetrag.Text = gesamtEinzelPreis.ToString("C");
+            lblNetto.Text = summeEinzelPreis.ToString("C");
+            lblSteuer.Text = 0.ToString("C");
+            lblBrutto.Text = summeGesamtPreis.ToString("C");
         }
+
         private void UpdateDataGridViewHeight()
         {
-            int rowHeight = dgvVerkaufsdaten.RowTemplate.Height;  // Höhe einer Zeile
-            int columnHeaderHeight = dgvVerkaufsdaten.ColumnHeadersHeight;  // Höhe des Headers
-            int rowCount = dgvVerkaufsdaten.Rows.Count;  // Anzahl der Zeilen
+            int rowHeight = dgvVerkaufsdaten.RowTemplate.Height;
+            int headerHeight = dgvVerkaufsdaten.ColumnHeadersHeight;
+            int rowCount = dgvVerkaufsdaten.Rows.Count;
+            int newHeight = (rowHeight * rowCount) + headerHeight;
+            int maxHeight = 400;
 
-            // Berechne die neue Höhe des DataGridView
-            int newHeight = (rowHeight * rowCount) + columnHeaderHeight;
-
-            int maxHeight = 400; // Max Höhe
-            // Setze die neue Höhe
             dgvVerkaufsdaten.Height = Math.Min(newHeight, maxHeight);
-
-
-            pnlNettoBrutto.Top= dgvVerkaufsdaten.Bottom + 1;
-
+            pnlNettoBrutto.Top = dgvVerkaufsdaten.Bottom + 1;
             pnlHaupPanel.Invalidate();
         }
+        #endregion
 
- 
+        #region Event-Handler
+
         private void frmDruckvorschau_Load(object sender, EventArgs e)
         {
             _FülleKundedaten();
@@ -413,66 +244,34 @@ namespace Parfüm2025
 
         private void dgvVerkaufsdaten_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            //UpdateSummeRow();
-
-           // _FülleRechnungsdetails();
-            ZeileHinzugefügt = 17 * dgvVerkaufsdaten.Rows.Count;
-            UpdateEcke();
+            ZeileHinzugefügt = MAX_ZEILEN_PRO_SEITE * dgvVerkaufsdaten.Rows.Count;
+            UpdateSummeRow();
             UpdateDataGridViewHeight();
-
         }
 
         private void dgvVerkaufsdaten_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-           // UpdateSummeRow();
-
-            ZeileHinzugefügt = 19 * dgvVerkaufsdaten.Rows.Count;
-            UpdateEcke();
+            ZeileHinzugefügt = MAX_ZEILEN_PRO_SEITE * dgvVerkaufsdaten.Rows.Count;
+            UpdateSummeRow();
             UpdateDataGridViewHeight();
-
         }
 
-        private void UpdateEcke()
+        private void btnAbbrechen_Click(object sender, EventArgs e)
         {
-            pnlHaupPanel.Invalidate();
-        }
-        private void pnlHaupPanel_Paint(object sender, PaintEventArgs e)
-        {
-           // Erstelle ein Panel für die Ecke
-
-
-                // Grafikobjekt für das Panel
-                Graphics g = e.Graphics;
-
-            // Berechne die Position und Größe des Panels
-            int width = pnlHaupPanel.Width;  // Breite des Panels
-            int height = pnlHaupPanel.Height; // Höhe des Panels      
-
-            // Definiere die Punkte für das Dreieck in der unteren rechten Ecke
-            Point[] points = new Point[]
-            {
-                    new Point(width, height),       // Untere rechte Ecke
-                    new Point(width - 800, height),  //  Pixel nach links (unten)             
-                     new Point(width, height - (480 - ZeileHinzugefügt))   // Pixel nach oben (rechts)
-            };
-
-            // Fülle das Dreieck mit der grünen Farbe
-            g.FillPolygon(Brushes.YellowGreen, points);
-
-
-            ZeileHinzugefügt = 0;
+            this.Close();
         }
 
         private void konvertiereZurPdfDateiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _SaveToPdf();
+            SaveAllPagesToPdf();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _SaveToPdf();
+            SaveAllPagesToPdf();
             this.Close();
         }
+        #endregion
     }
 }

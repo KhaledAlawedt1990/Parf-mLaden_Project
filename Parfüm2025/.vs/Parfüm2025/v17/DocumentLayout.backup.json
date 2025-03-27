@@ -1,26 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
+  "WorkspaceRootPath": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmaddupdaterechnung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmaddupdaterechnung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\pdf_rechnung\\frmdruckvorschau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:pdf_rechnung\\frmdruckvorschau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmaddupdaterechnungsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmrechnungsdetailsliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmrechnungsdetailsliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmrechnungenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmrechnungenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\pdf_rechnung\\frmdruckvorschau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:pdf_rechnung\\frmdruckvorschau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmrechnungenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmrechnungenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmaddupdaterechnungsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmaddupdaterechnungsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmaddupdaterechnung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmaddupdaterechnung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\verkaufsdaten\\frmaddupdaterechnungsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:verkaufsdaten\\frmaddupdaterechnungsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\produkte\\frmprodukts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:produkte\\frmprodukts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\einkaufsdaten\\frmaddupdateneueparf\u00FCmmenge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:einkaufsdaten\\frmaddupdateneueparf\u00FCmmenge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\einkaufsdaten\\frmeinkaufsdatenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:einkaufsdaten\\frmeinkaufsdatenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\einkaufsdaten\\frmeinkaufsdatenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:einkaufsdaten\\frmeinkaufsdatenliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +54,171 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmProdukts.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Produkte\\frmProdukts.cs",
-              "RelativeDocumentMoniker": "Produkte\\frmProdukts.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Produkte\\frmProdukts.cs",
-              "RelativeToolTip": "Produkte\\frmProdukts.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAHgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:52:34.013Z",
-              "IsPinned": true
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmAddUpdateRechnungsDetails.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
-              "RelativeDocumentMoniker": "Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
-              "RelativeToolTip": "Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswBcBAAAcAAAAAAAAAA==",
+              "Title": "frmRechnungsDetailsListe.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmRechnungsDetailsListe.cs",
+              "RelativeDocumentMoniker": "Verkaufsdaten\\frmRechnungsDetailsListe.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmRechnungsDetailsListe.cs [Design]",
+              "RelativeToolTip": "Verkaufsdaten\\frmRechnungsDetailsListe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T16:52:28.89Z",
+              "WhenOpened": "2025-03-27T12:11:26.998Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmDruckvorschau.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\PDF_Rechnung\\frmDruckvorschau.cs",
+              "RelativeDocumentMoniker": "PDF_Rechnung\\frmDruckvorschau.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\PDF_Rechnung\\frmDruckvorschau.cs",
+              "RelativeToolTip": "PDF_Rechnung\\frmDruckvorschau.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAHYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T22:23:42.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmAddUpdateRechnung.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnung.cs",
-              "RelativeDocumentMoniker": "Verkaufsdaten\\frmAddUpdateRechnung.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnung.cs",
-              "RelativeToolTip": "Verkaufsdaten\\frmAddUpdateRechnung.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAIwKIAAABBAAAAAAAAAA==",
+              "Title": "frmRechnungenListe.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmRechnungenListe.cs",
+              "RelativeDocumentMoniker": "Verkaufsdaten\\frmRechnungenListe.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmRechnungenListe.cs [Design]",
+              "RelativeToolTip": "Verkaufsdaten\\frmRechnungenListe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T16:50:31.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T12:14:53.646Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAddUpdateRechnung.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnung.cs",
-              "RelativeDocumentMoniker": "Verkaufsdaten\\frmAddUpdateRechnung.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnung.cs [Entwurf]",
-              "RelativeToolTip": "Verkaufsdaten\\frmAddUpdateRechnung.cs [Entwurf]",
+              "DocumentIndex": 4,
+              "Title": "frmRechnungenListe.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmRechnungenListe.cs",
+              "RelativeDocumentMoniker": "Verkaufsdaten\\frmRechnungenListe.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmRechnungenListe.cs",
+              "RelativeToolTip": "Verkaufsdaten\\frmRechnungenListe.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAcwNIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T16:50:29.638Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2025-03-27T12:05:38.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "frmDruckvorschau.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\PDF_Rechnung\\frmDruckvorschau.cs",
+              "RelativeDocumentMoniker": "PDF_Rechnung\\frmDruckvorschau.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\PDF_Rechnung\\frmDruckvorschau.cs [Design]",
+              "RelativeToolTip": "PDF_Rechnung\\frmDruckvorschau.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T22:23:29.269Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmAddUpdateRechnungsDetails.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
+              "RelativeDocumentMoniker": "Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
+              "RelativeToolTip": "Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAMwMYAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:07:31.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmAddUpdateRechnungsDetails.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
+              "RelativeDocumentMoniker": "Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs [Design]",
+              "RelativeToolTip": "Verkaufsdaten\\frmAddUpdateRechnungsDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:07:28.573Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmAddUpdateNeueParf\u00FCmMenge.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Einkaufsdaten\\frmAddUpdateNeueParf\u00FCmMenge.cs",
+              "RelativeDocumentMoniker": "Einkaufsdaten\\frmAddUpdateNeueParf\u00FCmMenge.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Einkaufsdaten\\frmAddUpdateNeueParf\u00FCmMenge.cs",
+              "RelativeToolTip": "Einkaufsdaten\\frmAddUpdateNeueParf\u00FCmMenge.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAAAOcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T22:11:14.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmEinkaufsDatenListe.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Einkaufsdaten\\frmEinkaufsDatenListe.cs",
+              "RelativeDocumentMoniker": "Einkaufsdaten\\frmEinkaufsDatenListe.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Einkaufsdaten\\frmEinkaufsDatenListe.cs",
+              "RelativeToolTip": "Einkaufsdaten\\frmEinkaufsDatenListe.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAmwGEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T22:11:07.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T01:03:37.688Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmEinkaufsDatenListe.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Einkaufsdaten\\frmEinkaufsDatenListe.cs",
+              "RelativeDocumentMoniker": "Einkaufsdaten\\frmEinkaufsDatenListe.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Einkaufsdaten\\frmEinkaufsDatenListe.cs [Design]",
+              "RelativeToolTip": "Einkaufsdaten\\frmEinkaufsDatenListe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T22:10:15.353Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 56,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

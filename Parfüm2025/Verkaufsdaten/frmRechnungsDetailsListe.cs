@@ -221,10 +221,8 @@ namespace Parfüm2025
                     {
                         belegID = element.belegID;
 
-                        if (element.gesamtPreis != 0.0m)
-                            totalGesamtPreis += element.gesamtPreis;
-                        else
-                            totalGesamtPreis += element.normalPreis;
+                        if(element.gesamtPreis != 0m)
+                              totalGesamtPreis += element.gesamtPreis;
 
                             float lagerBestandHaupt = element.HauptLagerbestand - element.verkaufsMenge;
                         //hier bestätigen wir den Verkauf und ziehen wir realistisch die gebrauchte Menge von dem LagerbestanHaupt ab.

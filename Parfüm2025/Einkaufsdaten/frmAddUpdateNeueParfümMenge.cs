@@ -229,11 +229,7 @@ namespace Parfüm2025
             {
                 if (_einkaufsDaten.Save())
                 {
-                    MessageBox.Show($"Einkauf Daten erfolgreich {(_mode == enMode.addnew ? "hinzugefügt" : "aktualisiert")}", "Erfolg",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     _mode = enMode.update; // wir aktualisieren den Object.
-
                     this.Close();
                     
                 }

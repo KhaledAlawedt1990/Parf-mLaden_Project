@@ -140,24 +140,14 @@ namespace Parfüm2025
 
             _fülleParfümDaten();
 
-            string status;
-            if (_mode == enMode.addnew)
-                status = "hinzugefügt";
-            else
-                status = "aktualisiert";
-
             AutoComplete.AVLTree tree = new AutoComplete.AVLTree();
             if(_parfüm.Save())
             {
                 tree.Insert(_parfüm.Name); // Hier addieren wir jeden neuen Parfüm in AVL Tree.
-
-                MessageBox.Show($"Parfümdaten erfolgreich {status}", "Erfolg",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                btnspeichern.Enabled = false;
             }
             else
-                MessageBox.Show($"Fehler beim {status} ist aufgetreten.", "Erorr",
+                MessageBox.Show($"Fehler ist aufgetreten.", "Erorr",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void btnspeichern_Click(object sender, EventArgs e)

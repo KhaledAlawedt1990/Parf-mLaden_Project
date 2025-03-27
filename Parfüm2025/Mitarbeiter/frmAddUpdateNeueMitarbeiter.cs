@@ -109,16 +109,9 @@ namespace Parfüm2025
 
             _fülleMitarbeiterDaten();
 
-            string status = string.Empty;
-            if (_mode == enMode.update) { status = "Mitarbeiterdaten wurden erfolgreich aktualisiert."; }
-            else status = "Mitarbeiterdaten wurden erfolgreich hinzugefügt.";
-
             if (personGespeichert &&  _mitarbeiter.Save())
             {
                 _mode = enMode.update;
-                txtMitarbeiterID.Text = _mitarbeiter.MitarbeiterID.ToString();
-                MessageBox.Show($"{status}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 this.Close();
             }
             else

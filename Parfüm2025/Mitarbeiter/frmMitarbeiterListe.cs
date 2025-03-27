@@ -184,5 +184,17 @@ namespace Parfüm2025
             HinzufügeBenutzerrechtetoolStripMenuItem1.Enabled = (!clsUser.ExistUserForThisMitarbeiter(mitarbeiterID)); //falls der _persondaten user im system definiert.
             AktualisiereBenutzerrechtetoolStripMenuItem2.Enabled = (clsUser.ExistUserForThisMitarbeiter(mitarbeiterID));
         }
+
+        private void dgvMitarbeiter_DoubleClick(object sender, EventArgs e)
+        {
+            int personID = (int)dgvMitarbeiter.CurrentRow.Cells[1].Value;
+            frmAddUpdateNeueMitarbeiter frm = new frmAddUpdateNeueMitarbeiter(personID, false);
+            frm.ShowDialog();
+        }
+
+        private void dgvMitarbeiter_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

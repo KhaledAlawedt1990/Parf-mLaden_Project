@@ -20,12 +20,12 @@ namespace Parfüm2025
 
             //Application.Run(new frmMitarbeiterListe());
 
-             Application.Run(new frmLogginScreen());
-            // Application.Run(new frmKundeListe());
+            // Application.Run(new frmLogginScreen());
+            //Application.Run(new frmKundeListe());
             //Application.Run(new frmMainScreen());
             //Application.Run(new frmUserListe());
             //Application.Run(new frmEinkaufsDatenListe());
-            //Application.Run(new frmVerkaufsDatenListe());
+            Application.Run(new frmVerkaufsDatenListe());
             //Application.Run(new frmDruckvorschau());
             //Application.Run(new frmLizenzEigabeBildschirm());
             //Application.Run(new frmProdukts());

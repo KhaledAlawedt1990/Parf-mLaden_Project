@@ -121,9 +121,6 @@ namespace Parfüm2025
                 if (personGespeichert && _kunde.Save())
                 {
                     _mode = enMode.update;
-                    txtKundeID.Text = _kunde.kundeID.ToString();
-                    MessageBox.Show($"{status}", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     this.Close();
                 }
                 else

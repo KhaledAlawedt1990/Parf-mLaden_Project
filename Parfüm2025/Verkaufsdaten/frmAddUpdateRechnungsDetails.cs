@@ -195,6 +195,8 @@ namespace Parfüm2025
             {
                 _rechnungsDetailsDaten.gesamtPreis = _ExtractNumber(txtGesamtPreis.Text.Trim()); // Mit Seteuer dazu.
             }
+            else
+                _rechnungsDetailsDaten.gesamtPreis = _ExtractNumber(txtNormalPreis.Text.Trim());
 
             return true;
         }

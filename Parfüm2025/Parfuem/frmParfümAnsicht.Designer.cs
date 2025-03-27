@@ -127,7 +127,7 @@
             // btnErstelleEineParfümListePdf
             // 
             this.btnErstelleEineParfümListePdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnErstelleEineParfümListePdf.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnErstelleEineParfümListePdf.BackColor = System.Drawing.Color.ForestGreen;
             this.btnErstelleEineParfümListePdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnErstelleEineParfümListePdf.ForeColor = System.Drawing.Color.White;
             this.btnErstelleEineParfümListePdf.Location = new System.Drawing.Point(1593, 37);
@@ -144,7 +144,7 @@
             this.lbVorschläge.FormattingEnabled = true;
             this.lbVorschläge.ItemHeight = 25;
             this.lbVorschläge.Location = new System.Drawing.Point(493, 86);
-            this.lbVorschläge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbVorschläge.Margin = new System.Windows.Forms.Padding(4);
             this.lbVorschläge.Name = "lbVorschläge";
             this.lbVorschläge.Size = new System.Drawing.Size(349, 204);
             this.lbVorschläge.TabIndex = 24;
@@ -155,7 +155,7 @@
             // 
             this.txtFilterWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFilterWert.Location = new System.Drawing.Point(443, 127);
-            this.txtFilterWert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFilterWert.Margin = new System.Windows.Forms.Padding(4);
             this.txtFilterWert.Multiline = true;
             this.txtFilterWert.Name = "txtFilterWert";
             this.txtFilterWert.Size = new System.Drawing.Size(549, 40);
@@ -175,7 +175,7 @@
             "Duftrichtung",
             "Jahreszeiten"});
             this.cbFilterBei.Location = new System.Drawing.Point(144, 127);
-            this.cbFilterBei.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbFilterBei.Margin = new System.Windows.Forms.Padding(4);
             this.cbFilterBei.Name = "cbFilterBei";
             this.cbFilterBei.Size = new System.Drawing.Size(289, 37);
             this.cbFilterBei.TabIndex = 22;
@@ -199,7 +199,7 @@
             // btnNeuParfümHinzufügen
             // 
             this.btnNeuParfümHinzufügen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNeuParfümHinzufügen.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnNeuParfümHinzufügen.BackColor = System.Drawing.Color.ForestGreen;
             this.btnNeuParfümHinzufügen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNeuParfümHinzufügen.ForeColor = System.Drawing.Color.White;
             this.btnNeuParfümHinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,7 +214,7 @@
             // 
             // btnSuchen
             // 
-            this.btnSuchen.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnSuchen.BackColor = System.Drawing.Color.ForestGreen;
             this.btnSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuchen.ForeColor = System.Drawing.Color.White;
             this.btnSuchen.Location = new System.Drawing.Point(849, 38);
@@ -588,11 +588,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1873, 84);
             this.panel1.TabIndex = 3;
