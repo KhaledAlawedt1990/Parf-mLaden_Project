@@ -373,7 +373,7 @@ namespace Parfüm2025
             {
 
                 int parfuemNummer = Convert.ToInt32(txtParfümNummer.Text);
-                int preisKategorie = clsEinkauf.FindEinkaufDatenByParfümNummer(parfuemNummer).preisKategorie;
+                int? preisKategorie = clsEinkauf.FindEinkaufDatenByParfümNummer(parfuemNummer).preisKategorie;
                 string formattedVerkaufsmenge = txtVerkaufsMenge.Text.Trim();
 
                 if (float.TryParse(formattedVerkaufsmenge, out float verkaufsmenge))
@@ -396,7 +396,7 @@ namespace Parfüm2025
             if (!string.IsNullOrEmpty(txtParfümNummer.Text))
             {
                 int parfümNummer = Convert.ToInt32(txtParfümNummer.Text.Trim());
-                int preisKategorie = clsEinkauf.FindEinkaufDatenByParfümNummer(Convert.ToInt32(txtParfümNummer.Text)).preisKategorie;
+                int? preisKategorie = clsEinkauf.FindEinkaufDatenByParfümNummer(Convert.ToInt32(txtParfümNummer.Text)).preisKategorie;
                 List<clsPreise> preisKategorieListe = clsPreise.GetPreisKategorieByKategorie(preisKategorie);
 
                 frmPreisKategorie frm = new frmPreisKategorie(preisKategorieListe);

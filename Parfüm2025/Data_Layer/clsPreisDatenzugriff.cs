@@ -16,7 +16,7 @@ namespace Data_Layer
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
         public static string connection { get { return ConnectionString; } }    
 
-        public static bool GetPreisKategorieByID(int preisID, ref int Kategorie, ref int miniMenge, ref int maxMenge, ref float preisProEinheit)
+        public static bool GetPreisKategorieByID(int preisID, ref int? Kategorie, ref int miniMenge, ref int maxMenge, ref float preisProEinheit)
         {
 
             bool isfound = false;
@@ -37,7 +37,7 @@ namespace Data_Layer
                             {
                                 isfound = true;
 
-                                Kategorie = (int)reader["Kategorie"];
+                                Kategorie = reader["Kategorie"] !=  DBNull.Value ? (int)reader["Kategorie"] : (int?)null;
                                 miniMenge = (int)reader["MiniMenge"];
                                 maxMenge = (int)reader["MaxMenge"];
                                 preisProEinheit = (float)reader["PreisProEinheit"];
@@ -124,7 +124,7 @@ namespace Data_Layer
             }
             return dt;
         }
-        public static int AddNewPreis(int Kategorie, int miniMenge, int maxMenge, float preisProEinheit)
+        public static int AddNewPreis(int? Kategorie, int miniMenge, int maxMenge, float preisProEinheit)
         {
             int preisID = -1;
 
@@ -140,7 +140,7 @@ namespace Data_Layer
                     {
 
                         // Über Parameter hinzufügen
-                        command.Parameters.AddWithValue("@Kategorie", Kategorie);
+                        command.Parameters.AddWithValue("@Kategorie", Kategorie ?? (object)DBNull.Value);
                         command.Parameters.AddWithValue("@miniMenge", miniMenge);
                         command.Parameters.AddWithValue("@maxMenge", maxMenge);
                         command.Parameters.AddWithValue("@preisProEinheit", preisProEinheit);
@@ -162,7 +162,7 @@ namespace Data_Layer
             return preisID;
         }
 
-        public static bool UpdatePreise(int preisID, int Kategorie, int miniMenge, int maxMenge, float preisProEinheit)
+        public static bool UpdatePreise(int preisID, int? Kategorie, int miniMenge, int maxMenge, float preisProEinheit)
         {
             int RowAffected = 0;
             string abfrage = @"Update Preise  Set
@@ -182,7 +182,7 @@ namespace Data_Layer
                         // Parameter hinzufügen
                         // Über Parameter hinzufügen
                         command.Parameters.AddWithValue("@preisID", preisID);
-                        command.Parameters.AddWithValue("@Kategorie", Kategorie);
+                        command.Parameters.AddWithValue("@Kategorie", Kategorie ?? (object)DBNull.Value);
                         command.Parameters.AddWithValue("@miniMenge", miniMenge);
                         command.Parameters.AddWithValue("@maxMenge", maxMenge);
                         command.Parameters.AddWithValue("@preisProEinheit", preisProEinheit);
@@ -225,7 +225,7 @@ namespace Data_Layer
             return RowAffected > 0;
         }
 
-        public static float BerechnePreis(float menge, int kategorie)
+        public static float BerechnePreis(float menge, int? kategorie)
         {
             float parfümPreis = 0;
 
@@ -239,7 +239,7 @@ namespace Data_Layer
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Kategorie", kategorie);
+                    command.Parameters.AddWithValue("@Kategorie", kategorie ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@Menge", menge);
 
                     try
@@ -261,7 +261,7 @@ namespace Data_Layer
             return parfümPreis;
         }
 
-        public static bool IstKategorieVorhanden(int Kategorie)
+        public static bool IstKategorieVorhanden(int? Kategorie)
         {
             bool isfound = false;
             string abfrage = @"SELECT 1 FROM Preise WHERE Kategorie= @Kategorie";
@@ -272,7 +272,7 @@ namespace Data_Layer
                 {
                     using (SqlCommand command = new SqlCommand(abfrage, connection))
                     {
-                        command.Parameters.AddWithValue("@Kategorie", Kategorie);
+                        command.Parameters.AddWithValue("@Kategorie", Kategorie ?? (object)DBNull.Value);
 
                         connection.Open();
                         using (SqlDataReader reader = command.ExecuteReader())

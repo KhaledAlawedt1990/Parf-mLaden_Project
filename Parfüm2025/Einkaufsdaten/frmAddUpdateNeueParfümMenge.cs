@@ -152,7 +152,6 @@ namespace Parfüm2025
 
             isValid = _ValidiereEinFeld(txtParfümName, "ParfümName");
             isValid &= _ValidiereEinFeld(txtParfümCode, "ParfümCode");
-            isValid &= _ValidiereEinFeld(txtPreiskategorie, "PreisKategorie");
             return isValid; // Gibt zurück, ob alle Felder gültig sind
         }
 
@@ -180,15 +179,17 @@ namespace Parfüm2025
             if(sekundärMenge != 0f)
                  _einkaufsDaten.SekundärLagerbestand = (_einkaufsDaten.SekundärLagerbestand ?? 0) + sekundärMenge;
 
-
-            int preisKategorie = Convert.ToInt32(txtPreiskategorie.Text);
-            if(!clsPreise.IstkategorieVorhanden(preisKategorie))
+            if (!string.IsNullOrEmpty(txtPreiskategorie.Text))
             {
-                MessageBox.Show("Diese Kategorie existiert nicht, bitte geben Sie eine Andere ein","Fehlermeldung",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                int preisKategorie = Convert.ToInt32(txtPreiskategorie.Text);
+                if (!clsPreise.IstkategorieVorhanden(preisKategorie))
+                {
+                    MessageBox.Show("Diese Kategorie existiert nicht, bitte geben Sie eine Andere ein", "Fehlermeldung",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                _einkaufsDaten.preisKategorie = preisKategorie;
             }
-            _einkaufsDaten.preisKategorie = preisKategorie;
             _einkaufsDaten.erstellungsDatum = dtpErstellungsDatum.Value;
 
             return true;

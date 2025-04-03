@@ -17,12 +17,12 @@ namespace Busnisse_Layer
         private enMode _mode = enMode.addnew;
 
         public int preisID { get; set; }
-        public int kategorie {  get; set; }
+        public int? kategorie {  get; set; }
         public int miniMenge {  get; set; }
         public int maxMenge { get; set; }
         public float preisProEinheit {  get; set; }
 
-        private clsPreise(int preisID,int kategorie, int miniMenge, int maxMenge, float preisProEinheit)
+        private clsPreise(int preisID,int? kategorie, int miniMenge, int maxMenge, float preisProEinheit)
         {
             this.preisID = preisID;
             this.kategorie = kategorie;
@@ -47,7 +47,7 @@ namespace Busnisse_Layer
         public static clsPreise Find(int preisID)
         {
             int miniMenge = 0, maxMenge = 0;
-            int kategorie = 0; float preisProEinheit = 0;
+            int? kategorie = null; float preisProEinheit = 0;
             if (clsPreisDatenzugriff.GetPreisKategorieByID(preisID, ref kategorie, ref miniMenge, ref maxMenge, ref preisProEinheit))
             {
                 return new clsPreise(preisID,kategorie, miniMenge, maxMenge, preisProEinheit);
@@ -97,17 +97,17 @@ namespace Busnisse_Layer
             return clsPreisDatenzugriff.DeletePreise(this.preisID);
         }
 
-        public static float BerechneParfuemPreis(float menge, int kategorie)
+        public static float BerechneParfuemPreis(float menge, int? kategorie)
         {
             return clsPreisDatenzugriff.BerechnePreis(menge, kategorie);
         }
-        public static bool IstkategorieVorhanden(int kategorie)
+        public static bool IstkategorieVorhanden(int? kategorie)
         {
             return clsPreisDatenzugriff.IstKategorieVorhanden(kategorie);
         }
 
 
-        public static List<clsPreise> GetPreisKategorieByKategorie(int Kategorie)
+        public static List<clsPreise> GetPreisKategorieByKategorie(int? Kategorie)
         {
             string abfrage = @"SELECT * From Preise Where Kategorie = @Kategorie";
 
@@ -128,7 +128,7 @@ namespace Busnisse_Layer
                             {
                                 preisKategorieListe.Add(new clsPreise
                                 {
-                                     kategorie = (int)reader["Kategorie"],
+                                     kategorie = reader["Kategorie"] != DBNull.Value ? (int)reader["Kategorie"] : (int?)null ,
                                     miniMenge = (int)reader["MiniMenge"],
                                     maxMenge = (int)reader["MaxMenge"],
                                     preisProEinheit = (float)reader["PreisProEinheit"]

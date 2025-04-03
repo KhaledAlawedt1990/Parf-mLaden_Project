@@ -24,11 +24,11 @@ namespace Busnisse_Layer
         public string parfümCode { get; set; }
         public float? HauptLagerbestand { get; set; }
         public float? SekundärLagerbestand { get; set; } //für SekundärLotNr falls vorhanden.
-        public int preisKategorie { get; set; }
+        public int? preisKategorie { get; set; }
         public DateTime erstellungsDatum { get; set; }
 
         private clsEinkauf(int parfümNummer, string parfümName, string parfümCode, string hauptBatchNummer, float? lagerBestandHaupt,
-            string sekundäreBatchNummer,float? lagerBestandSekundär, int preisKategorie, DateTime erstellungsDatum)
+            string sekundäreBatchNummer,float? lagerBestandSekundär, int? preisKategorie, DateTime erstellungsDatum)
         {
             this.parfümNummer = parfümNummer;
             this.parfümName = parfümName;
@@ -52,7 +52,7 @@ namespace Busnisse_Layer
             this.SekundärLotNr = null;
             this.HauptLagerbestand = null;
             this.SekundärLagerbestand = null;
-            this.preisKategorie = 1;
+            this.preisKategorie = null;
             this.erstellungsDatum = DateTime.Now;
 
             _mode = enMode.addnew;
@@ -62,7 +62,7 @@ namespace Busnisse_Layer
         {
             string parfümName = string.Empty; string hauptBatchNummer = null; string sekundäreBatchNummer = null;
             string parfümCode = string.Empty; float? lagerBestandHaupt = null; float? lagerBestandSekundär = null;
-            int preisKategorie = 1;  DateTime erstellungsDatum = DateTime.Now;
+            int? preisKategorie = null;  DateTime erstellungsDatum = DateTime.Now;
 
             if (clsEinkaufDatenzugriff.GetEinkaufDatenByParfümID(parfümNummer, ref parfümName, ref parfümCode,ref hauptBatchNummer,
                                    ref lagerBestandHaupt, ref sekundäreBatchNummer, ref lagerBestandSekundär, ref preisKategorie, ref erstellungsDatum))
