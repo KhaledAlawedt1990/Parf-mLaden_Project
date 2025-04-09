@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\mitarbeiter\\frmaddupdateneuemitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:mitarbeiter\\frmaddupdateneuemitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\mitarbeiter\\frmaddupdateneuemitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:mitarbeiter\\frmaddupdateneuemitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|c:\\users\\khale\\desktop\\parf-mladen_project\\parf\u00FCm2025\\busnisse_layer\\clsperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF81815D-4A86-4A1C-A36F-8B98E229D62D}|Busnisse_Layer\\Busnisse_Layer.csproj|solutionrelative:busnisse_layer\\clsperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{874254B8-1C9E-46A5-B811-30843F28D8A8}|Parf\u00FCm2025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -39,19 +47,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-03T22:42:53.217Z",
+              "Title": "frmAddUpdateNeueMitarbeiter.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs",
+              "RelativeDocumentMoniker": "Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs",
+              "RelativeToolTip": "Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:52:05.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmAddUpdateNeueMitarbeiter.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs",
+              "RelativeDocumentMoniker": "Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs [Design]",
+              "RelativeToolTip": "Mitarbeiter\\frmAddUpdateNeueMitarbeiter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:51:57.615Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsPerson.cs",
+              "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsPerson.cs",
+              "RelativeDocumentMoniker": "Busnisse_Layer\\clsPerson.cs",
+              "ToolTip": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Busnisse_Layer\\clsPerson.cs",
+              "RelativeToolTip": "Busnisse_Layer\\clsPerson.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAADgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:24:20.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\khale\\Desktop\\Parf-mLaden_Project\\Parf\u00FCm2025\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -59,8 +92,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T01:03:37.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T01:03:37.688Z"
             }
           ]
         },

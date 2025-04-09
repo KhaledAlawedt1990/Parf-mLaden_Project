@@ -101,8 +101,8 @@ namespace Parfüm2025
         }
         private void _KundedatenSpeichern()
         {
-            if (!_ValiedereMitarbeiterFelder())
-                return;
+            //if (!_ValiedereMitarbeiterFelder())
+            //    return;
 
             lock (_lockObject)
             {

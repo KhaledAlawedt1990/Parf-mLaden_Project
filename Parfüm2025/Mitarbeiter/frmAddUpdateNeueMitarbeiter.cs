@@ -99,8 +99,8 @@ namespace Parfüm2025
 
         private void _MitarbeiterDatenSpeichern()
         {
-            if (!_ValiedereMitarbeiterFelder())
-                return;
+            //if (!_ValiedereMitarbeiterFelder())
+            //    return;
 
             bool personGespeichert = ctrAddUpdatePerson1.speicherePersonDaten();
 

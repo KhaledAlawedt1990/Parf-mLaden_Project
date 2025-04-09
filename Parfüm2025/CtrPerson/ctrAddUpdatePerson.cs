@@ -217,8 +217,8 @@ namespace Parfüm2025
 
             lock (_lockObject)
             {
-                if (!_IstValidiert())
-                    return false;
+                //if (!_IstValidiert())
+                //    return false;
 
                 _füllePersonDaten();
                 if (!_persondaten.Save())
